@@ -10,7 +10,4 @@ $stderr.sync = true
 
 task :environment do
   require 'unlight'
-
-  # TODO: Avoid load API except OAPI task
-  require 'api/game_api'
 end
