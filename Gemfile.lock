@@ -183,13 +183,14 @@ GEM
     sentry-ruby (5.9.0)
       concurrent-ruby (~> 1.0, >= 1.0.2)
     sequel (5.68.0)
-    simplecov (0.17.1)
+    simplecov (0.22.0)
       docile (~> 1.1)
-      json (>= 1.8, < 3)
-      simplecov-html (~> 0.10.0)
+      simplecov-html (~> 0.11)
+      simplecov_json_formatter (~> 0.1)
     simplecov-cobertura (1.4.2)
       simplecov (~> 0.8)
-    simplecov-html (0.10.2)
+    simplecov-html (0.12.3)
+    simplecov_json_formatter (0.1.4)
     singleton (0.1.1)
     sqlite3 (1.6.2)
       mini_portile2 (~> 2.8.0)
@@ -240,7 +241,7 @@ DEPENDENCIES
   semantic_logger
   sentry-ruby
   sequel (~> 5.0)
-  simplecov (~> 0.17.1)
+  simplecov (~> 0.22.0)
   simplecov-cobertura
   sqlite3
   super_diff

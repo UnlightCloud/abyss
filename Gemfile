@@ -62,7 +62,7 @@ group :test do
   gem 'database_cleaner-sequel', require: false
   gem 'factory_bot', require: false
   gem 'faker', require: false
-  gem 'simplecov', '~> 0.17.1', require: false
+  gem 'simplecov', '~> 0.22.0', require: false
   gem 'simplecov-cobertura', require: false
 
   gem 'rack-test', require: false
