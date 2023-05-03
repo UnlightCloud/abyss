@@ -10,7 +10,7 @@ jobs:
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.6.8
+        ruby-version: 3.2.2
         bundler-cache: true
     - name: Run Lint
       run: bundle exec rubocop -P
@@ -40,7 +40,7 @@ jobs:
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.6.8
+        ruby-version: 3.2.2
         bundler-cache: true
     - name: Prepare Database
       run: bundle exec rake db:migrate

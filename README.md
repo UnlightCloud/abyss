@@ -13,7 +13,7 @@ More information please reference ours [developer document](https://docs.unlight
 
 ## Requirement
 
-* Ruby 2.6.8
+* Ruby 3.2.2
 * MySQL 8.0
 * Memcached
 * SQLite (for development)

@@ -1,5 +1,5 @@
 ARG UNLIGHT_HOME=/opt/unlight
-ARG RUBY_VERSION=2.6.8
+ARG RUBY_VERSION=3.2.2
 
 # Pre-compile Gems
 FROM ruby:${RUBY_VERSION}-alpine AS gem
