@@ -1,11 +1,9 @@
 Dawn Server
 ===
-![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/openunlight/dawn-ce)
-![Docker Image Version (latest semver)](https://img.shields.io/docker/v/openunlight/dawn-ce?sort=semver)
-[![Build Status](https://github.com/open-unlight/dawn-ce/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/open-unlight/dawn-ce/actions)
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fopen-unlight%2Fdawn-ce.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fopen-unlight%2Fdawn-ce?ref=badge_shield)
-[![Maintainability](https://api.codeclimate.com/v1/badges/3e1d368e98780957e572/maintainability)](https://codeclimate.com/github/open-unlight/dawn-ce/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/3e1d368e98780957e572/test_coverage)](https://codeclimate.com/github/open-unlight/dawn-ce/test_coverage)
+
+[![Test](https://github.com/UnlightCloud/abyss/actions/workflows/main.yml/badge.svg)](https://github.com/UnlightCloud/abyss/actions/workflows/main.yml)
+[![Maintainability](https://api.codeclimate.com/v1/badges/0b9b05fdca13833dcfcb/maintainability)](https://codeclimate.com/github/UnlightCloud/abyss/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/0b9b05fdca13833dcfcb/test_coverage)](https://codeclimate.com/github/UnlightCloud/abyss/test_coverage)
 
 This is the Unlight server maintenance by [Open Unlight](https://unlight.app) and based the CPA's [Unlight](https://github.com/unlightcpa/Unlight/) server.
 
@@ -142,6 +140,3 @@ If you are interested to contribute to this project, we are welcome to see you [
 ## License
 
 This server is available as open source under the terms of the [Apache 2.0 License](https://opensource.org/licenses/Apache2.0).
-
-
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fopen-unlight%2Fdawn-ce.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fopen-unlight%2Fdawn-ce?ref=badge_large)
