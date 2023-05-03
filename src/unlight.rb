@@ -31,7 +31,6 @@ require_relative '../config/initializers/config'
 require_relative '../config/initializers/sentry'
 # TODO: Require necessary library for Game / API mode
 require_relative '../config/initializers/oj'
-require_relative '../config/initializers/pagy'
 require_relative '../config/initializers/logger'
 
 # db_config.rb

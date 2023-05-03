@@ -115,10 +115,3 @@ services:
     command: raid_data -p 12100
     ports:
       - '12100:12100'
-  # API
-  game-api:
-    <<: *image
-    hostname: game-api.lvh.me
-    command: web game_api 9001
-    ports:
-      - '9001:9001'

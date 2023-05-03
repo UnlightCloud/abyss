@@ -17,17 +17,9 @@ gem 'sequel', '~> 5.0'
 gem 'dalli'
 
 # API Server
+gem 'oj'
 gem 'puma', '>= 5.3.1'
 gem 'rack'
-
-# Game API
-gem 'grape'
-gem 'grape-entity'
-gem 'grape-swagger', require: false
-gem 'grape-swagger-entity', require: false
-gem 'oj'
-gem 'pagy'
-gem 'rack-cors'
 
 # Monitor
 gem 'sentry-ruby'
