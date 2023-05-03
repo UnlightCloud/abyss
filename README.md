@@ -2,6 +2,7 @@ Dawn Server
 ===
 
 [![Test](https://github.com/UnlightCloud/abyss/actions/workflows/main.yml/badge.svg)](https://github.com/UnlightCloud/abyss/actions/workflows/main.yml)
+[![Containerize](https://github.com/UnlightCloud/abyss/actions/workflows/containerize.yml/badge.svg)](https://github.com/UnlightCloud/abyss/actions/workflows/containerize.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/0b9b05fdca13833dcfcb/maintainability)](https://codeclimate.com/github/UnlightCloud/abyss/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/0b9b05fdca13833dcfcb/test_coverage)](https://codeclimate.com/github/UnlightCloud/abyss/test_coverage)
 
