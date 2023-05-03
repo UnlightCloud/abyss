@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     RocketAMF (0.2.1)
-    RubyInline (3.12.6)
+    RubyInline (3.13.0)
       ZenTest (~> 4.3)
     ZenTest (4.12.1)
     activemodel (7.0.4.3)
@@ -210,7 +210,7 @@ PLATFORMS
 
 DEPENDENCIES
   RocketAMF (~> 0.2.1)
-  RubyInline (~> 3.12.4)
+  RubyInline (~> 3.13.0)
   activesupport
   config
   cucumber

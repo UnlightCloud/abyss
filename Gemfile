@@ -29,7 +29,7 @@ gem 'activesupport'
 gem 'config'
 gem 'gmp'
 gem 'rake'
-gem 'RubyInline', '~> 3.12.4'
+gem 'RubyInline', '~> 3.13.0'
 gem 'semantic_logger'
 
 group :build do
