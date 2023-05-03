@@ -6,12 +6,12 @@ FROM ruby:${RUBY_VERSION}-alpine AS gem
 
 RUN apk --update \
         add --no-cache \
-        build-base=~0.5 \
-        ca-certificates=~20191127 \
-        zlib-dev=~1.2 \
-        openssl-dev=~1.1.1 \
-        mariadb-dev=~10.5 \
-        mariadb-client=~10.5
+        build-base \
+        ca-certificates \
+        zlib-dev \
+        openssl-dev \
+        mariadb-dev \
+        mariadb-client
 
 # Setup Application
 ARG UNLIGHT_HOME
@@ -45,11 +45,11 @@ FROM ruby:${RUBY_VERSION}-alpine
 
 RUN apk --update \
         add --no-cache \
-        gcc=~10.3 \
-        libc-dev=~0.7 \
-        ca-certificates=~20191127 \
-        zlib=~1.2 \
-        mariadb-connector-c=~3.1
+        gcc \
+        libc-dev \
+        ca-certificates \
+        zlib \
+        mariadb-connector-c
 
 ARG UNLIGHT_HOME
 ENV UNLIGHT_HOME=${UNLIGHT_HOME}
