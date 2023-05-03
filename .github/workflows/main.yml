@@ -1,10 +1,13 @@
-name: dawn
+name: Test
 
-on: [push,pull_request]
+on:
+  - push
+  - pull_request
 
 jobs:
-  lint:
+  rubocop:
     runs-on: ubuntu-latest
+    name: rubocop
     steps:
     - uses: actions/checkout@v3
     - name: Set up Ruby
@@ -18,7 +21,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        command: ["bundle exec rspec", "bundle exec cucumber"]
+        command:
+          - rspec
+          - cucumber
     name: ${{ matrix.command }}
     services:
       mysql:
@@ -47,8 +52,8 @@ jobs:
       env:
         MEMCACHED_HOST: "127.0.0.1:${{ job.services.memcached.ports['11211'] }}"
         DATABASE_URL: "mysql2://unlight:unlight@127.0.0.1:${{ job.services.mysql.ports['3306'] }}/unlight_db?encoding=utf8"
-    - name: Run Test
-      run: ${{ matrix.command }}
+    - name: Run ${{ matrix.command }}
+      run: bundle exec ${{ matrix.command }}
       env:
         CUCUMBER_PUBLISH_QUIET: 'true'
         MEMCACHED_HOST: "127.0.0.1:${{ job.services.memcached.ports['11211'] }}"
