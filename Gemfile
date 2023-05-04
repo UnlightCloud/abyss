@@ -47,6 +47,7 @@ end
 
 group :development do
   gem 'dotenv'
+  gem 'ruby-lsp', require: false
 
   gem 'overcommit', require: false
 

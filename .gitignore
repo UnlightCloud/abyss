@@ -33,3 +33,6 @@ tags
 config/settings.local.yml
 config/settings/*.local.yml
 config/environments/*.local.yml
+
+# RBS
+.gem_rbs_collection/
