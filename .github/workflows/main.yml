@@ -58,7 +58,7 @@ jobs:
     - name: Run ${{ matrix.command }}
       run: bundle exec ${{ matrix.command }}
       env:
-        CUCUMBER_PUBLISH_QUIET: 'true'
+        CUCUMBER_PUBLISH_TOKEN: ${{ secrets.CUCUMBER_PUBLISH_TOKEN }}
         MEMCACHED_HOST: "127.0.0.1:${{ job.services.memcached.ports['11211'] }}"
         DATABASE_URL: "mysql2://unlight:unlight@127.0.0.1:${{ job.services.mysql.ports['3306'] }}/unlight_db?encoding=utf8"
     - name: Archive RSpec coverage report

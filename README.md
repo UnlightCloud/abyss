@@ -5,6 +5,7 @@ Dawn Server
 [![Containerize](https://github.com/UnlightCloud/abyss/actions/workflows/containerize.yml/badge.svg)](https://github.com/UnlightCloud/abyss/actions/workflows/containerize.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/0b9b05fdca13833dcfcb/maintainability)](https://codeclimate.com/github/UnlightCloud/abyss/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/0b9b05fdca13833dcfcb/test_coverage)](https://codeclimate.com/github/UnlightCloud/abyss/test_coverage)
+[![CucumberReports: UnlightCloud/Abyss](https://messages.cucumber.io/api/report-collections/78b91caa-5111-4e8b-beca-3df0601f4f86/badge)](https://reports.cucumber.io/report-collections/78b91caa-5111-4e8b-beca-3df0601f4f86)
 
 This is the Unlight server maintenance by [Open Unlight](https://unlight.app) and based the CPA's [Unlight](https://github.com/unlightcpa/Unlight/) server.
 
