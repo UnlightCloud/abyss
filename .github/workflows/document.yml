@@ -36,9 +36,9 @@ jobs:
     - name: Run yard
       run: yard
     - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: ./doc
+      uses: actions/upload-pages-artifact@v1
+      with:
+        path: ./doc
 
   publish:
     environment:
