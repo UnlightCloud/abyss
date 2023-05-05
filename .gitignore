@@ -34,5 +34,9 @@ config/settings.local.yml
 config/settings/*.local.yml
 config/environments/*.local.yml
 
+# Yard
+.yardoc/
+doc/
+
 # RBS
 .gem_rbs_collection/

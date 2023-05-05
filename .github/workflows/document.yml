@@ -1,0 +1,52 @@
+name: Document
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+env:
+  RUBY_VERSION: 3.2.2
+
+jobs:
+  yard:
+    runs-on: ubuntu-latest
+    name: rubocop
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ env.RUBY_VERSION }}
+        bundler-cache: true
+    - name: Cache Yard
+      id: cache-yard
+      uses: actions/cache@v3
+      with:
+        path: .yardoc
+    - name: Run yard
+      run: yard
+    - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./doc
+
+  publish:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: yard
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
