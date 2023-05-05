@@ -35,8 +35,8 @@ jobs:
         key: ${{ runner.os }}-yard
     - name: Install yard
       run: gem install yard
-    - name: Run yard
-      run: yard
+    - name: Run yardoc
+      run: yardoc
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v1
       with:
