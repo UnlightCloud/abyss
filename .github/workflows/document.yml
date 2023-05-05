@@ -33,6 +33,8 @@ jobs:
       with:
         path: .yardoc
         key: ${{ runner.os }}-yard
+    - name: Install yard
+      run: gem install yard
     - name: Run yard
       run: yard
     - name: Upload artifact
