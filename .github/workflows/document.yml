@@ -32,6 +32,7 @@ jobs:
       uses: actions/cache@v3
       with:
         path: .yardoc
+        key: ${{ runner.os }}-yard
     - name: Run yard
       run: yard
     - name: Upload artifact
