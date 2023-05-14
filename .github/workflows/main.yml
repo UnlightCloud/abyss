@@ -18,8 +18,20 @@ jobs:
       with:
         ruby-version: ${{ env.RUBY_VERSION }}
         bundler-cache: true
-    - name: Run Lint
+    - name: Run rubocop
       run: bundle exec rubocop -P
+  steep:
+    runs-on: ubuntu-latest
+    name: steep
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ env.RUBY_VERSION }}
+        bundler-cache: true
+    - name: Run steep
+      run: bundle exec steep check
   test:
     runs-on: ubuntu-latest
     strategy:
