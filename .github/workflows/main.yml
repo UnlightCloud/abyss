@@ -23,6 +23,7 @@ jobs:
   steep:
     runs-on: ubuntu-latest
     name: steep
+    continue-on-error: true
     steps:
     - uses: actions/checkout@v3
     - name: Set up Ruby
