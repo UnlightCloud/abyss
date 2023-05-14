@@ -1,0 +1,6 @@
+module Unlight
+end
+
+module Unlight::QuestController
+  include Unlight::DuelController
+end

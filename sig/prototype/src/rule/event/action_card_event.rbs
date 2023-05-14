@@ -1,0 +1,61 @@
+module Unlight
+end
+
+Unlight::ACTION_EVENT_NO: untyped
+
+class Unlight::DealedEvent < EventRule
+end
+
+class Unlight::ThrowedEvent < EventRule
+end
+
+class Unlight::DropedEvent < EventRule
+end
+
+class Unlight::OccurChanceEvent < EventRule
+end
+
+class Unlight::OccurHealEvent < EventRule
+end
+
+class Unlight::OccurDamageEvent < EventRule
+end
+
+class Unlight::OccurCureEvent < EventRule
+end
+
+class Unlight::OccurCurseEvent < EventRule
+end
+
+class Unlight::OccurChaliceEvent < EventRule
+end
+
+class Unlight::OccurPoisonEvent < EventRule
+end
+
+class Unlight::OccurDefeatEvent < EventRule
+end
+
+class Unlight::OccurIdeaEvent < EventRule
+end
+
+class Unlight::ChanceEvent < EventRule
+end
+
+class Unlight::HealEvent < EventRule
+end
+
+class Unlight::DamageEvent < EventRule
+end
+
+class Unlight::CureEvent < EventRule
+end
+
+class Unlight::CurseEvent < EventRule
+end
+
+class Unlight::ChaliceEvent < EventRule
+end
+
+class Unlight::PoisonEvent < EventRule
+end

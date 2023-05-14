@@ -1,0 +1,6 @@
+module Unlight
+end
+
+# 必要カードの必要カード情報を構成するクラス
+class Unlight::CharaCardRequirement < Sequel::Model
+end

@@ -1,0 +1,6 @@
+module Avatars
+end
+
+module Avatars::Quest
+  extend ActiveSupport::Concern
+end

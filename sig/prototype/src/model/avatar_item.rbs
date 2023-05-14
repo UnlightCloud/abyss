@@ -1,0 +1,12 @@
+module Unlight
+end
+
+# アバターアイテムクラス
+class Unlight::AvatarItem < Sequel::Model
+end
+
+Unlight::Unlight::AvatarItem::ITEM_DURATION_BASE: untyped
+
+Unlight::Unlight::AvatarItem::ITEM_EFFECTS: untyped
+
+Unlight::Unlight::AvatarItem::USE_QUEST_MAP_NO_METHOD: untyped

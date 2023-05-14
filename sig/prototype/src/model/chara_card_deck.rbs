@@ -1,0 +1,9 @@
+module Unlight
+end
+
+# キャラカードデッキクラス
+class Unlight::CharaCardDeck < Sequel::Model
+end
+
+class Unlight::Unlight::CharaCardDeck::Cost
+end

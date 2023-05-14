@@ -1,0 +1,6 @@
+module Unlight
+end
+
+# アバターの保持クエスト
+class Unlight::AvatarQuestInventory < Sequel::Model
+end

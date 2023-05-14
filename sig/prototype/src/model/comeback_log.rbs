@@ -1,0 +1,6 @@
+module Unlight
+end
+
+# カムバックログ
+class Unlight::ComebackLog < Sequel::Model
+end

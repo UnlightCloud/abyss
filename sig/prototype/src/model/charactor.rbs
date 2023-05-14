@@ -1,0 +1,6 @@
+module Unlight
+end
+
+# キャラクター本体のデータ
+class Unlight::Charactor < Sequel::Model
+end

@@ -1,0 +1,12 @@
+module Unlight
+end
+
+# キャラクタークラス
+class Unlight::CharaCard < Sequel::Model
+end
+
+Unlight::Unlight::CharaCard::STATE_CONTROL: untyped
+
+Unlight::Unlight::CharaCard::IRREMEDIABLE_STATE: untyped
+
+Unlight::Unlight::CharaCard::HAS_PILOTS: untyped

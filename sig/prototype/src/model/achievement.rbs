@@ -1,0 +1,16 @@
+module Unlight
+end
+
+# キャラクター本体のデータ
+class Unlight::Achievement < Sequel::Model
+end
+
+Unlight::Unlight::Achievement::CONDITION_SET: untyped
+
+Unlight::Unlight::Achievement::CHARA_CARD_CHECK_SHIFT_BIT: untyped
+
+Unlight::Unlight::Achievement::CHARA_CARD_CHECK_COMP_NUM: untyped
+
+Unlight::Unlight::Achievement::ITEM_SET_CALC_CHECK_SHIFT_BIT: untyped
+
+Unlight::Unlight::Achievement::ITEM_SET_CALC_CHECK_COMP_NUM: untyped

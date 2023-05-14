@@ -1,0 +1,11 @@
+# db_config.rb
+module Unlight
+end
+
+Unlight::MEMCACHE_CONFIG: untyped
+
+Unlight::MEMCACHE_OPTIONS: untyped
+
+# メモリリークチェック用関数
+module Unlight
+end

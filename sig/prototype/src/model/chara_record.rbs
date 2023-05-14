@@ -1,0 +1,6 @@
+module Unlight
+end
+
+# キャラクターとのアバターとの関係データ
+class Unlight::CharaRecord < Sequel::Model
+end

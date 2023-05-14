@@ -1,0 +1,7 @@
+module Unlight
+end
+
+# Duel部分のコントローラ
+# Duelが必要な他のコントローラにMIXINして使う
+module Unlight::DuelController
+end

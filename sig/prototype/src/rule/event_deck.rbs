@@ -1,0 +1,6 @@
+module Unlight
+end
+
+# イベントデッキクラス
+class Unlight::EventDeck < Deck
+end

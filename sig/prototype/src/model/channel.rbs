@@ -1,0 +1,6 @@
+module Unlight
+end
+
+# ゲームロビーのチャンネルクラス
+class Unlight::Channel < Sequel::Model
+end

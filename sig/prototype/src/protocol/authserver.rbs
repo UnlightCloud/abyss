@@ -1,0 +1,8 @@
+module Unlight
+end
+
+module Unlight::Protocol
+end
+
+class Unlight::Unlight::Protocol::AuthServer < ULServer
+end

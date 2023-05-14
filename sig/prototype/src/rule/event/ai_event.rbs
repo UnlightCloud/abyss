@@ -1,0 +1,82 @@
+module Unlight
+end
+
+Unlight::AI_WAIT_TIME: untyped
+
+# ===========================
+# 更新関数定義
+# ===========================
+class Unlight::OneToOneAi < EventRule
+end
+
+class Unlight::WaitingAction < EventRule
+end
+
+class Unlight::ChoiceMoveCardAction < EventRule
+end
+
+class Unlight::ChoiceAttackCardAction < EventRule
+end
+
+class Unlight::ChoiceDeffenceCardAction < EventRule
+end
+
+class Unlight::ChoiceCharaCardAction < EventRule
+end
+
+class Unlight::DropChanceCardAction < EventRule
+end
+
+class Unlight::DropMoveCardAction < EventRule
+end
+
+class Unlight::DropAttackCardAction < EventRule
+end
+
+class Unlight::DropDeffenceCardAction < EventRule
+end
+
+class Unlight::SetCharaCardAction < EventRule
+end
+
+class Unlight::DoneInitAction < EventRule
+end
+
+class Unlight::DoneAttackAction < EventRule
+end
+
+class Unlight::DoneDeffenceAction < EventRule
+end
+
+class Unlight::MoveFeatHandSetAction < EventRule
+end
+
+class Unlight::AttackFeatHandSetAction < EventRule
+end
+
+class Unlight::DeffenceFeatHandSetAction < EventRule
+end
+
+class Unlight::ResetThinkNumAction < EventRule
+end
+
+# ===========================
+# 判定定義
+# ===========================
+class Unlight::DecisionFeatAction < EventRule
+end
+
+class Unlight::DecisionDistAction < EventRule
+end
+
+class Unlight::DecisionAttackAction < EventRule
+end
+
+class Unlight::DecisionDeffenceAction < EventRule
+end
+
+class Unlight::DecisionCharaChangeAction < EventRule
+end
+
+class Unlight::FinishGameEvent < EventRule
+end

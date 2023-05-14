@@ -1,0 +1,5 @@
+module Unlight
+end
+
+module Unlight::LobbyController
+end

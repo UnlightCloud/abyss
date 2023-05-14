@@ -1,0 +1,207 @@
+#
+# クライアント共有定数モジュール
+#
+module Unlight
+end
+
+Unlight::LEVEL_EXP_TABLE: untyped
+
+Unlight::LEVEL_ENG_BOUNUS: untyped
+
+Unlight::LEVEL_FRND_BOUNUS: untyped
+
+Unlight::DECK_LEVEL_EXP_TABLE: untyped
+
+Unlight::SC_LEVEL_EXP_TABLE: untyped
+
+Unlight::CC_KIND_CHARA: untyped
+
+Unlight::CC_KIND_MONSTAR: untyped
+
+Unlight::CC_KIND_COIN: untyped
+
+Unlight::CC_KIND_TIPS: untyped
+
+Unlight::CC_KIND_EX_COIN: untyped
+
+Unlight::CC_KIND_EX_TIPS: untyped
+
+Unlight::CC_KIND_BOSS_MONSTAR: untyped
+
+Unlight::CC_KIND_PROFOUND_BOSS: untyped
+
+Unlight::CC_KIND_REBORN_CHARA: untyped
+
+Unlight::CC_KIND_ORB: untyped
+
+Unlight::CC_KIND_ARTIFACT: untyped
+
+Unlight::CC_KIND_RARE_MONSTER: untyped
+
+Unlight::CC_KIND_RENTAL: untyped
+
+Unlight::CC_KIND_EPISODE: untyped
+
+Unlight::CC_ID_OFFSET_REBORN: untyped
+
+Unlight::CHARACTOR_ID_OFFSET_REBORN: untyped
+
+Unlight::APT_B_BODY: untyped
+
+Unlight::APT_B_EYE: untyped
+
+Unlight::APT_B_MOUTH: untyped
+
+Unlight::APT_B_HAIR: untyped
+
+Unlight::APT_C_TOP: untyped
+
+Unlight::APT_C_BOTTOM: untyped
+
+Unlight::APT_C_DRESS: untyped
+
+Unlight::APT_C_SHOES: untyped
+
+Unlight::APT_A_HEAD: untyped
+
+Unlight::APT_A_ARAMS: untyped
+
+Unlight::APT_A_FACE: untyped
+
+Unlight::APT_BODY: untyped
+
+Unlight::APT_CLOTHES: untyped
+
+Unlight::APT_ACCESSORY: untyped
+
+Unlight::AP_INV_MAX: untyped
+
+Unlight::APS_USED: untyped
+
+Unlight::APS_ACTIVATED: untyped
+
+Unlight::CDT_DUEL: untyped
+
+Unlight::CDT_QUEST: untyped
+
+Unlight::CDS_NONE: untyped
+
+Unlight::CDS_QUEST: untyped
+
+Unlight::CDS_SERCH: untyped
+
+Unlight::CDS_RAID: untyped
+
+Unlight::FR_ST_OTHER_CONFIRM: untyped
+
+Unlight::FR_ST_MINE_CONFIRM: untyped
+
+Unlight::FR_ST_FRIEND: untyped
+
+Unlight::FR_ST_BLOCK: untyped
+
+Unlight::FR_ST_BLOCKED: untyped
+
+Unlight::FR_ST_ONLY_SNS: untyped
+
+Unlight::FR_ST_LOGIN: untyped
+
+Unlight::ITEM_USING_QUEST_MAX_UP: untyped
+
+Unlight::ITEM_USING_AP_RECOVERY_UP: untyped
+
+Unlight::ITEM_USING_BINDER_MAX_UP: untyped
+
+Unlight::ITEM_USING_EXP_UP: untyped
+
+Unlight::ITEM_USING_PARTS_MAX_UP: untyped
+
+Unlight::AVATAR_LEVEL_UP_INFO: untyped
+
+Unlight::RANK_NONE: untyped
+
+Unlight::RANK_UP: untyped
+
+Unlight::RANK_DOWN: untyped
+
+Unlight::RANK_S_UP: untyped
+
+Unlight::RANK_S_DOWN: untyped
+
+Unlight::RANK_TYPE_WD: untyped
+
+Unlight::RANK_TYPE_TD: untyped
+
+Unlight::RANK_TYPE_WQ: untyped
+
+Unlight::RANK_TYPE_TQ: untyped
+
+Unlight::RANK_TYPE_TE: untyped
+
+Unlight::RANK_TYPE_TV: untyped
+
+Unlight::RANK_SUPER_DIFF: untyped
+
+Unlight::SHOP_ITEM: untyped
+
+Unlight::SHOP_PART: untyped
+
+Unlight::SHOP_EVENT_CARD: untyped
+
+Unlight::SHOP_WEAPON_CARD: untyped
+
+Unlight::SHOP_CHARA_CARD: untyped
+
+Unlight::RM_ITEM_STATE_NORMAL: untyped
+
+Unlight::RM_ITEM_STATE_NEW: untyped
+
+Unlight::RM_ITEM_STATE_SALE: untyped
+
+Unlight::RM_ITEM_STATE_RECOMMENDED: untyped
+
+Unlight::RM_ITEM_STATE_NEW_RECOMMENDED: untyped
+
+Unlight::RM_ITEM_STATE_SALE_RECOMMENDED: untyped
+
+Unlight::SALE_TYPE_ROOKIE: untyped
+
+Unlight::SALE_TYPE_TEN: untyped
+
+Unlight::SALE_TYPE_FIFTEEN: untyped
+
+Unlight::SALE_TYPE_TWENTY: untyped
+
+Unlight::SALE_TYPE_THIRTY: untyped
+
+Unlight::SALE_TYPE_FORTY: untyped
+
+Unlight::SALE_TYPE_EVENT: untyped
+
+Unlight::RANDOM_SALE_TIME: untyped
+
+Unlight::RANDOM_SALE_PROBABILITY: untyped
+
+Unlight::ONE_DAY_SALE_TIME: untyped
+
+Unlight::RM_ITEM_DECK_ID: untyped
+
+Unlight::DECK_ITEM_ID: untyped
+
+Unlight::LOT_TYPE_BRONZE: untyped
+
+Unlight::LOT_TYPE_SILVER: untyped
+
+Unlight::LOT_TYPE_GOLD: untyped
+
+Unlight::LOT_TIKECT_NUM: untyped
+
+Unlight::RARE_CARD_TICKET: untyped
+
+Unlight::COPY_TICKET: untyped
+
+Unlight::STAGE_DECK: untyped
+
+Unlight::DECK_COST_CORRECTION_CRITERIA: untyped
+
+Unlight::DECK_COST_CORRECTION_VALUE: untyped

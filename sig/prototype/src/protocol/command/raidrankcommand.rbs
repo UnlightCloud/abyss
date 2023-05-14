@@ -1,0 +1,10 @@
+module Unlight
+end
+
+# RaidRankServerコマンド一覧
+class Unlight::Command
+end
+
+Unlight::Unlight::Command::RECEIVE_COMMANDS: untyped
+
+Unlight::Unlight::Command::SEND_COMMANDS: untyped

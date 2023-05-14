@@ -1,0 +1,249 @@
+# イベント定義
+# dsc:
+#   説明文
+#     "説明"
+# context:*
+#   実行可能な文脈 （登録した条件の一つでも合致すれば実行）。指定なければ必ず実行。
+#     obj, event, ...
+# guard:*
+#   実行条件 （登録した条件の一つでも合致すれば実行）。指定なければ必ず実行。
+#   ["reciver",:method],...<-配列すべてがTrueの時のみTrue
+# goal:*
+#   終了条件 （登録した条件の一つでも成功すれば成功）。指定なければ必ず終了。Hookの場合は逆に終了しない。
+#   ["reciver",:method],...<-配列すべてがTrueの時のみTrue
+# type:
+#   関数はいつ実行されるのか
+#   直ちに実行           type=>:instant < default
+#   なにかの前に行われる type=>:before, :obj=>"reciver", :hook=>:method ,:priority =>0
+#   なにかの後に行われ   type=>:after, :obj=>"reciver", :hook=>:method,:priority =>0
+#   なにかを置き換える   type=>:proxy, :obj=>"reciver", :hook=>:method
+#   (priorityは値の低い順に実行される。使用可能なのは整数のみ)
+# duration:
+#   終了しない場合どれくらい続くか？(Hook系のイベントには使用できない)
+#   終わらない       :none <default
+#   複数回           type=>:times, value=>x
+#   秒               type=>:sec, value=>x
+# event: (Hook系のイベントには使用できない)
+#   イベントを発行するか？
+#   実行前     :start
+#   実行後     :finish
+#   発行しない :< default
+# func:
+#   実行関数（hookする関数）
+# act:
+#   追加実行されるイベント
+module Unlight
+end
+
+class Unlight::SetDirectionAction < EventRule
+end
+
+class Unlight::MoveCardAddAction < EventRule
+end
+
+class Unlight::MoveCardRemoveAction < EventRule
+end
+
+class Unlight::MoveCardRotateAction < EventRule
+end
+
+class Unlight::AttackCardAddAction < EventRule
+end
+
+class Unlight::AttackCardRemoveAction < EventRule
+end
+
+class Unlight::AttackCardRotateAction < EventRule
+end
+
+class Unlight::DeffenceCardAddAction < EventRule
+end
+
+class Unlight::DeffenceCardRemoveAction < EventRule
+end
+
+class Unlight::DeffenceCardRotateAction < EventRule
+end
+
+class Unlight::CardRotateAction < EventRule
+end
+
+class Unlight::EventCardRotateAction < EventRule
+end
+
+class Unlight::AddTableAction < EventRule
+end
+
+class Unlight::CharaChangeAction < EventRule
+end
+
+class Unlight::InitDoneAction < EventRule
+end
+
+class Unlight::MoveDoneAction < EventRule
+end
+
+class Unlight::FinishMovePhaseAction < EventRule
+end
+
+class Unlight::AttackDoneAction < EventRule
+end
+
+class Unlight::DeffenceDoneAction < EventRule
+end
+
+class Unlight::ChangeDoneAction < EventRule
+end
+
+class Unlight::MoveAction < EventRule
+end
+
+class Unlight::HideMoveAction < EventRule
+end
+
+class Unlight::MoveCardAddSuccesEvent < EventRule
+end
+
+class Unlight::BattleCardAddSuccesEvent < EventRule
+end
+
+class Unlight::DamagedEvent < EventRule
+end
+
+class Unlight::DetermineDamageEvent < EventRule
+end
+
+class Unlight::ReviveEvent < EventRule
+end
+
+class Unlight::ConstraintEvent < EventRule
+end
+
+class Unlight::SetDamageLogEvent < EventRule
+end
+
+class Unlight::PartyDamagedEvent < EventRule
+end
+
+class Unlight::HealedEvent < EventRule
+end
+
+class Unlight::HitPointChangedEvent < EventRule
+end
+
+class Unlight::PartyHealedEvent < EventRule
+end
+
+class Unlight::CuredEvent < EventRule
+end
+
+class Unlight::SealedEvent < EventRule
+end
+
+class Unlight::UsedCardsEvent < EventRule
+end
+
+class Unlight::DealdEvent < EventRule
+end
+
+class Unlight::UseActionCardEvent < EventRule
+end
+
+class Unlight::DiscardEvent < EventRule
+end
+
+class Unlight::DiscardTableEvent < EventRule
+end
+
+class Unlight::PointUpdateEvent < EventRule
+end
+
+class Unlight::PointRewriteEvent < EventRule
+end
+
+class Unlight::SpecialDealedEvent < EventRule
+end
+
+class Unlight::GraveDealedEvent < EventRule
+end
+
+class Unlight::StealDealedEvent < EventRule
+end
+
+class Unlight::SpecialEventCardDealedEvent < EventRule
+end
+
+class Unlight::UpdateCardValueEvent < EventRule
+end
+
+class Unlight::DiceRollEvent < EventRule
+end
+
+class Unlight::UpdateWeaponEvent < EventRule
+end
+
+class Unlight::BattlePhaseInitEvent < EventRule
+end
+
+class Unlight::CardsMaxUpdateEvent < EventRule
+end
+
+class Unlight::DuelBonusEvent < EventRule
+end
+
+class Unlight::SpecialMessageEvent < EventRule
+end
+
+class Unlight::DuelMessageEvent < EventRule
+end
+
+class Unlight::AttributeRegistMessageEvent < EventRule
+end
+
+class Unlight::SetTurnEvent < EventRule
+end
+
+class Unlight::MovePhaseInitEvent < EventRule
+end
+
+class Unlight::UpdateTrapEvent < EventRule
+end
+
+class Unlight::TrapActionEvent < EventRule
+end
+
+class Unlight::TrapUpdateEvent < EventRule
+end
+
+class Unlight::DiceAttributeRegistEvent < EventRule
+end
+
+class Unlight::SetFieldStatusEvent < EventRule
+end
+
+class Unlight::SetInitiativeEvent < EventRule
+end
+
+class Unlight::CardLockEvent < EventRule
+end
+
+class Unlight::ClearCardLocksEvent < EventRule
+end
+
+# ===========================
+# 計算定義
+# ===========================
+class Unlight::BpCalcResolve < EventRule
+end
+
+class Unlight::DpCalcResolve < EventRule
+end
+
+class Unlight::MpCalcResolve < EventRule
+end
+
+class Unlight::AlterMpEvent < EventRule
+end
+
+class Unlight::MpEvaluationEvent < EventRule
+end

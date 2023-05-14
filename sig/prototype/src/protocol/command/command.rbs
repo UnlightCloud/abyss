@@ -1,0 +1,18 @@
+module Unlight
+end
+
+class Unlight::Command
+end
+
+Unlight::Unlight::Command::OUTPUT_EVAL: untyped
+
+Unlight::Unlight::Command::TYPE_DECODE_METHODS: untyped
+
+class TrueClass
+end
+
+class FalseClass
+end
+
+class NilClass
+end

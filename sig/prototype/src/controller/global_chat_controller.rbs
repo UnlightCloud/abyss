@@ -1,0 +1,15 @@
+module Unlight
+end
+
+module Unlight::GlobalChatController
+end
+
+Unlight::Unlight::GlobalChatController::HELP_CACHE_TTL: untyped
+
+Unlight::Unlight::GlobalChatController::HELP_SEND_SET_NUM: untyped
+
+Unlight::Unlight::GlobalChatController::HELP_SEND_SET_CNT_MAX: untyped
+
+Unlight::Unlight::GlobalChatController::HELP_SEND_SET_CNT_MIN: untyped
+
+Unlight::Unlight::GlobalChatController::HELP_SEND_SET_FRACTION_POW: untyped

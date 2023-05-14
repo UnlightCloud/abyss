@@ -1,0 +1,6 @@
+# TODO: Remove after Dawn::Application is ready
+module Dawn
+end
+
+class Dawn::Bootstrap
+end

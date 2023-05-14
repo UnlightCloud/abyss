@@ -1,0 +1,11 @@
+module Unlight
+end
+
+module Unlight::ChatController
+end
+
+Unlight::Unlight::ChatController::CHAT_CHANNEL_NAME: untyped
+
+Unlight::Unlight::ChatController::CHAT_CHANNEL_DUEL: untyped
+
+Unlight::Unlight::ChatController::CHAT_CHANNEL_WATCH: untyped

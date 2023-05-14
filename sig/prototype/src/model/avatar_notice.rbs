@@ -1,0 +1,6 @@
+module Unlight
+end
+
+# ゲームセッションログ
+class Unlight::AvatarNotice < Sequel::Model
+end

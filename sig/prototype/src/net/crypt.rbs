@@ -1,0 +1,15 @@
+module Unlight
+end
+
+# 暗号化クラス
+class Unlight::Crypt
+end
+
+# 単純なXOR処理を行うクラス
+class Unlight::Unlight::Crypt::XOR
+  alias decrypt encrypt
+end
+
+# 暗号化をしない
+class Unlight::Unlight::Crypt::None
+end

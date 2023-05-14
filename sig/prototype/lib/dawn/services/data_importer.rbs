@@ -1,0 +1,10 @@
+module Dawn
+end
+
+# Import Game Data
+#
+# @since 0.1.0
+class Dawn::DataImporter
+end
+
+Dawn::Dawn::DataImporter::LANGUAGE_SET: untyped

@@ -1,0 +1,10 @@
+module Dawn
+end
+
+# Export Game Data for Client
+#
+# @since 0.1.0
+class Dawn::ClientDataGenerator
+end
+
+Dawn::Dawn::ClientDataGenerator::MODELS: untyped

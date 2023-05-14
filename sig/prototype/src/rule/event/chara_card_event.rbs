@@ -1,0 +1,8593 @@
+module Unlight
+end
+
+Unlight::CHARA_PASSIVE_SKILL_EVENT_NO: untyped
+
+class Unlight::CheckAdditionalDrawPassiveEvent < EventRule
+end
+
+class Unlight::FinishAdditionalDrawPassiveEvent < EventRule
+end
+
+class Unlight::CheckIndomitableMindPassiveEvent < EventRule
+end
+
+class Unlight::CheckIndomitableMindPassiveChangeEvent < EventRule
+end
+
+class Unlight::UseIndomitableMindPassiveDamageEvent < EventRule
+end
+
+class Unlight::FinishIndomitableMindPassiveEvent < EventRule
+end
+
+class Unlight::FinishIndomitableMindPassiveDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckDrainSoulPassiveEvent < EventRule
+end
+
+class Unlight::FinishDrainSoulPassiveEvent < EventRule
+end
+
+class Unlight::CheckSealingAttackPassiveEvent < EventRule
+end
+
+class Unlight::CheckSealingAttackPassiveChangeEvent < EventRule
+end
+
+class Unlight::FinishSealingAttackPassiveEvent < EventRule
+end
+
+class Unlight::CheckInstantKillGuardPassiveStartTurnEvent < EventRule
+end
+
+class Unlight::CheckRageAgainstPassiveStartEvent < EventRule
+end
+
+class Unlight::CheckRageAgainstPassiveCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckRageAgainstPassiveDeadChangeEvent < EventRule
+end
+
+class Unlight::FinishRageAgainstPassiveEvent < EventRule
+end
+
+class Unlight::OnRageAgainstEvent < EventRule
+end
+
+class Unlight::CheckCreatorPassiveStartTurnEvent < EventRule
+end
+
+class Unlight::FinishCreatorPassiveCharaChangeEvent < EventRule
+end
+
+class Unlight::FinishCreatorPassiveDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckCreatorPassiveCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckCreatorPassiveDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::FinishCreatorPassiveFinishTurnEvent < EventRule
+end
+
+class Unlight::UseCreatorPassiveDamageEvent < EventRule
+end
+
+class Unlight::UseCreatorPassiveDetermineBpPhaseEvent < EventRule
+end
+
+class Unlight::UseCreatorPassiveBattleResultPhaseEvent < EventRule
+end
+
+class Unlight::TestCreatorPassiveCharaChangeEvent < EventRule
+end
+
+class Unlight::UseCreatorPassiveDetermineMovePhaseEvent < EventRule
+end
+
+class Unlight::UseCreatorPassiveMovePhaseEvent < EventRule
+end
+
+class Unlight::CheckBounceBackPassiveEvent < EventRule
+end
+
+class Unlight::CheckBounceBackPassiveChangeEvent < EventRule
+end
+
+class Unlight::UseBounceBackPassiveDamageEvent < EventRule
+end
+
+class Unlight::FinishBounceBackPassiveEvent < EventRule
+end
+
+class Unlight::FinishBounceBackPassiveDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckLinkagePassiveStartTurnEvent < EventRule
+end
+
+class Unlight::CheckLinkagePassiveCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckLinkagePassiveDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::UseLiberationPassiveEvent < EventRule
+end
+
+class Unlight::FinishLiberationPassiveEvent < EventRule
+end
+
+class Unlight::FinishLiberationPassiveDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckHardenPassiveEvent < EventRule
+end
+
+class Unlight::UseHardenPassiveDamageEvent < EventRule
+end
+
+class Unlight::FinishHardenPassiveEvent < EventRule
+end
+
+class Unlight::FinishHardenPassiveDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckAbsorpPassiveEvent < EventRule
+end
+
+class Unlight::UseAbsorpPassiveDamageEvent < EventRule
+end
+
+class Unlight::FinishAbsorpPassiveEvent < EventRule
+end
+
+class Unlight::FinishAbsorpPassiveDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckMoondogPassiveEvent < EventRule
+end
+
+class Unlight::CheckMoondogPassiveChangeEvent < EventRule
+end
+
+class Unlight::UseMoondogPassiveEvent < EventRule
+end
+
+class Unlight::FinishMoondogPassiveEvent < EventRule
+end
+
+class Unlight::FinishMoondogPassiveDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckJumpPassiveEvent < EventRule
+end
+
+class Unlight::UseJumpPassiveDamageAfterEvent < EventRule
+end
+
+class Unlight::UseJumpPassiveDamageBeforeEvent < EventRule
+end
+
+class Unlight::UseJumpPassiveDetBpEvent < EventRule
+end
+
+class Unlight::UseJumpPassiveBattleResultBeforeEvent < EventRule
+end
+
+class Unlight::UseJumpPassiveBattleResultAfterEvent < EventRule
+end
+
+class Unlight::FinishJumpPassiveEvent < EventRule
+end
+
+class Unlight::FinishJumpPassiveDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckProtectionAimPassiveEvent < EventRule
+end
+
+class Unlight::CheckProtectionAimPassiveChangeEvent < EventRule
+end
+
+class Unlight::UseProtectionAimPassiveEvent < EventRule
+end
+
+class Unlight::FinishProtectionAimPassiveEvent < EventRule
+end
+
+class Unlight::FinishProtectionAimPassiveDeadCharaChangeEvent < EventRule
+end
+
+# --------------------------------------------------------------------------------------------
+# ミステイク
+class Unlight::CheckMistakePassiveEvent < EventRule
+end
+
+class Unlight::UseMistakePassiveDamageEvent < EventRule
+end
+
+class Unlight::FinishMistakePassiveEvent < EventRule
+end
+
+class Unlight::FinishMistakePassiveDeadCharaChangeEvent < EventRule
+end
+
+# --------------------------------------------------------------------------------------------
+# 状態抵抗 妖蛆
+class Unlight::CheckStatusResistancePassiveEvent < EventRule
+end
+
+class Unlight::CheckSenkouPassiveEvent < EventRule
+end
+
+class Unlight::UseSenkouPassiveEvent < EventRule
+end
+
+class Unlight::FinishSenkouPassiveEvent < EventRule
+end
+
+class Unlight::FinishSenkouPassiveDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckHatePassiveEvent < EventRule
+end
+
+class Unlight::UseHatePassiveEvent < EventRule
+end
+
+class Unlight::UseHatePassiveDamageEvent < EventRule
+end
+
+class Unlight::FinishHatePassiveEvent < EventRule
+end
+
+class Unlight::FinishHatePassiveDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckLittlePrincessPassiveEvent < EventRule
+end
+
+class Unlight::CheckLittlePrincessChangePassiveEvent < EventRule
+end
+
+class Unlight::UseLittlePrincessPassiveEvent < EventRule
+end
+
+class Unlight::FinishLittlePrincessPassiveEvent < EventRule
+end
+
+class Unlight::FinishLittlePrincessPassiveDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckCrimsonWitchPassiveEvent < EventRule
+end
+
+class Unlight::CheckCrimsonWitchChangePassiveEvent < EventRule
+end
+
+class Unlight::UseCrimsonWitchPassiveEvent < EventRule
+end
+
+class Unlight::FinishCrimsonWitchPassiveEvent < EventRule
+end
+
+class Unlight::FinishCrimsonWitchPassiveDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckAegisPassiveEvent < EventRule
+end
+
+class Unlight::CheckAegisPassiveChangeEvent < EventRule
+end
+
+class Unlight::UseAegisPassiveEvent < EventRule
+end
+
+class Unlight::FinishAegisPassiveEvent < EventRule
+end
+
+class Unlight::FinishAegisPassiveDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckOceanPassiveEvent < EventRule
+end
+
+class Unlight::CheckOceanPassiveChangeEvent < EventRule
+end
+
+class Unlight::CheckOceanPassiveDeadChangeEvent < EventRule
+end
+
+class Unlight::CheckOceanPassiveDamageEvent < EventRule
+end
+
+class Unlight::FinishOceanPassiveEvent < EventRule
+end
+
+# --------------------------------------------------------------------------------------------
+# 状態抵抗 スキュラ
+class Unlight::CheckResistSkyllaPassiveEvent < EventRule
+end
+
+class Unlight::CheckNightFogPassiveEvent < EventRule
+end
+
+class Unlight::UseNightFogPassiveEvent < EventRule
+end
+
+class Unlight::UseNightFogPassiveDamageEvent < EventRule
+end
+
+class Unlight::FinishNightFogPassiveEvent < EventRule
+end
+
+class Unlight::FinishNightFogPassiveDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckDoubleBoddyPassiveEvent < EventRule
+end
+
+class Unlight::CheckDoubleBoddyPassiveChangeEvent < EventRule
+end
+
+class Unlight::UseDoubleBoddyPassiveEvent < EventRule
+end
+
+class Unlight::FinishDoubleBoddyPassiveEvent < EventRule
+end
+
+class Unlight::FinishDoubleBoddyPassiveDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckWitPassiveEvent < EventRule
+end
+
+class Unlight::UseWitPassiveDrawEvent < EventRule
+end
+
+class Unlight::UseWitPassiveEvent < EventRule
+end
+
+class Unlight::FinishWitPassiveEvent < EventRule
+end
+
+class Unlight::CheckCurseCarePassiveEvent < EventRule
+end
+
+class Unlight::CheckCurseCarePassiveChangeEvent < EventRule
+end
+
+class Unlight::RecoverCurseCarePassiveDetBpBfEvent < EventRule
+end
+
+class Unlight::RecoverCurseCarePassiveDetBpAfEvent < EventRule
+end
+
+class Unlight::RecoverCurseCarePassiveDamageBfEvent < EventRule
+end
+
+class Unlight::RecoverCurseCarePassiveDamageAfEvent < EventRule
+end
+
+class Unlight::RecoverCurseCarePassiveLastEvent < EventRule
+end
+
+class Unlight::UseCurseCarePassiveEvent < EventRule
+end
+
+class Unlight::FinishCurseCarePassiveEvent < EventRule
+end
+
+class Unlight::FinishCurseCarePassiveDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckWhiteLightPassiveEvent < EventRule
+end
+
+class Unlight::FinishWhiteLightPassiveEvent < EventRule
+end
+
+class Unlight::CheckCarapaceBreakPassiveEvent < EventRule
+end
+
+class Unlight::CheckCarapaceBreakChangePassiveEvent < EventRule
+end
+
+class Unlight::CheckCarapaceBreakDeadChangePassiveEvent < EventRule
+end
+
+class Unlight::UseCarapaceBreakPassiveEvent < EventRule
+end
+
+class Unlight::FinishCarapaceBreakPassiveEvent < EventRule
+end
+
+class Unlight::FinishCarapaceBreakPassiveDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckCarapacePassiveEvent < EventRule
+end
+
+class Unlight::UseCarapacePassiveEvent < EventRule
+end
+
+class Unlight::FinishCarapacePassiveEvent < EventRule
+end
+
+class Unlight::FinishCarapacePassiveDeadCharaChangeEvent < EventRule
+end
+
+# --------------------------------------------------------------------------------------------
+# 状態抵抗 かめ
+class Unlight::CheckResistKamuyPassiveEvent < EventRule
+end
+
+class Unlight::CheckCharaResistKamuyPassiveEvent < EventRule
+end
+
+class Unlight::RestoreResistKamuyPassiveEvent < EventRule
+end
+
+class Unlight::CheckRevisersPassiveEvent < EventRule
+end
+
+class Unlight::CheckRevisersPassiveChangeEvent < EventRule
+end
+
+class Unlight::CheckRevisersPassiveDeadChangeEvent < EventRule
+end
+
+# --------------------------------------------------------------------------------------------
+# レジストウォール
+class Unlight::CheckResistWallPassiveEvent < EventRule
+end
+
+class Unlight::CheckResistWallPassiveChangeEvent < EventRule
+end
+
+class Unlight::CheckResistWallPassiveDeadChangeEvent < EventRule
+end
+
+class Unlight::CheckResistWallPassiveMoveEvent < EventRule
+end
+
+class Unlight::CheckCurseSignPassiveEvent < EventRule
+end
+
+class Unlight::CheckCurseSignPassiveChangeEvent < EventRule
+end
+
+class Unlight::CheckCurseSignPassiveDeadChangeEvent < EventRule
+end
+
+class Unlight::FinishCurseSignPassiveEvent < EventRule
+end
+
+class Unlight::FinishCurseSignPassiveChangeEvent < EventRule
+end
+
+class Unlight::FinishCurseSignPassiveDeadChangeEvent < EventRule
+end
+
+class Unlight::CheckLoyaltyPassiveEvent < EventRule
+end
+
+class Unlight::CheckLoyaltyPassiveChangeEvent < EventRule
+end
+
+class Unlight::CheckLoyaltyPassiveDeadChangeEvent < EventRule
+end
+
+class Unlight::FinishLoyaltyPassiveEvent < EventRule
+end
+
+class Unlight::FinishLoyaltyPassiveChangeEvent < EventRule
+end
+
+class Unlight::FinishLoyaltyPassiveDeadChangeEvent < EventRule
+end
+
+class Unlight::CheckAimingPlusPassiveEvent < EventRule
+end
+
+class Unlight::CheckAimingPlusPassiveChangeEvent < EventRule
+end
+
+class Unlight::UseAimingPlusPassiveEvent < EventRule
+end
+
+class Unlight::FinishAimingPlusPassiveEvent < EventRule
+end
+
+class Unlight::FinishAimingPlusPassiveDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckEasingCardConditionPassiveEvent < EventRule
+end
+
+class Unlight::CheckEasingCardConditionPassiveChangeEvent < EventRule
+end
+
+class Unlight::CheckEasingCardConditionPassiveDeadChangeEvent < EventRule
+end
+
+class Unlight::CheckHarvestPassiveEvent < EventRule
+end
+
+class Unlight::FinishHarvestPassiveEvent < EventRule
+end
+
+class Unlight::CheckTdPassiveEvent < EventRule
+end
+
+class Unlight::FinishTdPassiveEvent < EventRule
+end
+
+class Unlight::CheckMoonShinePassiveEvent < EventRule
+end
+
+class Unlight::CheckMoonShinePassiveChangeEvent < EventRule
+end
+
+class Unlight::FinishMoonShinePassiveEvent < EventRule
+end
+
+class Unlight::CheckFertilityPassiveEvent < EventRule
+end
+
+class Unlight::FinishFertilityPassivePreEvent < EventRule
+end
+
+class Unlight::FinishFertilityPassiveEvent < EventRule
+end
+
+# --------------------------------------------------------------------------------------------
+# 状態抵抗 クエカボチャ
+class Unlight::CheckResistPumpkinPassiveEvent < EventRule
+end
+
+class Unlight::CheckAwcsPassiveEvent < EventRule
+end
+
+class Unlight::UseAwcsPassiveDamageEvent < EventRule
+end
+
+# --------------------------------------------------------------------------------------------
+# 状態抵抗 DW
+class Unlight::CheckResistDwPassiveEvent < EventRule
+end
+
+class Unlight::CheckLonsbroughEventPassiveEvent < EventRule
+end
+
+class Unlight::CheckLonsbroughEventPassiveChangeEvent < EventRule
+end
+
+class Unlight::CheckLonsbroughEventPassiveDeadChangeEvent < EventRule
+end
+
+class Unlight::UseLonsbroughEventPassiveDamageEvent < EventRule
+end
+
+class Unlight::CheckRockCrusherPassiveEvent < EventRule
+end
+
+class Unlight::CheckRockCrusherChangePassiveEvent < EventRule
+end
+
+class Unlight::CheckRockCrusherDeadChangePassiveEvent < EventRule
+end
+
+class Unlight::UseRockCrusherPassiveEvent < EventRule
+end
+
+class Unlight::FinishRockCrusherPassiveEvent < EventRule
+end
+
+class Unlight::FinishRockCrusherPassiveDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckProjectionPassiveChangeEvent < EventRule
+end
+
+class Unlight::CheckProjectionPassiveDeadChangeEvent < EventRule
+end
+
+class Unlight::FinishProjectionPassiveEvent < EventRule
+end
+
+class Unlight::CheckDamageMultiplierPassiveEvent < EventRule
+end
+
+class Unlight::CheckDamageMultiplierChangePassiveEvent < EventRule
+end
+
+class Unlight::CheckDamageMultiplierDeadChangePassiveEvent < EventRule
+end
+
+class Unlight::UseDamageMultiplierPassiveEvent < EventRule
+end
+
+class Unlight::FinishDamageMultiplierPassiveEvent < EventRule
+end
+
+class Unlight::FinishDamageMultiplierPassiveDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckEv201606PassiveEvent < EventRule
+end
+
+class Unlight::CheckEv201606ChangePassiveEvent < EventRule
+end
+
+class Unlight::CheckEv201606DeadChangePassiveEvent < EventRule
+end
+
+class Unlight::UseEv201606PassiveEvent < EventRule
+end
+
+class Unlight::FinishEv201606PassiveEvent < EventRule
+end
+
+class Unlight::FinishEv201606PassiveDeadCharaChangeEvent < EventRule
+end
+
+# --------------------------------------------------------------------------------------------
+# 状態抵抗 鯉
+class Unlight::CheckStatusResistanceAquamarinePassiveEvent < EventRule
+end
+
+class Unlight::CheckCoolyPassiveEvent < EventRule
+end
+
+class Unlight::CheckCoolyChangePassiveEvent < EventRule
+end
+
+class Unlight::CheckCoolyDeadChangePassiveEvent < EventRule
+end
+
+class Unlight::UseCoolyPassiveMoveEvent < EventRule
+end
+
+class Unlight::UseCoolyPassiveAttackEvent < EventRule
+end
+
+class Unlight::UseCoolyPassiveDefenseEvent < EventRule
+end
+
+# --------------------------------------------------------------------------------------------
+# 状態抵抗 Byakhee
+class Unlight::CheckResistByakheePassiveEvent < EventRule
+end
+
+class Unlight::CheckDisasterFlamePassiveEvent < EventRule
+end
+
+class Unlight::CheckDisasterFlamePassiveChangeEvent < EventRule
+end
+
+class Unlight::FinishDisasterFlamePassiveEvent < EventRule
+end
+
+class Unlight::CheckBramblesCardPassiveEvent < EventRule
+end
+
+class Unlight::CheckBramblesCardPassiveChangeEvent < EventRule
+end
+
+class Unlight::CheckBramblesCardPassiveDeadChangeEvent < EventRule
+end
+
+class Unlight::UseBramblesCardPassiveEvent < EventRule
+end
+
+class Unlight::FinishBramblesCardPassiveEvent < EventRule
+end
+
+class Unlight::CheckAwakeningOnePassiveEvent < EventRule
+end
+
+class Unlight::CheckAwakeningOnePassiveChangeEvent < EventRule
+end
+
+class Unlight::FinishAwakeningOnePassiveEvent < EventRule
+end
+
+class Unlight::CheckServoSkullPassiveEvent < EventRule
+end
+
+class Unlight::CheckServoSkullPassiveChangeEvent < EventRule
+end
+
+class Unlight::UseServoSkullPassiveEvent < EventRule
+end
+
+# 2020-10-08 - Issue#186
+class Unlight::UseServoSkullDefensePassiveEvent < EventRule
+end
+
+class Unlight::FinishServoSkullPassiveEvent < EventRule
+end
+
+class Unlight::FinishServoSkullPassiveDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckEv201612PassiveEvent < EventRule
+end
+
+class Unlight::CheckEv201612ChangePassiveEvent < EventRule
+end
+
+class Unlight::UseEv201612PassiveEvent < EventRule
+end
+
+class Unlight::FinishEv201612PassiveEvent < EventRule
+end
+
+class Unlight::FinishEv201612PassiveDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckHighProtectionPassiveEvent < EventRule
+end
+
+class Unlight::CheckHighProtectionPassiveChangeEvent < EventRule
+end
+
+class Unlight::UseHighProtectionPassiveEvent < EventRule
+end
+
+class Unlight::FinishHighProtectionPassiveEvent < EventRule
+end
+
+class Unlight::FinishHighProtectionPassiveDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckPuppetMasterPassiveEvent < EventRule
+end
+
+class Unlight::CheckPuppetMasterPassiveChangeEvent < EventRule
+end
+
+class Unlight::UsePuppetMasterPassiveEvent < EventRule
+end
+
+class Unlight::FinishPuppetMasterPassiveEvent < EventRule
+end
+
+class Unlight::FinishPuppetMasterPassiveDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckOgreArmPassiveEvent < EventRule
+end
+
+class Unlight::CheckOgreArmChangePassiveEvent < EventRule
+end
+
+class Unlight::UseOgreArmPassiveEvent < EventRule
+end
+
+class Unlight::FinishOgreArmPassiveEvent < EventRule
+end
+
+class Unlight::FinishOgreArmPassiveDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckCrimsonWillPassiveEvent < EventRule
+end
+
+class Unlight::CheckCrimsonWillPassiveChangeEvent < EventRule
+end
+
+class Unlight::UseCrimsonWillPassiveDamageEvent < EventRule
+end
+
+class Unlight::FinishCrimsonWillPassiveEvent < EventRule
+end
+
+class Unlight::FinishCrimsonWillPassiveDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckGuardianOfLifePassiveEvent < EventRule
+end
+
+class Unlight::CheckGuardianOfLifePassiveChangeEvent < EventRule
+end
+
+class Unlight::UseGuardianOfLifePassiveDefenseEvent < EventRule
+end
+
+class Unlight::UseGuardianOfLifePassiveAttackEvent < EventRule
+end
+
+class Unlight::FinishGuardianOfLifePassiveEvent < EventRule
+end
+
+class Unlight::FinishGuardianOfLifePassiveDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckBurningEmbersPassiveEvent < EventRule
+end
+
+class Unlight::CheckBurningEmbersChangePassiveEvent < EventRule
+end
+
+class Unlight::CheckBurningEmbersDeadChangePassiveEvent < EventRule
+end
+
+class Unlight::UseBurningEmbersPassiveMoveEvent < EventRule
+end
+
+class Unlight::UseBurningEmbersPassiveAttackEvent < EventRule
+end
+
+class Unlight::UseBurningEmbersPassiveDefenseEvent < EventRule
+end
+
+class Unlight::UseBurningEmbersPassiveDefenseDetCharaChangeEvent < EventRule
+end
+
+class Unlight::OnPassiveEvent < EventRule
+end
+
+class Unlight::OffPassiveEvent < EventRule
+end
+
+Unlight::CHARA_STATE_EVENT_NO: untyped
+
+class Unlight::CheckPoisonStateEvent < EventRule
+end
+
+class Unlight::FinishPoisonStateEvent < EventRule
+end
+
+class Unlight::CheckPoison2StateEvent < EventRule
+end
+
+class Unlight::FinishPoison2StateEvent < EventRule
+end
+
+class Unlight::CheckParalysisStateEvent < EventRule
+end
+
+class Unlight::FinishParalysisStateEvent < EventRule
+end
+
+class Unlight::CheckAttackUpStateEvent < EventRule
+end
+
+class Unlight::FinishAttackUpStateEvent < EventRule
+end
+
+class Unlight::CheckAttackDownStateEvent < EventRule
+end
+
+class Unlight::FinishAttackDownStateEvent < EventRule
+end
+
+class Unlight::CheckDeffenceUpStateEvent < EventRule
+end
+
+class Unlight::FinishDeffenceUpStateEvent < EventRule
+end
+
+class Unlight::CheckDeffenceDownStateEvent < EventRule
+end
+
+class Unlight::FinishDeffenceDownStateEvent < EventRule
+end
+
+class Unlight::CheckBerserkStateEvent < EventRule
+end
+
+class Unlight::FinishBerserkStateEvent < EventRule
+end
+
+class Unlight::CheckAttackStopStateEvent < EventRule
+end
+
+class Unlight::CheckDeffenceStopStateEvent < EventRule
+end
+
+class Unlight::FinishStopStateEvent < EventRule
+end
+
+class Unlight::CheckSealStateEvent < EventRule
+end
+
+class Unlight::FinishSealStateEvent < EventRule
+end
+
+class Unlight::CheckDeadCountStateEvent < EventRule
+end
+
+class Unlight::FinishDeadCountStateEvent < EventRule
+end
+
+class Unlight::CheckUndeadStateEvent < EventRule
+end
+
+class Unlight::FinishUndeadStateEvent < EventRule
+end
+
+class Unlight::CheckStoneStateEvent < EventRule
+end
+
+class Unlight::FinishStoneStateEvent < EventRule
+end
+
+class Unlight::CheckMoveUpStateEvent < EventRule
+end
+
+class Unlight::FinishMoveUpStateEvent < EventRule
+end
+
+class Unlight::CheckMoveDownStateEvent < EventRule
+end
+
+class Unlight::FinishMoveDownStateEvent < EventRule
+end
+
+class Unlight::CheckRegeneStateEvent < EventRule
+end
+
+class Unlight::FinishRegeneStateEvent < EventRule
+end
+
+class Unlight::CheckBindStateEvent < EventRule
+end
+
+class Unlight::FinishBindStateEvent < EventRule
+end
+
+class Unlight::CheckChaosAttackStateEvent < EventRule
+end
+
+class Unlight::CheckChaosDefenceStateEvent < EventRule
+end
+
+class Unlight::FinishChaosStateEvent < EventRule
+end
+
+class Unlight::CheckStigmataAttackStateEvent < EventRule
+end
+
+class Unlight::CheckStigmataDefenceStateEvent < EventRule
+end
+
+class Unlight::FinishStigmataStateEvent < EventRule
+end
+
+class Unlight::CheckStateDownAttackStateEvent < EventRule
+end
+
+class Unlight::CheckStateDownDefenceStateEvent < EventRule
+end
+
+class Unlight::FinishStateDownStateEvent < EventRule
+end
+
+class Unlight::CheckAttackStickStateEvent < EventRule
+end
+
+class Unlight::CheckDeffenceStickStateEvent < EventRule
+end
+
+class Unlight::FinishStickStateEvent < EventRule
+end
+
+class Unlight::CheckStateDownAttackStateEvent < EventRule
+end
+
+class Unlight::CheckStateDownDefenceStateEvent < EventRule
+end
+
+class Unlight::FinishStateDownStateEvent < EventRule
+end
+
+class Unlight::CheckCurseAttackStateEvent < EventRule
+end
+
+class Unlight::CheckBlessAttackStateEvent < EventRule
+end
+
+class Unlight::CheckBlessDeffenceStateEvent < EventRule
+end
+
+class Unlight::CheckUndead2StateEvent < EventRule
+end
+
+class Unlight::FinishUndead2StateEvent < EventRule
+end
+
+class Unlight::CheckControlStateEvent < EventRule
+end
+
+class Unlight::FinishControlStateEvent < EventRule
+end
+
+# --------------------------------------------------------------------------------------------
+# 暗黒状態
+class Unlight::FinishDarkStateEvent < EventRule
+end
+
+# --------------------------------------------------------------------------------------------
+# 人形状態
+class Unlight::FinishDollStateEvent < EventRule
+end
+
+class Unlight::OnBuffEvent < EventRule
+end
+
+class Unlight::OffBuffEvent < EventRule
+end
+
+class Unlight::UpdateBuffEvent < EventRule
+end
+
+class Unlight::UpdateCatStateEvent < EventRule
+end
+
+Unlight::CHARA_OTHER_EVENT_NO: untyped
+
+class Unlight::ProgressTrapEvent < EventRule
+end
+
+class Unlight::CheckStartedTrapDetBpBeforeEvent < EventRule
+end
+
+class Unlight::CheckStartedTrapDetBpEvent < EventRule
+end
+
+class Unlight::CheckStartedTrapBattleResultEvent < EventRule
+end
+
+class Unlight::CheckStartedTrapDamageEvent < EventRule
+end
+
+class Unlight::CheckStartedTrapFinishMoveEvent < EventRule
+end
+
+class Unlight::CheckStartedTrapDetChangeEvent < EventRule
+end
+
+class Unlight::CheckBarrierStateEvent < EventRule
+end
+
+class Unlight::CheckHarbourEvent < EventRule
+end
+
+class Unlight::CheckFieldStatusDetChangeEvent < EventRule
+end
+
+class Unlight::CheckFieldStatusPlDiceAttrEvent < EventRule
+end
+
+class Unlight::CheckFieldStatusFoeDiceAttrEvent < EventRule
+end
+
+class Unlight::CheckFieldStatusFinishTurnEvent < EventRule
+end
+
+Unlight::CHARA_SPECIAL_STATE_EVENT_NO: untyped
+
+class Unlight::CheckCatStateAttackEvent < EventRule
+end
+
+class Unlight::CheckCatStateDefenceEvent < EventRule
+end
+
+class Unlight::FinishCatStateEvent < EventRule
+end
+
+class Unlight::CheckDealingRestrictionStateEvent < EventRule
+end
+
+class Unlight::FinishDealingRestrictionStateEvent < EventRule
+end
+
+class Unlight::CheckConstraintStateEvent < EventRule
+end
+
+class Unlight::FinishConstraintStateEvent < EventRule
+end
+
+class Unlight::FinishMagneticFieldStateEvent < EventRule
+end
+
+class Unlight::CheckStuffedToysStateDamageEvent < EventRule
+end
+
+class Unlight::FinishStuffedToysStateDamageEvent < EventRule
+end
+
+class Unlight::StuffedToysSetEvent < EventRule
+end
+
+class Unlight::UseMonitoringStateHealBeforeEvent < EventRule
+end
+
+class Unlight::UseMonitoringStateHealAfterEvent < EventRule
+end
+
+class Unlight::UseMonitoringStatePartyHealBeforeEvent < EventRule
+end
+
+class Unlight::UseMonitoringStatePartyHealAfterEvent < EventRule
+end
+
+class Unlight::FinishMonitoringStateEvent < EventRule
+end
+
+class Unlight::FinishTimeLagDrawStateEvent < EventRule
+end
+
+class Unlight::FinishTimeLagBuffStateChangeEvent < EventRule
+end
+
+class Unlight::CheckMachineCellStateEvent < EventRule
+end
+
+class Unlight::UseMachineCellStateEvent < EventRule
+end
+
+class Unlight::FinishMachineCellStateEvent < EventRule
+end
+
+class Unlight::CheckAxGuardStateEvent < EventRule
+end
+
+class Unlight::UseAxGuardStateEvent < EventRule
+end
+
+class Unlight::FinishAxGuardStateEvent < EventRule
+end
+
+Unlight::CHARA_FEAT_EVENT_NO: untyped
+
+class Unlight::CheckAddSmashFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSmashFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSmashFeatEvent < EventRule
+end
+
+class Unlight::UseSmashFeatEvent < EventRule
+end
+
+class Unlight::FinishSmashFeatEvent < EventRule
+end
+
+class Unlight::CheckAddBloodyHowlFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBloodyHowlFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBloodyHowlFeatEvent < EventRule
+end
+
+class Unlight::UseBloodyHowlFeatEvent < EventRule
+end
+
+class Unlight::FinishBloodyHowlFeatEvent < EventRule
+end
+
+class Unlight::UseBloodyHowlFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddAimingFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveAimingFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateAimingFeatEvent < EventRule
+end
+
+class Unlight::UseAimingFeatEvent < EventRule
+end
+
+class Unlight::FinishAimingFeatEvent < EventRule
+end
+
+class Unlight::CheckAddPrecisionFireFeatEvent < EventRule
+end
+
+class Unlight::CheckRemovePrecisionFireFeatEvent < EventRule
+end
+
+class Unlight::CheckRotatePrecisionFireFeatEvent < EventRule
+end
+
+class Unlight::UsePrecisionFireFeatEvent < EventRule
+end
+
+class Unlight::FinishPrecisionFireFeatEvent < EventRule
+end
+
+class Unlight::UsePrecisionFireFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddStrikeFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveStrikeFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateStrikeFeatEvent < EventRule
+end
+
+class Unlight::UseStrikeFeatEvent < EventRule
+end
+
+class Unlight::UseStrikeFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishStrikeFeatEvent < EventRule
+end
+
+class Unlight::CheckAddPurpleLightningFeatEvent < EventRule
+end
+
+class Unlight::CheckRemovePurpleLightningFeatEvent < EventRule
+end
+
+class Unlight::CheckRotatePurpleLightningFeatEvent < EventRule
+end
+
+class Unlight::UsePurpleLightningFeatEvent < EventRule
+end
+
+class Unlight::UsePurpleLightningFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishPurpleLightningFeatEvent < EventRule
+end
+
+class Unlight::CheckAddComboFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveComboFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateComboFeatEvent < EventRule
+end
+
+class Unlight::UseComboFeatEvent < EventRule
+end
+
+class Unlight::FinishComboFeatEvent < EventRule
+end
+
+class Unlight::CheckAddSwordDanceFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSwordDanceFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSwordDanceFeatEvent < EventRule
+end
+
+class Unlight::UseSwordDanceFeatEvent < EventRule
+end
+
+class Unlight::FinishSwordDanceFeatEvent < EventRule
+end
+
+class Unlight::UseSwordDanceFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddThornFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveThornFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateThornFeatEvent < EventRule
+end
+
+class Unlight::UseThornFeatEvent < EventRule
+end
+
+class Unlight::UseThornFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishThornFeatEvent < EventRule
+end
+
+class Unlight::CheckAddChargeFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveChargeFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateChargeFeatEvent < EventRule
+end
+
+class Unlight::UseChargeFeatEvent < EventRule
+end
+
+class Unlight::FinishChargeFeatEvent < EventRule
+end
+
+class Unlight::CheckAddChargedThrustFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveChargedThrustFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateChargedThrustFeatEvent < EventRule
+end
+
+class Unlight::UseChargedThrustFeatEvent < EventRule
+end
+
+class Unlight::FinishChargedThrustFeatEvent < EventRule
+end
+
+class Unlight::CheckAddMirageFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveMirageFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateMirageFeatEvent < EventRule
+end
+
+class Unlight::CheckMoveMirageFeatEvent < EventRule
+end
+
+class Unlight::UseMirageFeatEvent < EventRule
+end
+
+class Unlight::FinishMirageFeatEvent < EventRule
+end
+
+class Unlight::CheckAddFrenzyEyesFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveFrenzyEyesFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateFrenzyEyesFeatEvent < EventRule
+end
+
+class Unlight::UseFrenzyEyesFeatEvent < EventRule
+end
+
+class Unlight::UseFrenzyEyesFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishFrenzyEyesFeatEvent < EventRule
+end
+
+class Unlight::CheckAddAbyssFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveAbyssFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateAbyssFeatEvent < EventRule
+end
+
+class Unlight::UseAbyssFeatEvent < EventRule
+end
+
+class Unlight::FinishAbyssFeatEvent < EventRule
+end
+
+class Unlight::CheckAddRapidSwordFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveRapidSwordFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateRapidSwordFeatEvent < EventRule
+end
+
+class Unlight::UseRapidSwordFeatEvent < EventRule
+end
+
+class Unlight::FinishRapidSwordFeatEvent < EventRule
+end
+
+class Unlight::CheckAddAngerFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveAngerFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateAngerFeatEvent < EventRule
+end
+
+class Unlight::UseAngerFeatEvent < EventRule
+end
+
+class Unlight::FinishAngerFeatEvent < EventRule
+end
+
+class Unlight::CheckAddPowerStockFeatEvent < EventRule
+end
+
+class Unlight::CheckRemovePowerStockFeatEvent < EventRule
+end
+
+class Unlight::CheckRotatePowerStockFeatEvent < EventRule
+end
+
+class Unlight::FinishPowerStockFeatEvent < EventRule
+end
+
+class Unlight::CheckAddMortalStyleFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveMortalStyleFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateMortalStyleFeatEvent < EventRule
+end
+
+class Unlight::FinishMortalStyleFeatEvent < EventRule
+end
+
+class Unlight::CheckAddShadowShotFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveShadowShotFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateShadowShotFeatEvent < EventRule
+end
+
+class Unlight::UseShadowShotFeatEvent < EventRule
+end
+
+class Unlight::FinishShadowShotFeatEvent < EventRule
+end
+
+class Unlight::UseShadowShotFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddRedFangFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveRedFangFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateRedFangFeatEvent < EventRule
+end
+
+class Unlight::UseRedFangFeatEvent < EventRule
+end
+
+class Unlight::FinishRedFangFeatEvent < EventRule
+end
+
+class Unlight::UseRedFangFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddBlessingBloodFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBlessingBloodFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBlessingBloodFeatEvent < EventRule
+end
+
+class Unlight::UseBlessingBloodFeatEvent < EventRule
+end
+
+class Unlight::UseBlessingBloodFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishBlessingBloodFeatEvent < EventRule
+end
+
+class Unlight::CheckAddCounterPreparationFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveCounterPreparationFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateCounterPreparationFeatEvent < EventRule
+end
+
+class Unlight::UseCounterPreparationFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishCounterPreparationFeatEvent < EventRule
+end
+
+class Unlight::CheckAddKarmicTimeFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveKarmicTimeFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateKarmicTimeFeatEvent < EventRule
+end
+
+class Unlight::UseKarmicTimeFeatEvent < EventRule
+end
+
+class Unlight::FinishCharaChangeKarmicTimeFeatEvent < EventRule
+end
+
+class Unlight::FinishFoeCharaChangeKarmicTimeFeatEvent < EventRule
+end
+
+class Unlight::CheckAddKarmicRingFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveKarmicRingFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateKarmicRingFeatEvent < EventRule
+end
+
+class Unlight::UseKarmicRingFeatEvent < EventRule
+end
+
+class Unlight::FinishKarmicRingFeatEvent < EventRule
+end
+
+class Unlight::CheckAddKarmicStringFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveKarmicStringFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateKarmicStringFeatEvent < EventRule
+end
+
+class Unlight::UseKarmicStringFeatEvent < EventRule
+end
+
+class Unlight::CheckAddHiSmashFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveHiSmashFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateHiSmashFeatEvent < EventRule
+end
+
+class Unlight::UseHiSmashFeatEvent < EventRule
+end
+
+class Unlight::FinishHiSmashFeatEvent < EventRule
+end
+
+class Unlight::CheckAddHiPowerStockFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveHiPowerStockFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateHiPowerStockFeatEvent < EventRule
+end
+
+class Unlight::FinishHiPowerStockFeatEvent < EventRule
+end
+
+class Unlight::CheckAddHiAimingFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveHiAimingFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateHiAimingFeatEvent < EventRule
+end
+
+class Unlight::UseHiAimingFeatEvent < EventRule
+end
+
+class Unlight::FinishHiAimingFeatEvent < EventRule
+end
+
+class Unlight::CheckAddHiRapidSwordFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveHiRapidSwordFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateHiRapidSwordFeatEvent < EventRule
+end
+
+class Unlight::UseHiRapidSwordFeatEvent < EventRule
+end
+
+class Unlight::FinishHiRapidSwordFeatEvent < EventRule
+end
+
+class Unlight::CheckAddHiKarmicStringFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveHiKarmicStringFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateHiKarmicStringFeatEvent < EventRule
+end
+
+class Unlight::UseHiKarmicStringFeatEvent < EventRule
+end
+
+class Unlight::CheckAddHiFrenzyEyesFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveHiFrenzyEyesFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateHiFrenzyEyesFeatEvent < EventRule
+end
+
+class Unlight::UseHiFrenzyEyesFeatEvent < EventRule
+end
+
+class Unlight::UseHiFrenzyEyesFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishHiFrenzyEyesFeatEvent < EventRule
+end
+
+class Unlight::CheckAddHiShadowShotFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveHiShadowShotFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateHiShadowShotFeatEvent < EventRule
+end
+
+class Unlight::UseHiShadowShotFeatEvent < EventRule
+end
+
+class Unlight::FinishHiShadowShotFeatEvent < EventRule
+end
+
+class Unlight::UseHiShadowShotFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddLandMineFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveLandMineFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateLandMineFeatEvent < EventRule
+end
+
+class Unlight::UseLandMineFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDesperadoFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDesperadoFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDesperadoFeatEvent < EventRule
+end
+
+class Unlight::UseDesperadoFeatEvent < EventRule
+end
+
+class Unlight::FinishDesperadoFeatEvent < EventRule
+end
+
+class Unlight::CheckAddRejectSwordFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveRejectSwordFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateRejectSwordFeatEvent < EventRule
+end
+
+class Unlight::UseRejectSwordFeatEvent < EventRule
+end
+
+class Unlight::FinishRejectSwordFeatEvent < EventRule
+end
+
+class Unlight::CheckAddCounterGuardFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveCounterGuardFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateCounterGuardFeatEvent < EventRule
+end
+
+class Unlight::UseCounterGuardFeatEvent < EventRule
+end
+
+class Unlight::UseCounterGuardFeatDiceAttrEvent < EventRule
+end
+
+class Unlight::FinishCounterGuardFeatEvent < EventRule
+end
+
+class Unlight::UseExCounterGuardFeatEvent < EventRule
+end
+
+class Unlight::UseExCounterGuardFeatDiceAttrEvent < EventRule
+end
+
+class Unlight::CheckAddPainFleeFeatEvent < EventRule
+end
+
+class Unlight::CheckRemovePainFleeFeatEvent < EventRule
+end
+
+class Unlight::CheckRotatePainFleeFeatEvent < EventRule
+end
+
+class Unlight::FinishPainFleeFeatEvent < EventRule
+end
+
+class Unlight::CheckAddBodyOfLightFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBodyOfLightFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBodyOfLightFeatEvent < EventRule
+end
+
+class Unlight::UseBodyOfLightFeatEvent < EventRule
+end
+
+class Unlight::FinishBodyOfLightFeatEvent < EventRule
+end
+
+class Unlight::CheckAddSealChainFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSealChainFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSealChainFeatEvent < EventRule
+end
+
+class Unlight::UseSealChainFeatEvent < EventRule
+end
+
+class Unlight::FinishSealChainFeatEvent < EventRule
+end
+
+class Unlight::UseSealChainFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddPurificationLightFeatEvent < EventRule
+end
+
+class Unlight::CheckRemovePurificationLightFeatEvent < EventRule
+end
+
+class Unlight::CheckRotatePurificationLightFeatEvent < EventRule
+end
+
+class Unlight::UsePurificationLightFeatEvent < EventRule
+end
+
+class Unlight::FinishPurificationLightFeatEvent < EventRule
+end
+
+class Unlight::UsePurificationLightFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddCraftinessFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveCraftinessFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateCraftinessFeatEvent < EventRule
+end
+
+class Unlight::FinishCraftinessFeatEvent < EventRule
+end
+
+class Unlight::CheckAddLandBombFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveLandBombFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateLandBombFeatEvent < EventRule
+end
+
+class Unlight::UseLandBombFeatEvent < EventRule
+end
+
+class Unlight::CheckAddRejectBladeFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveRejectBladeFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateRejectBladeFeatEvent < EventRule
+end
+
+class Unlight::UseRejectBladeFeatEvent < EventRule
+end
+
+class Unlight::FinishRejectBladeFeatEvent < EventRule
+end
+
+class Unlight::CheckAddSpellChainFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSpellChainFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSpellChainFeatEvent < EventRule
+end
+
+class Unlight::UseSpellChainFeatEvent < EventRule
+end
+
+class Unlight::FinishSpellChainFeatEvent < EventRule
+end
+
+class Unlight::UseSpellChainFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddIndomitableMindFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveIndomitableMindFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateIndomitableMindFeatEvent < EventRule
+end
+
+class Unlight::UseIndomitableMindFeatEvent < EventRule
+end
+
+class Unlight::UseIndomitableMindFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishIndomitableMindFeatEvent < EventRule
+end
+
+class Unlight::FinishIndomitableMindFeatDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckAddDrainSoulFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDrainSoulFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDrainSoulFeatEvent < EventRule
+end
+
+class Unlight::UseDrainSoulFeatEvent < EventRule
+end
+
+class Unlight::CheckAddBackStabFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBackStabFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBackStabFeatEvent < EventRule
+end
+
+class Unlight::UseBackStabFeatEvent < EventRule
+end
+
+class Unlight::FinishBackStabFeatEvent < EventRule
+end
+
+class Unlight::CheckAddEnlightenedFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveEnlightenedFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateEnlightenedFeatEvent < EventRule
+end
+
+class Unlight::CheckEnlightenedPointFeatEvent < EventRule
+end
+
+class Unlight::UseEnlightenedFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDarkWhirlpoolFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDarkWhirlpoolFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDarkWhirlpoolFeatEvent < EventRule
+end
+
+class Unlight::UseDarkWhirlpoolFeatEvent < EventRule
+end
+
+class Unlight::UseDarkWhirlpoolFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddKarmicPhantomFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveKarmicPhantomFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateKarmicPhantomFeatEvent < EventRule
+end
+
+class Unlight::UseKarmicPhantomFeatEvent < EventRule
+end
+
+class Unlight::FinishKarmicPhantomFeatEvent < EventRule
+end
+
+class Unlight::CheckAddRecoveryWaveFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveRecoveryWaveFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateRecoveryWaveFeatEvent < EventRule
+end
+
+class Unlight::FinishRecoveryWaveFeatEvent < EventRule
+end
+
+class Unlight::CheckAddSelfDestructionFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSelfDestructionFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSelfDestructionFeatEvent < EventRule
+end
+
+class Unlight::FinishSelfDestructionFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDeffenceShootingFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDeffenceShootingFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDeffenceShootingFeatEvent < EventRule
+end
+
+class Unlight::UseDeffenceShootingFeatEvent < EventRule
+end
+
+class Unlight::UseDeffenceShootingFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddRecoveryFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveRecoveryFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateRecoveryFeatEvent < EventRule
+end
+
+class Unlight::FinishRecoveryFeatEvent < EventRule
+end
+
+class Unlight::CheckAddShadowAttackFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveShadowAttackFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateShadowAttackFeatEvent < EventRule
+end
+
+class Unlight::UseShadowAttackFeatEvent < EventRule
+end
+
+class Unlight::FinishShadowAttackFeatEvent < EventRule
+end
+
+class Unlight::CheckAddSuicidalTendenciesFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSuicidalTendenciesFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSuicidalTendenciesFeatEvent < EventRule
+end
+
+class Unlight::UseSuicidalTendenciesFeatEvent < EventRule
+end
+
+class Unlight::FinishSuicidalTendenciesFeatEvent < EventRule
+end
+
+class Unlight::CheckAddMisfitFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveMisfitFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateMisfitFeatEvent < EventRule
+end
+
+class Unlight::UseMisfitFeatEvent < EventRule
+end
+
+class Unlight::UseMisfitFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishMisfitFeatEvent < EventRule
+end
+
+class Unlight::CheckAddBigBraggFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBigBraggFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBigBraggFeatEvent < EventRule
+end
+
+class Unlight::FinishBigBraggFeatEvent < EventRule
+end
+
+class Unlight::CheckAddLetsKnifeFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveLetsKnifeFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateLetsKnifeFeatEvent < EventRule
+end
+
+class Unlight::UseLetsKnifeFeatEvent < EventRule
+end
+
+class Unlight::FinishLetsKnifeFeatEvent < EventRule
+end
+
+class Unlight::CheckAddSingleHeartFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSingleHeartFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSingleHeartFeatEvent < EventRule
+end
+
+class Unlight::UseSingleHeartFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDoubleBodyFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDoubleBodyFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDoubleBodyFeatEvent < EventRule
+end
+
+class Unlight::UseDoubleBodyFeatEvent < EventRule
+end
+
+class Unlight::UseDoubleBodyFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishDoubleBodyFeatEvent < EventRule
+end
+
+class Unlight::CheckAddNineSoulFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveNineSoulFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateNineSoulFeatEvent < EventRule
+end
+
+class Unlight::UseNineSoulFeatEvent < EventRule
+end
+
+class Unlight::FinishNineSoulFeatEvent < EventRule
+end
+
+class Unlight::CheckAddThirteenEyesFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveThirteenEyesFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateThirteenEyesFeatEvent < EventRule
+end
+
+class Unlight::UseOwnerThirteenEyesFeatEvent < EventRule
+end
+
+class Unlight::UseFoeThirteenEyesFeatEvent < EventRule
+end
+
+class Unlight::FinishThirteenEyesFeatEvent < EventRule
+end
+
+class Unlight::UseThirteenEyesFeatDamageEvent < EventRule
+end
+
+class Unlight::UseFoeExThirteenEyesFeatEvent < EventRule
+end
+
+class Unlight::FinishExThirteenEyesFeatEvent < EventRule
+end
+
+class Unlight::CheckAddLifeDrainFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveLifeDrainFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateLifeDrainFeatEvent < EventRule
+end
+
+class Unlight::UseLifeDrainFeatEvent < EventRule
+end
+
+class Unlight::FinishLifeDrainFeatEvent < EventRule
+end
+
+class Unlight::UseLifeDrainFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddRandomCurseFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveRandomCurseFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateRandomCurseFeatEvent < EventRule
+end
+
+class Unlight::UseRandomCurseFeatEvent < EventRule
+end
+
+class Unlight::FinishRandomCurseFeatEvent < EventRule
+end
+
+class Unlight::UseRandomCurseFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddHealVoiceFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveHealVoiceFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateHealVoiceFeatEvent < EventRule
+end
+
+class Unlight::UseHealVoiceFeatEvent < EventRule
+end
+
+class Unlight::FinishHealVoiceFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDoubleAttackFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDoubleAttackFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDoubleAttackFeatEvent < EventRule
+end
+
+class Unlight::UseDoubleAttackFeatEvent < EventRule
+end
+
+class Unlight::FinishDoubleAttackFeatEvent < EventRule
+end
+
+class Unlight::CheckAddPartyDamageFeatEvent < EventRule
+end
+
+class Unlight::CheckRemovePartyDamageFeatEvent < EventRule
+end
+
+class Unlight::CheckRotatePartyDamageFeatEvent < EventRule
+end
+
+class Unlight::UsePartyDamageFeatEvent < EventRule
+end
+
+class Unlight::FinishPartyDamageFeatEvent < EventRule
+end
+
+class Unlight::CheckAddGuardFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveGuardFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateGuardFeatEvent < EventRule
+end
+
+class Unlight::UseGuardFeatEvent < EventRule
+end
+
+class Unlight::UseGuardFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishGuardFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDeathControlFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDeathControlFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDeathControlFeatEvent < EventRule
+end
+
+class Unlight::UseDeathControlFeatEvent < EventRule
+end
+
+class Unlight::FinishDeathControlFeatEvent < EventRule
+end
+
+class Unlight::UseDeathControlFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddWitFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveWitFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateWitFeatEvent < EventRule
+end
+
+class Unlight::UseWitFeatEvent < EventRule
+end
+
+class Unlight::FinishWitFeatEvent < EventRule
+end
+
+class Unlight::CheckAddThornCareFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveThornCareFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateThornCareFeatEvent < EventRule
+end
+
+class Unlight::UseThornCareFeatEvent < EventRule
+end
+
+class Unlight::UseThornCareFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishThornCareFeatEvent < EventRule
+end
+
+class Unlight::CheckAddLiberatingSwordFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveLiberatingSwordFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateLiberatingSwordFeatEvent < EventRule
+end
+
+class Unlight::UseLiberatingSwordFeatEvent < EventRule
+end
+
+class Unlight::FinishLiberatingSwordFeatEvent < EventRule
+end
+
+class Unlight::UseLiberatingSwordFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddOneSlashFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveOneSlashFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateOneSlashFeatEvent < EventRule
+end
+
+class Unlight::UseOneSlashFeatEvent < EventRule
+end
+
+class Unlight::FinishOneSlashFeatEvent < EventRule
+end
+
+class Unlight::UseOneSlashFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddTenSlashFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveTenSlashFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateTenSlashFeatEvent < EventRule
+end
+
+class Unlight::UseTenSlashFeatEvent < EventRule
+end
+
+class Unlight::FinishTenSlashFeatEvent < EventRule
+end
+
+class Unlight::CheckAddHassenFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveHassenFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateHassenFeatEvent < EventRule
+end
+
+class Unlight::UseHassenFeatEvent < EventRule
+end
+
+class Unlight::FinishHassenFeatEvent < EventRule
+end
+
+class Unlight::CheckAddHandledSlashFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveHandledSlashFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateHandledSlashFeatEvent < EventRule
+end
+
+class Unlight::UseHandledSlashFeatEvent < EventRule
+end
+
+class Unlight::FinishHandledSlashFeatEvent < EventRule
+end
+
+class Unlight::UseHandledSlashFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddHandledSlashRFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveHandledSlashRFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateHandledSlashRFeatEvent < EventRule
+end
+
+class Unlight::UseHandledSlashRFeatEvent < EventRule
+end
+
+class Unlight::FinishHandledSlashRFeatEvent < EventRule
+end
+
+class Unlight::UseHandledSlashRFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddCurseCareFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveCurseCareFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateCurseCareFeatEvent < EventRule
+end
+
+class Unlight::UseCurseCareFeatEvent < EventRule
+end
+
+class Unlight::UseCurseCareFeatDamageEvent < EventRule
+end
+
+class Unlight::UseCurseCareFeatHeal1Event < EventRule
+end
+
+class Unlight::UseCurseCareFeatHealDetBpEvent < EventRule
+end
+
+class Unlight::UseCurseCareFeatHeal2Event < EventRule
+end
+
+class Unlight::UseCurseCareFeatHeal3Event < EventRule
+end
+
+class Unlight::CheckAddMoonShineFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveMoonShineFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateMoonShineFeatEvent < EventRule
+end
+
+class Unlight::UseMoonShineFeatEvent < EventRule
+end
+
+class Unlight::FinishMoonShineFeatEvent < EventRule
+end
+
+class Unlight::CheckAddRaptureFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveRaptureFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateRaptureFeatEvent < EventRule
+end
+
+class Unlight::UseRaptureFeatEvent < EventRule
+end
+
+class Unlight::UseRaptureFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishRaptureFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDoomsdayFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDoomsdayFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDoomsdayFeatEvent < EventRule
+end
+
+class Unlight::FinishDoomsdayFeatEvent < EventRule
+end
+
+class Unlight::CheckAddHellFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveHellFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateHellFeatEvent < EventRule
+end
+
+class Unlight::UseHellFeatEvent < EventRule
+end
+
+class Unlight::FinishHellFeatEvent < EventRule
+end
+
+class Unlight::CheckAddAwakingFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveAwakingFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateAwakingFeatEvent < EventRule
+end
+
+class Unlight::FinishAwakingFeatEvent < EventRule
+end
+
+class Unlight::CheckAddMovingOneFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveMovingOneFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateMovingOneFeatEvent < EventRule
+end
+
+class Unlight::UseMovingOneFeatEvent < EventRule
+end
+
+class Unlight::FinishMovingOneFeatEvent < EventRule
+end
+
+class Unlight::CheckAddArrogantOneFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveArrogantOneFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateArrogantOneFeatEvent < EventRule
+end
+
+class Unlight::UseArrogantOneFeatEvent < EventRule
+end
+
+class Unlight::FinishArrogantOneFeatEvent < EventRule
+end
+
+class Unlight::CheckAddEatingOneFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveEatingOneFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateEatingOneFeatEvent < EventRule
+end
+
+class Unlight::UseEatingOneFeatEvent < EventRule
+end
+
+class Unlight::FinishEatingOneFeatEvent < EventRule
+end
+
+class Unlight::CheckAddRevivingOneFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveRevivingOneFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateRevivingOneFeatEvent < EventRule
+end
+
+class Unlight::FinishRevivingOneFeatEvent < EventRule
+end
+
+class Unlight::CheckAddWhiteLightFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveWhiteLightFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateWhiteLightFeatEvent < EventRule
+end
+
+class Unlight::FinishWhiteLightFeatEvent < EventRule
+end
+
+class Unlight::CheckAddCrystalShieldFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveCrystalShieldFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateCrystalShieldFeatEvent < EventRule
+end
+
+class Unlight::UseCrystalShieldFeatEvent < EventRule
+end
+
+class Unlight::UseAfterCrystalShieldFeatEvent < EventRule
+end
+
+class Unlight::FinishCrystalShieldFeatEvent < EventRule
+end
+
+class Unlight::CheckAddSnowBallingFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSnowBallingFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSnowBallingFeatEvent < EventRule
+end
+
+class Unlight::UseSnowBallingFeatEvent < EventRule
+end
+
+class Unlight::UseSnowBallingFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishSnowBallingFeatEvent < EventRule
+end
+
+class Unlight::UseSnowBallingFeatConstDamageEvent < EventRule
+end
+
+class Unlight::CheckAddObituaryFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveObituaryFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateObituaryFeatEvent < EventRule
+end
+
+class Unlight::UseObituaryFeatEvent < EventRule
+end
+
+class Unlight::UseObituaryFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishObituaryFeatEvent < EventRule
+end
+
+class Unlight::CheckAddSolventRainFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSolventRainFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSolventRainFeatEvent < EventRule
+end
+
+class Unlight::UseSolventRainFeatEvent < EventRule
+end
+
+class Unlight::FinishSolventRainFeatEvent < EventRule
+end
+
+class Unlight::CheckAddSolventRainRFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSolventRainRFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSolventRainRFeatEvent < EventRule
+end
+
+class Unlight::UseSolventRainRFeatEvent < EventRule
+end
+
+class Unlight::FinishSolventRainRFeatEvent < EventRule
+end
+
+class Unlight::CheckAddAwakingDoorFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveAwakingDoorFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateAwakingDoorFeatEvent < EventRule
+end
+
+class Unlight::FinishAwakingDoorFeatEvent < EventRule
+end
+
+class Unlight::CheckAddOverDoseFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveOverDoseFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateOverDoseFeatEvent < EventRule
+end
+
+class Unlight::UseOverDoseFeatEvent < EventRule
+end
+
+class Unlight::FinishOverDoseFeatEvent < EventRule
+end
+
+class Unlight::CheckAddRazorsEdgeFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveRazorsEdgeFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateRazorsEdgeFeatEvent < EventRule
+end
+
+class Unlight::UseOwnerRazorsEdgeFeatEvent < EventRule
+end
+
+class Unlight::UseFoeRazorsEdgeFeatEvent < EventRule
+end
+
+class Unlight::UseRazorsEdgeFeatDiceAttrEvent < EventRule
+end
+
+class Unlight::FinishRazorsEdgeFeatEvent < EventRule
+end
+
+# --------------------------------------------------------------------------------------------
+# レイザーズエッジ
+class Unlight::UseFoeExRazorsEdgeFeatEvent < EventRule
+end
+
+class Unlight::UseExRazorsEdgeFeatDiceAttrEvent < EventRule
+end
+
+class Unlight::CheckAddHellsBellFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveHellsBellFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateHellsBellFeatEvent < EventRule
+end
+
+class Unlight::UseHellsBellFeatEvent < EventRule
+end
+
+class Unlight::FinishHellsBellFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDrainSeedFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDrainSeedFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDrainSeedFeatEvent < EventRule
+end
+
+class Unlight::FinishDrainSeedFeatEvent < EventRule
+end
+
+class Unlight::CheckAddAtkDrainFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveAtkDrainFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateAtkDrainFeatEvent < EventRule
+end
+
+class Unlight::UseAtkDrainFeatEvent < EventRule
+end
+
+class Unlight::FinishAtkDrainFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDefDrainFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDefDrainFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDefDrainFeatEvent < EventRule
+end
+
+class Unlight::UseDefDrainFeatEvent < EventRule
+end
+
+class Unlight::FinishDefDrainFeatEvent < EventRule
+end
+
+class Unlight::CheckAddMovDrainFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveMovDrainFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateMovDrainFeatEvent < EventRule
+end
+
+class Unlight::FinishMovDrainFeatEvent < EventRule
+end
+
+class Unlight::CheckAddPoisonSkinFeatEvent < EventRule
+end
+
+class Unlight::CheckRemovePoisonSkinFeatEvent < EventRule
+end
+
+class Unlight::CheckRotatePoisonSkinFeatEvent < EventRule
+end
+
+class Unlight::UsePoisonSkinFeatEvent < EventRule
+end
+
+class Unlight::UsePoisonSkinFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishPoisonSkinFeatEvent < EventRule
+end
+
+class Unlight::CheckAddRoarFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveRoarFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateRoarFeatEvent < EventRule
+end
+
+class Unlight::UseRoarFeatEvent < EventRule
+end
+
+class Unlight::FinishRoarFeatEvent < EventRule
+end
+
+class Unlight::CheckAddFireBreathFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveFireBreathFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateFireBreathFeatEvent < EventRule
+end
+
+class Unlight::UseFireBreathFeatEvent < EventRule
+end
+
+class Unlight::FinishFireBreathFeatEvent < EventRule
+end
+
+class Unlight::CheckAddWhirlWindFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveWhirlWindFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateWhirlWindFeatEvent < EventRule
+end
+
+class Unlight::UseWhirlWindFeatEvent < EventRule
+end
+
+class Unlight::FinishWhirlWindFeatEvent < EventRule
+end
+
+class Unlight::CheckAddActiveArmorFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveActiveArmorFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateActiveArmorFeatEvent < EventRule
+end
+
+class Unlight::UseActiveArmorFeatEvent < EventRule
+end
+
+class Unlight::UseActiveArmorFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckSealActiveArmorFeatMoveAfterEvent < EventRule
+end
+
+class Unlight::CheckSealActiveArmorFeatDetChangeAfterEvent < EventRule
+end
+
+class Unlight::CheckSealActiveArmorFeatDamageAfterEvent < EventRule
+end
+
+class Unlight::CheckUnsealActiveArmorFeatDamageAfterEvent < EventRule
+end
+
+class Unlight::CheckUnsealActiveArmorFeatStartTurnEvent < EventRule
+end
+
+class Unlight::CheckSealActiveArmorFeatCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckAddScolorAttackFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveScolorAttackFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateScolorAttackFeatEvent < EventRule
+end
+
+class Unlight::UseScolorAttackFeatEvent < EventRule
+end
+
+class Unlight::FinishScolorAttackFeatEvent < EventRule
+end
+
+class Unlight::UseScolorAttackFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddHeatSeekerFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveHeatSeekerFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateHeatSeekerFeatEvent < EventRule
+end
+
+class Unlight::UseHeatSeekerFeatEvent < EventRule
+end
+
+class Unlight::FinishHeatSeekerFeatEvent < EventRule
+end
+
+class Unlight::UseHeatSeekerFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddPurgeFeatEvent < EventRule
+end
+
+class Unlight::CheckRemovePurgeFeatEvent < EventRule
+end
+
+class Unlight::CheckRotatePurgeFeatEvent < EventRule
+end
+
+class Unlight::FinishPurgeFeatEvent < EventRule
+end
+
+class Unlight::CheckAddHighHandFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveHighHandFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateHighHandFeatEvent < EventRule
+end
+
+class Unlight::UseHighHandFeatEvent < EventRule
+end
+
+class Unlight::UseHighHandFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddJackPotFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveJackPotFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateJackPotFeatEvent < EventRule
+end
+
+class Unlight::UseJackPotFeatEvent < EventRule
+end
+
+class Unlight::UseAfterJackPotFeatEvent < EventRule
+end
+
+class Unlight::FinishJackPotFeatEvent < EventRule
+end
+
+class Unlight::CheckAddLowBallFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveLowBallFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateLowBallFeatEvent < EventRule
+end
+
+class Unlight::UseLowBallFeatEvent < EventRule
+end
+
+class Unlight::FinishLowBallFeatEvent < EventRule
+end
+
+class Unlight::UseLowBallFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddGambleFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveGambleFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateGambleFeatEvent < EventRule
+end
+
+class Unlight::UseGambleFeatEvent < EventRule
+end
+
+class Unlight::FinishGambleFeatEvent < EventRule
+end
+
+class Unlight::UseGambleFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddBirdCageFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBirdCageFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBirdCageFeatEvent < EventRule
+end
+
+class Unlight::FinishBirdCageFeatEvent < EventRule
+end
+
+class Unlight::CheckAddHangingFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveHangingFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateHangingFeatEvent < EventRule
+end
+
+class Unlight::UseHangingFeatEvent < EventRule
+end
+
+class Unlight::FinishHangingFeatEvent < EventRule
+end
+
+class Unlight::CheckAddBlastOffFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBlastOffFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBlastOffFeatEvent < EventRule
+end
+
+class Unlight::UseBlastOffFeatEvent < EventRule
+end
+
+class Unlight::ExBlastOffFeatEvent < EventRule
+end
+
+class Unlight::FinishBlastOffFeatEvent < EventRule
+end
+
+class Unlight::CheckAddPuppetMasterFeatEvent < EventRule
+end
+
+class Unlight::CheckRemovePuppetMasterFeatEvent < EventRule
+end
+
+class Unlight::CheckRotatePuppetMasterFeatEvent < EventRule
+end
+
+class Unlight::UsePuppetMasterFeatEvent < EventRule
+end
+
+class Unlight::FinishPuppetMasterFeatEvent < EventRule
+end
+
+class Unlight::CheckAddCtlFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveCtlFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateCtlFeatEvent < EventRule
+end
+
+class Unlight::UseCtlFeatEvent < EventRule
+end
+
+class Unlight::FinishCtlFeatEvent < EventRule
+end
+
+class Unlight::CheckAddBpaFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBpaFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBpaFeatEvent < EventRule
+end
+
+class Unlight::UseBpaFeatEvent < EventRule
+end
+
+class Unlight::FinishBpaFeatEvent < EventRule
+end
+
+class Unlight::CheckAddLarFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveLarFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateLarFeatEvent < EventRule
+end
+
+class Unlight::UseLarFeatEvent < EventRule
+end
+
+class Unlight::FinishLarFeatEvent < EventRule
+end
+
+class Unlight::UseLarFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddSssFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSssFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSssFeatEvent < EventRule
+end
+
+class Unlight::FinishSssFeatEvent < EventRule
+end
+
+class Unlight::CheckAddCounterRushFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveCounterRushFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateCounterRushFeatEvent < EventRule
+end
+
+class Unlight::UseCounterRushFeatEvent < EventRule
+end
+
+class Unlight::FinishCounterRushFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDisasterFlameFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDisasterFlameFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDisasterFlameFeatEvent < EventRule
+end
+
+class Unlight::UseDisasterFlameFeatEvent < EventRule
+end
+
+class Unlight::FinishDisasterFlameFeatEvent < EventRule
+end
+
+class Unlight::CheckAddHellFireFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveHellFireFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateHellFireFeatEvent < EventRule
+end
+
+class Unlight::UseHellFireFeatEvent < EventRule
+end
+
+class Unlight::UseHellFireFeatDamageEvent < EventRule
+end
+
+class Unlight::UseHellFireFeatConstDamageEvent < EventRule
+end
+
+class Unlight::FinishHellFireFeatEvent < EventRule
+end
+
+class Unlight::CheckAddBlindnessFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBlindnessFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBlindnessFeatEvent < EventRule
+end
+
+class Unlight::UseBlindnessFeat1Event < EventRule
+end
+
+class Unlight::UseBlindnessFeat2Event < EventRule
+end
+
+class Unlight::FinishBlindnessFeatEvent < EventRule
+end
+
+class Unlight::CheckAddFireDisappearFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveFireDisappearFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateFireDisappearFeatEvent < EventRule
+end
+
+class Unlight::UseFireDisappearFeatEvent < EventRule
+end
+
+class Unlight::UseAfterFireDisappearFeatEvent < EventRule
+end
+
+class Unlight::FinishFireDisappearFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDarkHoleFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDarkHoleFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDarkHoleFeatEvent < EventRule
+end
+
+class Unlight::UseDarkHoleFeatEvent < EventRule
+end
+
+class Unlight::FinishDarkHoleFeatEvent < EventRule
+end
+
+class Unlight::CheckAddTannhauserGateFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveTannhauserGateFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateTannhauserGateFeatEvent < EventRule
+end
+
+class Unlight::UseTannhauserGateFeatEvent < EventRule
+end
+
+class Unlight::FinishTannhauserGateFeatEvent < EventRule
+end
+
+class Unlight::CheckAddSchwarBlitzFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSchwarBlitzFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSchwarBlitzFeatEvent < EventRule
+end
+
+class Unlight::UseSchwarBlitzFeatEvent < EventRule
+end
+
+class Unlight::FinishSchwarBlitzFeatEvent < EventRule
+end
+
+class Unlight::UseSchwarBlitzFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddHiRounderFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveHiRounderFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateHiRounderFeatEvent < EventRule
+end
+
+class Unlight::UseHiRounderFeatEvent < EventRule
+end
+
+class Unlight::FinishHiRounderFeatEvent < EventRule
+end
+
+class Unlight::UseHiRounderFeatConstDamageEvent < EventRule
+end
+
+class Unlight::CheckAddBloodRettingFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBloodRettingFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBloodRettingFeatEvent < EventRule
+end
+
+class Unlight::UseBloodRettingFeatEvent < EventRule
+end
+
+class Unlight::UseBloodRettingFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishBloodRettingFeatEvent < EventRule
+end
+
+class Unlight::CheckAddAcupunctureFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveAcupunctureFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateAcupunctureFeatEvent < EventRule
+end
+
+class Unlight::FinishAcupunctureFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDissectionFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDissectionFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDissectionFeatEvent < EventRule
+end
+
+class Unlight::UseDissectionFeatEvent < EventRule
+end
+
+class Unlight::UseDissectionFeatDamageEvent < EventRule
+end
+
+class Unlight::UseDissectionFeatGuardEvent < EventRule
+end
+
+class Unlight::CheckAddEuthanasiaFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveEuthanasiaFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateEuthanasiaFeatEvent < EventRule
+end
+
+class Unlight::UseEuthanasiaFeatEvent < EventRule
+end
+
+class Unlight::FinishEuthanasiaFeatEvent < EventRule
+end
+
+class Unlight::UseEuthanasiaFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddAngerNailFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveAngerNailFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateAngerNailFeatEvent < EventRule
+end
+
+class Unlight::FinishAngerNailFeatEvent < EventRule
+end
+
+class Unlight::CheckAddCalmBackFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveCalmBackFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateCalmBackFeatEvent < EventRule
+end
+
+class Unlight::UseCalmBackFeatEvent < EventRule
+end
+
+class Unlight::FinishCalmBackFeatEvent < EventRule
+end
+
+class Unlight::UseCalmBackFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddBlueEyesFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBlueEyesFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBlueEyesFeatEvent < EventRule
+end
+
+class Unlight::UseBlueEyesFeatEvent < EventRule
+end
+
+class Unlight::FinishBlueEyesFeatEvent < EventRule
+end
+
+class Unlight::CheckAddWolfFangFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveWolfFangFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateWolfFangFeatEvent < EventRule
+end
+
+class Unlight::UseWolfFangFeatEvent < EventRule
+end
+
+class Unlight::FinishWolfFangFeatEvent < EventRule
+end
+
+class Unlight::CheckAddHagakureFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveHagakureFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateHagakureFeatEvent < EventRule
+end
+
+class Unlight::UseHagakureFeatEvent < EventRule
+end
+
+class Unlight::UseHagakureFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishHagakureFeatEvent < EventRule
+end
+
+class Unlight::CheckAddReppuFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveReppuFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateReppuFeatEvent < EventRule
+end
+
+class Unlight::UseReppuFeatEvent < EventRule
+end
+
+class Unlight::FinishReppuFeatEvent < EventRule
+end
+
+class Unlight::FinishEffectReppuFeatEvent < EventRule
+end
+
+class Unlight::FinishFoeChangeReppuFeatEvent < EventRule
+end
+
+class Unlight::FinishDeadChangeReppuFeatEvent < EventRule
+end
+
+class Unlight::FinishTurnReppuFeatEvent < EventRule
+end
+
+class Unlight::CheckAddEnpiFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveEnpiFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateEnpiFeatEvent < EventRule
+end
+
+class Unlight::UseEnpiFeatEvent < EventRule
+end
+
+class Unlight::FinishEnpiFeatEvent < EventRule
+end
+
+class Unlight::UseEnpiFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddMikazukiFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveMikazukiFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateMikazukiFeatEvent < EventRule
+end
+
+class Unlight::UseMikazukiFeatEvent < EventRule
+end
+
+class Unlight::FinishMikazukiFeatEvent < EventRule
+end
+
+class Unlight::CheckAddCasablancaFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveCasablancaFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateCasablancaFeatEvent < EventRule
+end
+
+class Unlight::FinishCasablancaFeatEvent < EventRule
+end
+
+class Unlight::CheckAddRhodesiaFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveRhodesiaFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateRhodesiaFeatEvent < EventRule
+end
+
+class Unlight::UseRhodesiaFeatEvent < EventRule
+end
+
+class Unlight::UseRhodesiaFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishRhodesiaFeatEvent < EventRule
+end
+
+class Unlight::CheckAddMadripoolFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveMadripoolFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateMadripoolFeatEvent < EventRule
+end
+
+class Unlight::UseMadripoolFeatEvent < EventRule
+end
+
+class Unlight::FinishMadripoolFeatEvent < EventRule
+end
+
+class Unlight::CheckAddAsiaFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveAsiaFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateAsiaFeatEvent < EventRule
+end
+
+class Unlight::UseAsiaFeatEvent < EventRule
+end
+
+class Unlight::FinishAsiaFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDemonicFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDemonicFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDemonicFeatEvent < EventRule
+end
+
+class Unlight::UseDemonicFeatEvent < EventRule
+end
+
+class Unlight::FinishDemonicFeatEvent < EventRule
+end
+
+class Unlight::UseDemonicFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddShadowSwordFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveShadowSwordFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateShadowSwordFeatEvent < EventRule
+end
+
+class Unlight::UseShadowSwordFeatEvent < EventRule
+end
+
+class Unlight::FinishShadowSwordFeatEvent < EventRule
+end
+
+class Unlight::CheckAddPerfectDeadFeatEvent < EventRule
+end
+
+class Unlight::CheckRemovePerfectDeadFeatEvent < EventRule
+end
+
+class Unlight::CheckRotatePerfectDeadFeatEvent < EventRule
+end
+
+class Unlight::UsePerfectDeadFeatEvent < EventRule
+end
+
+class Unlight::UsePerfectDeadFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishPerfectDeadFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDestructGearFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDestructGearFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDestructGearFeatEvent < EventRule
+end
+
+class Unlight::UseDestructGearFeatEvent < EventRule
+end
+
+class Unlight::UseDestructGearFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishDestructGearFeatEvent < EventRule
+end
+
+class Unlight::CheckAddPowerShiftFeatEvent < EventRule
+end
+
+class Unlight::CheckRemovePowerShiftFeatEvent < EventRule
+end
+
+class Unlight::CheckRotatePowerShiftFeatEvent < EventRule
+end
+
+class Unlight::UsePowerShiftFeatEvent < EventRule
+end
+
+class Unlight::UsePowerShiftFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishPowerShiftFeatEvent < EventRule
+end
+
+class Unlight::CheckAddKillShotFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveKillShotFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateKillShotFeatEvent < EventRule
+end
+
+class Unlight::UseKillShotFeatEvent < EventRule
+end
+
+class Unlight::UseKillShotFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishKillShotFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDefrectFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDefrectFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDefrectFeatEvent < EventRule
+end
+
+class Unlight::UseDefrectFeatEvent < EventRule
+end
+
+class Unlight::UseDefrectFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishDefrectFeatEvent < EventRule
+end
+
+class Unlight::CheckAddFlameOfferingFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveFlameOfferingFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateFlameOfferingFeatEvent < EventRule
+end
+
+class Unlight::UseFlameOfferingFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDrainHandFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDrainHandFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDrainHandFeatEvent < EventRule
+end
+
+class Unlight::UseDrainHandFeatEvent < EventRule
+end
+
+class Unlight::UseDrainHandFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishDrainHandFeatEvent < EventRule
+end
+
+class Unlight::CheckAddFirePrizonFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveFirePrizonFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateFirePrizonFeatEvent < EventRule
+end
+
+class Unlight::UseFirePrizonFeatEvent < EventRule
+end
+
+class Unlight::CheckAddTimeStopFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveTimeStopFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateTimeStopFeatEvent < EventRule
+end
+
+class Unlight::FinishTimeStopFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDeadGuardFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDeadGuardFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDeadGuardFeatEvent < EventRule
+end
+
+class Unlight::UseDeadGuardFeatEvent < EventRule
+end
+
+class Unlight::UseDeadGuardFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishDeadGuardFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDeadBlueFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDeadBlueFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDeadBlueFeatEvent < EventRule
+end
+
+class Unlight::UseDeadBlueFeatEvent < EventRule
+end
+
+class Unlight::UseDeadBlueFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishDeadBlueFeatEvent < EventRule
+end
+
+class Unlight::CheckAddEvilGuardFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveEvilGuardFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateEvilGuardFeatEvent < EventRule
+end
+
+class Unlight::UseEvilGuardFeatEvent < EventRule
+end
+
+class Unlight::UseEvilGuardFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishEvilGuardFeatEvent < EventRule
+end
+
+class Unlight::CheckAddAbyssEyesFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveAbyssEyesFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateAbyssEyesFeatEvent < EventRule
+end
+
+class Unlight::UseAbyssEyesFeatEvent < EventRule
+end
+
+class Unlight::UseAbyssEyesFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishAbyssEyesFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDeadRedFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDeadRedFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDeadRedFeatEvent < EventRule
+end
+
+class Unlight::UseDeadRedFeatEvent < EventRule
+end
+
+class Unlight::FinishDeadRedFeatEvent < EventRule
+end
+
+class Unlight::CheckAddNightGhostFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveNightGhostFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateNightGhostFeatEvent < EventRule
+end
+
+class Unlight::UseNightGhostFeatEvent < EventRule
+end
+
+class Unlight::UseNightGhostFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishNightGhostFeatEvent < EventRule
+end
+
+class Unlight::CheckAddAvatarWarFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveAvatarWarFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateAvatarWarFeatEvent < EventRule
+end
+
+class Unlight::UseAvatarWarFeatEvent < EventRule
+end
+
+class Unlight::FinishAvatarWarFeatEvent < EventRule
+end
+
+class Unlight::UseAvatarWarFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddConfusePoolFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveConfusePoolFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateConfusePoolFeatEvent < EventRule
+end
+
+class Unlight::UseConfusePoolFeatEvent < EventRule
+end
+
+class Unlight::UseConfusePoolFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishConfusePoolFeatEvent < EventRule
+end
+
+class Unlight::CheckAddProminenceFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveProminenceFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateProminenceFeatEvent < EventRule
+end
+
+class Unlight::UseProminenceFeatEvent < EventRule
+end
+
+class Unlight::FinishProminenceFeatEvent < EventRule
+end
+
+class Unlight::CheckAddBattleAxeFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBattleAxeFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBattleAxeFeatEvent < EventRule
+end
+
+class Unlight::UseBattleAxeFeatEvent < EventRule
+end
+
+class Unlight::FinishBattleAxeFeatEvent < EventRule
+end
+
+class Unlight::UseBattleAxeFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddMoabFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveMoabFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateMoabFeatEvent < EventRule
+end
+
+class Unlight::UseMoabFeatEvent < EventRule
+end
+
+class Unlight::FinishMoabFeatEvent < EventRule
+end
+
+class Unlight::CheckAddOverHeatFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveOverHeatFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateOverHeatFeatEvent < EventRule
+end
+
+class Unlight::FinishOverHeatFeatEvent < EventRule
+end
+
+class Unlight::CheckAddBlueRoseFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBlueRoseFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBlueRoseFeatEvent < EventRule
+end
+
+class Unlight::UseBlueRoseFeatEvent < EventRule
+end
+
+class Unlight::UseBlueRoseFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishBlueRoseFeatEvent < EventRule
+end
+
+class Unlight::CheckAddWhiteCrowFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveWhiteCrowFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateWhiteCrowFeatEvent < EventRule
+end
+
+class Unlight::FinishWhiteCrowFeatEvent < EventRule
+end
+
+class Unlight::CheckAddRedMoonFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveRedMoonFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateRedMoonFeatEvent < EventRule
+end
+
+class Unlight::UseRedMoonFeatEvent < EventRule
+end
+
+class Unlight::UseRedMoonFeatDiceAttrEvent < EventRule
+end
+
+class Unlight::UseRedMoonFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishRedMoonFeatEvent < EventRule
+end
+
+class Unlight::UseExRedMoonFeatDiceAttrEvent < EventRule
+end
+
+class Unlight::CheckAddBlackSunFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBlackSunFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBlackSunFeatEvent < EventRule
+end
+
+class Unlight::UseBlackSunFeatEvent < EventRule
+end
+
+class Unlight::FinishBlackSunFeatEvent < EventRule
+end
+
+class Unlight::CheckAddGirasoleFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveGirasoleFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateGirasoleFeatEvent < EventRule
+end
+
+class Unlight::UseGirasoleFeatEvent < EventRule
+end
+
+class Unlight::UseGirasoleFeatDamageEvent < EventRule
+end
+
+class Unlight::UseGirasoleFeatConstDamageEvent < EventRule
+end
+
+class Unlight::FinishGirasoleFeatEvent < EventRule
+end
+
+class Unlight::CheckAddViolettaFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveViolettaFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateViolettaFeatEvent < EventRule
+end
+
+class Unlight::FinishViolettaFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDigitaleFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDigitaleFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDigitaleFeatEvent < EventRule
+end
+
+class Unlight::UseDigitaleFeatEvent < EventRule
+end
+
+class Unlight::FinishDigitaleFeatEvent < EventRule
+end
+
+class Unlight::UseDigitaleFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddRosmarinoFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveRosmarinoFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateRosmarinoFeatEvent < EventRule
+end
+
+class Unlight::UseRosmarinoFeatEvent < EventRule
+end
+
+class Unlight::FinishRosmarinoFeatEvent < EventRule
+end
+
+class Unlight::CheckAddHachiyouFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveHachiyouFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateHachiyouFeatEvent < EventRule
+end
+
+class Unlight::FinishHachiyouFeatEvent < EventRule
+end
+
+class Unlight::CheckAddStoneCareFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveStoneCareFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateStoneCareFeatEvent < EventRule
+end
+
+class Unlight::UseStoneCareFeatEvent < EventRule
+end
+
+class Unlight::FinishStoneCareFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDustSwordFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDustSwordFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDustSwordFeatEvent < EventRule
+end
+
+class Unlight::UseDustSwordFeatEvent < EventRule
+end
+
+class Unlight::UseDustSwordFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishDustSwordFeatEvent < EventRule
+end
+
+class Unlight::CheckAddIllusionFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveIllusionFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateIllusionFeatEvent < EventRule
+end
+
+class Unlight::UseIllusionFeatEvent < EventRule
+end
+
+class Unlight::UseIllusionFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishIllusionFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDespairShoutFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDespairShoutFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDespairShoutFeatEvent < EventRule
+end
+
+class Unlight::FinishDespairShoutFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDarknessSongFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDarknessSongFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDarknessSongFeatEvent < EventRule
+end
+
+class Unlight::UseDarknessSongFeatEvent < EventRule
+end
+
+class Unlight::FinishDarknessSongFeatEvent < EventRule
+end
+
+class Unlight::CheckAddGuardSpiritFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveGuardSpiritFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateGuardSpiritFeatEvent < EventRule
+end
+
+class Unlight::FinishGuardSpiritFeatEvent < EventRule
+end
+
+class Unlight::CheckAddSlaughterOrganFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSlaughterOrganFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSlaughterOrganFeatEvent < EventRule
+end
+
+class Unlight::UseSlaughterOrganFeatEvent < EventRule
+end
+
+class Unlight::FinishSlaughterOrganFeatEvent < EventRule
+end
+
+class Unlight::FinishTurnSlaughterOrganFeatEvent < EventRule
+end
+
+class Unlight::CheckAddFoolsHandFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveFoolsHandFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateFoolsHandFeatEvent < EventRule
+end
+
+class Unlight::UseFoolsHandFeatEvent < EventRule
+end
+
+class Unlight::UseFoolsHandFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishFoolsHandFeatEvent < EventRule
+end
+
+class Unlight::CheckAddTimeSeedFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveTimeSeedFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateTimeSeedFeatEvent < EventRule
+end
+
+class Unlight::UseTimeSeedFeatEvent < EventRule
+end
+
+class Unlight::FinishTimeSeedFeatEvent < EventRule
+end
+
+class Unlight::CheckAddIrongateOfFateFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveIrongateOfFateFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateIrongateOfFateFeatEvent < EventRule
+end
+
+class Unlight::UseIrongateOfFateFeatEvent < EventRule
+end
+
+class Unlight::UseIrongateOfFateFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishIrongateOfFateFeatEvent < EventRule
+end
+
+class Unlight::CheckAddGathererFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveGathererFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateGathererFeatEvent < EventRule
+end
+
+class Unlight::UseGathererFeatEvent < EventRule
+end
+
+class Unlight::UseNextGathererFeatEvent < EventRule
+end
+
+class Unlight::FinishGathererFeatEvent < EventRule
+end
+
+class Unlight::FinishCharaChangeGathererFeatEvent < EventRule
+end
+
+class Unlight::FinishFoeCharaChangeGathererFeatEvent < EventRule
+end
+
+class Unlight::CheckAddJudgeFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveJudgeFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateJudgeFeatEvent < EventRule
+end
+
+class Unlight::UseJudgeFeatEvent < EventRule
+end
+
+class Unlight::UseJudgeFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishJudgeFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDreamFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDreamFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDreamFeatEvent < EventRule
+end
+
+class Unlight::UseDreamFeatEvent < EventRule
+end
+
+class Unlight::UseDreamFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishDreamFeatEvent < EventRule
+end
+
+class Unlight::CheckAddOneAboveAllFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveOneAboveAllFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateOneAboveAllFeatEvent < EventRule
+end
+
+class Unlight::UseOneAboveAllFeatEvent < EventRule
+end
+
+class Unlight::CheckAddAntisepticFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveAntisepticFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateAntisepticFeatEvent < EventRule
+end
+
+class Unlight::UseAntisepticFeatEvent < EventRule
+end
+
+class Unlight::FinishAntisepticFeatEvent < EventRule
+end
+
+class Unlight::FinishTurnAntisepticFeatEvent < EventRule
+end
+
+class Unlight::CheckAntisepticStateChangeEvent < EventRule
+end
+
+class Unlight::CheckAntisepticStateDeadChangeEvent < EventRule
+end
+
+class Unlight::FinishAntisepticStateEvent < EventRule
+end
+
+class Unlight::CheckAddSilverMachineFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSilverMachineFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSilverMachineFeatEvent < EventRule
+end
+
+class Unlight::UseSilverMachineFeatEvent < EventRule
+end
+
+class Unlight::FinishSilverMachineFeatEvent < EventRule
+end
+
+class Unlight::FinishTurnSilverMachineFeatEvent < EventRule
+end
+
+class Unlight::CheckAddAtomHeartFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveAtomHeartFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateAtomHeartFeatEvent < EventRule
+end
+
+class Unlight::UseAtomHeartFeatEvent < EventRule
+end
+
+class Unlight::UseNextAtomHeartFeatEvent < EventRule
+end
+
+class Unlight::FinishAtomHeartFeatEvent < EventRule
+end
+
+class Unlight::FinishResultAtomHeartFeatEvent < EventRule
+end
+
+class Unlight::FinishCalcAtomHeartFeatEvent < EventRule
+end
+
+class Unlight::DisableAtomHeartFeatEvent < EventRule
+end
+
+class Unlight::DisableNextAtomHeartFeatEvent < EventRule
+end
+
+class Unlight::CheckAddElectricSurgeryFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveElectricSurgeryFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateElectricSurgeryFeatEvent < EventRule
+end
+
+class Unlight::UseElectricSurgeryFeatEvent < EventRule
+end
+
+class Unlight::FinishElectricSurgeryFeatEvent < EventRule
+end
+
+class Unlight::UseElectricSurgeryFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddAcidEaterFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveAcidEaterFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateAcidEaterFeatEvent < EventRule
+end
+
+class Unlight::FinishUsedDetermineAcidEaterFeatEvent < EventRule
+end
+
+class Unlight::FinishDetermineAcidEaterFeatEvent < EventRule
+end
+
+class Unlight::FinishCalcAcidEaterFeatEvent < EventRule
+end
+
+class Unlight::FinishNextAcidEaterFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDeadLockFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDeadLockFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDeadLockFeatEvent < EventRule
+end
+
+class Unlight::UseDeadLockFeatEvent < EventRule
+end
+
+class Unlight::UseDeadLockFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishDeadLockFeatEvent < EventRule
+end
+
+class Unlight::CheckAddBeggarsBanquetFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBeggarsBanquetFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBeggarsBanquetFeatEvent < EventRule
+end
+
+class Unlight::UseBeggarsBanquetFeatEvent < EventRule
+end
+
+class Unlight::ExBeggarsBanquetTmpFeatEvent < EventRule
+end
+
+class Unlight::FinishExBeggarsBanquetFeatEvent < EventRule
+end
+
+class Unlight::FinishCharaChangeExBeggarsBanquetFeatEvent < EventRule
+end
+
+class Unlight::FinishFoeCharaChangeExBeggarsBanquetFeatEvent < EventRule
+end
+
+class Unlight::CheckAddSwanSongFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSwanSongFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSwanSongFeatEvent < EventRule
+end
+
+class Unlight::UseSwanSongFeatEvent < EventRule
+end
+
+class Unlight::FinishSwanSongFeatEvent < EventRule
+end
+
+class Unlight::CheckAddIdleGraveFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveIdleGraveFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateIdleGraveFeatEvent < EventRule
+end
+
+class Unlight::UseIdleGraveFeatEvent < EventRule
+end
+
+class Unlight::CheckAddSorrowSongFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSorrowSongFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSorrowSongFeatEvent < EventRule
+end
+
+class Unlight::UseSorrowSongFeatEvent < EventRule
+end
+
+class Unlight::FinishSorrowSongFeatEvent < EventRule
+end
+
+class Unlight::FinishExSorrowSongFeatEvent < EventRule
+end
+
+class Unlight::CheckAddRedWheelFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveRedWheelFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateRedWheelFeatEvent < EventRule
+end
+
+class Unlight::UseRedWheelFeatEvent < EventRule
+end
+
+class Unlight::UseRedWheelFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishRedWheelFeatEvent < EventRule
+end
+
+class Unlight::CheckAddRedPomegranateFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveRedPomegranateFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateRedPomegranateFeatEvent < EventRule
+end
+
+class Unlight::FinishRedPomegranateFeatEvent < EventRule
+end
+
+class Unlight::CheckAddClockWorksFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveClockWorksFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateClockWorksFeatEvent < EventRule
+end
+
+class Unlight::FinishClockWorksFeatEvent < EventRule
+end
+
+class Unlight::CheckAddTimeHuntFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveTimeHuntFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateTimeHuntFeatEvent < EventRule
+end
+
+class Unlight::UseExTimeHuntFeatEvent < EventRule
+end
+
+class Unlight::UseTimeHuntFeatEvent < EventRule
+end
+
+class Unlight::FinishTimeHuntFeatEvent < EventRule
+end
+
+class Unlight::CheckAddTimeBombFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveTimeBombFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateTimeBombFeatEvent < EventRule
+end
+
+class Unlight::UseTimeBombFeatEvent < EventRule
+end
+
+class Unlight::FinishTimeBombFeatEvent < EventRule
+end
+
+class Unlight::CheckAddInTheEveningFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveInTheEveningFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateInTheEveningFeatEvent < EventRule
+end
+
+class Unlight::FinishInTheEveningFeatEvent < EventRule
+end
+
+class Unlight::CheckAddFinalWaltzFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveFinalWaltzFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateFinalWaltzFeatEvent < EventRule
+end
+
+class Unlight::UseFinalWaltzFeatEvent < EventRule
+end
+
+class Unlight::FinishFinalWaltzFeatEvent < EventRule
+end
+
+class Unlight::UseFinalWaltzFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddDesperateSonataFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDesperateSonataFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDesperateSonataFeatEvent < EventRule
+end
+
+class Unlight::UseDesperateSonataFeatEvent < EventRule
+end
+
+class Unlight::FinishDesperateSonataFeatEvent < EventRule
+end
+
+class Unlight::FinishTurnDesperateSonataFeatEvent < EventRule
+end
+
+class Unlight::CheckAddGladiatorMarchFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveGladiatorMarchFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateGladiatorMarchFeatEvent < EventRule
+end
+
+class Unlight::UseGladiatorMarchFeatEvent < EventRule
+end
+
+class Unlight::FinishGladiatorMarchFeatEvent < EventRule
+end
+
+class Unlight::CheckAddRequiemOfRevengeFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveRequiemOfRevengeFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateRequiemOfRevengeFeatEvent < EventRule
+end
+
+class Unlight::UseRequiemOfRevengeFeatEvent < EventRule
+end
+
+class Unlight::FinishRequiemOfRevengeFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDeliciousMilkFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDeliciousMilkFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDeliciousMilkFeatEvent < EventRule
+end
+
+class Unlight::UseDeliciousMilkFeatEvent < EventRule
+end
+
+class Unlight::UseExDeliciousMilkFeatEvent < EventRule
+end
+
+class Unlight::FinishChangeDeliciousMilkFeatEvent < EventRule
+end
+
+class Unlight::FinishDeliciousMilkFeatEvent < EventRule
+end
+
+class Unlight::FinishTurnDeliciousMilkFeatEvent < EventRule
+end
+
+class Unlight::CheckAddEasyInjectionFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveEasyInjectionFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateEasyInjectionFeatEvent < EventRule
+end
+
+class Unlight::UseEasyInjectionFeatEvent < EventRule
+end
+
+class Unlight::FinishEasyInjectionFeatEvent < EventRule
+end
+
+class Unlight::CheckAddBloodCollectingFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBloodCollectingFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBloodCollectingFeatEvent < EventRule
+end
+
+class Unlight::UseBloodCollectingFeatEvent < EventRule
+end
+
+class Unlight::FinishBloodCollectingFeatEvent < EventRule
+end
+
+class Unlight::CheckAddSecretMedicineFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSecretMedicineFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSecretMedicineFeatEvent < EventRule
+end
+
+class Unlight::UseSecretMedicineFeatEvent < EventRule
+end
+
+class Unlight::FinishSecretMedicineFeatEvent < EventRule
+end
+
+class Unlight::CheckAddIceGateFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveIceGateFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateIceGateFeatEvent < EventRule
+end
+
+class Unlight::UseIceGateFeatEvent < EventRule
+end
+
+class Unlight::FinishIceGateFeatEvent < EventRule
+end
+
+class Unlight::CheckAddFireGateFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveFireGateFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateFireGateFeatEvent < EventRule
+end
+
+class Unlight::UseFireGateFeatEvent < EventRule
+end
+
+class Unlight::FinishFireGateFeatEvent < EventRule
+end
+
+class Unlight::CheckAddBreakGateFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBreakGateFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBreakGateFeatEvent < EventRule
+end
+
+class Unlight::UseBreakGateFeatEvent < EventRule
+end
+
+class Unlight::FinishBreakGateFeatEvent < EventRule
+end
+
+class Unlight::CheckAddShoutOfGateFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveShoutOfGateFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateShoutOfGateFeatEvent < EventRule
+end
+
+class Unlight::UseShoutOfGateFeatEvent < EventRule
+end
+
+class Unlight::UseShoutOfGateFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishShoutOfGateFeatEvent < EventRule
+end
+
+class Unlight::CheckAddFerreousAngerFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveFerreousAngerFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateFerreousAngerFeatEvent < EventRule
+end
+
+class Unlight::UseFerreousAngerFeatEvent < EventRule
+end
+
+class Unlight::FinishFerreousAngerFeatEvent < EventRule
+end
+
+class Unlight::UseFerreousAngerFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddNameOfCharityFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveNameOfCharityFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateNameOfCharityFeatEvent < EventRule
+end
+
+class Unlight::UseNameOfCharityFeatEvent < EventRule
+end
+
+class Unlight::CheckAddGoodWillFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveGoodWillFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateGoodWillFeatEvent < EventRule
+end
+
+class Unlight::UseGoodWillFeatEvent < EventRule
+end
+
+class Unlight::FinishGoodWillFeatEvent < EventRule
+end
+
+class Unlight::CheckAddGreatVengeanceFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveGreatVengeanceFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateGreatVengeanceFeatEvent < EventRule
+end
+
+class Unlight::UseGreatVengeanceFeatEvent < EventRule
+end
+
+class Unlight::UseGreatVengeanceFeatDamageEvent < EventRule
+end
+
+class Unlight::UseGreatVengeanceFeatConstDamageEvent < EventRule
+end
+
+class Unlight::FinishGreatVengeanceFeatEvent < EventRule
+end
+
+class Unlight::CheckAddInnocentSoulFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveInnocentSoulFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateInnocentSoulFeatEvent < EventRule
+end
+
+class Unlight::FinishInnocentSoulFeatEvent < EventRule
+end
+
+class Unlight::CheckAddInfallibleDeedFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveInfallibleDeedFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateInfallibleDeedFeatEvent < EventRule
+end
+
+class Unlight::UseInfallibleDeedFeatEvent < EventRule
+end
+
+class Unlight::FinishInfallibleDeedFeatEvent < EventRule
+end
+
+class Unlight::FinishEffectInfallibleDeedFeatEvent < EventRule
+end
+
+class Unlight::FinishCharaChangeInfallibleDeedFeatEvent < EventRule
+end
+
+class Unlight::FinishFoeChangeInfallibleDeedFeatEvent < EventRule
+end
+
+class Unlight::FinishOwnerChangeInfallibleDeedFeatEvent < EventRule
+end
+
+class Unlight::FinishDeadChangeInfallibleDeedFeatEvent < EventRule
+end
+
+class Unlight::FinishTurnInfallibleDeedFeatEvent < EventRule
+end
+
+class Unlight::CheckAddIdleFateFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveIdleFateFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateIdleFateFeatEvent < EventRule
+end
+
+class Unlight::UseIdleFateFeatEvent < EventRule
+end
+
+class Unlight::UseIdleFateFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishIdleFateFeatEvent < EventRule
+end
+
+class Unlight::CheckAddRegrettableJudgmentFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveRegrettableJudgmentFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateRegrettableJudgmentFeatEvent < EventRule
+end
+
+class Unlight::UseRegrettableJudgmentFeatEvent < EventRule
+end
+
+class Unlight::UseRegrettableJudgmentFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishRegrettableJudgmentFeatEvent < EventRule
+end
+
+class Unlight::CheckAddSinWriggleFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSinWriggleFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSinWriggleFeatEvent < EventRule
+end
+
+class Unlight::UseSinWriggleFeatEvent < EventRule
+end
+
+class Unlight::UseSinWriggleFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishSinWriggleFeatEvent < EventRule
+end
+
+class Unlight::CheckAddIdleGroanFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveIdleGroanFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateIdleGroanFeatEvent < EventRule
+end
+
+class Unlight::UseIdleGroanFeatEvent < EventRule
+end
+
+class Unlight::FinishIdleGroanFeatEvent < EventRule
+end
+
+class Unlight::UseIdleGroanFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishTurnIdleGroanFeatEvent < EventRule
+end
+
+class Unlight::CheckAddContaminationSorrowFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveContaminationSorrowFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateContaminationSorrowFeatEvent < EventRule
+end
+
+class Unlight::FinishContaminationSorrowFeatEvent < EventRule
+end
+
+class Unlight::CheckAddFailureGroanFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveFailureGroanFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateFailureGroanFeatEvent < EventRule
+end
+
+class Unlight::UseFailureGroanFeatEvent < EventRule
+end
+
+class Unlight::FinishFailureGroanFeatEvent < EventRule
+end
+
+class Unlight::CheckAddCathedralFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveCathedralFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateCathedralFeatEvent < EventRule
+end
+
+class Unlight::UseCathedralFeatEvent < EventRule
+end
+
+class Unlight::FinishCathedralFeatEvent < EventRule
+end
+
+class Unlight::CheckAddWinterDreamFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveWinterDreamFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateWinterDreamFeatEvent < EventRule
+end
+
+class Unlight::UseWinterDreamFeatEvent < EventRule
+end
+
+class Unlight::FinishWinterDreamFeatEvent < EventRule
+end
+
+class Unlight::UseWinterDreamFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddTenderNightFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveTenderNightFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateTenderNightFeatEvent < EventRule
+end
+
+class Unlight::FinishTenderNightFeatEvent < EventRule
+end
+
+class Unlight::CheckAddFortunateReasonFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveFortunateReasonFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateFortunateReasonFeatEvent < EventRule
+end
+
+class Unlight::FinishFortunateReasonFeatEvent < EventRule
+end
+
+class Unlight::CheckAddRudNumFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveRudNumFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateRudNumFeatEvent < EventRule
+end
+
+class Unlight::UseRudNumFeatEvent < EventRule
+end
+
+class Unlight::FinishRudNumFeatEvent < EventRule
+end
+
+class Unlight::CheckAddVonNumFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveVonNumFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateVonNumFeatEvent < EventRule
+end
+
+class Unlight::UseVonNumFeatEvent < EventRule
+end
+
+class Unlight::UseVonNumFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishVonNumFeatEvent < EventRule
+end
+
+class Unlight::CheckAddChrNumFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveChrNumFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateChrNumFeatEvent < EventRule
+end
+
+class Unlight::UseChrNumFeatEvent < EventRule
+end
+
+class Unlight::FinishChrNumFeatEvent < EventRule
+end
+
+class Unlight::CheckAddWilNumFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveWilNumFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateWilNumFeatEvent < EventRule
+end
+
+class Unlight::UseWilNumFeatEvent < EventRule
+end
+
+class Unlight::FinishWilNumFeatEvent < EventRule
+end
+
+class Unlight::CheckAddKutunesirkaFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveKutunesirkaFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateKutunesirkaFeatEvent < EventRule
+end
+
+class Unlight::UseKutunesirkaFeatEvent < EventRule
+end
+
+class Unlight::FinishKutunesirkaFeatEvent < EventRule
+end
+
+class Unlight::UseKutunesirkaFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddFeetOfHermesFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveFeetOfHermesFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateFeetOfHermesFeatEvent < EventRule
+end
+
+class Unlight::UseFeetOfHermesFeatEvent < EventRule
+end
+
+class Unlight::UseFeetOfHermesFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddAegisWingFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveAegisWingFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateAegisWingFeatEvent < EventRule
+end
+
+class Unlight::UseAegisWingFeatEvent < EventRule
+end
+
+class Unlight::FinishAegisWingFeatEvent < EventRule
+end
+
+class Unlight::UseAegisWingFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddClaiomhSolaisFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveClaiomhSolaisFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateClaiomhSolaisFeatEvent < EventRule
+end
+
+class Unlight::UseClaiomhSolaisFeatEvent < EventRule
+end
+
+class Unlight::FinishClaiomhSolaisFeatEvent < EventRule
+end
+
+class Unlight::CheckAddMutationFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveMutationFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateMutationFeatEvent < EventRule
+end
+
+class Unlight::UseMutationFeatEvent < EventRule
+end
+
+class Unlight::FinishMutationFeatEvent < EventRule
+end
+
+class Unlight::FinishEffectMutationFeatEvent < EventRule
+end
+
+class Unlight::CheckAddRampancyFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveRampancyFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateRampancyFeatEvent < EventRule
+end
+
+class Unlight::UseRampancyFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishRampancyFeatEvent < EventRule
+end
+
+class Unlight::CheckAddSacrificeOfSoulFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSacrificeOfSoulFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSacrificeOfSoulFeatEvent < EventRule
+end
+
+class Unlight::UseSacrificeOfSoulFeatEvent < EventRule
+end
+
+class Unlight::UseSacrificeOfSoulFeatHealEvent < EventRule
+end
+
+class Unlight::UseSacrificeOfSoulFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddSilverBulletFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSilverBulletFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSilverBulletFeatEvent < EventRule
+end
+
+class Unlight::FinishSilverBulletFeatEvent < EventRule
+end
+
+class Unlight::CheckAddPumpkinDropFeatEvent < EventRule
+end
+
+class Unlight::CheckRemovePumpkinDropFeatEvent < EventRule
+end
+
+class Unlight::CheckRotatePumpkinDropFeatEvent < EventRule
+end
+
+class Unlight::UsePumpkinDropFeatEvent < EventRule
+end
+
+class Unlight::UsePumpkinDropFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishPumpkinDropFeatEvent < EventRule
+end
+
+class Unlight::UsePumpkinDropFeatConstDamageEvent < EventRule
+end
+
+class Unlight::CheckAddWanderingFeatherFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveWanderingFeatherFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateWanderingFeatherFeatEvent < EventRule
+end
+
+class Unlight::UseWanderingFeatherFeatEvent < EventRule
+end
+
+class Unlight::FinishWanderingFeatherFeatEvent < EventRule
+end
+
+class Unlight::CutinWanderingFeatherFeatEvent < EventRule
+end
+
+class Unlight::CheckAddSheepSongFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSheepSongFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSheepSongFeatEvent < EventRule
+end
+
+class Unlight::UseSheepSongFeatEvent < EventRule
+end
+
+class Unlight::FinishSheepSongFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDreamOfOvueryaFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDreamOfOvueryaFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDreamOfOvueryaFeatEvent < EventRule
+end
+
+class Unlight::FinishDreamOfOvueryaFeatEvent < EventRule
+end
+
+class Unlight::CheckAddMarysSheepFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveMarysSheepFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateMarysSheepFeatEvent < EventRule
+end
+
+class Unlight::UseMarysSheepFeatEvent < EventRule
+end
+
+class Unlight::UseMarysSheepFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishMarysSheepFeatEvent < EventRule
+end
+
+class Unlight::CheckAddEvilEyeFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveEvilEyeFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateEvilEyeFeatEvent < EventRule
+end
+
+class Unlight::UseEvilEyeFeatEvent < EventRule
+end
+
+class Unlight::FinishEvilEyeFeatEvent < EventRule
+end
+
+class Unlight::UseEvilEyeFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddBlackArtsFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBlackArtsFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBlackArtsFeatEvent < EventRule
+end
+
+class Unlight::FinishBlackArtsFeatEvent < EventRule
+end
+
+class Unlight::CheckAddBlasphemyCurseFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBlasphemyCurseFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBlasphemyCurseFeatEvent < EventRule
+end
+
+class Unlight::UseBlasphemyCurseFeatEvent < EventRule
+end
+
+class Unlight::FinishBlasphemyCurseFeatEvent < EventRule
+end
+
+class Unlight::UseBlasphemyCurseFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddEndOfEndFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveEndOfEndFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateEndOfEndFeatEvent < EventRule
+end
+
+class Unlight::UseEndOfEndFeatEvent < EventRule
+end
+
+class Unlight::FinishEndOfEndFeatEvent < EventRule
+end
+
+class Unlight::UseEndOfEndFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddThronesGateFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveThronesGateFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateThronesGateFeatEvent < EventRule
+end
+
+class Unlight::UseThronesGateFeatEvent < EventRule
+end
+
+class Unlight::FinishThronesGateFeatEvent < EventRule
+end
+
+class Unlight::UseThronesGateFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddGhostResentmentFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveGhostResentmentFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateGhostResentmentFeatEvent < EventRule
+end
+
+class Unlight::UseGhostResentmentFeatEvent < EventRule
+end
+
+class Unlight::FinishGhostResentmentFeatEvent < EventRule
+end
+
+class Unlight::UseGhostResentmentFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddSwordAvoidFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSwordAvoidFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSwordAvoidFeatEvent < EventRule
+end
+
+class Unlight::UseSwordAvoidFeatEvent < EventRule
+end
+
+class Unlight::UseSwordAvoidFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishSwordAvoidFeatEvent < EventRule
+end
+
+class Unlight::CheckAddCurseSwordFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveCurseSwordFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateCurseSwordFeatEvent < EventRule
+end
+
+class Unlight::UseCurseSwordFeatEvent < EventRule
+end
+
+class Unlight::FinishCurseSwordFeatEvent < EventRule
+end
+
+class Unlight::UseCurseSwordFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddRapidSwordR2FeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveRapidSwordR2FeatEvent < EventRule
+end
+
+class Unlight::CheckRotateRapidSwordR2FeatEvent < EventRule
+end
+
+class Unlight::UseRapidSwordR2FeatEvent < EventRule
+end
+
+class Unlight::FinishRapidSwordR2FeatEvent < EventRule
+end
+
+class Unlight::CheckAddVolitionDeflectFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveVolitionDeflectFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateVolitionDeflectFeatEvent < EventRule
+end
+
+class Unlight::UseVolitionDeflectFeatEvent < EventRule
+end
+
+class Unlight::FinishVolitionDeflectFeatEvent < EventRule
+end
+
+class Unlight::FinishVolitionDeflectFeatDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckAddAngerRFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveAngerRFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateAngerRFeatEvent < EventRule
+end
+
+class Unlight::UseAngerRFeatEvent < EventRule
+end
+
+class Unlight::FinishAngerRFeatEvent < EventRule
+end
+
+class Unlight::CheckAddShadowShotRFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveShadowShotRFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateShadowShotRFeatEvent < EventRule
+end
+
+class Unlight::UseShadowShotRFeatEvent < EventRule
+end
+
+class Unlight::FinishShadowShotRFeatEvent < EventRule
+end
+
+class Unlight::UseShadowShotRFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddBurningTailFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBurningTailFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBurningTailFeatEvent < EventRule
+end
+
+class Unlight::UseBurningTailFeatEvent < EventRule
+end
+
+class Unlight::FinishBurningTailFeatEvent < EventRule
+end
+
+class Unlight::CheckAddQuakeWalkFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveQuakeWalkFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateQuakeWalkFeatEvent < EventRule
+end
+
+class Unlight::FinishQuakeWalkFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDrainageFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDrainageFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDrainageFeatEvent < EventRule
+end
+
+class Unlight::UseDrainageFeatEvent < EventRule
+end
+
+class Unlight::FinishDrainageFeatEvent < EventRule
+end
+
+class Unlight::UseDrainageFeatDamageEvent < EventRule
+end
+
+class Unlight::UseDrainageFeatConstDamageEvent < EventRule
+end
+
+class Unlight::CheckAddSmileFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSmileFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSmileFeatEvent < EventRule
+end
+
+class Unlight::UseSmileFeatEvent < EventRule
+end
+
+class Unlight::FinishSmileFeatEvent < EventRule
+end
+
+class Unlight::UseSmileFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddBlutkontaminaFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBlutkontaminaFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBlutkontaminaFeatEvent < EventRule
+end
+
+class Unlight::UseBlutkontaminaFeatEvent < EventRule
+end
+
+class Unlight::FinishBlutkontaminaFeatEvent < EventRule
+end
+
+class Unlight::UseBlutkontaminaFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddColdEyesFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveColdEyesFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateColdEyesFeatEvent < EventRule
+end
+
+class Unlight::UseColdEyesFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishColdEyesFeatEvent < EventRule
+end
+
+class Unlight::CheckAddFeat1FeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveFeat1FeatEvent < EventRule
+end
+
+class Unlight::CheckRotateFeat1FeatEvent < EventRule
+end
+
+class Unlight::UseFeat1FeatEvent < EventRule
+end
+
+class Unlight::FinishFeat1FeatEvent < EventRule
+end
+
+class Unlight::UseFeat1FeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddFeat2FeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveFeat2FeatEvent < EventRule
+end
+
+class Unlight::CheckRotateFeat2FeatEvent < EventRule
+end
+
+class Unlight::UseFeat2FeatEvent < EventRule
+end
+
+class Unlight::FinishFeat2FeatEvent < EventRule
+end
+
+class Unlight::UseFeat2FeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddFeat3FeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveFeat3FeatEvent < EventRule
+end
+
+class Unlight::CheckRotateFeat3FeatEvent < EventRule
+end
+
+class Unlight::UseFeat3FeatEvent < EventRule
+end
+
+class Unlight::FinishFeat3FeatEvent < EventRule
+end
+
+class Unlight::CheckAddFeat4FeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveFeat4FeatEvent < EventRule
+end
+
+class Unlight::CheckRotateFeat4FeatEvent < EventRule
+end
+
+class Unlight::CheckBpFeat4AttackFeatEvent < EventRule
+end
+
+class Unlight::CheckBpFeat4DefenceFeatEvent < EventRule
+end
+
+class Unlight::UseFeat4FeatEvent < EventRule
+end
+
+class Unlight::FinishChangeFeat4FeatEvent < EventRule
+end
+
+class Unlight::FinishFeat4FeatEvent < EventRule
+end
+
+class Unlight::StartFeat4FeatEvent < EventRule
+end
+
+class Unlight::CheckAddWeaselFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveWeaselFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateWeaselFeatEvent < EventRule
+end
+
+class Unlight::CheckTableWeaselFeatMoveEvent < EventRule
+end
+
+class Unlight::CheckTableWeaselFeatBattleEvent < EventRule
+end
+
+class Unlight::UseWeaselFeatDealEvent < EventRule
+end
+
+class Unlight::UseWeaselFeatEvent < EventRule
+end
+
+class Unlight::UseWeaselFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishWeaselFeatEvent < EventRule
+end
+
+class Unlight::CheckEndingWeaselFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDarkProfoundFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDarkProfoundFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDarkProfoundFeatEvent < EventRule
+end
+
+class Unlight::UseDarkProfoundFeatEvent < EventRule
+end
+
+class Unlight::UseDarkProfoundFeatBornusEvent < EventRule
+end
+
+class Unlight::FinishDarkProfoundFeatEvent < EventRule
+end
+
+class Unlight::CheckAddKarmicDorFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveKarmicDorFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateKarmicDorFeatEvent < EventRule
+end
+
+class Unlight::CheckPointKarmicDorFeatEvent < EventRule
+end
+
+class Unlight::UseKarmicDorFeatEvent < EventRule
+end
+
+class Unlight::FinishKarmicDorFeatEvent < EventRule
+end
+
+class Unlight::FinishCharaChangeKarmicDorFeatEvent < EventRule
+end
+
+class Unlight::FinishFoeCharaChangeKarmicDorFeatEvent < EventRule
+end
+
+class Unlight::CheckAddBataflyMovFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBataflyMovFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBataflyMovFeatEvent < EventRule
+end
+
+class Unlight::DetermineDistanceBataflyMovFeatEvent < EventRule
+end
+
+class Unlight::FinishBataflyMovFeatEvent < EventRule
+end
+
+class Unlight::CheckAddBataflyAtkFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBataflyAtkFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBataflyAtkFeatEvent < EventRule
+end
+
+class Unlight::UseBataflyAtkFeatEvent < EventRule
+end
+
+class Unlight::FinishBataflyAtkFeatEvent < EventRule
+end
+
+class Unlight::CheckAddBataflyDefFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBataflyDefFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBataflyDefFeatEvent < EventRule
+end
+
+class Unlight::UseBataflyDefFeatEvent < EventRule
+end
+
+class Unlight::FinishBataflyDefFeatEvent < EventRule
+end
+
+class Unlight::CheckAddBataflySldFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBataflySldFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBataflySldFeatEvent < EventRule
+end
+
+class Unlight::UseBataflySldFeatEvent < EventRule
+end
+
+class Unlight::FinishBataflySldFeatEvent < EventRule
+end
+
+class Unlight::CheckAddGraceCocktailFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveGraceCocktailFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateGraceCocktailFeatEvent < EventRule
+end
+
+class Unlight::UseGraceCocktailFeatEvent < EventRule
+end
+
+class Unlight::FinishGraceCocktailFeatEvent < EventRule
+end
+
+class Unlight::UseGraceCocktailFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddLandMineRFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveLandMineRFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateLandMineRFeatEvent < EventRule
+end
+
+class Unlight::UseLandMineRFeatEvent < EventRule
+end
+
+class Unlight::CheckAddNapalmDeathFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveNapalmDeathFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateNapalmDeathFeatEvent < EventRule
+end
+
+class Unlight::UseNapalmDeathFeatEvent < EventRule
+end
+
+class Unlight::FinishNapalmDeathFeatEvent < EventRule
+end
+
+class Unlight::CheckAddSuicidalFailureFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSuicidalFailureFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSuicidalFailureFeatEvent < EventRule
+end
+
+class Unlight::UseSuicidalFailureFeatEvent < EventRule
+end
+
+class Unlight::FinishSuicidalFailureFeatEvent < EventRule
+end
+
+class Unlight::CheckAddBigBraggRFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBigBraggRFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBigBraggRFeatEvent < EventRule
+end
+
+class Unlight::FinishBigBraggRFeatEvent < EventRule
+end
+
+class Unlight::CheckAddLetsKnifeRFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveLetsKnifeRFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateLetsKnifeRFeatEvent < EventRule
+end
+
+class Unlight::UseLetsKnifeRFeatEvent < EventRule
+end
+
+class Unlight::FinishLetsKnifeRFeatEvent < EventRule
+end
+
+class Unlight::CheckAddPreyFeatEvent < EventRule
+end
+
+class Unlight::CheckRemovePreyFeatEvent < EventRule
+end
+
+class Unlight::CheckRotatePreyFeatEvent < EventRule
+end
+
+class Unlight::UsePreyFeatEvent < EventRule
+end
+
+class Unlight::CheckAddRuminationFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveRuminationFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateRuminationFeatEvent < EventRule
+end
+
+class Unlight::UseRuminationFeatEvent < EventRule
+end
+
+class Unlight::FinishRuminationFeatEvent < EventRule
+end
+
+class Unlight::FinishRuminationFeatFoeCharaChangeEvent < EventRule
+end
+
+class Unlight::FinishRuminationFeatOwnerCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckAddPilumFeatEvent < EventRule
+end
+
+class Unlight::CheckRemovePilumFeatEvent < EventRule
+end
+
+class Unlight::CheckRotatePilumFeatEvent < EventRule
+end
+
+class Unlight::UsePilumFeatEvent < EventRule
+end
+
+class Unlight::FinishPilumFeatEvent < EventRule
+end
+
+class Unlight::UsePilumFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddRoadOfUndergroundFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveRoadOfUndergroundFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateRoadOfUndergroundFeatEvent < EventRule
+end
+
+class Unlight::UseRoadOfUndergroundFeatEvent < EventRule
+end
+
+class Unlight::UseRoadOfUndergroundFeatFinishMoveEvent < EventRule
+end
+
+class Unlight::FinishRoadOfUndergroundFeatEvent < EventRule
+end
+
+class Unlight::CheckAddFoxShadowFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveFoxShadowFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateFoxShadowFeatEvent < EventRule
+end
+
+class Unlight::UseFoxShadowFeatEvent < EventRule
+end
+
+class Unlight::FinishFoxShadowFeatEvent < EventRule
+end
+
+class Unlight::CheckAddFoxShootFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveFoxShootFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateFoxShootFeatEvent < EventRule
+end
+
+class Unlight::UseFoxShootFeatEvent < EventRule
+end
+
+class Unlight::FinishFoxShootFeatEvent < EventRule
+end
+
+class Unlight::UseFoxShootFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddFoxZoneFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveFoxZoneFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateFoxZoneFeatEvent < EventRule
+end
+
+class Unlight::UseFoxZoneFeatEvent < EventRule
+end
+
+class Unlight::UseFoxZoneFeatAttackDealDetCharaChangeEvent < EventRule
+end
+
+class Unlight::UseFoxZoneFeatAttackDealChangeInitiativeEvent < EventRule
+end
+
+class Unlight::UseFoxZoneFeatDefenseDealEvent < EventRule
+end
+
+class Unlight::FinishFoxZoneFeatEvent < EventRule
+end
+
+class Unlight::CheckAddArrowRainFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveArrowRainFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateArrowRainFeatEvent < EventRule
+end
+
+class Unlight::UseArrowRainFeatEvent < EventRule
+end
+
+class Unlight::FinishArrowRainFeatEvent < EventRule
+end
+
+class Unlight::CheckAddAtemwendeFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveAtemwendeFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateAtemwendeFeatEvent < EventRule
+end
+
+class Unlight::UseAtemwendeFeatEvent < EventRule
+end
+
+class Unlight::FinishChangeAtemwendeFeatEvent < EventRule
+end
+
+class Unlight::FinishTurnAtemwendeFeatEvent < EventRule
+end
+
+class Unlight::CheckAddFadensonnenFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveFadensonnenFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateFadensonnenFeatEvent < EventRule
+end
+
+class Unlight::UseFadensonnenFeatEvent < EventRule
+end
+
+class Unlight::FinishFadensonnenFeatEvent < EventRule
+end
+
+class Unlight::CheckAddLichtzwangFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveLichtzwangFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateLichtzwangFeatEvent < EventRule
+end
+
+class Unlight::UseLichtzwangFeatEvent < EventRule
+end
+
+class Unlight::FinishLichtzwangFeatEvent < EventRule
+end
+
+class Unlight::UseLichtzwangFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddSchneepartFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSchneepartFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSchneepartFeatEvent < EventRule
+end
+
+class Unlight::UseSchneepartFeatEvent < EventRule
+end
+
+class Unlight::UseSchneepartFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishSchneepartFeatEvent < EventRule
+end
+
+class Unlight::CheckAddHighgateFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveHighgateFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateHighgateFeatEvent < EventRule
+end
+
+class Unlight::UseHighgateFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDorfloftFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDorfloftFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDorfloftFeatEvent < EventRule
+end
+
+class Unlight::UseDorfloftFeatEvent < EventRule
+end
+
+class Unlight::UseDorfloftFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddLuminesFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveLuminesFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateLuminesFeatEvent < EventRule
+end
+
+class Unlight::UseLuminesFeatEvent < EventRule
+end
+
+class Unlight::FinishLuminesFeatEvent < EventRule
+end
+
+class Unlight::UseLuminesFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddSuperHeroineFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSuperHeroineFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSuperHeroineFeatEvent < EventRule
+end
+
+class Unlight::FinishSuperHeroineFeatEvent < EventRule
+end
+
+class Unlight::CheckAddStampedeFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveStampedeFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateStampedeFeatEvent < EventRule
+end
+
+class Unlight::UseStampedeFeatEvent < EventRule
+end
+
+class Unlight::FinishStampedeFeatEvent < EventRule
+end
+
+class Unlight::UseStampedeFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddDeathControl2FeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDeathControl2FeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDeathControl2FeatEvent < EventRule
+end
+
+class Unlight::UseDeathControl2FeatEvent < EventRule
+end
+
+class Unlight::FinishDeathControl2FeatEvent < EventRule
+end
+
+class Unlight::UseDeathControl2FeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddKengiFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveKengiFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateKengiFeatEvent < EventRule
+end
+
+class Unlight::UseKengiFeatEvent < EventRule
+end
+
+class Unlight::UseKengiFeatRollChancelEvent < EventRule
+end
+
+class Unlight::UseKengiFeatBattleResultEvent < EventRule
+end
+
+class Unlight::FinishKengiFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDokowoFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDokowoFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDokowoFeatEvent < EventRule
+end
+
+class Unlight::FinishDokowoFeatEvent < EventRule
+end
+
+class Unlight::CheckAddMikittaFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveMikittaFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateMikittaFeatEvent < EventRule
+end
+
+class Unlight::FinishMikittaFeatEvent < EventRule
+end
+
+class Unlight::CheckAddHontouFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveHontouFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateHontouFeatEvent < EventRule
+end
+
+class Unlight::UseHontouFeatEvent < EventRule
+end
+
+class Unlight::UseHontouFeatRollChancelEvent < EventRule
+end
+
+class Unlight::UseHontouFeatBattleResultEvent < EventRule
+end
+
+class Unlight::FinishHontouFeatEvent < EventRule
+end
+
+class Unlight::CheckAddInvitedFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveInvitedFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateInvitedFeatEvent < EventRule
+end
+
+class Unlight::FinishInvitedFeatEvent < EventRule
+end
+
+class Unlight::CheckAddThroughHandFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveThroughHandFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateThroughHandFeatEvent < EventRule
+end
+
+class Unlight::UseThroughHandFeatEvent < EventRule
+end
+
+class Unlight::CheckAddProfBreathFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveProfBreathFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateProfBreathFeatEvent < EventRule
+end
+
+class Unlight::FinishProfBreathFeatEvent < EventRule
+end
+
+class Unlight::CheckAddSevenWishFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSevenWishFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSevenWishFeatEvent < EventRule
+end
+
+class Unlight::UseSevenWishFeatEvent < EventRule
+end
+
+class Unlight::UseSevenWishFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddThirteenEyesRFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveThirteenEyesRFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateThirteenEyesRFeatEvent < EventRule
+end
+
+class Unlight::UseOwnerThirteenEyesRFeatEvent < EventRule
+end
+
+class Unlight::UseFoeThirteenEyesRFeatEvent < EventRule
+end
+
+class Unlight::FinishThirteenEyesRFeatEvent < EventRule
+end
+
+class Unlight::UseThirteenEyesRFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddThornCareRFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveThornCareRFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateThornCareRFeatEvent < EventRule
+end
+
+class Unlight::UseThornCareRFeatEvent < EventRule
+end
+
+class Unlight::UseThornCareRFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishThornCareRFeatEvent < EventRule
+end
+
+class Unlight::CheckAddLiberatingSwordRFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveLiberatingSwordRFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateLiberatingSwordRFeatEvent < EventRule
+end
+
+class Unlight::UseLiberatingSwordRFeatEvent < EventRule
+end
+
+class Unlight::FinishLiberatingSwordRFeatEvent < EventRule
+end
+
+class Unlight::UseLiberatingSwordRFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddCurseSwordRFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveCurseSwordRFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateCurseSwordRFeatEvent < EventRule
+end
+
+class Unlight::UseCurseSwordRFeatEvent < EventRule
+end
+
+class Unlight::FinishCurseSwordRFeatEvent < EventRule
+end
+
+class Unlight::UseCurseSwordRFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddFlameRingFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveFlameRingFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateFlameRingFeatEvent < EventRule
+end
+
+class Unlight::UseFlameRingFeatEvent < EventRule
+end
+
+class Unlight::FinishFlameRingFeatEvent < EventRule
+end
+
+class Unlight::CheckAddPianoFeatEvent < EventRule
+end
+
+class Unlight::CheckRemovePianoFeatEvent < EventRule
+end
+
+class Unlight::CheckRotatePianoFeatEvent < EventRule
+end
+
+class Unlight::UsePianoFeatEvent < EventRule
+end
+
+class Unlight::UsePianoFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishPianoFeatEvent < EventRule
+end
+
+class Unlight::CheckAddOnaBallFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveOnaBallFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateOnaBallFeatEvent < EventRule
+end
+
+class Unlight::FinishNextOnaBallFeatEvent < EventRule
+end
+
+class Unlight::CheckAddViolentFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveViolentFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateViolentFeatEvent < EventRule
+end
+
+class Unlight::FinishViolentFeatEvent < EventRule
+end
+
+class Unlight::FinishViolentFeatChangeEvent < EventRule
+end
+
+class Unlight::CheckAddLifetimeSoundFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveLifetimeSoundFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateLifetimeSoundFeatEvent < EventRule
+end
+
+class Unlight::UseLifetimeSoundFeatEvent < EventRule
+end
+
+class Unlight::FinishLifetimeSoundFeatEvent < EventRule
+end
+
+class Unlight::FinishLifetimeSoundFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddBalanceLifeFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBalanceLifeFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBalanceLifeFeatEvent < EventRule
+end
+
+class Unlight::UseBalanceLifeFeatEvent < EventRule
+end
+
+class Unlight::UseBalanceLifeFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishBalanceLifeFeatEvent < EventRule
+end
+
+class Unlight::CheckAddComaWhiteFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveComaWhiteFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateComaWhiteFeatEvent < EventRule
+end
+
+class Unlight::UseComaWhiteFeatEvent < EventRule
+end
+
+class Unlight::FinishComaWhiteFeatEvent < EventRule
+end
+
+class Unlight::CheckAddGoesToDarkFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveGoesToDarkFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateGoesToDarkFeatEvent < EventRule
+end
+
+class Unlight::FinishGoesToDarkFeatEvent < EventRule
+end
+
+class Unlight::CheckAddRakshasaStanceFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveRakshasaStanceFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateRakshasaStanceFeatEvent < EventRule
+end
+
+class Unlight::CheckRakshasaStanceStateChangeEvent < EventRule
+end
+
+class Unlight::UseRakshasaStanceFeatEvent < EventRule
+end
+
+class Unlight::UseRakshasaStanceFeatResultEvent < EventRule
+end
+
+class Unlight::OnRakshasaStanceFeatEvent < EventRule
+end
+
+class Unlight::OffRakshasaStanceFeatEvent < EventRule
+end
+
+class Unlight::FinishRakshasaStanceFeatEvent < EventRule
+end
+
+class Unlight::CheckAddKirigakureFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveKirigakureFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateKirigakureFeatEvent < EventRule
+end
+
+class Unlight::CheckAddKirigakureFeatFoeAttackEvent < EventRule
+end
+
+class Unlight::CheckRemoveKirigakureFeatFoeAttackEvent < EventRule
+end
+
+class Unlight::CheckRotateKirigakureFeatFoeAttackEvent < EventRule
+end
+
+class Unlight::CheckAddKirigakureFeatFoeDefenseEvent < EventRule
+end
+
+class Unlight::CheckRemoveKirigakureFeatFoeDefenseEvent < EventRule
+end
+
+class Unlight::CheckRotateKirigakureFeatFoeDefenseEvent < EventRule
+end
+
+class Unlight::UseKirigakureFeatCalcEvent < EventRule
+end
+
+class Unlight::UseKirigakureFeatPhaseInitEvent < EventRule
+end
+
+class Unlight::UseKirigakureFeatDefenseDoneOwnerEvent < EventRule
+end
+
+class Unlight::UseKirigakureFeatDefenseDoneOwnerEvent < EventRule
+end
+
+class Unlight::UseKirigakureFeatDefenseDoneFoeEvent < EventRule
+end
+
+class Unlight::UseKirigakureFeatEvent < EventRule
+end
+
+class Unlight::UseKirigakureFeatDetChangeEvent < EventRule
+end
+
+class Unlight::FinishKirigakureFeatOwnerDamagedEvent < EventRule
+end
+
+class Unlight::FinishKirigakureFeatDoDamageEvent < EventRule
+end
+
+class Unlight::FinishKirigakureFeatFinishTurnEvent < EventRule
+end
+
+class Unlight::CheckAddMikagamiFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveMikagamiFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateMikagamiFeatEvent < EventRule
+end
+
+class Unlight::UseMikagamiFeatEvent < EventRule
+end
+
+class Unlight::FinishMikagamiFeatEvent < EventRule
+end
+
+class Unlight::CheckAddMutualLoveFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveMutualLoveFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateMutualLoveFeatEvent < EventRule
+end
+
+class Unlight::UseMutualLoveFeatEvent < EventRule
+end
+
+class Unlight::UseMutualLoveFeatDamageEvent < EventRule
+end
+
+class Unlight::UseMutualLoveFeatConstDamageEvent < EventRule
+end
+
+class Unlight::FinishMutualLoveFeatEvent < EventRule
+end
+
+class Unlight::CheckAddMereShadowFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveMereShadowFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateMereShadowFeatEvent < EventRule
+end
+
+class Unlight::UseMereShadowFeatEvent < EventRule
+end
+
+class Unlight::FinishMereShadowFeatEvent < EventRule
+end
+
+class Unlight::FinishMereShadowFeatDiceAttrEvent < EventRule
+end
+
+class Unlight::CheckAddScapulimancyFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveScapulimancyFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateScapulimancyFeatEvent < EventRule
+end
+
+class Unlight::FinishScapulimancyFeatEvent < EventRule
+end
+
+class Unlight::CheckAddSoilGuardFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSoilGuardFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSoilGuardFeatEvent < EventRule
+end
+
+class Unlight::UseSoilGuardFeatEvent < EventRule
+end
+
+class Unlight::UseSoilGuardFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddCarapaceSpinFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveCarapaceSpinFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateCarapaceSpinFeatEvent < EventRule
+end
+
+class Unlight::UseCarapaceSpinFeatEvent < EventRule
+end
+
+class Unlight::FinishCarapaceSpinFeatEvent < EventRule
+end
+
+class Unlight::CheckAddVendettaFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveVendettaFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateVendettaFeatEvent < EventRule
+end
+
+class Unlight::UseVendettaFeatEvent < EventRule
+end
+
+class Unlight::FinishVendettaFeatEvent < EventRule
+end
+
+class Unlight::CheckAddAvengersFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveAvengersFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateAvengersFeatEvent < EventRule
+end
+
+class Unlight::UseAvengersFeatEvent < EventRule
+end
+
+class Unlight::FinishAvengersFeatEvent < EventRule
+end
+
+class Unlight::CheckAddSharpenEdgeFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSharpenEdgeFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSharpenEdgeFeatEvent < EventRule
+end
+
+class Unlight::UseSharpenEdgeFeatEvent < EventRule
+end
+
+class Unlight::CheckSharpenEdgeStateChangeEvent < EventRule
+end
+
+class Unlight::CheckSharpenEdgeStateDeadChangeEvent < EventRule
+end
+
+class Unlight::UseSharpenEdgeStateDamageEvent < EventRule
+end
+
+class Unlight::FinishSharpenEdgeStateEvent < EventRule
+end
+
+class Unlight::CheckAddHacknineFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveHacknineFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateHacknineFeatEvent < EventRule
+end
+
+class Unlight::UseHacknineFeatEvent < EventRule
+end
+
+class Unlight::FinishHacknineFeatEvent < EventRule
+end
+
+class Unlight::CheckAddBlackMageiaFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBlackMageiaFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBlackMageiaFeatEvent < EventRule
+end
+
+class Unlight::FinishBlackMageiaFeatEvent < EventRule
+end
+
+class Unlight::CheckAddCorpsDrainFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveCorpsDrainFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateCorpsDrainFeatEvent < EventRule
+end
+
+class Unlight::FinishCorpsDrainFeatEvent < EventRule
+end
+
+class Unlight::UseCorpsDrainFeatDamageEvent < EventRule
+end
+
+# --------------------------------------------------------------------------------------------
+# インヴァート
+class Unlight::CheckAddInvertFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveInvertFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateInvertFeatEvent < EventRule
+end
+
+class Unlight::FinishInvertFeatEvent < EventRule
+end
+
+class Unlight::CheckAddNightHawkFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveNightHawkFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateNightHawkFeatEvent < EventRule
+end
+
+class Unlight::UseNightHawkFeatEvent < EventRule
+end
+
+class Unlight::UseNightHawkFeatDetMpBefore1Event < EventRule
+end
+
+class Unlight::UseNightHawkFeatDetMpBefore2Event < EventRule
+end
+
+class Unlight::UseNightHawkFeatFoeChangeEvent < EventRule
+end
+
+class Unlight::UseNightHawkFeatOwnerChangeEvent < EventRule
+end
+
+class Unlight::UseNightHawkFeatDeadChangeEvent < EventRule
+end
+
+class Unlight::FinishNightHawkFeatChangeEvent < EventRule
+end
+
+class Unlight::CheckAddPhantomBarrettFeatEvent < EventRule
+end
+
+class Unlight::CheckRemovePhantomBarrettFeatEvent < EventRule
+end
+
+class Unlight::CheckRotatePhantomBarrettFeatEvent < EventRule
+end
+
+class Unlight::UsePhantomBarrettFeatEvent < EventRule
+end
+
+class Unlight::FinishPhantomBarrettFeatEvent < EventRule
+end
+
+class Unlight::CheckAddOneActFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveOneActFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateOneActFeatEvent < EventRule
+end
+
+class Unlight::UseOneActFeatEvent < EventRule
+end
+
+class Unlight::FinishOneActFeatEvent < EventRule
+end
+
+class Unlight::CheckAddFinalBarrettFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveFinalBarrettFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateFinalBarrettFeatEvent < EventRule
+end
+
+class Unlight::UseFinalBarrettFeatEvent < EventRule
+end
+
+class Unlight::FinishFinalBarrettFeatEvent < EventRule
+end
+
+class Unlight::CheckAddGrimmdeadFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveGrimmdeadFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateGrimmdeadFeatEvent < EventRule
+end
+
+class Unlight::UseGrimmdeadFeatCalcEvent < EventRule
+end
+
+class Unlight::UseGrimmdeadFeatEvent < EventRule
+end
+
+class Unlight::UseGrimmdeadFeatMoveBeforeEvent < EventRule
+end
+
+class Unlight::UseGrimmdeadFeatMoveAfterEvent < EventRule
+end
+
+class Unlight::FinishGrimmdeadFeatEvent < EventRule
+end
+
+class Unlight::CheckAddWunderkammerFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveWunderkammerFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateWunderkammerFeatEvent < EventRule
+end
+
+class Unlight::FinishWunderkammerFeatEvent < EventRule
+end
+
+class Unlight::UseWunderkammerFeatEvent < EventRule
+end
+
+class Unlight::UseWunderkammerFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddConstraintFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveConstraintFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateConstraintFeatEvent < EventRule
+end
+
+class Unlight::UseConstraintFeatEvent < EventRule
+end
+
+class Unlight::UseConstraintFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishConstraintFeatEvent < EventRule
+end
+
+class Unlight::CheckAddRenovateAtrandomFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveRenovateAtrandomFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateRenovateAtrandomFeatEvent < EventRule
+end
+
+class Unlight::UseRenovateAtrandomFeatEvent < EventRule
+end
+
+class Unlight::UseRenovateAtrandomFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishRenovateAtrandomFeatEvent < EventRule
+end
+
+class Unlight::CheckAddBackbeardFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBackbeardFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBackbeardFeatEvent < EventRule
+end
+
+class Unlight::UseBackbeardFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishBackbeardFeatEvent < EventRule
+end
+
+class Unlight::CheckAddShadowStitchFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveShadowStitchFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateShadowStitchFeatEvent < EventRule
+end
+
+class Unlight::UseShadowStitchFeatEvent < EventRule
+end
+
+class Unlight::FinishShadowStitchFeatEvent < EventRule
+end
+
+class Unlight::UseShadowStitchFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddMextliFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveMextliFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateMextliFeatEvent < EventRule
+end
+
+class Unlight::UseMextliFeatEvent < EventRule
+end
+
+class Unlight::CheckDamageInsuranceChangeEvent < EventRule
+end
+
+class Unlight::CheckDamageInsuranceDeadChangeEvent < EventRule
+end
+
+class Unlight::UseDamageInsuranceDamageEvent < EventRule
+end
+
+class Unlight::CheckAddRivetAndSurgeFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveRivetAndSurgeFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateRivetAndSurgeFeatEvent < EventRule
+end
+
+class Unlight::UseRivetAndSurgeFeatAttackEvent < EventRule
+end
+
+class Unlight::UseRivetAndSurgeFeatDefenseEvent < EventRule
+end
+
+class Unlight::CutinRivetAndSurgeFeatEvent < EventRule
+end
+
+class Unlight::FinishRivetAndSurgeFeatEvent < EventRule
+end
+
+class Unlight::CheckAddPhantomasFeatEvent < EventRule
+end
+
+class Unlight::CheckRemovePhantomasFeatEvent < EventRule
+end
+
+class Unlight::CheckRotatePhantomasFeatEvent < EventRule
+end
+
+class Unlight::UsePhantomasFeatEvent < EventRule
+end
+
+class Unlight::FinishPhantomasFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDangerDrugFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDangerDrugFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDangerDrugFeatEvent < EventRule
+end
+
+class Unlight::FinishDangerDrugFeatEvent < EventRule
+end
+
+class Unlight::CheckAddThreeThunderFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveThreeThunderFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateThreeThunderFeatEvent < EventRule
+end
+
+class Unlight::UseThreeThunderFeatEvent < EventRule
+end
+
+class Unlight::FinishThreeThunderFeatEvent < EventRule
+end
+
+class Unlight::CheckAddPrimeHealFeatEvent < EventRule
+end
+
+class Unlight::CheckRemovePrimeHealFeatEvent < EventRule
+end
+
+class Unlight::CheckRotatePrimeHealFeatEvent < EventRule
+end
+
+class Unlight::UsePrimeHealFeatEvent < EventRule
+end
+
+class Unlight::FinishPrimeHealFeatEvent < EventRule
+end
+
+class Unlight::CheckAddFourCometFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveFourCometFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateFourCometFeatEvent < EventRule
+end
+
+class Unlight::UseFourCometFeatEvent < EventRule
+end
+
+class Unlight::FinishFourCometFeatEvent < EventRule
+end
+
+class Unlight::CheckAddClubJuggFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveClubJuggFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateClubJuggFeatEvent < EventRule
+end
+
+class Unlight::UseClubJuggFeatEvent < EventRule
+end
+
+class Unlight::UseClubJuggFeatDealEvent < EventRule
+end
+
+class Unlight::FinishClubJuggFeatEvent < EventRule
+end
+
+class Unlight::CheckAddKnifeJuggFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveKnifeJuggFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateKnifeJuggFeatEvent < EventRule
+end
+
+class Unlight::UseKnifeJuggFeatEvent < EventRule
+end
+
+class Unlight::UseKnifeJuggFeatDealEvent < EventRule
+end
+
+class Unlight::FinishKnifeJuggFeatEvent < EventRule
+end
+
+class Unlight::CheckAddBlowingFireFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBlowingFireFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBlowingFireFeatEvent < EventRule
+end
+
+class Unlight::UseBlowingFireFeatEvent < EventRule
+end
+
+class Unlight::FinishBlowingFireFeatEvent < EventRule
+end
+
+class Unlight::CheckAddBalanceBallFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBalanceBallFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBalanceBallFeatEvent < EventRule
+end
+
+class Unlight::UseBalanceBallFeatEvent < EventRule
+end
+
+class Unlight::FinishBalanceBallFeatEvent < EventRule
+end
+
+class Unlight::CheckAddBadMilkFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBadMilkFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBadMilkFeatEvent < EventRule
+end
+
+class Unlight::UseBadMilkFeatEvent < EventRule
+end
+
+class Unlight::UseBadMilkFeatRecalcEvent < EventRule
+end
+
+class Unlight::UseExBadMilkFeatEvent < EventRule
+end
+
+class Unlight::FinishChangeBadMilkFeatEvent < EventRule
+end
+
+class Unlight::FinishBadMilkFeatEvent < EventRule
+end
+
+class Unlight::FinishTurnBadMilkFeatEvent < EventRule
+end
+
+class Unlight::CheckAddMiraHpFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveMiraHpFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateMiraHpFeatEvent < EventRule
+end
+
+class Unlight::UseMiraHpFeatEvent < EventRule
+end
+
+class Unlight::FinishMiraHpFeatEvent < EventRule
+end
+
+class Unlight::UseMiraHpFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddSkillDrainFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSkillDrainFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSkillDrainFeatEvent < EventRule
+end
+
+class Unlight::UseSkillDrainFeatEvent < EventRule
+end
+
+class Unlight::UseSkillDrainFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishSkillDrainFeatEvent < EventRule
+end
+
+class Unlight::FinishSkillDrainFeatFinishEvent < EventRule
+end
+
+class Unlight::FinishOverrideSkillStateEvent < EventRule
+end
+
+class Unlight::CheckAddCoffinFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveCoffinFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateCoffinFeatEvent < EventRule
+end
+
+class Unlight::UseCoffinFeatEvent < EventRule
+end
+
+class Unlight::FinishCoffinFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDarkEyesFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDarkEyesFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDarkEyesFeatEvent < EventRule
+end
+
+class Unlight::UseDarkEyesFeatEvent < EventRule
+end
+
+class Unlight::UseDarkEyesFeatMoveEvent < EventRule
+end
+
+class Unlight::UseDarkEyesFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddCrowsClawFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveCrowsClawFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateCrowsClawFeatEvent < EventRule
+end
+
+class Unlight::UseCrowsClawFeatEvent < EventRule
+end
+
+class Unlight::FinishCrowsClawFeatEvent < EventRule
+end
+
+class Unlight::CheckAddMoleFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveMoleFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateMoleFeatEvent < EventRule
+end
+
+class Unlight::UseMoleFeatEvent < EventRule
+end
+
+class Unlight::UseMoleFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishMoleFeatEvent < EventRule
+end
+
+class Unlight::CheckAddSunsetFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSunsetFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSunsetFeatEvent < EventRule
+end
+
+class Unlight::UseSunsetFeatEvent < EventRule
+end
+
+class Unlight::UseSunsetFeatResultEvent < EventRule
+end
+
+class Unlight::UseSunsetFeatDamageCheckEvent < EventRule
+end
+
+class Unlight::UseSunsetFeatConstDamageEvent < EventRule
+end
+
+class Unlight::CheckAddVineFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveVineFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateVineFeatEvent < EventRule
+end
+
+class Unlight::UseVineFeatEvent < EventRule
+end
+
+class Unlight::FinishVineFeatEvent < EventRule
+end
+
+class Unlight::UseVineFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishVineFeatTurnEvent < EventRule
+end
+
+class Unlight::CheckAddGrapeVineFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveGrapeVineFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateGrapeVineFeatEvent < EventRule
+end
+
+class Unlight::UseGrapeVineFeatEvent < EventRule
+end
+
+class Unlight::UseGrapeVineFeatDamageEvent < EventRule
+end
+
+class Unlight::UseGrapeVineFeatFoeEvent < EventRule
+end
+
+class Unlight::CheckAddThunderStruckFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveThunderStruckFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateThunderStruckFeatEvent < EventRule
+end
+
+class Unlight::UseThunderStruckFeatEvent < EventRule
+end
+
+class Unlight::FinishThunderStruckFeatEvent < EventRule
+end
+
+class Unlight::FinishThunderStruckFeatEndEvent < EventRule
+end
+
+class Unlight::CheckAddWeaveWorldFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveWeaveWorldFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateWeaveWorldFeatEvent < EventRule
+end
+
+class Unlight::UseWeaveWorldFeatEvent < EventRule
+end
+
+class Unlight::FinishWeaveWorldFeatEvent < EventRule
+end
+
+class Unlight::CheckAddCollectionFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveCollectionFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateCollectionFeatEvent < EventRule
+end
+
+class Unlight::CheckTableCollectionFeatMoveEvent < EventRule
+end
+
+class Unlight::CheckTableCollectionFeatBattleEvent < EventRule
+end
+
+class Unlight::UseCollectionFeatDealEvent < EventRule
+end
+
+class Unlight::UseCollectionFeatEvent < EventRule
+end
+
+class Unlight::FinishCollectionFeatEvent < EventRule
+end
+
+class Unlight::CheckEndingCollectionFeatEvent < EventRule
+end
+
+class Unlight::CheckAddRestrictionFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveRestrictionFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateRestrictionFeatEvent < EventRule
+end
+
+class Unlight::UseRestrictionFeatEvent < EventRule
+end
+
+class Unlight::FinishRestrictionFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDabsFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDabsFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDabsFeatEvent < EventRule
+end
+
+class Unlight::UseDabsFeatEvent < EventRule
+end
+
+class Unlight::FinishDabsFeatEvent < EventRule
+end
+
+class Unlight::CheckAddVibrationFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveVibrationFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateVibrationFeatEvent < EventRule
+end
+
+class Unlight::UseVibrationFeatEvent < EventRule
+end
+
+class Unlight::FinishVibrationFeatEvent < EventRule
+end
+
+class Unlight::CheckAddTotFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveTotFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateTotFeatEvent < EventRule
+end
+
+class Unlight::UseTotFeatEvent < EventRule
+end
+
+class Unlight::UseTotFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishTotFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDuckAppleFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDuckAppleFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDuckAppleFeatEvent < EventRule
+end
+
+class Unlight::FinishDuckAppleFeatEvent < EventRule
+end
+
+class Unlight::CheckAddRampageFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveRampageFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateRampageFeatEvent < EventRule
+end
+
+class Unlight::UseRampageFeatEvent < EventRule
+end
+
+class Unlight::FinishRampageFeatEvent < EventRule
+end
+
+class Unlight::UseRampageFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddScratchFireFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveScratchFireFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateScratchFireFeatEvent < EventRule
+end
+
+class Unlight::UseScratchFireFeatEvent < EventRule
+end
+
+class Unlight::FinishScratchFireFeatEvent < EventRule
+end
+
+class Unlight::UseScratchFireFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddBlueRuinFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBlueRuinFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBlueRuinFeatEvent < EventRule
+end
+
+class Unlight::UseBlueRuinFeatEvent < EventRule
+end
+
+class Unlight::FinishBlueRuinFeatEvent < EventRule
+end
+
+class Unlight::CheckAddThirdStepFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveThirdStepFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateThirdStepFeatEvent < EventRule
+end
+
+class Unlight::UseThirdStepFeatEvent < EventRule
+end
+
+class Unlight::UseThirdStepFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishThirdStepFeatEvent < EventRule
+end
+
+class Unlight::CheckAddMetalShieldFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveMetalShieldFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateMetalShieldFeatEvent < EventRule
+end
+
+class Unlight::UseMetalShieldFeatEvent < EventRule
+end
+
+class Unlight::FinishMetalShieldFeatEvent < EventRule
+end
+
+class Unlight::CheckAddMagneticFieldFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveMagneticFieldFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateMagneticFieldFeatEvent < EventRule
+end
+
+class Unlight::UseMagneticFieldFeatEvent < EventRule
+end
+
+class Unlight::FinishMagneticFieldFeatEvent < EventRule
+end
+
+class Unlight::FinalMagneticFieldFeatEvent < EventRule
+end
+
+class Unlight::CheckAddAfterglowFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveAfterglowFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateAfterglowFeatEvent < EventRule
+end
+
+class Unlight::UseAfterglowFeatEvent < EventRule
+end
+
+class Unlight::UseAfterglowFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishAfterglowFeatEvent < EventRule
+end
+
+class Unlight::CheckAddKeeperFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveKeeperFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateKeeperFeatEvent < EventRule
+end
+
+class Unlight::UseKeeperFeatEvent < EventRule
+end
+
+class Unlight::FinishKeeperFeatEvent < EventRule
+end
+
+class Unlight::FinishKeeperFeatDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckAddHealingSchockFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveHealingSchockFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateHealingSchockFeatEvent < EventRule
+end
+
+class Unlight::UseHealingSchockFeatEvent < EventRule
+end
+
+class Unlight::FinishHealingSchockFeatEvent < EventRule
+end
+
+class Unlight::CheckAddClaymoreFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveClaymoreFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateClaymoreFeatEvent < EventRule
+end
+
+class Unlight::FinishClaymoreFeatEvent < EventRule
+end
+
+class Unlight::CheckAddTrapChaseFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveTrapChaseFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateTrapChaseFeatEvent < EventRule
+end
+
+class Unlight::UseTrapChaseFeatEvent < EventRule
+end
+
+class Unlight::UseTrapChaseFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishTrapChaseFeatEvent < EventRule
+end
+
+class Unlight::CheckAddPanicFeatEvent < EventRule
+end
+
+class Unlight::CheckRemovePanicFeatEvent < EventRule
+end
+
+class Unlight::CheckRotatePanicFeatEvent < EventRule
+end
+
+class Unlight::UsePanicFeatEvent < EventRule
+end
+
+class Unlight::FinishPanicFeatEvent < EventRule
+end
+
+class Unlight::UsePanicFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddBulletCounterFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBulletCounterFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBulletCounterFeatEvent < EventRule
+end
+
+class Unlight::UseBulletCounterFeatEvent < EventRule
+end
+
+class Unlight::FinishBulletCounterFeatEvent < EventRule
+end
+
+class Unlight::CheckAddBeanStormFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBeanStormFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBeanStormFeatEvent < EventRule
+end
+
+class Unlight::UseBeanStormFeatEvent < EventRule
+end
+
+class Unlight::FinishBeanStormFeatEvent < EventRule
+end
+
+class Unlight::CheckAddJokerFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveJokerFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateJokerFeatEvent < EventRule
+end
+
+class Unlight::FinishJokerFeatEvent < EventRule
+end
+
+class Unlight::CheckAddFamiliarFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveFamiliarFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateFamiliarFeatEvent < EventRule
+end
+
+class Unlight::UseFamiliarFeatEvent < EventRule
+end
+
+class Unlight::FinishFamiliarFeatEvent < EventRule
+end
+
+class Unlight::CheckAddCrownCrownFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveCrownCrownFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateCrownCrownFeatEvent < EventRule
+end
+
+class Unlight::UseCrownCrownFeatEvent < EventRule
+end
+
+class Unlight::UseCrownCrownFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishCrownCrownFeatEvent < EventRule
+end
+
+class Unlight::CheckAddRiddleBoxFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveRiddleBoxFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateRiddleBoxFeatEvent < EventRule
+end
+
+class Unlight::UseRiddleBoxFeatEvent < EventRule
+end
+
+class Unlight::UseRiddleBoxFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishRiddleBoxFeatEvent < EventRule
+end
+
+class Unlight::CheckAddFlutterSwordDanceFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveFlutterSwordDanceFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateFlutterSwordDanceFeatEvent < EventRule
+end
+
+class Unlight::FinishFlutterSwordDanceFeatEvent < EventRule
+end
+
+class Unlight::CheckAddRitualOfBraveryFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveRitualOfBraveryFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateRitualOfBraveryFeatEvent < EventRule
+end
+
+class Unlight::UseRitualOfBraveryFeatEvent < EventRule
+end
+
+class Unlight::FinishRitualOfBraveryFeatEvent < EventRule
+end
+
+class Unlight::CheckAddHuntingCheetahFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveHuntingCheetahFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateHuntingCheetahFeatEvent < EventRule
+end
+
+class Unlight::UseHuntingCheetahFeatEvent < EventRule
+end
+
+class Unlight::FinishHuntingCheetahFeatEvent < EventRule
+end
+
+class Unlight::UseHuntingCheetahFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddProbeFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveProbeFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateProbeFeatEvent < EventRule
+end
+
+class Unlight::UseProbeFeatEvent < EventRule
+end
+
+class Unlight::UseProbeFeatPowEvent < EventRule
+end
+
+class Unlight::FinishProbeFeatEvent < EventRule
+end
+
+class Unlight::CheckAddTailoringFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveTailoringFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateTailoringFeatEvent < EventRule
+end
+
+class Unlight::UseTailoringFeatEvent < EventRule
+end
+
+class Unlight::FinishTailoringFeatEvent < EventRule
+end
+
+class Unlight::UseTailoringFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddCutFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveCutFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateCutFeatEvent < EventRule
+end
+
+class Unlight::UseCutFeatEvent < EventRule
+end
+
+class Unlight::FinishCutFeatEvent < EventRule
+end
+
+class Unlight::CheckAddSewingFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSewingFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSewingFeatEvent < EventRule
+end
+
+class Unlight::UseSewingFeatEvent < EventRule
+end
+
+class Unlight::FinishSewingFeatEvent < EventRule
+end
+
+class Unlight::CheckAddCancellationFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveCancellationFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateCancellationFeatEvent < EventRule
+end
+
+class Unlight::UseCancellationFeatEvent < EventRule
+end
+
+class Unlight::FinishCancellationFeatEvent < EventRule
+end
+
+class Unlight::CheckAddSeihoFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSeihoFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSeihoFeatEvent < EventRule
+end
+
+class Unlight::UseSeihoFeatEvent < EventRule
+end
+
+class Unlight::FinishSeihoFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDokkoFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDokkoFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDokkoFeatEvent < EventRule
+end
+
+class Unlight::UseDokkoFeatEvent < EventRule
+end
+
+class Unlight::UseDokkoFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishDokkoFeatEvent < EventRule
+end
+
+class Unlight::CheckAddNyoiFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveNyoiFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateNyoiFeatEvent < EventRule
+end
+
+class Unlight::UseNyoiFeatEvent < EventRule
+end
+
+class Unlight::UseNyoiFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishNyoiFeatEvent < EventRule
+end
+
+class Unlight::CheckAddKongoFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveKongoFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateKongoFeatEvent < EventRule
+end
+
+class Unlight::UseKongoFeatEvent < EventRule
+end
+
+class Unlight::FinishKongoFeatEvent < EventRule
+end
+
+class Unlight::UseKongoFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddCarpQuakeFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveCarpQuakeFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateCarpQuakeFeatEvent < EventRule
+end
+
+class Unlight::FinishCarpQuakeFeatEvent < EventRule
+end
+
+class Unlight::CheckAddCarpLightningFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveCarpLightningFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateCarpLightningFeatEvent < EventRule
+end
+
+class Unlight::UseCarpLightningFeatEvent < EventRule
+end
+
+class Unlight::UseCarpLightningFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishCarpLightningFeatEvent < EventRule
+end
+
+class Unlight::CheckAddFieldLockFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveFieldLockFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateFieldLockFeatEvent < EventRule
+end
+
+class Unlight::UseFieldLockFeatEvent < EventRule
+end
+
+class Unlight::CheckAddArrestFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveArrestFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateArrestFeatEvent < EventRule
+end
+
+class Unlight::UseArrestFeatEvent < EventRule
+end
+
+class Unlight::UseArrestFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishArrestFeatEvent < EventRule
+end
+
+class Unlight::CheckAddQuickDrawFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveQuickDrawFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateQuickDrawFeatEvent < EventRule
+end
+
+class Unlight::UseQuickDrawFeatEvent < EventRule
+end
+
+class Unlight::FinishQuickDrawFeatEvent < EventRule
+end
+
+class Unlight::CheckAddGazeFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveGazeFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateGazeFeatEvent < EventRule
+end
+
+class Unlight::UseGazeFeatEvent < EventRule
+end
+
+class Unlight::FinishGazeFeatEvent < EventRule
+end
+
+class Unlight::FinishCharaChangeGazeFeatEvent < EventRule
+end
+
+class Unlight::FinishFoeCharaChangeGazeFeatEvent < EventRule
+end
+
+class Unlight::CheckAddMonitoringFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveMonitoringFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateMonitoringFeatEvent < EventRule
+end
+
+class Unlight::UseMonitoringFeatEvent < EventRule
+end
+
+class Unlight::FinishMonitoringFeatEvent < EventRule
+end
+
+class Unlight::UseMonitoringFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddTimeLagDrawFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveTimeLagDrawFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateTimeLagDrawFeatEvent < EventRule
+end
+
+class Unlight::UseTimeLagDrawFeatEvent < EventRule
+end
+
+class Unlight::FinishTimeLagDrawFeatEvent < EventRule
+end
+
+class Unlight::CheckAddTimeLagBuffFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveTimeLagBuffFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateTimeLagBuffFeatEvent < EventRule
+end
+
+# 2020-10-08 - Issue#182
+class Unlight::UseTimeLagBuffFeatEvent < EventRule
+end
+
+class Unlight::FinishTimeLagBuffFeatEvent < EventRule
+end
+
+class Unlight::CheckAddDamageTransferFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDamageTransferFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDamageTransferFeatEvent < EventRule
+end
+
+class Unlight::UseDamageTransferFeatEvent < EventRule
+end
+
+class Unlight::FinishDamageTransferFeatEvent < EventRule
+end
+
+class Unlight::CheckAddCigaretteFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveCigaretteFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateCigaretteFeatEvent < EventRule
+end
+
+class Unlight::UseCigaretteFeatEvent < EventRule
+end
+
+class Unlight::FinishCigaretteFeatEvent < EventRule
+end
+
+class Unlight::CheckAddThreeCardFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveThreeCardFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateThreeCardFeatEvent < EventRule
+end
+
+class Unlight::UseThreeCardFeatEvent < EventRule
+end
+
+class Unlight::FinishThreeCardFeatEvent < EventRule
+end
+
+class Unlight::CheckAddCardSearchFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveCardSearchFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateCardSearchFeatEvent < EventRule
+end
+
+class Unlight::FinishCardSearchFeatEvent < EventRule
+end
+
+class Unlight::CheckAddAllInOneFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveAllInOneFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateAllInOneFeatEvent < EventRule
+end
+
+class Unlight::UseAllInOneFeatPowerEvent < EventRule
+end
+
+class Unlight::UseAllInOneFeatEvent < EventRule
+end
+
+class Unlight::FinishAllInOneFeatEvent < EventRule
+end
+
+class Unlight::CheckEv201609PassiveEvent < EventRule
+end
+
+class Unlight::CheckEv201609ChangePassiveEvent < EventRule
+end
+
+class Unlight::CheckEv201609DeadChangePassiveEvent < EventRule
+end
+
+class Unlight::UseEv201609PassiveEvent < EventRule
+end
+
+class Unlight::FinishEv201609PassiveEvent < EventRule
+end
+
+class Unlight::FinishEv201609PassiveDeadCharaChangeEvent < EventRule
+end
+
+class Unlight::CheckAddFireBirdFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveFireBirdFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateFireBirdFeatEvent < EventRule
+end
+
+class Unlight::UseFireBirdFeatEvent < EventRule
+end
+
+class Unlight::UseAfterFireBirdFeatEvent < EventRule
+end
+
+class Unlight::FinishFireBirdFeatEvent < EventRule
+end
+
+class Unlight::CheckAddBramblesFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveBramblesFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateBramblesFeatEvent < EventRule
+end
+
+class Unlight::UseBramblesFeatEvent < EventRule
+end
+
+class Unlight::UseBramblesFeatMoveBeforeEvent < EventRule
+end
+
+class Unlight::UseBramblesFeatMoveAfterEvent < EventRule
+end
+
+class Unlight::FinishBramblesFeatEvent < EventRule
+end
+
+class Unlight::CheckAddFrankenTackleFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveFrankenTackleFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateFrankenTackleFeatEvent < EventRule
+end
+
+class Unlight::UseOwnerFrankenTackleFeatEvent < EventRule
+end
+
+class Unlight::UseFoeFrankenTackleFeatEvent < EventRule
+end
+
+class Unlight::UseFrankenTackleFeatDiceAttrEvent < EventRule
+end
+
+class Unlight::FinishFrankenTackleFeatEvent < EventRule
+end
+
+class Unlight::CheckAddFrankenChargingFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveFrankenChargingFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateFrankenChargingFeatEvent < EventRule
+end
+
+class Unlight::UseFrankenChargingFeatEvent < EventRule
+end
+
+class Unlight::FinishFrankenChargingFeatEvent < EventRule
+end
+
+class Unlight::UseFrankenChargingFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddMovingOneRFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveMovingOneRFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateMovingOneRFeatEvent < EventRule
+end
+
+class Unlight::UseMovingOneRFeatEvent < EventRule
+end
+
+class Unlight::UseMovingOneRFeatAttackEvent < EventRule
+end
+
+class Unlight::UseMovingOneRFeatDefenseEvent < EventRule
+end
+
+class Unlight::FinishMovingOneRFeatEvent < EventRule
+end
+
+class Unlight::FinishTurnMovingOneRFeatEvent < EventRule
+end
+
+class Unlight::CheckAddArrogantOneRFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveArrogantOneRFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateArrogantOneRFeatEvent < EventRule
+end
+
+class Unlight::UseArrogantOneRFeatEvent < EventRule
+end
+
+class Unlight::FinishArrogantOneRFeatEvent < EventRule
+end
+
+class Unlight::CheckAddEatingOneRFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveEatingOneRFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateEatingOneRFeatEvent < EventRule
+end
+
+class Unlight::UseEatingOneRFeatEvent < EventRule
+end
+
+class Unlight::FinishEatingOneRFeatEvent < EventRule
+end
+
+# --------------------------------------------------------------------------------------------
+# ハーフデッド
+class Unlight::CheckAddHarfDeadFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveHarfDeadFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateHarfDeadFeatEvent < EventRule
+end
+
+class Unlight::UseHarfDeadFeatEvent < EventRule
+end
+
+# 2020-10-08 - Issue#187
+class Unlight::UseHarfDeadMoveEvent < EventRule
+end
+
+class Unlight::FinishHarfDeadFeatEvent < EventRule
+end
+
+class Unlight::CheckAddMachineCellFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveMachineCellFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateMachineCellFeatEvent < EventRule
+end
+
+class Unlight::FinishMachineCellFeatEvent < EventRule
+end
+
+class Unlight::CheckAddHeatSeekerRFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveHeatSeekerRFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateHeatSeekerRFeatEvent < EventRule
+end
+
+class Unlight::UseHeatSeekerRFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishHeatSeekerRFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddDirectionalBeamFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDirectionalBeamFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDirectionalBeamFeatEvent < EventRule
+end
+
+class Unlight::UseDirectionalBeamFeatEvent < EventRule
+end
+
+class Unlight::FinishDirectionalBeamFeatEvent < EventRule
+end
+
+class Unlight::UseDirectionalBeamFeatDamageEvent < EventRule
+end
+
+class Unlight::CheckAddDeltaFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveDeltaFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateDeltaFeatEvent < EventRule
+end
+
+class Unlight::UseDeltaFeatEvent < EventRule
+end
+
+class Unlight::FinishDeltaFeatEvent < EventRule
+end
+
+class Unlight::CheckAddSigmaFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveSigmaFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateSigmaFeatEvent < EventRule
+end
+
+class Unlight::UseSigmaFeatEvent < EventRule
+end
+
+class Unlight::ExSigma0FeatEvent < EventRule
+end
+
+class Unlight::ExSigmaFeatEvent < EventRule
+end
+
+class Unlight::FinishSigmaFeatEvent < EventRule
+end
+
+class Unlight::CheckAddStampFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveStampFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateStampFeatEvent < EventRule
+end
+
+class Unlight::UseStampFeatEvent < EventRule
+end
+
+class Unlight::FinishStampFeatEvent < EventRule
+end
+
+class Unlight::CheckAddAccelerationFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveAccelerationFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateAccelerationFeatEvent < EventRule
+end
+
+class Unlight::UseAccelerationFeatEvent < EventRule
+end
+
+class Unlight::FinishAccelerationFeatEvent < EventRule
+end
+
+class Unlight::CheckAddFoabFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveFoabFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateFoabFeatEvent < EventRule
+end
+
+class Unlight::UseFoabFeatEvent < EventRule
+end
+
+class Unlight::FinishFoabFeatEvent < EventRule
+end
+
+class Unlight::CheckAddWhiteMoonFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveWhiteMoonFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateWhiteMoonFeatEvent < EventRule
+end
+
+class Unlight::UseWhiteMoonFeatEvent < EventRule
+end
+
+class Unlight::UseWhiteMoonFeatDiceAttrEvent < EventRule
+end
+
+class Unlight::UseWhiteMoonFeatDamageEvent < EventRule
+end
+
+class Unlight::FinishWhiteMoonFeatEvent < EventRule
+end
+
+class Unlight::CheckAddAngerBackFeatEvent < EventRule
+end
+
+class Unlight::CheckRemoveAngerBackFeatEvent < EventRule
+end
+
+class Unlight::CheckRotateAngerBackFeatEvent < EventRule
+end
+
+class Unlight::UseAngerBackFeatEvent < EventRule
+end
+
+class Unlight::FinishAngerBackFeatEvent < EventRule
+end
+
+class Unlight::UseAngerBackFeatDamageEvent < EventRule
+end
+
+class Unlight::UseFeatEvent < EventRule
+end
+
+class Unlight::UsePassiveEvent < EventRule
+end
+
+class Unlight::ChangeCharaCardEvent < EventRule
+end
+
+class Unlight::OnFeatEvent < EventRule
+end
+
+class Unlight::OffFeatEvent < EventRule
+end
+
+class Unlight::ChangeFeatEvent < EventRule
+end
+
+class Unlight::OnTransformEvent < EventRule
+end
+
+class Unlight::OffTransformEvent < EventRule
+end
+
+class Unlight::OnLostInTheFogEvent < EventRule
+end
+
+class Unlight::OffLostInTheFogEvent < EventRule
+end
+
+class Unlight::InTheFogEvent < EventRule
+end
+
+class Unlight::OpenTrapEvent < EventRule
+end
+
+class Unlight::UpdateFeatConditionEvent < EventRule
+end

@@ -1,0 +1,4 @@
+module Dawn
+end
+
+Dawn::VERSION: untyped

@@ -1,0 +1,6 @@
+module Unlight
+end
+
+module Unlight::GameController
+  include Unlight::DuelController
+end

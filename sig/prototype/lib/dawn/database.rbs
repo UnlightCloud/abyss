@@ -1,0 +1,13 @@
+module Dawn
+end
+
+# Database
+#
+# Manage the database connection from config or environment to improve deployment
+#
+# @since 0.1.0
+class Dawn::Database
+  extend Forwardable
+
+  include Singleton
+end

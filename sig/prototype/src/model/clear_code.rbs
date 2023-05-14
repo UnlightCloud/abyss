@@ -1,0 +1,10 @@
+module Unlight
+end
+
+# 課金アイテムクラス
+class Unlight::ClearCode < Sequel::Model
+end
+
+Unlight::Unlight::ClearCode::STATE_UNUSE: untyped
+
+Unlight::Unlight::ClearCode::STATE_USED: untyped
