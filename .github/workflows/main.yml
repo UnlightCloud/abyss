@@ -31,6 +31,8 @@ jobs:
       with:
         ruby-version: ${{ env.RUBY_VERSION }}
         bundler-cache: true
+    - name: Install RBS
+      run: rbs collection install
     - name: Run steep
       run: bundle exec steep check
   test:
