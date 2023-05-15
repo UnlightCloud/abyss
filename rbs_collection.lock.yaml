@@ -1,27 +1,12 @@
 ---
 sources:
-- name: ruby/gem_rbs_collection
+- type: git
+  name: ruby/gem_rbs_collection
+  revision: d0d7aeed98fa74427b30b336fc402ea86d526f35
   remote: https://github.com/ruby/gem_rbs_collection.git
-  revision: main
   repo_dir: gems
 path: ".gem_rbs_collection"
 gems:
-- name: activemodel
-  version: '7.0'
-  source:
-    type: git
-    name: ruby/gem_rbs_collection
-    revision: 34275028974d6352fe7666a6e833def7a6efb4a5
-    remote: https://github.com/ruby/gem_rbs_collection.git
-    repo_dir: gems
-- name: activerecord
-  version: '7.0'
-  source:
-    type: git
-    name: ruby/gem_rbs_collection
-    revision: 34275028974d6352fe7666a6e833def7a6efb4a5
-    remote: https://github.com/ruby/gem_rbs_collection.git
-    repo_dir: gems
 - name: activesupport
   version: '7.0'
   source:
@@ -38,6 +23,10 @@ gems:
     revision: 34275028974d6352fe7666a6e833def7a6efb4a5
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
+- name: cgi
+  version: '0'
+  source:
+    type: stdlib
 - name: concurrent-ruby
   version: '1.1'
   source:
@@ -46,14 +35,18 @@ gems:
     revision: 34275028974d6352fe7666a6e833def7a6efb4a5
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
-- name: faker
-  version: '2.23'
+- name: csv
+  version: '0'
   source:
-    type: git
-    name: ruby/gem_rbs_collection
-    revision: 34275028974d6352fe7666a6e833def7a6efb4a5
-    remote: https://github.com/ruby/gem_rbs_collection.git
-    repo_dir: gems
+    type: stdlib
+- name: date
+  version: '0'
+  source:
+    type: stdlib
+- name: fileutils
+  version: '0'
+  source:
+    type: stdlib
 - name: forwardable
   version: '0'
   source:
@@ -70,18 +63,30 @@ gems:
   version: '0'
   source:
     type: stdlib
+- name: listen
+  version: '3.2'
+  source:
+    type: git
+    name: ruby/gem_rbs_collection
+    revision: d0d7aeed98fa74427b30b336fc402ea86d526f35
+    remote: https://github.com/ruby/gem_rbs_collection.git
+    repo_dir: gems
+- name: logger
+  version: '0'
+  source:
+    type: stdlib
 - name: minitest
   version: '0'
   source:
     type: stdlib
-- name: parallel
-  version: '1.20'
+- name: monitor
+  version: '0'
   source:
-    type: git
-    name: ruby/gem_rbs_collection
-    revision: 34275028974d6352fe7666a6e833def7a6efb4a5
-    remote: https://github.com/ruby/gem_rbs_collection.git
-    repo_dir: gems
+    type: stdlib
+- name: mutex_m
+  version: '0'
+  source:
+    type: stdlib
 - name: prime
   version: '0'
   source:
@@ -102,6 +107,10 @@ gems:
     revision: 34275028974d6352fe7666a6e833def7a6efb4a5
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
+- name: securerandom
+  version: '0'
+  source:
+    type: stdlib
 - name: sentry-ruby
   version: '5.2'
   source:
@@ -114,19 +123,15 @@ gems:
   version: '0'
   source:
     type: stdlib
-- name: date
+- name: steep
+  version: 1.4.0
+  source:
+    type: rubygems
+- name: strscan
   version: '0'
   source:
     type: stdlib
-- name: logger
-  version: '0'
-  source:
-    type: stdlib
-- name: monitor
-  version: '0'
-  source:
-    type: stdlib
-- name: mutex_m
+- name: tempfile
   version: '0'
   source:
     type: stdlib
@@ -134,15 +139,7 @@ gems:
   version: '0'
   source:
     type: stdlib
-- name: cgi
-  version: '0'
-  source:
-    type: stdlib
 - name: uri
-  version: '0'
-  source:
-    type: stdlib
-- name: tempfile
   version: '0'
   source:
     type: stdlib
