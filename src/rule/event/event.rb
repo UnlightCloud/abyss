@@ -7,8 +7,6 @@ require 'singleton'
 require 'erb'
 
 module Unlight
-  EVAL_OUTPUT = false
-
   #
   # Eventの基礎クラス
   #

@@ -1,17 +1,17 @@
 module Unlight
 end
 
-class Unlight::DrawCardsEvent < EventRule
+class Unlight::DrawCardsEvent < Unlight::EventRule
 end
 
-class Unlight::DrawLowCardsEvent < EventRule
+class Unlight::DrawLowCardsEvent < Unlight::EventRule
 end
 
-class Unlight::DeckInitEvent < EventRule
+class Unlight::DeckInitEvent < Unlight::EventRule
 end
 
-class Unlight::CreateChanceCardEvent < EventRule
+class Unlight::CreateChanceCardEvent < Unlight::EventRule
 end
 
-class Unlight::AppendJokerCardEvent < EventRule
+class Unlight::AppendJokerCardEvent < Unlight::EventRule
 end

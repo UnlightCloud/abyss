@@ -35,153 +35,153 @@
 module Unlight
 end
 
-class Unlight::UseEnergyEvent < EventRule
+class Unlight::UseEnergyEvent < Unlight::EventRule
 end
 
-class Unlight::UseFreeDuelCountEvent < EventRule
+class Unlight::UseFreeDuelCountEvent < Unlight::EventRule
 end
 
-class Unlight::UpdateEnergyMaxEvent < EventRule
+class Unlight::UpdateEnergyMaxEvent < Unlight::EventRule
 end
 
-class Unlight::UpdateRemainTimeEvent < EventRule
+class Unlight::UpdateRemainTimeEvent < Unlight::EventRule
 end
 
-class Unlight::GetExpEvent < EventRule
+class Unlight::GetExpEvent < Unlight::EventRule
 end
 
-class Unlight::LevelUpEvent < EventRule
+class Unlight::LevelUpEvent < Unlight::EventRule
 end
 
-class Unlight::GetDeckExpEvent < EventRule
+class Unlight::GetDeckExpEvent < Unlight::EventRule
 end
 
-class Unlight::DeckLevelUpEvent < EventRule
+class Unlight::DeckLevelUpEvent < Unlight::EventRule
 end
 
-class Unlight::UpdateGemsEvent < EventRule
+class Unlight::UpdateGemsEvent < Unlight::EventRule
 end
 
-class Unlight::UpdateResultEvent < EventRule
+class Unlight::UpdateResultEvent < Unlight::EventRule
 end
 
-class Unlight::ItemGetEvent < EventRule
+class Unlight::ItemGetEvent < Unlight::EventRule
 end
 
-class Unlight::ItemUseEvent < EventRule
+class Unlight::ItemUseEvent < Unlight::EventRule
 end
 
-class Unlight::CoinUseEvent < EventRule
+class Unlight::CoinUseEvent < Unlight::EventRule
 end
 
-class Unlight::PartGetEvent < EventRule
+class Unlight::PartGetEvent < Unlight::EventRule
 end
 
-class Unlight::SlotCardGetEvent < EventRule
+class Unlight::SlotCardGetEvent < Unlight::EventRule
 end
 
-class Unlight::CharaCardGetEvent < EventRule
+class Unlight::CharaCardGetEvent < Unlight::EventRule
 end
 
-class Unlight::QuestGetEvent < EventRule
+class Unlight::QuestGetEvent < Unlight::EventRule
 end
 
-class Unlight::QuestStateUpdateEvent < EventRule
+class Unlight::QuestStateUpdateEvent < Unlight::EventRule
 end
 
-class Unlight::QuestDeletedEvent < EventRule
+class Unlight::QuestDeletedEvent < Unlight::EventRule
 end
 
-class Unlight::QuestProgressUpdateEvent < EventRule
+class Unlight::QuestProgressUpdateEvent < Unlight::EventRule
 end
 
-class Unlight::QuestDeckStateUpdateEvent < EventRule
+class Unlight::QuestDeckStateUpdateEvent < Unlight::EventRule
 end
 
-class Unlight::QuestFlagUpdateEvent < EventRule
+class Unlight::QuestFlagUpdateEvent < Unlight::EventRule
 end
 
 # By_K2
-class Unlight::FloorCountUpdateEvent < EventRule
+class Unlight::FloorCountUpdateEvent < Unlight::EventRule
 end
 
-class Unlight::QuestClearNumUpdateEvent < EventRule
+class Unlight::QuestClearNumUpdateEvent < Unlight::EventRule
 end
 
-class Unlight::QuestFindAtUpdateEvent < EventRule
+class Unlight::QuestFindAtUpdateEvent < Unlight::EventRule
 end
 
-class Unlight::EventQuestFlagUpdateEvent < EventRule
+class Unlight::EventQuestFlagUpdateEvent < Unlight::EventRule
 end
 
-class Unlight::EventQuestClearNumUpdateEvent < EventRule
+class Unlight::EventQuestClearNumUpdateEvent < Unlight::EventRule
 end
 
-class Unlight::UpdateFriendMaxEvent < EventRule
+class Unlight::UpdateFriendMaxEvent < Unlight::EventRule
 end
 
-class Unlight::UpdatePartMaxEvent < EventRule
+class Unlight::UpdatePartMaxEvent < Unlight::EventRule
 end
 
-class Unlight::GetQuestTreasureEvent < EventRule
+class Unlight::GetQuestTreasureEvent < Unlight::EventRule
 end
 
-class Unlight::UpdateRecoveryIntervalEvent < EventRule
+class Unlight::UpdateRecoveryIntervalEvent < Unlight::EventRule
 end
 
-class Unlight::UpdateQuestInventoryMaxEvent < EventRule
+class Unlight::UpdateQuestInventoryMaxEvent < Unlight::EventRule
 end
 
-class Unlight::UpdateExpPowEvent < EventRule
+class Unlight::UpdateExpPowEvent < Unlight::EventRule
 end
 
-class Unlight::UpdateGemPowEvent < EventRule
+class Unlight::UpdateGemPowEvent < Unlight::EventRule
 end
 
-class Unlight::UpdateQuestFindPowEvent < EventRule
+class Unlight::UpdateQuestFindPowEvent < Unlight::EventRule
 end
 
-class Unlight::UpdateQuestPointEvent < EventRule
+class Unlight::UpdateQuestPointEvent < Unlight::EventRule
 end
 
-class Unlight::VanishPartEvent < EventRule
+class Unlight::VanishPartEvent < Unlight::EventRule
 end
 
-class Unlight::AchievementClearEvent < EventRule
+class Unlight::AchievementClearEvent < Unlight::EventRule
 end
 
-class Unlight::AddNewAchievementEvent < EventRule
+class Unlight::AddNewAchievementEvent < Unlight::EventRule
 end
 
-class Unlight::DeleteAchievementEvent < EventRule
+class Unlight::DeleteAchievementEvent < Unlight::EventRule
 end
 
-class Unlight::UpdateRankEvent < EventRule
+class Unlight::UpdateRankEvent < Unlight::EventRule
 end
 
-class Unlight::StartSaleEvent < EventRule
+class Unlight::StartSaleEvent < Unlight::EventRule
 end
 
-class Unlight::DeckGetEvent < EventRule
+class Unlight::DeckGetEvent < Unlight::EventRule
 end
 
-class Unlight::UpdateAchievementInfoEvent < EventRule
+class Unlight::UpdateAchievementInfoEvent < Unlight::EventRule
 end
 
-class Unlight::DropAchievementEvent < EventRule
+class Unlight::DropAchievementEvent < Unlight::EventRule
 end
 
-class Unlight::SendProfoundInfoEvent < EventRule
+class Unlight::SendProfoundInfoEvent < Unlight::EventRule
 end
 
-class Unlight::ResendProfoundInventoryEvent < EventRule
+class Unlight::ResendProfoundInventoryEvent < Unlight::EventRule
 end
 
-class Unlight::ResendProfoundInventoryFinishEvent < EventRule
+class Unlight::ResendProfoundInventoryFinishEvent < Unlight::EventRule
 end
 
-class Unlight::ChangeFavoriteCharaIdEvent < EventRule
+class Unlight::ChangeFavoriteCharaIdEvent < Unlight::EventRule
 end
 
-class Unlight::UpdateCombineWeaponDataEvent < EventRule
+class Unlight::UpdateCombineWeaponDataEvent < Unlight::EventRule
 end

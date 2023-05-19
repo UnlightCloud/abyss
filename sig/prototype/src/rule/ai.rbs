@@ -2,7 +2,7 @@ module Unlight
 end
 
 # 一人プレイ時デュエル時にEntarantを操作するAIクラス
-class Unlight::AI < BaseEvent
+class Unlight::AI < Unlight::BaseEvent
 end
 
 # 条件と威力

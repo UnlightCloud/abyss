@@ -1,5 +1,5 @@
 module Unlight
 end
 
-class Unlight::AvatarEvent < BaseEvent
+class Unlight::AvatarEvent < Unlight::BaseEvent
 end

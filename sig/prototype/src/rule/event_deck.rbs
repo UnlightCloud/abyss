@@ -2,5 +2,5 @@ module Unlight
 end
 
 # イベントデッキクラス
-class Unlight::EventDeck < Deck
+class Unlight::EventDeck < Unlight::Deck
 end

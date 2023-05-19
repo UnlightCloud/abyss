@@ -38,59 +38,59 @@ end
 # ===========================
 # ターン定義
 # ===========================
-class Unlight::ThreeToThreeDuel < EventRule
+class Unlight::ThreeToThreeDuel < Unlight::EventRule
 end
 
-class Unlight::StartTurnPhase < EventRule
+class Unlight::StartTurnPhase < Unlight::EventRule
 end
 
-class Unlight::RefillCardPhase < EventRule
+class Unlight::RefillCardPhase < Unlight::EventRule
 end
 
-class Unlight::RefillEventCardPhase < EventRule
+class Unlight::RefillEventCardPhase < Unlight::EventRule
 end
 
-class Unlight::MoveCardDropPhase < EventRule
+class Unlight::MoveCardDropPhase < Unlight::EventRule
 end
 
-class Unlight::DetermineMovePhase < EventRule
+class Unlight::DetermineMovePhase < Unlight::EventRule
 end
 
-class Unlight::FinishMovePhase < EventRule
+class Unlight::FinishMovePhase < Unlight::EventRule
 end
 
-class Unlight::CharaChangePhase < EventRule
+class Unlight::CharaChangePhase < Unlight::EventRule
 end
 
-class Unlight::DetermineCharaChangePhase < EventRule
+class Unlight::DetermineCharaChangePhase < Unlight::EventRule
 end
 
-class Unlight::AttackCardDropPhase < EventRule
+class Unlight::AttackCardDropPhase < Unlight::EventRule
 end
 
-class Unlight::DeffenceCardDropPhase < EventRule
+class Unlight::DeffenceCardDropPhase < Unlight::EventRule
 end
 
-class Unlight::DetermineBattlePointPhase < EventRule
+class Unlight::DetermineBattlePointPhase < Unlight::EventRule
 end
 
-class Unlight::BattleResultPhase < EventRule
+class Unlight::BattleResultPhase < Unlight::EventRule
 end
 
-class Unlight::DamagePhase < EventRule
+class Unlight::DamagePhase < Unlight::EventRule
 end
 
-class Unlight::ChangeInitiativePhase < EventRule
+class Unlight::ChangeInitiativePhase < Unlight::EventRule
 end
 
-class Unlight::DeadCharaChangePhase < EventRule
+class Unlight::DeadCharaChangePhase < Unlight::EventRule
 end
 
-class Unlight::DetermineDeadCharaChangePhase < EventRule
+class Unlight::DetermineDeadCharaChangePhase < Unlight::EventRule
 end
 
-class Unlight::FinishTurnPhase < EventRule
+class Unlight::FinishTurnPhase < Unlight::EventRule
 end
 
-class Unlight::FinishGameEvent < EventRule
+class Unlight::FinishGameEvent < Unlight::EventRule
 end

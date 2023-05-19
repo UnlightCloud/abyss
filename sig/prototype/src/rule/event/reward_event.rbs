@@ -35,41 +35,41 @@
 module Unlight
 end
 
-class Unlight::RewardEvent < EventRule
+class Unlight::RewardEvent < Unlight::EventRule
 end
 
-class Unlight::InitPhase < EventRule
+class Unlight::InitPhase < Unlight::EventRule
 end
 
-class Unlight::CandidateCardsListPhase < EventRule
+class Unlight::CandidateCardsListPhase < Unlight::EventRule
 end
 
-class Unlight::BottomDiceNumPhase < EventRule
+class Unlight::BottomDiceNumPhase < Unlight::EventRule
 end
 
-class Unlight::HighLowPhase < EventRule
+class Unlight::HighLowPhase < Unlight::EventRule
 end
 
-class Unlight::ExitPhase < EventRule
+class Unlight::ExitPhase < Unlight::EventRule
 end
 
-class Unlight::UpEvent < EventRule
+class Unlight::UpEvent < Unlight::EventRule
 end
 
-class Unlight::DownEvent < EventRule
+class Unlight::DownEvent < Unlight::EventRule
 end
 
-class Unlight::ResultDiceEvent < EventRule
+class Unlight::ResultDiceEvent < Unlight::EventRule
 end
 
-class Unlight::CancelEvent < EventRule
+class Unlight::CancelEvent < Unlight::EventRule
 end
 
-class Unlight::RetryRewardEvent < EventRule
+class Unlight::RetryRewardEvent < Unlight::EventRule
 end
 
-class Unlight::RerollEvent < EventRule
+class Unlight::RerollEvent < Unlight::EventRule
 end
 
-class Unlight::AmendEvent < EventRule
+class Unlight::AmendEvent < Unlight::EventRule
 end

@@ -3,59 +3,59 @@ end
 
 Unlight::ACTION_EVENT_NO: untyped
 
-class Unlight::DealedEvent < EventRule
+class Unlight::DealedEvent < Unlight::EventRule
 end
 
-class Unlight::ThrowedEvent < EventRule
+class Unlight::ThrowedEvent < Unlight::EventRule
 end
 
-class Unlight::DropedEvent < EventRule
+class Unlight::DropedEvent < Unlight::EventRule
 end
 
-class Unlight::OccurChanceEvent < EventRule
+class Unlight::OccurChanceEvent < Unlight::EventRule
 end
 
-class Unlight::OccurHealEvent < EventRule
+class Unlight::OccurHealEvent < Unlight::EventRule
 end
 
-class Unlight::OccurDamageEvent < EventRule
+class Unlight::OccurDamageEvent < Unlight::EventRule
 end
 
-class Unlight::OccurCureEvent < EventRule
+class Unlight::OccurCureEvent < Unlight::EventRule
 end
 
-class Unlight::OccurCurseEvent < EventRule
+class Unlight::OccurCurseEvent < Unlight::EventRule
 end
 
-class Unlight::OccurChaliceEvent < EventRule
+class Unlight::OccurChaliceEvent < Unlight::EventRule
 end
 
-class Unlight::OccurPoisonEvent < EventRule
+class Unlight::OccurPoisonEvent < Unlight::EventRule
 end
 
-class Unlight::OccurDefeatEvent < EventRule
+class Unlight::OccurDefeatEvent < Unlight::EventRule
 end
 
-class Unlight::OccurIdeaEvent < EventRule
+class Unlight::OccurIdeaEvent < Unlight::EventRule
 end
 
-class Unlight::ChanceEvent < EventRule
+class Unlight::ChanceEvent < Unlight::EventRule
 end
 
-class Unlight::HealEvent < EventRule
+class Unlight::HealEvent < Unlight::EventRule
 end
 
-class Unlight::DamageEvent < EventRule
+class Unlight::DamageEvent < Unlight::EventRule
 end
 
-class Unlight::CureEvent < EventRule
+class Unlight::CureEvent < Unlight::EventRule
 end
 
-class Unlight::CurseEvent < EventRule
+class Unlight::CurseEvent < Unlight::EventRule
 end
 
-class Unlight::ChaliceEvent < EventRule
+class Unlight::ChaliceEvent < Unlight::EventRule
 end
 
-class Unlight::PoisonEvent < EventRule
+class Unlight::PoisonEvent < Unlight::EventRule
 end

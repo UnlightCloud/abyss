@@ -1,5 +1,5 @@
 module Unlight
 end
 
-class Unlight::CharaCardEvent < BaseEvent
+class Unlight::CharaCardEvent < Unlight::BaseEvent
 end

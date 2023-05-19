@@ -6,7 +6,7 @@ Unlight::POINT_CHECK_MOVE: untyped
 Unlight::POINT_CHECK_BATTLE: untyped
 
 # 参加者クラス
-class Unlight::Entrant < BaseEvent
+class Unlight::Entrant < Unlight::BaseEvent
 end
 
 Unlight::Unlight::Entrant::DEFAULT_CARD_NUM: untyped

@@ -1,0 +1,9 @@
+module Unlight
+  class EventRule
+    include Singleton
+  end
+
+  class BaseEvent
+    include Context
+  end
+end

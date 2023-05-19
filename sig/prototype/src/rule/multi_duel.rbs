@@ -1,5 +1,5 @@
 module Unlight
 end
 
-class Unlight::MultiDuel < BaseEvent
+class Unlight::MultiDuel < Unlight::BaseEvent
 end

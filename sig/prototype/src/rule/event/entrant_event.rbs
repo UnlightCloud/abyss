@@ -35,215 +35,215 @@
 module Unlight
 end
 
-class Unlight::SetDirectionAction < EventRule
+class Unlight::SetDirectionAction < Unlight::EventRule
 end
 
-class Unlight::MoveCardAddAction < EventRule
+class Unlight::MoveCardAddAction < Unlight::EventRule
 end
 
-class Unlight::MoveCardRemoveAction < EventRule
+class Unlight::MoveCardRemoveAction < Unlight::EventRule
 end
 
-class Unlight::MoveCardRotateAction < EventRule
+class Unlight::MoveCardRotateAction < Unlight::EventRule
 end
 
-class Unlight::AttackCardAddAction < EventRule
+class Unlight::AttackCardAddAction < Unlight::EventRule
 end
 
-class Unlight::AttackCardRemoveAction < EventRule
+class Unlight::AttackCardRemoveAction < Unlight::EventRule
 end
 
-class Unlight::AttackCardRotateAction < EventRule
+class Unlight::AttackCardRotateAction < Unlight::EventRule
 end
 
-class Unlight::DeffenceCardAddAction < EventRule
+class Unlight::DeffenceCardAddAction < Unlight::EventRule
 end
 
-class Unlight::DeffenceCardRemoveAction < EventRule
+class Unlight::DeffenceCardRemoveAction < Unlight::EventRule
 end
 
-class Unlight::DeffenceCardRotateAction < EventRule
+class Unlight::DeffenceCardRotateAction < Unlight::EventRule
 end
 
-class Unlight::CardRotateAction < EventRule
+class Unlight::CardRotateAction < Unlight::EventRule
 end
 
-class Unlight::EventCardRotateAction < EventRule
+class Unlight::EventCardRotateAction < Unlight::EventRule
 end
 
-class Unlight::AddTableAction < EventRule
+class Unlight::AddTableAction < Unlight::EventRule
 end
 
-class Unlight::CharaChangeAction < EventRule
+class Unlight::CharaChangeAction < Unlight::EventRule
 end
 
-class Unlight::InitDoneAction < EventRule
+class Unlight::InitDoneAction < Unlight::EventRule
 end
 
-class Unlight::MoveDoneAction < EventRule
+class Unlight::MoveDoneAction < Unlight::EventRule
 end
 
-class Unlight::FinishMovePhaseAction < EventRule
+class Unlight::FinishMovePhaseAction < Unlight::EventRule
 end
 
-class Unlight::AttackDoneAction < EventRule
+class Unlight::AttackDoneAction < Unlight::EventRule
 end
 
-class Unlight::DeffenceDoneAction < EventRule
+class Unlight::DeffenceDoneAction < Unlight::EventRule
 end
 
-class Unlight::ChangeDoneAction < EventRule
+class Unlight::ChangeDoneAction < Unlight::EventRule
 end
 
-class Unlight::MoveAction < EventRule
+class Unlight::MoveAction < Unlight::EventRule
 end
 
-class Unlight::HideMoveAction < EventRule
+class Unlight::HideMoveAction < Unlight::EventRule
 end
 
-class Unlight::MoveCardAddSuccesEvent < EventRule
+class Unlight::MoveCardAddSuccesEvent < Unlight::EventRule
 end
 
-class Unlight::BattleCardAddSuccesEvent < EventRule
+class Unlight::BattleCardAddSuccesEvent < Unlight::EventRule
 end
 
-class Unlight::DamagedEvent < EventRule
+class Unlight::DamagedEvent < Unlight::EventRule
 end
 
-class Unlight::DetermineDamageEvent < EventRule
+class Unlight::DetermineDamageEvent < Unlight::EventRule
 end
 
-class Unlight::ReviveEvent < EventRule
+class Unlight::ReviveEvent < Unlight::EventRule
 end
 
-class Unlight::ConstraintEvent < EventRule
+class Unlight::ConstraintEvent < Unlight::EventRule
 end
 
-class Unlight::SetDamageLogEvent < EventRule
+class Unlight::SetDamageLogEvent < Unlight::EventRule
 end
 
-class Unlight::PartyDamagedEvent < EventRule
+class Unlight::PartyDamagedEvent < Unlight::EventRule
 end
 
-class Unlight::HealedEvent < EventRule
+class Unlight::HealedEvent < Unlight::EventRule
 end
 
-class Unlight::HitPointChangedEvent < EventRule
+class Unlight::HitPointChangedEvent < Unlight::EventRule
 end
 
-class Unlight::PartyHealedEvent < EventRule
+class Unlight::PartyHealedEvent < Unlight::EventRule
 end
 
-class Unlight::CuredEvent < EventRule
+class Unlight::CuredEvent < Unlight::EventRule
 end
 
-class Unlight::SealedEvent < EventRule
+class Unlight::SealedEvent < Unlight::EventRule
 end
 
-class Unlight::UsedCardsEvent < EventRule
+class Unlight::UsedCardsEvent < Unlight::EventRule
 end
 
-class Unlight::DealdEvent < EventRule
+class Unlight::DealdEvent < Unlight::EventRule
 end
 
-class Unlight::UseActionCardEvent < EventRule
+class Unlight::UseActionCardEvent < Unlight::EventRule
 end
 
-class Unlight::DiscardEvent < EventRule
+class Unlight::DiscardEvent < Unlight::EventRule
 end
 
-class Unlight::DiscardTableEvent < EventRule
+class Unlight::DiscardTableEvent < Unlight::EventRule
 end
 
-class Unlight::PointUpdateEvent < EventRule
+class Unlight::PointUpdateEvent < Unlight::EventRule
 end
 
-class Unlight::PointRewriteEvent < EventRule
+class Unlight::PointRewriteEvent < Unlight::EventRule
 end
 
-class Unlight::SpecialDealedEvent < EventRule
+class Unlight::SpecialDealedEvent < Unlight::EventRule
 end
 
-class Unlight::GraveDealedEvent < EventRule
+class Unlight::GraveDealedEvent < Unlight::EventRule
 end
 
-class Unlight::StealDealedEvent < EventRule
+class Unlight::StealDealedEvent < Unlight::EventRule
 end
 
-class Unlight::SpecialEventCardDealedEvent < EventRule
+class Unlight::SpecialEventCardDealedEvent < Unlight::EventRule
 end
 
-class Unlight::UpdateCardValueEvent < EventRule
+class Unlight::UpdateCardValueEvent < Unlight::EventRule
 end
 
-class Unlight::DiceRollEvent < EventRule
+class Unlight::DiceRollEvent < Unlight::EventRule
 end
 
-class Unlight::UpdateWeaponEvent < EventRule
+class Unlight::UpdateWeaponEvent < Unlight::EventRule
 end
 
-class Unlight::BattlePhaseInitEvent < EventRule
+class Unlight::BattlePhaseInitEvent < Unlight::EventRule
 end
 
-class Unlight::CardsMaxUpdateEvent < EventRule
+class Unlight::CardsMaxUpdateEvent < Unlight::EventRule
 end
 
-class Unlight::DuelBonusEvent < EventRule
+class Unlight::DuelBonusEvent < Unlight::EventRule
 end
 
-class Unlight::SpecialMessageEvent < EventRule
+class Unlight::SpecialMessageEvent < Unlight::EventRule
 end
 
-class Unlight::DuelMessageEvent < EventRule
+class Unlight::DuelMessageEvent < Unlight::EventRule
 end
 
-class Unlight::AttributeRegistMessageEvent < EventRule
+class Unlight::AttributeRegistMessageEvent < Unlight::EventRule
 end
 
-class Unlight::SetTurnEvent < EventRule
+class Unlight::SetTurnEvent < Unlight::EventRule
 end
 
-class Unlight::MovePhaseInitEvent < EventRule
+class Unlight::MovePhaseInitEvent < Unlight::EventRule
 end
 
-class Unlight::UpdateTrapEvent < EventRule
+class Unlight::UpdateTrapEvent < Unlight::EventRule
 end
 
-class Unlight::TrapActionEvent < EventRule
+class Unlight::TrapActionEvent < Unlight::EventRule
 end
 
-class Unlight::TrapUpdateEvent < EventRule
+class Unlight::TrapUpdateEvent < Unlight::EventRule
 end
 
-class Unlight::DiceAttributeRegistEvent < EventRule
+class Unlight::DiceAttributeRegistEvent < Unlight::EventRule
 end
 
-class Unlight::SetFieldStatusEvent < EventRule
+class Unlight::SetFieldStatusEvent < Unlight::EventRule
 end
 
-class Unlight::SetInitiativeEvent < EventRule
+class Unlight::SetInitiativeEvent < Unlight::EventRule
 end
 
-class Unlight::CardLockEvent < EventRule
+class Unlight::CardLockEvent < Unlight::EventRule
 end
 
-class Unlight::ClearCardLocksEvent < EventRule
+class Unlight::ClearCardLocksEvent < Unlight::EventRule
 end
 
 # ===========================
 # 計算定義
 # ===========================
-class Unlight::BpCalcResolve < EventRule
+class Unlight::BpCalcResolve < Unlight::EventRule
 end
 
-class Unlight::DpCalcResolve < EventRule
+class Unlight::DpCalcResolve < Unlight::EventRule
 end
 
-class Unlight::MpCalcResolve < EventRule
+class Unlight::MpCalcResolve < Unlight::EventRule
 end
 
-class Unlight::AlterMpEvent < EventRule
+class Unlight::AlterMpEvent < Unlight::EventRule
 end
 
-class Unlight::MpEvaluationEvent < EventRule
+class Unlight::MpEvaluationEvent < Unlight::EventRule
 end

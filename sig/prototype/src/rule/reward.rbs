@@ -2,5 +2,5 @@ module Unlight
 end
 
 # ゲームの報酬ルール
-class Unlight::Reward < BaseEvent
+class Unlight::Reward < Unlight::BaseEvent
 end
