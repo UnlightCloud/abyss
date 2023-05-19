@@ -1,0 +1,3 @@
+class Array[T]
+  def ^:(Array[T]) -> Array[T]
+end

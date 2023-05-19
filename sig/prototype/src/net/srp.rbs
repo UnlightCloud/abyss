@@ -2,6 +2,3 @@
 # http://srp.stanford.edu/design.htmlを参照
 class SRP
 end
-
-class Array
-end
