@@ -5,5 +5,5 @@ end
 class Unlight::CharaCardDeck < Sequel::Model
 end
 
-class Unlight::Unlight::CharaCardDeck::Cost
+class Unlight::CharaCardDeck::Cost
 end

@@ -6,25 +6,25 @@ class Unlight::AI < Unlight::BaseEvent
 end
 
 # 条件と威力
-module Unlight::Unlight::AI::FeatChecker
+module Unlight::AI::FeatChecker
 end
 
-Unlight::Unlight::AI::Unlight::Unlight::AI::FeatChecker::GREATER: untyped
+Unlight::AI::FeatChecker::GREATER: untyped
 
-Unlight::Unlight::AI::Unlight::Unlight::AI::FeatChecker::EQUAL: untyped
+Unlight::AI::FeatChecker::EQUAL: untyped
 
-Unlight::Unlight::AI::Unlight::Unlight::AI::FeatChecker::SMALLER: untyped
+Unlight::AI::FeatChecker::SMALLER: untyped
 
-Unlight::Unlight::AI::Unlight::Unlight::AI::FeatChecker::SHORT: untyped
+Unlight::AI::FeatChecker::SHORT: untyped
 
-Unlight::Unlight::AI::Unlight::Unlight::AI::FeatChecker::MIDDLE: untyped
+Unlight::AI::FeatChecker::MIDDLE: untyped
 
-Unlight::Unlight::AI::Unlight::Unlight::AI::FeatChecker::LONG: untyped
+Unlight::AI::FeatChecker::LONG: untyped
 
-Unlight::Unlight::AI::Unlight::Unlight::AI::FeatChecker::MOVE: untyped
+Unlight::AI::FeatChecker::MOVE: untyped
 
-Unlight::Unlight::AI::Unlight::Unlight::AI::FeatChecker::ATK: untyped
+Unlight::AI::FeatChecker::ATK: untyped
 
-Unlight::Unlight::AI::Unlight::Unlight::AI::FeatChecker::DEF: untyped
+Unlight::AI::FeatChecker::DEF: untyped
 
-Unlight::Unlight::AI::Unlight::Unlight::AI::FeatChecker::FEAT_CONDITION: untyped
+Unlight::AI::FeatChecker::FEAT_CONDITION: untyped

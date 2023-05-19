@@ -5,4 +5,4 @@ end
 class Unlight::AvatarPart < Sequel::Model
 end
 
-Unlight::Unlight::AvatarPart::PART_EFFECTS: untyped
+Unlight::AvatarPart::PART_EFFECTS: untyped

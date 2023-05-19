@@ -12,10 +12,10 @@ class Unlight::Avatar < Sequel::Model
   include Avatars::Quest
 end
 
-Unlight::Unlight::Avatar::NAME_INPUT_SUCCESS: untyped
+Unlight::Avatar::NAME_INPUT_SUCCESS: untyped
 
-Unlight::Unlight::Avatar::NAME_ALREADY_USED: untyped
+Unlight::Avatar::NAME_ALREADY_USED: untyped
 
-Unlight::Unlight::Avatar::NAME_CANT_USE: untyped
+Unlight::Avatar::NAME_CANT_USE: untyped
 
-Unlight::Unlight::Avatar::RENAME_CHARACTORS: untyped
+Unlight::Avatar::RENAME_CHARACTORS: untyped

@@ -5,90 +5,90 @@ end
 class Unlight::CharaCardSlotInventory < Sequel::Model
 end
 
-Unlight::Unlight::CharaCardSlotInventory::PARAM2_DEFAULT: untyped
+Unlight::CharaCardSlotInventory::PARAM2_DEFAULT: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_BASE_SA: untyped
+Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_BASE_SA: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_BASE_SD: untyped
+Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_BASE_SD: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_BASE_AA: untyped
+Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_BASE_AA: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_BASE_AD: untyped
+Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_BASE_AD: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_ADD_SA: untyped
+Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_ADD_SA: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_ADD_SD: untyped
+Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_ADD_SD: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_ADD_AA: untyped
+Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_ADD_AA: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_ADD_AD: untyped
+Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_ADD_AD: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_BASE_MAX: untyped
+Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_BASE_MAX: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_CNT_A: untyped
+Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_CNT_A: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_CNT_A_MAX: untyped
+Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_CNT_A_MAX: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_ADD_MAX: untyped
+Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_ADD_MAX: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_PASS_A: untyped
+Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_PASS_A: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_PSV_NUM_MAX: untyped
+Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_PSV_NUM_MAX: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_CNT_B: untyped
+Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_CNT_B: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_CNT_B_MAX: untyped
+Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_CNT_B_MAX: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_PASS_B: untyped
+Unlight::CharaCardSlotInventory::COMB_PARAM_MASK_PASS_B: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::COMB_BASE_PARAM_MAX: untyped
+Unlight::CharaCardSlotInventory::COMB_BASE_PARAM_MAX: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::COMB_BASE_PARAM_MIN: untyped
+Unlight::CharaCardSlotInventory::COMB_BASE_PARAM_MIN: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::COMB_ADD_PARAM_UPPER_MAX: untyped
+Unlight::CharaCardSlotInventory::COMB_ADD_PARAM_UPPER_MAX: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::COMB_ADD_PARAM_ZERO_MAX: untyped
+Unlight::CharaCardSlotInventory::COMB_ADD_PARAM_ZERO_MAX: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::COMB_ADD_PARAM_LOWER_MAX: untyped
+Unlight::CharaCardSlotInventory::COMB_ADD_PARAM_LOWER_MAX: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::COMB_ADD_PARAM_MIN: untyped
+Unlight::CharaCardSlotInventory::COMB_ADD_PARAM_MIN: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::COMB_LEVEL_MAX: untyped
+Unlight::CharaCardSlotInventory::COMB_LEVEL_MAX: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::COMB_ADD_PARAM_REST_SET: untyped
+Unlight::CharaCardSlotInventory::COMB_ADD_PARAM_REST_SET: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::COMB_PASSIVE_SET: untyped
+Unlight::CharaCardSlotInventory::COMB_PASSIVE_SET: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::COMB_BASE_COST_RULE: untyped
+Unlight::CharaCardSlotInventory::COMB_BASE_COST_RULE: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::COMB_PASSIVE_RELEASE_LEVEL_RULE: untyped
+Unlight::CharaCardSlotInventory::COMB_PASSIVE_RELEASE_LEVEL_RULE: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::COMB_NORMAL_TYPE_PARAM_ID_RULE: untyped
+Unlight::CharaCardSlotInventory::COMB_NORMAL_TYPE_PARAM_ID_RULE: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::COMB_SEND_EXP_COEFFICIENT: untyped
+Unlight::CharaCardSlotInventory::COMB_SEND_EXP_COEFFICIENT: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::CMB_BASE_WC_CHANGE_ID: untyped
+Unlight::CharaCardSlotInventory::CMB_BASE_WC_CHANGE_ID: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::CMB_BASE_PARAM_UP_IDS: untyped
+Unlight::CharaCardSlotInventory::CMB_BASE_PARAM_UP_IDS: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::CMB_BASE_PARAM_SHIFT_IDS: untyped
+Unlight::CharaCardSlotInventory::CMB_BASE_PARAM_SHIFT_IDS: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::CMB_MONSTER_PARAM_UP_IDS: untyped
+Unlight::CharaCardSlotInventory::CMB_MONSTER_PARAM_UP_IDS: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::CMB_BASE_PARAM_MAX_UP_IDS: untyped
+Unlight::CharaCardSlotInventory::CMB_BASE_PARAM_MAX_UP_IDS: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::CMB_BASE_PARAM_MAX_UP_NUM: untyped
+Unlight::CharaCardSlotInventory::CMB_BASE_PARAM_MAX_UP_NUM: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::CMB_CREST_MATERIAL_IDS: untyped
+Unlight::CharaCardSlotInventory::CMB_CREST_MATERIAL_IDS: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::CMB_PASSIVE_MATERIAL_IDS: untyped
+Unlight::CharaCardSlotInventory::CMB_PASSIVE_MATERIAL_IDS: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::CMB_PASSIVE_MATERIAL_PASS_SET: untyped
+Unlight::CharaCardSlotInventory::CMB_PASSIVE_MATERIAL_PASS_SET: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::CMB_BLOCK_WC_ID_START: untyped
+Unlight::CharaCardSlotInventory::CMB_BLOCK_WC_ID_START: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::CMB_BLOCK_WC_ID_END: untyped
+Unlight::CharaCardSlotInventory::CMB_BLOCK_WC_ID_END: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::CMB_CREST_CAN_USE_LV: untyped
+Unlight::CharaCardSlotInventory::CMB_CREST_CAN_USE_LV: untyped
 
-Unlight::Unlight::CharaCardSlotInventory::CMB_CREST_CAN_USE_NUM: untyped
+Unlight::CharaCardSlotInventory::CMB_CREST_CAN_USE_NUM: untyped

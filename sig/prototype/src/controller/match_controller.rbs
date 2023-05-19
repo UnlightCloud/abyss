@@ -4,12 +4,12 @@ end
 module Unlight::MatchController
 end
 
-Unlight::Unlight::MatchController::RADDER_DECK_COST_LIMEN: untyped
+Unlight::MatchController::RADDER_DECK_COST_LIMEN: untyped
 
-Unlight::Unlight::MatchController::RADDER_DECK_LV_LIMEN: untyped
+Unlight::MatchController::RADDER_DECK_LV_LIMEN: untyped
 
-Unlight::Unlight::MatchController::RADDER_BP_LIMEN: untyped
+Unlight::MatchController::RADDER_BP_LIMEN: untyped
 
-Unlight::Unlight::MatchController::RADDER_WAITING_TIME: untyped
+Unlight::MatchController::RADDER_WAITING_TIME: untyped
 
-Unlight::Unlight::MatchController::RADDER_MATCH_USER_MIN: untyped
+Unlight::MatchController::RADDER_MATCH_USER_MIN: untyped

@@ -9,24 +9,24 @@ Unlight::POINT_CHECK_BATTLE: untyped
 class Unlight::Entrant < Unlight::BaseEvent
 end
 
-Unlight::Unlight::Entrant::DEFAULT_CARD_NUM: untyped
+Unlight::Entrant::DEFAULT_CARD_NUM: untyped
 
-Unlight::Unlight::Entrant::DISTANCE_MAX: untyped
+Unlight::Entrant::DISTANCE_MAX: untyped
 
-Unlight::Unlight::Entrant::POINT_CHECK_MOVE: untyped
+Unlight::Entrant::POINT_CHECK_MOVE: untyped
 
-Unlight::Unlight::Entrant::POINT_CHECK_BATTLE: untyped
+Unlight::Entrant::POINT_CHECK_BATTLE: untyped
 
-Unlight::Unlight::Entrant::EVENT_CARD_DRAW_NUM: untyped
+Unlight::Entrant::EVENT_CARD_DRAW_NUM: untyped
 
-Unlight::Unlight::Entrant::DIRECTION_PEND: untyped
+Unlight::Entrant::DIRECTION_PEND: untyped
 
-Unlight::Unlight::Entrant::DIRECTION_FORWARD: untyped
+Unlight::Entrant::DIRECTION_FORWARD: untyped
 
-Unlight::Unlight::Entrant::DIRECTION_STAY: untyped
+Unlight::Entrant::DIRECTION_STAY: untyped
 
-Unlight::Unlight::Entrant::DIRECTION_BACKWARD: untyped
+Unlight::Entrant::DIRECTION_BACKWARD: untyped
 
-Unlight::Unlight::Entrant::DIRECTION_CHARA_CHANGE: untyped
+Unlight::Entrant::DIRECTION_CHARA_CHANGE: untyped
 
-Unlight::Unlight::Entrant::FIELD_STATUS: untyped
+Unlight::Entrant::FIELD_STATUS: untyped
