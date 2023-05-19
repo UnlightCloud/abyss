@@ -1,0 +1,6 @@
+module Unlight
+  module Protocol
+    class ULServer
+    end
+  end
+end

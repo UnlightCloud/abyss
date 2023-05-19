@@ -1,0 +1,7 @@
+module Unlight
+  module Protocol
+    class ChatServer < ULServer
+      include ChatController
+    end
+  end
+end

@@ -1,0 +1,6 @@
+module Unlight
+  module Protocol
+    class AuthServer < ULServer
+    end
+  end
+end
