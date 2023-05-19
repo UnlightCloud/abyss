@@ -7,4 +7,4 @@ end
 class Dawn::DataImporter
 end
 
-Dawn::Dawn::DataImporter::LANGUAGE_SET: untyped
+Dawn::DataImporter::LANGUAGE_SET: untyped

@@ -7,4 +7,4 @@ end
 class Dawn::ClientDataGenerator
 end
 
-Dawn::Dawn::ClientDataGenerator::MODELS: untyped
+Dawn::ClientDataGenerator::MODELS: untyped

@@ -8,4 +8,4 @@ class Dawn::Dataset
   include Enumerable
 end
 
-Dawn::Dawn::Dataset::LANGUAGE_SET: untyped
+Dawn::Dataset::LANGUAGE_SET: untyped
