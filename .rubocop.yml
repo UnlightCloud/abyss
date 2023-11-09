@@ -27,6 +27,9 @@ Style/AsciiComments:
 RSpec/FilePath:
   Enabled: false
 
+RSpec/SpecFilePathFormat:
+  Enabled: false
+
 Metrics/BlockLength:
   Exclude:
     - spec/**/*_spec.rb

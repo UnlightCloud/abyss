@@ -2,7 +2,7 @@
 
 FactoryBot.define do
   factory :achievement_inventory, class: 'Unlight::AchievementInventory' do
-    association :avatar
-    association :achievement
+    avatar
+    achievement
   end
 end

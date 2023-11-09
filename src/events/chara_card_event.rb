@@ -22673,7 +22673,7 @@ module Unlight
         end
         if hps.size > 1
           hps.shuffle! if hps.size == 2 && hps[0][1] == hps[1][1] # 残り二人のhpが同じ値ならばランダムに入れ替える
-          chp = hps.sort! { |a, b| a[1] <=> b[1] }.shift
+          chp = hps.sort_by! { |a| a[1] }.shift
 
           dmg = 0
           hps.each do |hp|
