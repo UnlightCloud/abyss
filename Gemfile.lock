@@ -205,7 +205,7 @@ GEM
       syntax_tree (>= 6.1.1, < 7)
     ruby-progressbar (1.13.0)
     securerandom (0.2.2)
-    semantic_logger (4.13.0)
+    semantic_logger (4.14.0)
       concurrent-ruby (~> 1.0)
     sentry-ruby (5.9.0)
       concurrent-ruby (~> 1.0, >= 1.0.2)
