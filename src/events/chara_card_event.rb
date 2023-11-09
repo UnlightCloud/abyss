@@ -306,7 +306,7 @@ module Unlight
           ret = target.instant_kill_damage - d
 
         elsif target.is_indomitable
-          dmg = target.hit_point - dmg < 1 ? target.hit_point - 1 : dmg
+          dmg = target.hit_point - 1 if target.hit_point - dmg < 1
           ret = dmg.negative? ? 0 : dmg
 
         else
@@ -321,21 +321,21 @@ module Unlight
         # 反射によるダメージ
       when ATTRIBUTE_REFLECTION
         dmg = (target.current_chara_card.status[STATE_UNDEAD2][1]).positive? ? 0 : d
-        dmg = target.current_chara_card.is_senkou? ? dmg * 7 : dmg
-        dmg = target.current_chara_card.in_carapace? ? dmg * 5 : dmg
+        dmg *= 7 if target.current_chara_card.is_senkou?
+        dmg *= 5 if target.current_chara_card.in_carapace?
         ret = dmg
 
         # カウンターによるダメージ
       when ATTRIBUTE_COUNTER
         dmg = (target.current_chara_card.status[STATE_UNDEAD2][1]).positive? ? 0 : d
-        dmg = target.current_chara_card.is_senkou? ? dmg * 7 : dmg
-        dmg = target.current_chara_card.in_carapace? ? dmg * 5 : dmg
+        dmg *= 7 if target.current_chara_card.is_senkou?
+        dmg *= 5 if target.current_chara_card.in_carapace?
         ret = dmg
 
         # 割合ダメージ、即死系のカウンター
       when ATTRIBUTE_SPECIAL_COUNTER
         dmg = target.current_chara_card.is_senkou? ? d * 7 : d
-        dmg = target.current_chara_card.in_carapace? ? dmg * 5 : dmg
+        dmg *= 5 if target.current_chara_card.in_carapace?
         ret = dmg
 
       end

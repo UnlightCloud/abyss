@@ -1615,7 +1615,7 @@ module Unlight
     def reward_finish_handler(target, _ret)
       r = target.final_result
       if r[1]
-        get_card =  r[1].join(',')
+        get_card = r[1].join(',')
         sc_chara_card_inventory_info(r[4].join(','), get_card)
       else
         get_card = ''

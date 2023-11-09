@@ -72,7 +72,8 @@ module Dawn
       when :String then 'string'
       when :int
         return 'int32' if size == 4
-        return 'int8' if size == 1
+
+        'int8' if size == 1
       when :char then 'char'
       when :Boolean then 'bool'
       else 'unknown'

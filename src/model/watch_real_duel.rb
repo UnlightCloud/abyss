@@ -79,7 +79,7 @@ module Unlight
       if commands
         commands.each do |cmd|
           if cmd
-            func = cmd[:func].gsub(/_handler/, '')
+            func = cmd[:func].gsub('_handler', '')
             args = cmd[:args]
             send(func, args)
             @cmd_cnt += 1
