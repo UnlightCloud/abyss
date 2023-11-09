@@ -36,7 +36,7 @@ jobs:
     - name: Install RBS
       run: bundle exec rbs collection install
     - name: Run steep
-      run: bundle exec steep check
+      run: bundle exec steep check --jobs=4
   test:
     runs-on: ubuntu-latest
     strategy:
