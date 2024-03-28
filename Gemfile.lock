@@ -204,7 +204,8 @@ GEM
     ruby-progressbar (1.13.0)
     semantic_logger (4.15.0)
       concurrent-ruby (~> 1.0)
-    sentry-ruby (5.12.0)
+    sentry-ruby (5.17.1)
+      bigdecimal
       concurrent-ruby (~> 1.0, >= 1.0.2)
     sequel (5.74.0)
       bigdecimal
