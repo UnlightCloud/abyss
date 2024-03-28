@@ -22,21 +22,6 @@ jobs:
         bundler-cache: true
     - name: Run rubocop
       run: bundle exec rubocop -P
-  steep:
-    runs-on: ubuntu-latest
-    name: steep
-    continue-on-error: true
-    steps:
-    - uses: actions/checkout@v3
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: ${{ env.RUBY_VERSION }}
-        bundler-cache: true
-    - name: Install RBS
-      run: bundle exec rbs collection install
-    - name: Run steep
-      run: bundle exec steep check --jobs=4
   test:
     runs-on: ubuntu-latest
     strategy:

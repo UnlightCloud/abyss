@@ -1,6 +1,0 @@
-module Unlight
-end
-
-# デッキクラス
-class Unlight::Deck < Unlight::BaseEvent
-end

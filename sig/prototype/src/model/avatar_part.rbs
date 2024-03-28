@@ -1,8 +1,0 @@
-module Unlight
-end
-
-# アバターパーツクラス
-class Unlight::AvatarPart < Sequel::Model
-end
-
-Unlight::AvatarPart::PART_EFFECTS: untyped

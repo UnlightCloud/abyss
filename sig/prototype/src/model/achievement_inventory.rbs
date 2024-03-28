@@ -1,6 +1,0 @@
-module Unlight
-end
-
-# カードのインベントリクラス
-class Unlight::AchievementInventory < Sequel::Model
-end

@@ -1,6 +1,0 @@
-module Unlight
-end
-
-# 合成武器カードのインベントリクラス
-class Unlight::CombineWeaponCardInventory < Sequel::Model
-end

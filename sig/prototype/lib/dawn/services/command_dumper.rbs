@@ -1,8 +1,0 @@
-module Dawn
-end
-
-# Dump Command to JSON
-#
-# @since 0.1.0
-class Dawn::CommandDumper
-end

@@ -1,6 +1,0 @@
-module Unlight
-end
-
-# お詫び用データ
-class Unlight::AvatarApology < Sequel::Model
-end

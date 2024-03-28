@@ -1,6 +1,0 @@
-module Unlight
-end
-
-class Unlight::ContextValue < Array
-  alias to_s check_list_update
-end

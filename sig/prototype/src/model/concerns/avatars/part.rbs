@@ -1,6 +1,0 @@
-module Avatars
-end
-
-module Avatars::Part
-  extend ActiveSupport::Concern
-end

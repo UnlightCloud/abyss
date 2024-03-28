@@ -1,7 +1,0 @@
-module Avatars
-end
-
-# AvatarItem related methods
-module Avatars::Item
-  extend ActiveSupport::Concern
-end

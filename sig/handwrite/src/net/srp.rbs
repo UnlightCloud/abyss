@@ -1,3 +1,0 @@
-class Array[unchecked out T]
-  def ^:(Array[T]) -> Array[T]
-end

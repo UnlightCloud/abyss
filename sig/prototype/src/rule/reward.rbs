@@ -1,6 +1,0 @@
-module Unlight
-end
-
-# ゲームの報酬ルール
-class Unlight::Reward < Unlight::BaseEvent
-end
