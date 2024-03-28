@@ -131,7 +131,7 @@ GEM
     minitest (5.20.0)
     multi_test (1.1.0)
     mutex_m (0.2.0)
-    mysql2 (0.5.5)
+    mysql2 (0.5.6)
     nio4r (2.5.9)
     oj (3.16.1)
     optimist (3.1.0)
@@ -283,7 +283,7 @@ DEPENDENCIES
   factory_bot
   faker
   gmp
-  mysql2 (~> 0.5.2)
+  mysql2 (~> 0.5.6)
   oj
   overcommit
   prime

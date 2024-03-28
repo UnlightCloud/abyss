@@ -10,7 +10,7 @@ gem 'prime'
 gem 'eventmachine'
 
 # Database
-gem 'mysql2', '~> 0.5.2'
+gem 'mysql2', '~> 0.5.6'
 gem 'sequel', '~> 5.0'
 
 # Cache
