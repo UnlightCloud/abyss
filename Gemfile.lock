@@ -106,7 +106,7 @@ GEM
       dry-schema (>= 1.12, < 2)
       zeitwerk (~> 2.6)
     eventmachine (1.2.7)
-    factory_bot (6.3.0)
+    factory_bot (6.4.6)
       activesupport (>= 5.0.0)
     faker (3.2.2)
       i18n (>= 1.8.11, < 2)
