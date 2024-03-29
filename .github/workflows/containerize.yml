@@ -16,12 +16,7 @@ permissions:
 
 jobs:
   build-and-push-image:
-    strategy:
-      matrix:
-        os:
-          - ubuntu-latest
-          - macos-14 # Build for ARM64
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -50,6 +45,7 @@ jobs:
         with:
           context: .
           push: true
+          platforms: linux/amd64,linux/arm64
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
