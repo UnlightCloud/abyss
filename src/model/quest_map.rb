@@ -121,5 +121,9 @@ module Unlight
     def self.refresh_cache(reg)
       cache_store.delete("region:#{reg}")
     end
+
+    def to_client
+      [id, name, caption, region, level, ap, difficulty]
+    end
   end
 end

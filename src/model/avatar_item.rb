@@ -897,5 +897,9 @@ module Unlight
         -1
       end
     end
+
+    def to_client
+      [id, name, item_no, kind, sub_kind, cond, image, image_frame, effect_image, caption]
+    end
   end
 end

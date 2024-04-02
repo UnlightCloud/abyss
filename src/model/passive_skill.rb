@@ -74,14 +74,14 @@ module Unlight
       pow.to_s && caption ? caption.gsub('__POW__', pow.to_s).gsub('__NAME__', name.delete('+')) : caption
     end
 
-    def get_data_csv_str
-      ret = ''
-      ret << id.to_s.force_encoding('UTF-8') << ','
-      ret << passive_skill_no.to_s.force_encoding('UTF-8') << ','
-      ret << '"' << (name || '').force_encoding('UTF-8') << '",'
-      ret << '"' << (replaced_caption || '').force_encoding('UTF-8') << '",'
-      ret << '"' << (effect_image || '').force_encoding('UTF-8') << '"'
-      ret
+    def to_client
+      [
+        id,
+        passive_skill_no,
+        name || '',
+        replaced_caption || '',
+        effect_image || ''
+      ]
     end
 
     # 読み込み時に初期化する

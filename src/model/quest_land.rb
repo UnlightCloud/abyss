@@ -80,16 +80,16 @@ module Unlight
       self.updated_at = Time.now.utc
     end
 
-    def get_data_csv_str
-      ret = ''
-      ret << id.to_s << ','
-      ret << '"' << (name || '') << '",'
-      ret << (monstar_no || 0).to_s << ','
-      ret << (treasure_genre || 0).to_s << ','
-      ret << (event_no || 0).to_s << ','
-      ret << (stage || 0).to_s << ','
-      ret << '"' << (caption || '') << '"'
-      ret
+    def to_client
+      [
+        id,
+        name || '',
+        monstar_no || 0,
+        treasure_genre || 0,
+        event_no || 0,
+        stage || 0,
+        caption || ''
+      ]
     end
   end
 end

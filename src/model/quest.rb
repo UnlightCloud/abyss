@@ -265,20 +265,20 @@ module Unlight
       self.updated_at = Time.now.utc
     end
 
-    def get_data_csv_str
-      ret = ''
-      ret << id.to_s << ','
-      ret << '"' << (name || '') << '",'
-      ret << '"' << (caption || '') << '",'
-      ret << (ap || 0).to_s << ','
-      ret << (kind || 0).to_s << ','
-      ret << (difficulty || 0).to_s << ','
-      ret << (rarity || 0).to_s << ','
-      ret << '[' << (get_land_ids_str || '') << '],'
-      ret << '[' << (get_nexts_str || '') << '],'
-      ret << (quest_map_id || 0).to_s << ','
-      ret << (story_no || 0).to_s << ''
-      ret
+    def to_client
+      [
+        id,
+        name || '',
+        caption || '',
+        ap || 0,
+        kind || 0,
+        difficulty || 0,
+        rarity || 0,
+        "[#{get_land_ids_str}]",
+        "[#{get_nexts_str}]",
+        quest_map_id || 0,
+        story_no || 0
+      ]
     end
   end
 end

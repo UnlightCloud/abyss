@@ -344,32 +344,33 @@ module Unlight
 
     def feat_event_no_to_id; end
 
-    def get_data_csv_str
-      ret = ''
-      ret << id.to_s << ','
-      ret << '"' << (name || '') << '",'
-      ret << '"' << (ab_name || '') << '",'
-      ret << (level || 0).to_s << ','
-      ret << (hp || 0).to_s << ','
-      ret << (ap || 0).to_s << ','
-      ret << (dp || 0).to_s << ','
-      ret << (rarity || 0).to_s << ','
-      ret << (deck_cost || 0).to_s << ','
-      ret << (slot || 0).to_s << ','
-      ret << '"' << (stand_image || '') << '",'
-      ret << '"' << (chara_image || '') << '",'
-      ret << '"' << (artifact_image || '') << '",'
-      ret << '"' << (bg_image || '') << '",'
-      ret << '"' << (caption || '') << '",'
-      ret << '"' << (feats_id || '') << '",'
-      ret << (story_id || 0).to_s << ','
-      ret << (charactor_id || 0).to_s << ','
-      ret << (next_id || 0).to_s << ','
-      ret << '"' << (CharaCardRequirement.up_tree(id).join(',')) << '",'
-      ret << '"' << (CharaCardRequirement.down_tree(id).join(',')) << '",'
-      ret << (kind || 0).to_s << ','
-      ret << '"' << (passives_id || '') << '"'
-      ret
+    def to_client
+      [
+        id,
+        name || '',
+        ab_name || '',
+        level || 0,
+        hp || 0,
+        ap || 0,
+        dp || 0,
+        rarity || 0,
+        deck_cost || 0,
+        slot || 0,
+        stand_image || '',
+        chara_image || '',
+        artifact_image || '',
+        bg_image || '',
+        caption || '',
+        feats_id || '',
+        story_id || 0,
+        charactor_id || 0,
+        next_id || 0,
+        CharaCardRequirement.up_tree(id).join(','),
+        CharaCardRequirement.down_tree(id).join(','),
+        kind || 0,
+        passives_id || '',
+        CharaCardStory.get_data_csv_str(id)
+      ]
     end
   end
 

@@ -31,14 +31,4 @@ RSpec.describe Unlight::Charactor do
       it { is_expected.to eq(%w[A B]) }
     end
   end
-
-  describe '#get_data_csv_str' do
-    subject { charactor.get_data_csv_str }
-
-    let(:charactor) { create(:charactor) }
-
-    it { is_expected.to be_a(String) }
-
-    pending 'verify csv string format'
-  end
 end

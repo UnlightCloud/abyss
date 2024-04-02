@@ -1617,65 +1617,65 @@ module Unlight
     end
 
     def get_record_clear_quest_no
-      ret = 0
+      ret = nil
       # 初心者レコード
-      ret = ROOKIE_QUEST_01[0] if ret.zero? && ROOKIE_QUEST_01[1].include?(id)
+      ret = ROOKIE_QUEST_01[0] if ret.nil? && ROOKIE_QUEST_01[1].include?(id)
       # イベントレコード
-      ret = EVENT_QUEST_01[0] if ret.zero? && EVENT_QUEST_01[1].include?(id)
-      ret = EVENT_QUEST_02[0] if ret.zero? && EVENT_QUEST_02[1].include?(id)
-      ret = EVENT_QUEST_03[0] if ret.zero? && EVENT_QUEST_03[1].include?(id)
-      ret = EVENT_QUEST_04[0] if ret.zero? && EVENT_QUEST_04[1].include?(id)
-      ret = EVENT_QUEST_05[0] if ret.zero? && EVENT_QUEST_05[1].include?(id)
-      ret = EVENT_QUEST_06[0] if ret.zero? && EVENT_QUEST_06[1].include?(id)
-      ret = EVENT_QUEST_07[0] if ret.zero? && EVENT_QUEST_07[1].include?(id)
-      ret = EVENT_QUEST_08[0] if ret.zero? && EVENT_QUEST_08[1].include?(id)
-      ret = EVENT_QUEST_09[0] if ret.zero? && EVENT_QUEST_09[1].include?(id)
-      ret = EVENT_QUEST_10[0] if ret.zero? && EVENT_QUEST_10[1].include?(id)
-      ret = EVENT_QUEST_11[0] if ret.zero? && EVENT_QUEST_11[1].include?(id)
-      ret = EVENT_QUEST_12[0] if ret.zero? && EVENT_QUEST_12[1].include?(id)
-      ret = EVENT_QUEST_13[0] if ret.zero? && EVENT_QUEST_13[1].include?(id)
-      ret = EVENT_QUEST_14[0] if ret.zero? && EVENT_QUEST_14[1].include?(id)
-      ret = EVENT_QUEST_15[0] if ret.zero? && EVENT_QUEST_15[1].include?(id)
-      ret = EVENT_QUEST_16[0] if ret.zero? && EVENT_QUEST_16[1].include?(id)
-      ret = EVENT_QUEST_17[0] if ret.zero? && EVENT_QUEST_17[1].include?(id)
-      ret = EVENT_QUEST_18[0] if ret.zero? && EVENT_QUEST_18[1].include?(id)
-      ret = EVENT_QUEST_19[0] if ret.zero? && EVENT_QUEST_19[1].include?(id)
-      ret = EVENT_QUEST_20[0] if ret.zero? && EVENT_QUEST_20[1].include?(id)
-      ret = EVENT_QUEST_21[0] if ret.zero? && EVENT_QUEST_21[1].include?(id)
-      ret = EVENT_QUEST_22[0] if ret.zero? && EVENT_QUEST_22[1].include?(id)
-      ret = EVENT_QUEST_23[0] if ret.zero? && EVENT_QUEST_23[1].include?(id)
-      ret = EVENT_QUEST_24[0] if ret.zero? && EVENT_QUEST_24[1].include?(id)
-      ret = EVENT_QUEST_25[0] if ret.zero? && EVENT_QUEST_25[1].include?(id)
-      ret = EVENT_QUEST_26[0] if ret.zero? && EVENT_QUEST_26[1].include?(id)
-      ret = EVENT_QUEST_27[0] if ret.zero? && EVENT_QUEST_27[1].include?(id)
-      ret = EVENT_QUEST_28[0] if ret.zero? && EVENT_QUEST_28[1].include?(id)
-      ret = EVENT_QUEST_29[0] if ret.zero? && EVENT_QUEST_29[1].include?(id)
-      ret = EVENT_QUEST_30[0] if ret.zero? && EVENT_QUEST_30[1].include?(id)
-      ret = EVENT_QUEST_31[0] if ret.zero? && EVENT_QUEST_31[1].include?(id)
-      ret = EVENT_QUEST_32[0] if ret.zero? && EVENT_QUEST_32[1].include?(id)
-      ret = EVENT_QUEST_33[0] if ret.zero? && EVENT_QUEST_33[1].include?(id)
-      ret = EVENT_QUEST_34[0] if ret.zero? && EVENT_QUEST_34[1].include?(id)
-      ret = EVENT_QUEST_35[0] if ret.zero? && EVENT_QUEST_35[1].include?(id)
+      ret = EVENT_QUEST_01[0] if ret.nil? && EVENT_QUEST_01[1].include?(id)
+      ret = EVENT_QUEST_02[0] if ret.nil? && EVENT_QUEST_02[1].include?(id)
+      ret = EVENT_QUEST_03[0] if ret.nil? && EVENT_QUEST_03[1].include?(id)
+      ret = EVENT_QUEST_04[0] if ret.nil? && EVENT_QUEST_04[1].include?(id)
+      ret = EVENT_QUEST_05[0] if ret.nil? && EVENT_QUEST_05[1].include?(id)
+      ret = EVENT_QUEST_06[0] if ret.nil? && EVENT_QUEST_06[1].include?(id)
+      ret = EVENT_QUEST_07[0] if ret.nil? && EVENT_QUEST_07[1].include?(id)
+      ret = EVENT_QUEST_08[0] if ret.nil? && EVENT_QUEST_08[1].include?(id)
+      ret = EVENT_QUEST_09[0] if ret.nil? && EVENT_QUEST_09[1].include?(id)
+      ret = EVENT_QUEST_10[0] if ret.nil? && EVENT_QUEST_10[1].include?(id)
+      ret = EVENT_QUEST_11[0] if ret.nil? && EVENT_QUEST_11[1].include?(id)
+      ret = EVENT_QUEST_12[0] if ret.nil? && EVENT_QUEST_12[1].include?(id)
+      ret = EVENT_QUEST_13[0] if ret.nil? && EVENT_QUEST_13[1].include?(id)
+      ret = EVENT_QUEST_14[0] if ret.nil? && EVENT_QUEST_14[1].include?(id)
+      ret = EVENT_QUEST_15[0] if ret.nil? && EVENT_QUEST_15[1].include?(id)
+      ret = EVENT_QUEST_16[0] if ret.nil? && EVENT_QUEST_16[1].include?(id)
+      ret = EVENT_QUEST_17[0] if ret.nil? && EVENT_QUEST_17[1].include?(id)
+      ret = EVENT_QUEST_18[0] if ret.nil? && EVENT_QUEST_18[1].include?(id)
+      ret = EVENT_QUEST_19[0] if ret.nil? && EVENT_QUEST_19[1].include?(id)
+      ret = EVENT_QUEST_20[0] if ret.nil? && EVENT_QUEST_20[1].include?(id)
+      ret = EVENT_QUEST_21[0] if ret.nil? && EVENT_QUEST_21[1].include?(id)
+      ret = EVENT_QUEST_22[0] if ret.nil? && EVENT_QUEST_22[1].include?(id)
+      ret = EVENT_QUEST_23[0] if ret.nil? && EVENT_QUEST_23[1].include?(id)
+      ret = EVENT_QUEST_24[0] if ret.nil? && EVENT_QUEST_24[1].include?(id)
+      ret = EVENT_QUEST_25[0] if ret.nil? && EVENT_QUEST_25[1].include?(id)
+      ret = EVENT_QUEST_26[0] if ret.nil? && EVENT_QUEST_26[1].include?(id)
+      ret = EVENT_QUEST_27[0] if ret.nil? && EVENT_QUEST_27[1].include?(id)
+      ret = EVENT_QUEST_28[0] if ret.nil? && EVENT_QUEST_28[1].include?(id)
+      ret = EVENT_QUEST_29[0] if ret.nil? && EVENT_QUEST_29[1].include?(id)
+      ret = EVENT_QUEST_30[0] if ret.nil? && EVENT_QUEST_30[1].include?(id)
+      ret = EVENT_QUEST_31[0] if ret.nil? && EVENT_QUEST_31[1].include?(id)
+      ret = EVENT_QUEST_32[0] if ret.nil? && EVENT_QUEST_32[1].include?(id)
+      ret = EVENT_QUEST_33[0] if ret.nil? && EVENT_QUEST_33[1].include?(id)
+      ret = EVENT_QUEST_34[0] if ret.nil? && EVENT_QUEST_34[1].include?(id)
+      ret = EVENT_QUEST_35[0] if ret.nil? && EVENT_QUEST_35[1].include?(id)
       # 炎の聖女
-      ret = GODDESS_OF_FIRE_QUEST_01[0] if ret.zero? && GODDESS_OF_FIRE_QUEST_01[1].include?(id)
-      ret = GODDESS_OF_FIRE_QUEST_02[0] if ret.zero? && GODDESS_OF_FIRE_QUEST_02[1].include?(id)
-      ret = GODDESS_OF_FIRE_QUEST_03[0] if ret.zero? && GODDESS_OF_FIRE_QUEST_03[1].include?(id)
+      ret = GODDESS_OF_FIRE_QUEST_01[0] if ret.nil? && GODDESS_OF_FIRE_QUEST_01[1].include?(id)
+      ret = GODDESS_OF_FIRE_QUEST_02[0] if ret.nil? && GODDESS_OF_FIRE_QUEST_02[1].include?(id)
+      ret = GODDESS_OF_FIRE_QUEST_03[0] if ret.nil? && GODDESS_OF_FIRE_QUEST_03[1].include?(id)
       ret
     end
 
     def get_record_clear_prf_no
-      ret = 0
+      ret = nil
       # ボス討伐チェック
-      ret = EVENT_PRF_SET_01[0] if ret.zero? && EVENT_PRF_SET_01[1].include?(id)
+      ret = EVENT_PRF_SET_01[0] if ret.nil? && EVENT_PRF_SET_01[1].include?(id)
       ret
     end
 
     def get_record_part
-      ret = 0
+      ret = nil
       # パーツ取得チェック
-      ret = EVENT_GET_PART_01[0] if ret.zero? && EVENT_GET_PART_01[1].include?(id)
-      ret = EVENT_GET_PART_02[0] if ret.zero? && EVENT_GET_PART_02[1].include?(id)
-      ret = EVENT_GET_PART_03[0] if ret.zero? && EVENT_GET_PART_03[1].include?(id)
+      ret = EVENT_GET_PART_01[0] if ret.nil? && EVENT_GET_PART_01[1].include?(id)
+      ret = EVENT_GET_PART_02[0] if ret.nil? && EVENT_GET_PART_02[1].include?(id)
+      ret = EVENT_GET_PART_03[0] if ret.nil? && EVENT_GET_PART_03[1].include?(id)
       ret
     end
 
@@ -1791,22 +1791,22 @@ module Unlight
           case CONDITION_SET[id][0]
           when :quest_no_clear_check
             q_ids = get_record_clear_quest_no
-            if q_ids.zero?
-              ret << q_ids.to_s
+            if q_ids.nil?
+              ret << '0'
             else
               ret << q_ids.join(',')
             end
           when :raid_boss_defeat_check
             p_ids = get_record_clear_prf_no
-            if p_ids.zero?
-              ret << p_ids.to_s
+            if p_ids.nil?
+              ret << '0'
             else
               ret << p_ids.join(',')
             end
           when :get_part_check
             p_ids = get_record_part
-            if p_ids.zero?
-              ret << p_ids.to_s
+            if p_ids.nil?
+              ret << '0'
             else
               ret << p_ids.join(',')
             end
@@ -1820,18 +1820,17 @@ module Unlight
     end
 
     # データをとる
-    def get_data_csv_str
-      ret = ''
-      ret << id.to_s << ','
-      ret << kind.to_s << ','
-      ret << '"' << (caption || '') << '",'
-      ret << '"' << (event_end_at && event_end_at.strftime('%a %b %d %H:%M:%S %Z %Y') || '') << '",'
-      ret << success_cond.to_s << ','
-      ret << '"' << get_cond_info_str << '",'
-      exp_str = explanation.nil? ? '' : explanation.delete("\n")
-      ret << '"' << exp_str << '"' << ','
-      ret << get_selectable_array.to_s
-      ret
+    def to_client
+      [
+        id,
+        kind,
+        caption || '',
+        event_end_at && event_end_at.strftime('%a %b %d %H:%M:%S %Z %Y') || '',
+        success_cond,
+        get_cond_info_str,
+        explanation.nil? ? '' : explanation.delete("\n"),
+        get_selectable_array
+      ]
     end
 
     # クエストクリアチェック

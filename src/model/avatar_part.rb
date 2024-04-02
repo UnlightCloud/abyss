@@ -58,21 +58,21 @@ module Unlight
     end
 
     # パラメータをCSVのデータで返す
-    def get_data_csv_str
-      ret = ''
-      ret << id.to_s << ','
-      ret << '"' << (name || '') << '",'
-      ret << '"' << (image_extract || '') << '",'
-      ret << (parts_type || 0).to_s << ','
-      ret << (color || 0).to_s << ','
-      ret << (offset_x || 0).to_s << ','
-      ret << (offset_y || 0).to_s << ','
-      ret << (offset_scale || 0).to_s << ','
-      ret << (power_type || 0).to_s << ','
-      ret << (power || 0).to_s << ','
-      ret << (duration || 0).to_s << ','
-      ret << '"' << (trans_caption || '') << '"'
-      ret
+    def to_client
+      [
+        id,
+        name || '',
+        image_extract || '',
+        parts_type || 0,
+        color || 0,
+        offset_x || 0,
+        offset_y || 0,
+        offset_scale || 0,
+        power_type || 0,
+        power || 0,
+        duration || 0,
+        trans_caption || ''
+      ]
     end
 
     def image_extract

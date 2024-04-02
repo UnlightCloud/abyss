@@ -395,6 +395,10 @@ module Unlight
     def joker?
       event_no == JOKER_EVENT_NO
     end
+
+    def to_client
+      [id, u_type, u_value, b_type, b_value, event_no, image, caption]
+    end
   end
 
   class ActionCardEvent < BaseEvent

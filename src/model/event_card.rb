@@ -93,6 +93,10 @@ module Unlight
       @@filler_cards << EventCard[1] if @@filler_cards.empty?
     end
 
+    def to_client
+      [id, name, event_no, card_cost, color, max_in_deck, restriction, image, caption]
+    end
+
     initialize_event_card
   end
 end

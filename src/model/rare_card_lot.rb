@@ -200,6 +200,10 @@ module Unlight
       (r[lot_kind][rarity - 1] * 100).round(1)
     end
 
+    def to_client
+      [id, lot_kind, article_kind, article_id, order, visible, description, num]
+    end
+
     initialize_percent
   end
 end

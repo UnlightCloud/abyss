@@ -23,6 +23,14 @@ module Unlight
     before_save do
       self.updated_at = Time.now.utc
     end
+
+    # NOTE: Only type = 0 is used in the game
+    SALE_TYPE = 0
+    def to_client
+      return if shop_type != SALE_TYPE
+
+      [article_kind, article_id, price, coin_0, coin_1, coin_2, coin_3, coin_4, coin_ex, view_frame]
+    end
   end
 
   # 特定のショップのアイテムIDリストをもらえる
@@ -61,22 +69,5 @@ module Unlight
   # 特定ショップのキャッシュをクリア
   def Shop.refresh_cache(shop)
     cache_store.delete("shop_type:#{shop}")
-  end
-
-  def Shop.get_sale_list_str(type = 0)
-    ret = ''
-    ret += '['
-    ret += "#{type},"
-    ret += '['
-    Shop.filter({ shop_type: type }).all.each do |s|
-      ret += '['
-      ret2 = []
-      ret2 << [s.article_kind, s.article_id, s.price, s.coin_0, s.coin_1, s.coin_2, s.coin_3, s.coin_4, s.coin_ex, s.view_frame]
-      ret += ret2.join(',')
-      ret += '],'
-    end
-    ret.chop!
-    ret += ']'
-    ret += ']'
   end
 end

@@ -83,15 +83,7 @@ module Unlight
       max_hp
     end
 
-    def get_data_csv_str
-      ret = ''
-      ret << id.to_s << ','
-      ret << prf_type.to_s << ','
-      ret << '"' << (name || '') << '",'
-      ret << rarity.to_s << ','
-      ret << level.to_s << ','
-      ret << quest_map_id.to_s << ','
-      ret << stage.to_s << ','
+    def to_client
       boss_data = CpuCardData[core_monster_id]
       boss_name = 'Boss'
       max_hp = 0
@@ -103,19 +95,29 @@ module Unlight
           max_hp += CharaCard[id.to_i].hp if CharaCard[id.to_i]
         end
       end
-      ret << boss_id.to_s << ','
-      ret << '"' << boss_name << '",'
-      ret << max_hp.to_s << ','
-      ret << '"' << (caption || '') << '",'
+
       _rank_bonus, all_bonus, _defeat_bonus, _found_bonus = ProfoundTreasureData.get_level_treasure_list(treasure_level)
       all_bonus_set = []
       all_bonus.each do |b|
         all_bonus_set << "#{b[:type]}_#{b[:id]}_#{b[:num]}_#{b[:sct_type]}"
       end
       all_bonus_set_str = all_bonus_set.empty? ? '' : all_bonus_set.join(',')
-      ret << '"' << (all_bonus_set_str || '') << '",'
-      ret << member_limit.to_s
-      ret
+
+      [
+        id,
+        prf_type,
+        name || '',
+        rarity,
+        level,
+        quest_map_id,
+        stage,
+        boss_id,
+        boss_name,
+        max_hp,
+        caption || '',
+        all_bonus_set_str || '',
+        member_limit
+      ]
     end
   end
 end

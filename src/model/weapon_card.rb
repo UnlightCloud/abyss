@@ -80,23 +80,23 @@ module Unlight
     end
 
     # CSVで返す
-    def get_data_csv_str
-      ret = ''
-      ret << id.to_s << ','
-      ret << '"' << (name || '') << '",'
-      ret << (weapon_no || 0).to_s << ','
-      ret << (card_cost || 0).to_s << ','
-      ret << '[' << '"' << (restriction || '') << '"' << '],'
-      ret << '"' << (image || '') << '",'
-      ret << '"' << (caption || '') << '",'
-      ret << (weapon_type || 0).to_s << ','
-      ret << (material_use_cnt || 0).to_s << ','
-      ret << (param_to_point(material_add_param, *MAT_ADD_PARAM_MASK_ADD_SA) || 0).to_s << ','
-      ret << (param_to_point(material_add_param, *MAT_ADD_PARAM_MASK_ADD_SD) || 0).to_s << ','
-      ret << (param_to_point(material_add_param, *MAT_ADD_PARAM_MASK_ADD_AA) || 0).to_s << ','
-      ret << (param_to_point(material_add_param, *MAT_ADD_PARAM_MASK_ADD_AD) || 0).to_s << ','
-      ret << '[' << '"' << (passive_id || '') << '"' << ']'
-      ret
+    def to_client
+      [
+        id,
+        name || '',
+        weapon_no || 0,
+        card_cost || 0,
+        "[\"#{restriction}\"]",
+        image || '',
+        caption || '',
+        weapon_type || 0,
+        material_use_cnt || 0,
+        param_to_point(material_add_param, *MAT_ADD_PARAM_MASK_ADD_SA) || 0,
+        param_to_point(material_add_param, *MAT_ADD_PARAM_MASK_ADD_SD) || 0,
+        param_to_point(material_add_param, *MAT_ADD_PARAM_MASK_ADD_AA) || 0,
+        param_to_point(material_add_param, *MAT_ADD_PARAM_MASK_ADD_AD) || 0,
+        "[\"#{get_passive_id.join('","')}\"]"
+      ]
     end
 
     # キャラで使えるかチェック
@@ -409,42 +409,42 @@ module Unlight
 
     # 近距離攻撃力増加
     def sword_ap(_ai = :none)
-      (WEAPON_EFFECTS[weapon_no][:sword_ap] || 0) if WEAPON_EFFECTS[weapon_no]
+      WEAPON_EFFECTS[weapon_no][:sword_ap] || 0 if WEAPON_EFFECTS[weapon_no]
     end
 
     # 近距離ダイス攻撃力増加
     def sword_dice_bonus(_ai = :none)
-      (WEAPON_EFFECTS[weapon_no][:sword_dice_bonus] || 0) if WEAPON_EFFECTS[weapon_no]
+      WEAPON_EFFECTS[weapon_no][:sword_dice_bonus] || 0 if WEAPON_EFFECTS[weapon_no]
     end
 
     # 近距離防御力増加
     def sword_dp(_ai = :none)
-      (WEAPON_EFFECTS[weapon_no][:sword_dp] || 0) if WEAPON_EFFECTS[weapon_no]
+      WEAPON_EFFECTS[weapon_no][:sword_dp] || 0 if WEAPON_EFFECTS[weapon_no]
     end
 
     # 近距離ダイス防御力増加
     def sword_deffence_dice_bonus(_ai = :none)
-      (WEAPON_EFFECTS[weapon_no][:sword_deffence_dice_bonus] || 0) if WEAPON_EFFECTS[weapon_no]
+      WEAPON_EFFECTS[weapon_no][:sword_deffence_dice_bonus] || 0 if WEAPON_EFFECTS[weapon_no]
     end
 
     # 遠距離攻撃力増加
     def arrow_ap(_ai = :none)
-      (WEAPON_EFFECTS[weapon_no][:arrow_ap] || 0) if WEAPON_EFFECTS[weapon_no]
+      WEAPON_EFFECTS[weapon_no][:arrow_ap] || 0 if WEAPON_EFFECTS[weapon_no]
     end
 
     # 遠距離ダイス増加
     def arrow_dice_bonus(_ai = :none)
-      (WEAPON_EFFECTS[weapon_no][:arrow_dice_bonus] || 0) if WEAPON_EFFECTS[weapon_no]
+      WEAPON_EFFECTS[weapon_no][:arrow_dice_bonus] || 0 if WEAPON_EFFECTS[weapon_no]
     end
 
     # 遠距離防御力増加
     def arrow_dp(_ai = :none)
-      (WEAPON_EFFECTS[weapon_no][:arrow_dp] || 0) if WEAPON_EFFECTS[weapon_no]
+      WEAPON_EFFECTS[weapon_no][:arrow_dp] || 0 if WEAPON_EFFECTS[weapon_no]
     end
 
     # 遠距離ダイス防御力増加
     def arrow_deffence_dice_bonus(_ai = :none)
-      (WEAPON_EFFECTS[weapon_no][:arrow_deffence_dice_bonus] || 0) if WEAPON_EFFECTS[weapon_no]
+      WEAPON_EFFECTS[weapon_no][:arrow_deffence_dice_bonus] || 0 if WEAPON_EFFECTS[weapon_no]
     end
 
     # 近距離攻撃力

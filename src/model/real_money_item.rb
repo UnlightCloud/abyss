@@ -67,5 +67,9 @@ module Unlight
       end
       ret
     end
+
+    def to_client
+      [id, name, price, rm_item_type, item_id, num, order, state, image_url, tab, description, view_frame, extra_id, sale_type, deck_image_url]
+    end
   end
 end

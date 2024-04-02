@@ -36,14 +36,14 @@ module Unlight
     end
 
     # データをとる
-    def get_data_csv_str
-      ret = ''
-      ret << id.to_s << ','
-      ret << '"' << (name || '') << '",'
-      ret << '"' << (lobby_image || '') << '",'
-      ret << '"' << (chara_voice || '') << '",'
-      ret << (parent_id || 0).to_s
-      ret
+    def to_client
+      [
+        id,
+        name || '',
+        lobby_image || '',
+        chara_voice || '',
+        parent_id || 0
+      ]
     end
 
     initialize_charactor_param

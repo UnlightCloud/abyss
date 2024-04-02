@@ -8,7 +8,7 @@ namespace :data do
     Unlight::DB.logger = nil
     generator = Dawn::ClientDataGenerator.new
     generator.export do |dataset|
-      puts "Generating #{generator.destination}/#{dataset.table_name}.json"
+      puts "Generating #{generator.destination}/#{dataset.table_name}.csv"
     end
   end
 end

@@ -1,14 +1,13 @@
 # frozen_string_literal: true
 
 require 'date'
+require 'csv'
 # NOTE: Add String#singularize support
 require 'sequel'
 require 'sequel/extensions/inflector'
 
 require 'dawn'
 require 'dawn/dataset'
-
-Sequel::Model.plugin :json_serializer
 
 module Dawn
   # Export Game Data for Client
@@ -18,18 +17,15 @@ module Dawn
     # @since 0.1.0
     MODELS = %w[
       CharaCard
-      CharaCardStory
-      CharaCardRequirement
       ActionCard
+      WeaponCard
       Feat
+      PassiveSkill
       AvatarItem
       EventCard
       Quest
       QuestLand
       QuestMap
-      TreasureData
-      FeatInventory
-      WeaponCard
       RareCardLot
       RealMoneyItem
       AvatarPart
@@ -37,8 +33,7 @@ module Dawn
       Achievement
       ProfoundData
       ProfoundTreasureData
-      PassiveSkill
-      PassiveSkillInventory
+      Charactor
     ].freeze
 
     # @param block [Proc] the callback when rows imported
@@ -49,9 +44,10 @@ module Dawn
 
       datasets.each do |dataset|
         yield dataset if block_given?
-        # TODO: Use `only` options to select necessary columns
-        json_data = dataset.to_json(except: %i[created_at updated_at])
-        File.write(destination.join("#{dataset.table_name}.json"), json_data)
+
+        CSV.open(destination.join("#{dataset.table_name}.csv"), 'w') do |csv|
+          dataset.each { |row| csv << row.to_client }
+        end
       end
     end
 

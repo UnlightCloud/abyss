@@ -54,5 +54,9 @@ module Unlight
       end
       ret
     end
+
+    def to_client
+      [id, level, prf_trs_type, rank_min, rank_max, treasure_type, treasure_id, slot_type, value]
+    end
   end
 end

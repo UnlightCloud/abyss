@@ -571,13 +571,13 @@ module Unlight
       @@dice_attribute_set[id].split(',')
     end
 
-    def get_data_csv_str
-      ret = ''
-      ret << id.to_s.force_encoding('UTF-8') << ','
-      ret << '"' << (name || '').force_encoding('UTF-8') << '",'
-      ret << '"' << (effect_image || '').force_encoding('UTF-8') << '",'
-      ret << '"' << (caption || '').force_encoding('UTF-8') << '"'
-      ret
+    def to_client
+      [
+        id,
+        name || '',
+        effect_image || '',
+        caption || ''
+      ]
     end
 
     # 読み込み時に初期化する
