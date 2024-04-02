@@ -51,6 +51,7 @@ group :development do
 
   gem 'overcommit', require: false
 
+  gem 'dip', require: false
   gem 'pry'
 end
 
