@@ -27,7 +27,6 @@ gem 'sentry-ruby'
 # Utils
 gem 'activesupport'
 gem 'config'
-gem 'gmp'
 gem 'rake'
 gem 'RubyInline', '~> 3.14.0'
 gem 'semantic_logger'

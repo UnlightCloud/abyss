@@ -105,7 +105,7 @@ module Unlight
         class_name = self.class.name.split('::').last
         transaction = Sentry.start_transaction(op: 'dawn.execute_command', name: "#{class_name}##{method}")
         yield if block
-        transaction.finish
+        transaction&.finish
       end
 
       def track_user_context
