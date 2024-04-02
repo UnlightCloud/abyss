@@ -7,6 +7,7 @@
 # https://opensource.org/licenses/Apache2.0
 
 require 'bundler'
+
 $LOAD_PATH.unshift Bundler.root.join('lib')
 $LOAD_PATH.unshift Bundler.root.join('src')
 

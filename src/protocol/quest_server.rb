@@ -7,37 +7,38 @@ require 'protocol/ulserver'
 require 'protocol/command/command'
 require 'controller/quest_controller'
 
-include Unlight
-module Protocol
-  class QuestServer < ULServer
-    include QuestController
-    attr_accessor :player, :avatar
+module Unlight
+  module Protocol
+    class QuestServer < ULServer
+      include QuestController
+      attr_accessor :player, :avatar
 
-    # クラスの初期化
-    def self.setup
-      super
-      # コマンドクラスをつくる
-      @@receive_cmd = Command.new(self, :Quest)
-      CharaCardDeck.preload_CPU_deck
-    end
-
-    # 切断時
-    def unbind
-      # 例外をrescueしないのAbortするので注意
-      begin
-        if @player
-          delete_connection
-          do_logout
-          @player = nil
-        end
-      rescue StandardError => e
-        Sentry.capture_exception(e)
+      # クラスの初期化
+      def self.setup
+        super
+        # コマンドクラスをつくる
+        @@receive_cmd = Command.new(self, :Quest)
+        CharaCardDeck.preload_CPU_deck
       end
-      SERVER_LOG.info("#{@@class_name}: Connection unbind >> #{@ip}")
-    end
 
-    def online_list
-      @@online_list
+      # 切断時
+      def unbind
+        # 例外をrescueしないのAbortするので注意
+        begin
+          if @player
+            delete_connection
+            do_logout
+            @player = nil
+          end
+        rescue StandardError => e
+          Sentry.capture_exception(e)
+        end
+        SERVER_LOG.info("#{@@class_name}: Connection unbind >> #{@ip}")
+      end
+
+      def online_list
+        @@online_list
+      end
     end
   end
 end
