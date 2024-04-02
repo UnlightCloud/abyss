@@ -82,7 +82,7 @@ module Unlight
       end
 
       def self.update_login_count
-        @@server_channel.update_count
+        @@server_channel&.update_count
       end
     end
   end
