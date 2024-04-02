@@ -312,6 +312,8 @@ module Unlight
 
     # 一定間隔ごとに呼ばれるクイックマッチの更新
     def self.radder_match_update
+      return if Unlight::Protocol::MatchServer.server_channel.nil?
+
       # リストに2人以上いないなら無意味 CPUマッチがある場合は一人でもチェック
       if Unlight::Protocol::MatchServer.server_channel.cpu_matching_type?.zero?
         return if @@radder_match_waiting_list.size < 2
