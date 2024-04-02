@@ -52,7 +52,7 @@ group :development do
   gem 'overcommit', require: false
 
   gem 'dip', require: false
-  gem 'pry'
+  gem 'irb'
 end
 
 group :test do

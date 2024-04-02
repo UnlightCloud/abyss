@@ -32,18 +32,10 @@ command = ARGV.shift
 
 def run_console
   require 'bundler/setup'
-  begin
-    require 'pry'
-  rescue LoadError
-    require 'irb'
-  end
+  require 'irb'
   require_relative '../src/unlight'
 
-  if defined?(Pry)
-    Pry.start
-  else
-    IRB.start(__FILE__)
-  end
+  IRB.start(__FILE__)
 end
 
 def run_web
@@ -53,8 +45,8 @@ end
 case command
 when 'console', 'rake', 'web'
   ensure_connection
-  if respond_to?("run_#{command}", true)
-    send("run_#{command}")
+  if respond_to?(:"run_#{command}", true)
+    send(:"run_#{command}")
   else
     exec("bundle exec #{command} #{ARGV.join(' ')}")
   end
