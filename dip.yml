@@ -34,6 +34,11 @@ interaction:
     service: auth
     command: bundle exec rake data:import data:initialize_cpu_decks
 
+  client_data:
+    description: Generate client data
+    service: auth
+    command: bundle exec rake data:generate_client_data
+
   clean_cache:
     description: Delete cache files on the host machine
     command: rm -rf $(pwd)/tmp/cache/*
