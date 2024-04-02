@@ -32,7 +32,6 @@ gem 'RubyInline', '~> 3.14.0'
 gem 'semantic_logger'
 
 group :build do
-  gem 'RocketAMF', '~> 0.2.1'
   gem 'sqlite3'
 end
 
