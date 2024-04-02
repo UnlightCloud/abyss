@@ -1,0 +1,40 @@
+# Required minimum dip version
+version: '8.0'
+
+environment:
+  DAWN_ENV: development
+  RUBY_VERSION: <%= RUBY_VERSION %>
+  WORK_DIR: /opt/unlight/${DIP_WORK_DIR_REL_PATH}
+
+compose:
+  files:
+    - dip/docker-compose.yml
+    - dip/docker-compose.$DAWN_ENV.yml
+    - dip/docker-compose.$DIP_OS.yml
+  project_name: abyss
+
+interaction:
+  abyss:
+    description: Run the abyss command
+    service: auth
+    command: bin/unlight
+    subcommands:
+      c:
+        description: Run the abyss console
+        service: auth
+        command: bin/unlight console
+
+  migrate:
+    description: Run database migration
+    service: auth
+    command: bundle exec rake db:migrate
+
+  clean_cache:
+    description: Delete cache files on the host machine
+    command: rm -rf $(pwd)/tmp/cache/*
+
+provision:
+  - dip compose down --volumes
+  - dip clean_cache
+  - dip up -d --wait mysql memcached xmlsocket
+  - dip migrate

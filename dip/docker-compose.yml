@@ -1,0 +1,127 @@
+version: '3.4'
+
+x-image: &image
+  build:
+    context: ..
+    dockerfile: Dockerfile.dev
+    args:
+      RUBY_VERSION: ${RUBY_VERSION:-3.2.2}
+  volumes:
+    - ${PWD}:/opt/unlight:cached
+    - bundler_data:/usr/local/bundle
+    - history:/usr/local/hist
+  working_dir: ${WORK_DIR:-/opt/unlight}
+  environment:
+    DATABASE_URL: mysql2://unlight:unlight@mysql/unlight_db?encoding=utf8mb4
+    MEMCACHED_HOST: memcached:11211
+    # Development
+    HISTFILE: /usr/local/hist/.bash_history
+    LANG: C.UTF-8
+    PROMPT_DIRTRIM: 2
+    PS1: '[\W]\! '
+  tmpfs:
+    - /tmp
+  depends_on:
+    - memcached
+    - mysql
+
+services:
+  memcached:
+    image: memcached:alpine
+    ports:
+      - 11211
+  mysql:
+    image: mysql:8.0
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    environment:
+      MYSQL_USER: unlight
+      MYSQL_PASSWORD: unlight
+      MYSQL_DATABASE: unlight_db
+      MYSQL_ROOT_PASSWORD: unlight
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+    volumes:
+      - mysql:/var/lib/mysql
+    ports:
+      - 3306
+
+  # Flash Fallback
+  xmlsocket:
+    <<: *image
+    command: ./bin/xmlsocket
+    ports:
+      - 11999 # XMLSocket for Flash Policy
+
+  # Game Server
+  auth:
+    <<: *image
+    command: ./bin/authentication -p 12001
+    ports:
+      - 12001
+  lobby:
+    <<: *image
+    command: ./bin/lobby -p 12002
+    ports:
+      - 12002
+  quest:
+    <<: *image
+    command: ./bin/quest -p 12005
+    ports:
+      - 12005
+  data:
+    <<: *image
+    command: ./bin/data_lobby -p 12032
+    ports:
+      - 12032
+  game:
+    <<: *image
+    command: ./bin/game -p 12008
+    ports:
+      - 12008
+  match:
+    <<: *image
+    command: ./bin/matching -p 12018
+    ports:
+      - 12018
+  chat:
+    <<: *image
+    command: ./bin/chat -p 12012
+    ports:
+      - 12012
+  watch:
+    <<: *image
+    command: ./bin/watch -p 12080
+    ports:
+      - 12080
+  global_chat:
+    <<: *image
+    command: ./bin/global_chat -p 12020
+    ports:
+      - 12020
+  raid:
+    <<: *image
+    command: ./bin/raid -p 12050
+    ports:
+      - 12050
+  raid_rank:
+    <<: *image
+    command: ./bin/raid_rank -p 12070
+    ports:
+      - 12070
+  raid_chat:
+    <<: *image
+    command: ./bin/raid_chat -p 12090
+    ports:
+      - 12090
+  raid_data:
+    <<: *image
+    command: ./bin/raid_data -p 12100
+    ports:
+      - 12100
+
+volumes:
+  mysql:
+  bundler_data:
+  history:
