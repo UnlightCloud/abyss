@@ -16,14 +16,21 @@ $LOAD_PATH.unshift Bundler.root.join('lib')
 require 'dawn/database'
 
 def wait_database
+  puts 'Check database connection...'
   Dawn::Database.current.test_connection
 rescue Sequel::DatabaseConnectionError
   sleep 1
   retry
 end
 
+def wait_migration
+  while Dawn::Database.pending?
+    puts 'Waiting for database migration...'
+    sleep 1
+  end
+end
+
 def ensure_connection
-  puts 'Check database connection...'
   Timeout.timeout(30) { wait_database }
 rescue Timeout::Error
   puts 'Unable connect to database'
@@ -56,8 +63,9 @@ when 'authentication', 'chat', 'global_chat', 'game', 'lobby', 'data_lobby', 'ma
      'raid', 'raid_chat', 'raid_data', 'raid_rank', 'quest', 'watch'
   ensure_connection
   exec("#{command} #{ARGV.join(' ')}")
-when 'wait-database'
-  wait_database
+when 'wait'
+  action = ARGV.first
+  send(:"wait_#{action}")
 else
   exec("#{command} #{ARGV.join(' ')}")
 end

@@ -23,7 +23,7 @@ module Dawn
     class << self
       extend Forwardable
 
-      delegate %w[migrate! config current] => :instance
+      delegate %w[migrate! pending? config current] => :instance
     end
 
     include Singleton
@@ -56,6 +56,16 @@ module Dawn
     def migrate!(version = nil)
       Sequel.extension :migration
       Sequel::Migrator.run(current, Dawn.root.join('db/migrations'), target: version&.to_i)
+    end
+
+    # Check any pendign migrations
+    #
+    # @since 0.1.0
+    #
+    # @return [Boolean] true if there are pending migrations
+    def pending?(version = nil)
+      Sequel.extension :migration
+      Sequel::Migrator.is_current?(current, Dawn.root.join('db/migrations'), target: version&.to_i) == false
     end
 
     # @return [Sequel] the current database object
