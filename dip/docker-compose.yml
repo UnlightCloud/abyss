@@ -1,11 +1,7 @@
 version: '3.4'
 
 x-image: &image
-  build:
-    context: ..
-    dockerfile: Dockerfile.dev
-    args:
-      RUBY_VERSION: ${RUBY_VERSION:-3.2.2}
+  image: ruby:${RUBY_VERSION:-3.2}
   volumes:
     - ${PWD}:/opt/unlight:cached
     - bundler_data:/usr/local/bundle
@@ -14,6 +10,9 @@ x-image: &image
   environment:
     DATABASE_URL: mysql2://unlight:unlight@mysql/unlight_db?encoding=utf8mb4
     MEMCACHED_HOST: memcached:11211
+    # Unlight
+    RUBY_INLINE_DIR: /opt/unlight/lib/ruby_inline
+    DAWN_LOG_TO_STDOUT: ${LOG_TO_STDOUT:-true}
     # Development
     HISTFILE: /usr/local/hist/.bash_history
     LANG: C.UTF-8

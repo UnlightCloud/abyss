@@ -4,6 +4,7 @@ version: '8.0'
 environment:
   DAWN_ENV: development
   RUBY_VERSION: <%= RUBY_VERSION %>
+  LOG_TO_STDOUT: true
   WORK_DIR: /opt/unlight/${DIP_WORK_DIR_REL_PATH}
 
 compose:
@@ -23,6 +24,11 @@ interaction:
         description: Run the abyss console
         service: auth
         command: bin/unlight console
+
+  bundle:
+    description: Run the bundle command
+    service: auth
+    command: bundle
 
   migrate:
     description: Run database migration
@@ -47,5 +53,6 @@ provision:
   - dip compose down --volumes
   - dip clean_cache
   - dip up -d --wait mysql memcached xmlsocket
+  - dip bundle
   - dip migrate
   - dip import
