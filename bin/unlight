@@ -54,6 +54,8 @@ when 'authentication', 'chat', 'global_chat', 'game', 'lobby', 'data_lobby', 'ma
      'raid', 'raid_chat', 'raid_data', 'raid_rank', 'quest', 'watch'
   ensure_connection
   exec("#{command} #{ARGV.join(' ')}")
+when 'wait-database'
+  Dawn::Database.current.test_connection
 else
   exec("#{command} #{ARGV.join(' ')}")
 end
