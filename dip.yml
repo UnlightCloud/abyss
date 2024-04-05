@@ -30,6 +30,16 @@ interaction:
     service: auth
     command: bundle
 
+  spec:
+    description: Run the rspec command
+    service: auth
+    command: bundle exec rspec
+
+  cucumber:
+    description: Run the cucumber command
+    service: auth
+    command: bundle exec cucumber
+
   migrate:
     description: Run database migration
     service: auth
