@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    tags:
+      - v*
 
 env:
   RUBY_VERSION: 3.2.2
@@ -35,6 +37,7 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
             type=raw,value=latest,enable={{is_default_branch}}
+            type=semver,pattern={{version}}
             type=sha,prefix=,format=short
 
       - name: Setup Docker Buildx

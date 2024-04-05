@@ -74,6 +74,7 @@ services:
     command: ./bin/data_lobby -p 12032
     ports:
       - 12032
+  # Matching Related - Begin
   game:
     <<: *image
     command: ./bin/game -p 12008
@@ -94,6 +95,7 @@ services:
     command: ./bin/watch -p 12080
     ports:
       - 12080
+  # Matching Related - End
   global_chat:
     <<: *image
     command: ./bin/global_chat -p 12020
