@@ -67,7 +67,7 @@ module Unlight
 
       def self.server_channel
         unless @@server_channel
-          @@server_channel = Channel.filter(host: Dawn::Server.hostname, port: Dawn::Server.port).all.first
+          @@server_channel = Channel.filter(host_name: Dawn::Server.hostname, port: Dawn::Server.port).all.first
           @@server_channel.boot if @@server_channel
         end
         @@server_channel
