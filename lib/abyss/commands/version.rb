@@ -14,6 +14,6 @@ module Abyss
       end
     end
 
-    register 'version', Version
+    register 'version', Version, aliases: ['v', '-v', '--version']
   end
 end

@@ -11,6 +11,7 @@ module Abyss
     extend Dry::CLI::Registry
 
     require_relative 'commands/version'
+    require_relative 'commands/console'
 
     module_function
 
