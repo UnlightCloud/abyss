@@ -9,9 +9,12 @@ module Abyss
       class Maintenance < Dry::CLI::Command
         desc 'Check the maintenance mode is disabled'
 
+        option :wait, type: :boolean, default: false, desc: 'Wait until the maintenance mode is disabled'
+
         def call(*)
           while Abyss::Maintenance.enabled?
             puts 'The server is in maintenance mode'
+            exit 1 unless options[:wait]
             sleep 1
           end
 

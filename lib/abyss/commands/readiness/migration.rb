@@ -11,9 +11,12 @@ module Abyss
 
         desc 'Check database migration is ready'
 
+        option :wait, type: :boolean, default: false, desc: 'Wait until the database migration is ready'
+
         def call(*)
           while Dawn::Database.pending?
             puts 'Waiting for database migration...'
+            exit 1 unless options[:wait]
             sleep 1
           end
 

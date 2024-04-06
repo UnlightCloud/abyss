@@ -9,9 +9,12 @@ module Abyss
       class Cache < Dry::CLI::Command
         desc 'Check cache server is ready'
 
-        def call(*)
+        option :wait, type: :boolean, default: false, desc: 'Wait until the cache server is ready'
+
+        def call(**options)
           until Abyss::Cache.ready?
             puts 'Waiting for cache server...'
+            exit 1 unless options[:wait]
             sleep 1
           end
 
