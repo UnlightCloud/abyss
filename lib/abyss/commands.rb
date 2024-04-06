@@ -13,6 +13,7 @@ module Abyss
     require_relative 'commands/version'
     require_relative 'commands/console'
     require_relative 'commands/server'
+    require_relative 'commands/readiness'
 
     module_function
 
