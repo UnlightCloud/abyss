@@ -15,6 +15,7 @@ module Abyss
     require_relative 'commands/server'
     require_relative 'commands/readiness'
     require_relative 'commands/rake'
+    require_relative 'commands/maintenance'
 
     module_function
 
