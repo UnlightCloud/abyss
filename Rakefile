@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'bundler/setup'
-
 $LOAD_PATH.unshift Bundler.root.join('lib')
 $LOAD_PATH.unshift Bundler.root.join('src')
 
