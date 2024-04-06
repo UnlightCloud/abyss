@@ -18,7 +18,7 @@ interaction:
   abyss:
     description: Run the abyss command
     service: auth
-    command: bin/unlight
+    command: bin/abyss
     subcommands:
       c:
         description: Run the abyss console

@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+# Copyright (c) 2023 Unlight Cloud
+# This software is released under the Apache 2.0 License.
+# https://opensource.org/licenses/Apache2.0
+
+# frozen_string_literal: true
+
+require 'bundler/setup'
+require 'dry/cli'
+
+$LOAD_PATH.unshift Bundler.root.join('lib')
+
+require 'abyss/commands'
+
+Abyss::Commands.run
