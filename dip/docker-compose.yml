@@ -46,79 +46,72 @@ services:
     ports:
       - 3306
 
-  # Flash Fallback
-  xmlsocket:
-    <<: *image
-    command: ./bin/xmlsocket
-    ports:
-      - 11999 # XMLSocket for Flash Policy
-
   # Game Server
   auth:
     <<: *image
-    command: ./bin/authentication -p 12001
+    command: bin/abyss server auth -p 12001
     ports:
       - 12001
   lobby:
     <<: *image
-    command: ./bin/lobby -p 12002
+    command: bin/abyss server lobby -p 12002
     ports:
       - 12002
   quest:
     <<: *image
-    command: ./bin/quest -p 12005
+    command: bin/abyss server quest -p 12005
     ports:
       - 12005
   data:
     <<: *image
-    command: ./bin/data_lobby -p 12032
+    command: bin/abyss server data_lobby -p 12032
     ports:
       - 12032
   # Matching Related - Begin
   game:
     <<: *image
-    command: ./bin/game -p 12008
+    command: bin/abyss server game -p 12008
     ports:
       - 12008
   match:
     <<: *image
-    command: ./bin/matching -p 12018
+    command: bin/abyss server matching -p 12018
     ports:
       - 12018
   chat:
     <<: *image
-    command: ./bin/chat -p 12012
+    command: bin/abyss server chat -p 12012
     ports:
       - 12012
   watch:
     <<: *image
-    command: ./bin/watch -p 12080
+    command: bin/abyss server watch -p 12080
     ports:
       - 12080
   # Matching Related - End
   global_chat:
     <<: *image
-    command: ./bin/global_chat -p 12020
+    command: bin/abyss server global_chat -p 12020
     ports:
       - 12020
   raid:
     <<: *image
-    command: ./bin/raid -p 12050
+    command: bin/abyss server raid -p 12050
     ports:
       - 12050
   raid_rank:
     <<: *image
-    command: ./bin/raid_rank -p 12070
+    command: bin/abyss server raid_rank -p 12070
     ports:
       - 12070
   raid_chat:
     <<: *image
-    command: ./bin/raid_chat -p 12090
+    command: bin/abyss server raid_chat -p 12090
     ports:
       - 12090
   raid_data:
     <<: *image
-    command: ./bin/raid_data -p 12100
+    command: bin/abyss server raid_data -p 12100
     ports:
       - 12100
 
