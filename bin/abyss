@@ -13,4 +13,7 @@ $LOAD_PATH.unshift Bundler.root.join('lib')
 
 require 'abyss'
 
+$stdout.sync = true
+$stderr.sync = true
+
 Abyss::Commands.run
