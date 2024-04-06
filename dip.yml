@@ -47,5 +47,6 @@ interaction:
 provision:
   - dip compose down --volumes
   - dip clean_cache
-  - dip up -d --wait mysql memcached xmlsocket
+  - dip bundle
+  - dip up -d --wait mysql memcached
   - dip abyss upgrade

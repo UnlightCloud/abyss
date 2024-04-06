@@ -15,7 +15,6 @@ module Abyss
 
       def call(**options)
         require 'dawn/database'
-        require Abyss.root.join('src', 'unlight')
 
         Dawn::Database.migrate!(options.fetch(:version, nil))
         import_data if options[:import]
@@ -25,6 +24,7 @@ module Abyss
       private
 
       def import_data
+        require Abyss.root.join('src', 'unlight')
         require 'dawn/services/data_importer'
 
         importer = Dawn::DataImporter.new
@@ -34,6 +34,8 @@ module Abyss
       end
 
       def initialize_cpu_decks
+        require Abyss.root.join('src', 'unlight')
+
         Unlight::CharaCardDeck.initialize_CPU_deck
       end
     end
