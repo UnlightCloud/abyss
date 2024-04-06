@@ -11,7 +11,7 @@ module Abyss
 
         option :wait, type: :boolean, default: false, desc: 'Wait until the maintenance mode is disabled'
 
-        def call(*)
+        def call(**options)
           while Abyss::Maintenance.enabled?
             puts 'The server is in maintenance mode'
             exit 1 unless options[:wait]
