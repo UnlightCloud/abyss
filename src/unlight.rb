@@ -24,6 +24,7 @@ Sequel::Model.require_valid_table = false
 Sequel::Model.plugin :json_serializer
 
 require 'dawn'
+require 'abyss'
 
 # TODO: Refactor to Dawn::AppLoader
 # Initialize Extensions
@@ -32,16 +33,6 @@ require_relative '../config/initializers/sentry'
 # TODO: Require necessary library for Game / API mode
 require_relative '../config/initializers/oj'
 require_relative '../config/initializers/logger'
-
-# db_config.rb
-module Unlight
-  # Memcache Server
-  MEMCACHE_CONFIG = (ENV['MEMCACHED_HOST'] || 'localhost:11211')
-  MEMCACHE_OPTIONS = {
-    timeout: 1,
-    namespace: 'unlight'
-  }
-end
 
 if File.exist?("#{File.dirname(__FILE__)}/server_ip.rb")
   require 'server_ip'

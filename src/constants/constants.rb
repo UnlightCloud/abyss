@@ -368,7 +368,7 @@ module Unlight
 
   # memcached server
   # CACHE = MemCache.new MEMCACHE_CONFIG, MEMCACHE_OPTIONS
-  CACHE = Dalli::Client.new MEMCACHE_CONFIG, MEMCACHE_OPTIONS
+  CACHE = Abyss::Cache.current
   # キャッシュを念のため全削除
   CACHE.flush_all
 

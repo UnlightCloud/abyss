@@ -2,6 +2,7 @@
 
 require_relative 'abyss/version'
 require_relative 'abyss/commands'
+require_relative 'abyss/cache'
 
 # Abyss is open-source Unlight server
 #
