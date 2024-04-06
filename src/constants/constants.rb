@@ -370,7 +370,7 @@ module Unlight
   # CACHE = MemCache.new MEMCACHE_CONFIG, MEMCACHE_OPTIONS
   CACHE = Abyss::Cache.current
   # キャッシュを念のため全削除
-  CACHE.flush_all
+  CACHE.flush_all unless ENV.fetch('ABYSS_JOB', nil) == 'yes'
 
   # Sqlite3設定のデフォルト
   SQLITE3 =  {

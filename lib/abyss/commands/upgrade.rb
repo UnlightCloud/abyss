@@ -16,6 +16,9 @@ module Abyss
       def call(**options)
         require 'dawn/database'
 
+        # NOTE: Replace with Flipper gem to avoid Unlight flush all cache
+        ENV['ABYSS_JOB'] = 'yes'
+
         Dawn::Database.migrate!(options.fetch(:version, nil))
         import_data if options[:import]
         initialize_cpu_decks if options[:cpu_decks]
