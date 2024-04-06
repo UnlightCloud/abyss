@@ -35,16 +35,6 @@ interaction:
     service: auth
     command: bundle exec cucumber
 
-  migrate:
-    description: Run database migration
-    service: auth
-    command: bundle exec rake db:migrate
-
-  import:
-    description: Import data
-    service: auth
-    command: bundle exec rake data:import data:initialize_cpu_decks
-
   client_data:
     description: Generate client data
     service: auth
@@ -58,6 +48,4 @@ provision:
   - dip compose down --volumes
   - dip clean_cache
   - dip up -d --wait mysql memcached xmlsocket
-  - dip bundle
-  - dip migrate
-  - dip import
+  - dip abyss upgrade
