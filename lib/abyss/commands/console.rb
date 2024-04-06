@@ -15,7 +15,7 @@ module Abyss
 
         # NOTE: replace dawn with abyss
         require 'dawn'
-        require Dawn.root.join('src', 'unlight')
+        require Abyss.root.join('src', 'unlight')
 
         ARGV.clear
 
