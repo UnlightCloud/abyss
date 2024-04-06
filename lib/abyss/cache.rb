@@ -3,6 +3,8 @@
 require 'singleton'
 require 'forwardable'
 
+require 'dalli'
+
 module Abyss
   # The cache server adapter
   #

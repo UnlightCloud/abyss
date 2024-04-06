@@ -9,7 +9,7 @@ module Abyss
       class Database < Dry::CLI::Command
         require 'dawn/database'
 
-        desc 'Check the database readiness'
+        desc 'Check the database is ready'
 
         def call(*)
           puts 'Check database connection...'
