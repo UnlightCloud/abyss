@@ -24145,7 +24145,7 @@ module Unlight
       now_on_feats = target.current_chara_card.get_enable_feats(phase)
       now_on_feats.each do |key, _value|
         fid = @feats[key]
-        tmp_range = Feat.send("ai_dist_condition_f#{fid}")
+        tmp_range = Feat.send(:"ai_dist_condition_f#{fid}")
         range += tmp_range
       end
 
