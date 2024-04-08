@@ -88,7 +88,7 @@ module Unlight
          [ # Name, Type, Size
            ['result_ranking', :String, 0]
          ],
-         true]                    # zlib圧縮ON
+         true] # zlib圧縮ON
 
       ]
   end

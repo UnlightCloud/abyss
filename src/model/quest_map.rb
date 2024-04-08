@@ -108,10 +108,7 @@ module Unlight
     def self.get_quest_map_list(reg)
       ret = cache_store.get("region:#{reg}")
       unless ret
-        ret = []
-        QuestMap.filter({ region: reg }).all.each do |s|
-          ret << s.id
-        end
+        ret = QuestMap.filter({ region: reg }).all.map(&:id)
         cache_store.set("region:#{reg}", ret)
       end
       ret

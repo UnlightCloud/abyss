@@ -41,12 +41,9 @@ module Unlight
   puts "[#{rank_list_str}]の順位毎ににそれぞれ[#{rew_list_str}]を配付しますか？"
   answer = gets.chomp
   if answer == 'y'
-    ranks = []
     rewards = []
 
-    rank_list_str.split(',').each do |rank_str|
-      ranks << rank_str.to_i
-    end
+    ranks = rank_list_str.split(',').map(&:to_i)
     rew_list_str.split(',').each do |rew_list_arr|
       rew_list = []
       rew_list_arr.split('-').each do |rew_str|

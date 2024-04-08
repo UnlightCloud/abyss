@@ -242,10 +242,7 @@ module Unlight
 
     # カードの配列をIDのカンマ区切りStringにして返す
     def self.array2str(a)
-      ids = []
-      a.each do |cc|
-        ids << cc.id
-      end
+      ids = a.map(&:id)
       ids.join(',')
     end
 

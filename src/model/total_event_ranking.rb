@@ -90,7 +90,7 @@ module Unlight
 
       # 計算したポイントを各々のフレンドに加算
       friend_point_hash = {}
-      hash_clone.each do |key, _val|
+      hash_clone.each_key do |key|
         # フレンド一覧を取得
         links = FriendLink.get_link(key, server_type)
         links.each do |fl|
@@ -193,7 +193,7 @@ module Unlight
       end
 
       # 計算したポイントを各々のフレンドに加算
-      hash_clone.each do |key, _val|
+      hash_clone.each_key do |key|
         # フレンド一覧を取得
         links = FriendLink.get_link(key, server_type)
         links.each do |fl|

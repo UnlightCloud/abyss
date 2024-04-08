@@ -1396,9 +1396,8 @@ module Unlight
 
     # テーブルに置かれたカードタイプの配列を返す
     def get_table_card_types
-      ret = []
-      @table.each do |a|
-        ret << (a.up? ? a.u_type : a.b_type)
+      ret = @table.map do |a|
+        (a.up? ? a.u_type : a.b_type)
       end
 
       ret.uniq
@@ -1790,8 +1789,7 @@ module Unlight
 
     # 現在のONになっているIDを送る
     def current_on_cards
-      ids = []
-      @table.each { |c| ids << c.id }
+      ids = @table.map(&:id)
       [ids.join(','), current_on_card_value]
     end
 

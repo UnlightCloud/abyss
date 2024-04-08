@@ -120,8 +120,7 @@ module Unlight
 
     def cs_request_update_inventory(id_list_str)
       str_list = id_list_str.split(',')
-      id_list = []
-      str_list.each { |s| id_list << s.to_i }
+      id_list = str_list.map(&:to_i)
       @avatar.resend_profound_inventory(id_list) if @avatar
     end
 

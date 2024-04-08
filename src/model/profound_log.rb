@@ -122,11 +122,7 @@ module Unlight
 
     # キャラランキングを取ってくる（デフォルトは5位まで）
     def self.get_chara_ranking_no_set(prf_id, rank_limit = 5)
-      ret = []
-      ProfoundLog.get_chara_ranking(prf_id, rank_limit).each do |v|
-        ret << v.atk_charactor
-      end
-      ret
+      ProfoundLog.get_chara_ranking(prf_id, rank_limit).map(&:atk_charactor)
     end
   end
 end

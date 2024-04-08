@@ -43,11 +43,9 @@ module Unlight
     end
 
     def self.quest_clear_dialogue(chara_id, map_no)
-      ret = []
-      DialogueWeight.filter({ chara_id:, level: map_no, dialogue_type: DLG_QUEST_END_CHARA..DLG_QUEST_END_AVATAR }).order(Sequel.asc(:weight)).all.each do |r|
-        ret << [Dialogue[r.dialogue.id].content, r.id, r.dialogue_type]
+      DialogueWeight.filter({ chara_id:, level: map_no, dialogue_type: DLG_QUEST_END_CHARA..DLG_QUEST_END_AVATAR }).order(Sequel.asc(:weight)).all.map do |r|
+        [Dialogue[r.dialogue.id].content, r.id, r.dialogue_type]
       end
-      ret
     end
 
     # ダイアログのIDを返す

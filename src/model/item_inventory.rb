@@ -37,7 +37,7 @@ module Unlight
         save_changes
         ret = avatar_item.use(avt, quest_map_no)
         if ret != 0
-          self.state = ITEM_STATE_NOT_USE   # 未使用に戻す
+          self.state = ITEM_STATE_NOT_USE # 未使用に戻す
           save_changes
         end
       end

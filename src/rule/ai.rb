@@ -41,10 +41,7 @@ module Unlight
     end
 
     def self.chara_cards_ids(cards)
-      ret = []
-      cards.each do |a|
-        ret << a.id
-      end
+      ret = cards.map(&:id)
       ret.join(',')
     end
 
@@ -173,9 +170,9 @@ module Unlight
       end
 
       # 役がそろっているカードは捨てない
-      @chara_feat_value.each do |_k, v|
+      @chara_feat_value.each_value do |v|
         if v
-          v[1].each do |l, _w|
+          v[1].each_key do |l|
             @hand_useless_value[l] = 0 if @hand_value[l]
           end
         end
@@ -416,7 +413,7 @@ module Unlight
         @think_num += 1
       when 4
         # 必殺技がONになる可能性を判断
-        @chara_feat_value.each do |_k, v|
+        @chara_feat_value.each_value do |v|
           if v
             case [v][1]
             when [1]

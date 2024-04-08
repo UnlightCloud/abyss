@@ -198,13 +198,13 @@ module Unlight
     end
 
     def reset_feats_enable
-      @feats_enable.each do |k, _v|
+      @feats_enable.each_key do |k|
         @feats_enable[k] = false
       end
     end
 
     def reset_passives_enable
-      @passives_enable.each do |k, _v|
+      @passives_enable.each_key do |k|
         @passives_enable[k] = false
       end
     end
@@ -384,9 +384,8 @@ module Unlight
 
         # HPが最小のインデックスが対象
       when TARGET_TYPE_HP_MIN
-        hps = []
-        idxs.each do |i|
-          hps << [i, target.hit_points[i]]
+        hps = idxs.map do |i|
+          [i, target.hit_points[i]]
         end
         attack_times.times do
           damage_to_index(target, hps.min_by { |a| a[1] }[0], damage, attribute, type, is_not_hostile)
@@ -2069,10 +2068,9 @@ module Unlight
         # 与えるダメージ
         dmg = 0
         # 特殊カード
-        aca = []
         # カードをシャッフルする
-        foe.cards.shuffle.each do |c|
-          aca << c
+        aca = foe.cards.shuffle.map do |c|
+          c
         end
         PassiveSkill.pow(@passives[PASSIVE_DISASTER_FLAME]).times do |a|
           discard(foe, aca[a]) if aca[a]
@@ -8645,10 +8643,9 @@ module Unlight
       if @feats_enable[FEAT_DISASTER_FLAME]
         use_feat_event(@feats[FEAT_DISASTER_FLAME])
         # 破棄候補のカード
-        aca = []
         # カードをシャッフルする
-        foe.cards.shuffle.each do |c|
-          aca << c
+        aca = foe.cards.shuffle.map do |c|
+          c
         end
         # ダメージの分だけカードを捨てる
         Feat.pow(@feats[FEAT_DISASTER_FLAME]).times do |a|
@@ -14908,7 +14905,7 @@ module Unlight
             feats_nums << now_on_feats.length
 
             feats_index_sum_tmp = 0
-            now_on_feats.each do |key, _value|
+            now_on_feats.each_key do |key|
               attack_phase_feats.each_with_index do |a, i|
                 feats_index_sum_tmp += i if a == key.to_i
               end
@@ -14937,17 +14934,14 @@ module Unlight
           i = 1
           while selected_cards.length > 1 && i < 3
 
-            guideline_tmp = []
-
-            selected_cards.each do |idx|
-              guideline_tmp << selection_guideline[i][idx]
+            guideline_tmp = selected_cards.map do |idx|
+              selection_guideline[i][idx]
             end
 
             guideline_tmp = get_min_values(guideline_tmp)
 
-            selected_cards_tmp = []
-            guideline_tmp.each do |i|
-              selected_cards_tmp << selected_cards[i]
+            selected_cards_tmp = guideline_tmp.map do |i|
+              selected_cards[i]
             end
             selected_cards = selected_cards_tmp
             i += 1
@@ -23763,7 +23757,7 @@ module Unlight
     # そのトラップがその状態でそこに存在するか
     def check_trap_state(target, kind, distance, state)
       trap = target.trap
-      (trap.key?(kind.to_s) && trap[kind.to_s][TRAP_STATUS_DISTANCE] == distance && (trap[kind.to_s][TRAP_STATUS_TURN]).positive? && trap[kind.to_s][TRAP_STATUS_STATE] == state)
+      trap.key?(kind.to_s) && trap[kind.to_s][TRAP_STATUS_DISTANCE] == distance && (trap[kind.to_s][TRAP_STATUS_TURN]).positive? && trap[kind.to_s][TRAP_STATUS_STATE] == state
     end
 
     # トラップのステータスをセットする
@@ -23778,7 +23772,7 @@ module Unlight
     # 全てのトラップをクライアントに再送する
     def update_trap_all(target)
       trap = target.trap
-      trap.each do |kind, _status|
+      trap.each_key do |kind|
         target.trap_update_event(kind.to_i, trap[kind.to_s][TRAP_STATUS_DISTANCE], trap[kind.to_s][TRAP_STATUS_TURN], trap[kind.to_s][TRAP_STATUS_VISIBILITY])
       end
     end
@@ -24143,7 +24137,7 @@ module Unlight
       target = entrant ? owner : foe
       range = []
       now_on_feats = target.current_chara_card.get_enable_feats(phase)
-      now_on_feats.each do |key, _value|
+      now_on_feats.each_key do |key|
         fid = @feats[key]
         tmp_range = Feat.send(:"ai_dist_condition_f#{fid}")
         range += tmp_range
@@ -24331,7 +24325,7 @@ module Unlight
       dice_attribute_list = []
       now_on_feats = get_enable_feats
       # ON状態の技を取得して、その技ごとに属性をとりたい
-      now_on_feats.each do |key, _val|
+      now_on_feats.each_key do |key|
         da = Feat.dice_attribute(@feats[key])
         da.each do |a|
           dice_attribute_list << a unless dice_attribute_list.include?(a)
@@ -24379,7 +24373,7 @@ module Unlight
     # その技がfeat_invの中で何番目かを返す
     def get_feat_inventories_index(feat_id)
       ret = 0
-      @feats.each do |_no, id|
+      @feats.each_value do |id|
         break if id == feat_id
 
         ret += 1
@@ -24428,7 +24422,7 @@ module Unlight
       else
 
         # 2以上の数値は減算対象
-        ac_cond_list.each do |_i, cond|
+        ac_cond_list.each_value do |cond|
           if cond[:type_sign] != 'W'
             if num.negative? && cond[:value] > 1
               cond[:value] += (cond[:op] == '-' ? -1 * num : num)

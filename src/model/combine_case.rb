@@ -208,9 +208,8 @@ module Unlight
     def get_condition_base_proc
       return @@condition_base_proc[id] if @@condition_base_proc[id]
 
-      cond_set = []
-      condition[:base].each do |c|
-        cond_set << get_range_judge_proc(c)
+      cond_set = condition[:base].map do |c|
+        get_range_judge_proc(c)
       end
       @@condition_base_proc[id] = proc do |base|
         ret = false
@@ -230,9 +229,8 @@ module Unlight
 
       @@condition_add_proc[id] = []
       condition[:add].each do |c|
-        set = []
-        c.each do |cc|
-          set << get_range_judge_proc(cc)
+        set = c.map do |cc|
+          get_range_judge_proc(cc)
         end
         set << proc { |_base| true } if c.empty?
         @@condition_add_proc[id] << proc do |base|

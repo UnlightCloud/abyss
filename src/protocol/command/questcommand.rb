@@ -1366,7 +1366,7 @@ module Unlight
            ['psv_pass_set', :String, 0],
            ['vani_psv_ids', :String, 0]
          ],
-         true]                    # zlib圧縮ON
+         true] # zlib圧縮ON
 
       ]
   end

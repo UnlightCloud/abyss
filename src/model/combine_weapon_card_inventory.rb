@@ -67,7 +67,7 @@ module Unlight
 
       # 特定の組み合わせがない場合の処理
       add_params = []
-      use_materials.each do |_id, data|
+      use_materials.each_value do |data|
         mat = data[:mat]
         num = data[:num]
         sap = mat.combine_sword_ap.to_f / 10 * num

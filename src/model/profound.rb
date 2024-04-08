@@ -157,7 +157,7 @@ module Unlight
 
     # 消滅しているか
     def is_vanished?(lt = 0)
-      ret = (state == PRF_ST_VANISH || state == PRF_ST_VAN_DEFEAT)
+      ret = state == PRF_ST_VANISH || state == PRF_ST_VAN_DEFEAT
       if !ret && close_at
         if Time.now.utc > (close_at + lt)
           # 今消滅を確認したので、Stateを変更
@@ -181,7 +181,7 @@ module Unlight
     # 撃破判定
     def is_defeat?(r = true)
       refresh if r
-      (state == PRF_ST_FINISH || state == PRF_ST_VAN_DEFEAT)
+      state == PRF_ST_FINISH || state == PRF_ST_VAN_DEFEAT
     end
 
     # 撃破後時間の設定

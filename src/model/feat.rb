@@ -268,7 +268,7 @@ module Unlight
           break
         end
       end
-      del.each do |k, _v|
+      del.each_key do |k|
         cards.delete(k)
       end
       [cards, del]
@@ -285,7 +285,7 @@ module Unlight
           break
         end
       end
-      del.each do |k, _v|
+      del.each_key do |k|
         cards.delete(k)
       end
       [cards, del]
@@ -307,7 +307,7 @@ module Unlight
         end
       end
       if cv >= value
-        del.each do |k, _v|
+        del.each_key do |k|
           cards.delete(k)
         end
       else
@@ -331,7 +331,7 @@ module Unlight
         end
       end
       if cv <= value
-        del.each do |k, _v|
+        del.each_key do |k|
           cards.delete(k)
         end
       else
@@ -379,7 +379,7 @@ module Unlight
       end
 
       if cv >= value
-        del.each do |k, _v|
+        del.each_key do |k|
           cards.delete(k)
         end
       else
@@ -431,7 +431,7 @@ module Unlight
         end
       end
       if cv >= value
-        del.each do |k, _v|
+        del.each_key do |k|
           cards.delete(k)
         end
       else

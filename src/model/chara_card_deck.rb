@@ -96,11 +96,7 @@ module Unlight
     end
 
     def slot_inventories_id_list
-      ret = []
-      chara_card_slot_inventories.each do |i|
-        ret << i.id
-      end
-      ret
+      chara_card_slot_inventories.map(&:id)
     end
 
     # 完全削除(カードインベントリをバインダに戻さずに削除する)
@@ -112,12 +108,8 @@ module Unlight
 
     # デッキが保有するキャラカード
     def cards_id(r = true)
-      ret = []
       refresh if r
-      cards.each do |c|
-        ret << c.id
-      end
-      ret
+      cards.map(&:id)
     end
 
     # デッキが保有するキャラカード
@@ -279,12 +271,8 @@ module Unlight
 
     # デッキ内のポジション配列を返す
     def position_list_card
-      ret = []
       refresh
-      card_inventories.sort { |a, b| (a.position <=> b.position) if a && b && a.position && b.position }.each do |i|
-        ret << i.id
-      end
-      ret
+      card_inventories.sort { |a, b| (a.position <=> b.position) if a && b && a.position && b.position }.map(&:id)
     end
 
     # 引数のカードインベントリと同じキャラがすでにデッキにある

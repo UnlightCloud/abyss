@@ -55,7 +55,7 @@ module Unlight
     # 取得済み判定
     def self.is_acquired_profound(avatar_id, hash)
       list = Profound.join(ProfoundInventory.filter(avatar_id:), profound_id: :id).filter(profound_hash: hash).all
-      (list && !list.empty?)
+      list && !list.empty?
     end
 
     # 撃破者のインベントリ取得
@@ -139,7 +139,7 @@ module Unlight
       ret = profound.is_vanished?(lt)
 
       # 渦は消えてないが、ギブアップなどをしている場合
-      ret ||= (state == PRF_INV_ST_FAILED || state == PRF_INV_ST_GIVE_UP)
+      ret ||= state == PRF_INV_ST_FAILED || state == PRF_INV_ST_GIVE_UP
       ret
     end
 
@@ -163,7 +163,7 @@ module Unlight
 
     # 失敗済みか
     def is_failed?
-      (state == PRF_INV_ST_FAILED || state == PRF_INV_ST_GIVE_UP)
+      state == PRF_INV_ST_FAILED || state == PRF_INV_ST_GIVE_UP
     end
 
     # 解決
@@ -193,7 +193,7 @@ module Unlight
 
     # 終了してるか判定
     def is_not_end?
-      (state != PRF_INV_ST_SOLVED && state != PRF_INV_ST_FAILED && state != PRF_INV_ST_GIVE_UP)
+      state != PRF_INV_ST_SOLVED && state != PRF_INV_ST_FAILED && state != PRF_INV_ST_GIVE_UP
     end
 
     # 報酬取得可能状態に変更
@@ -445,7 +445,7 @@ module Unlight
       @ranking_arrow ||= "prf_#{profound_id}_ranking:arrow"
 
       ret = rank_cache_get(@ranking_all)
-      inited = (ret.nil? || full_clear)
+      inited = ret.nil? || full_clear
 
       if inited
         all_cache_delete(full_clear)
@@ -557,7 +557,7 @@ module Unlight
       end
       rank_cache_delete(@ranking_all)
       rank_cache_delete(@ranking_all_id)
-      @@prf_ranking_str_set.each do |k, _v|
+      @@prf_ranking_str_set.each_key do |k|
         rank_cache_delete(k)
       end
       @@prf_ranking_str_set = {}
@@ -632,7 +632,7 @@ module Unlight
         end
         rank = 1
         ret = {}
-        data_list.each do |_dmg, data|
+        data_list.each_value do |data|
           count = 0
           data.each do |d|
             ret[rank] = [] unless ret[rank]
@@ -660,7 +660,7 @@ module Unlight
         end
         rank = 1
         ret = {}
-        data_list.each do |_dmg, data|
+        data_list.each_value do |data|
           count = 0
           data.each do |d|
             ret[d[:a_id]] = { rank:, damage: d[:score] }

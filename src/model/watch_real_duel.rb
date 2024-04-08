@@ -253,8 +253,7 @@ module Unlight
       end
 
       # 手札を配る
-      acs = []
-      @pl_ac.each { |ac| acs.push(ac[:id]) }
+      acs = @pl_ac.map { |ac| ac[:id] }
       @pl_table.each { |ac| acs.push(ac[:id]) } unless func.nil?
       foe_ac_size = @foe_ac.size
       foe_ac_size += @foe_table.size unless func.nil?

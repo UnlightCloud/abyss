@@ -72,9 +72,7 @@ module Unlight
         # 部屋が満杯でなく、かつ他の部屋にすでに入室していない場合のみ入室する
         if a.size < ROOM_CAP && !room_from_player_id(player_id, channel.id)
           channel.room_list[room_id].enter_player(pl)
-          ret = []
-          a.each { |c| ret << c.id }
-          ret
+          ret = a.map(&:id)
         end
       end
       ret
@@ -132,8 +130,7 @@ module Unlight
         # 部屋が満杯でないなら入る
         if a.size < ROOM_CAP
           channel.room_list[room_id].enter_player(Player[ai_id])
-          ret = []
-          a.each { |c| ret << c.id }
+          a.map(&:id)
           ret = a # 自分入った位置
         end
       end

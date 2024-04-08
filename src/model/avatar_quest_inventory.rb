@@ -108,7 +108,7 @@ module Unlight
     end
 
     def unsolved?
-      (status == QS_UNSOLVE || status == QS_NEW || status == QS_PRESENTED)
+      status == QS_UNSOLVE || status == QS_NEW || status == QS_PRESENTED
     end
 
     def presented?

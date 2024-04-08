@@ -11,9 +11,8 @@ module Unlight
       if @avatar
         ProfoundComment.set_comment(prf_id, @avatar.id, @avatar.name, comment)
         ret, new_last_id = ProfoundComment.get_comment(prf_id, last_id)
-        set_comments = []
-        ret.each do |pc|
-          set_comments << "#{pc[:a_name]}:#{pc[:comment]}"
+        set_comments = ret.map do |pc|
+          "#{pc[:a_name]}:#{pc[:comment]}"
         end
         sc_update_comment(prf_id, set_comments.join(',').force_encoding('UTF-8'), new_last_id) unless set_comments.empty?
       end
@@ -23,9 +22,8 @@ module Unlight
     def cs_request_comment(prf_id, last_id)
       SERVER_LOG.info("<UID:#{@uid}>RaidChatServer: [#{__method__}] prf_id:#{prf_id} last_id:#{last_id}")
       ret, new_last_id = ProfoundComment.get_comment(prf_id, last_id)
-      set_comments = []
-      ret.each do |pc|
-        set_comments << "#{pc[:a_name]}:#{pc[:comment]}"
+      set_comments = ret.map do |pc|
+        "#{pc[:a_name]}:#{pc[:comment]}"
       end
       sc_update_comment(prf_id, set_comments.join(',').force_encoding('UTF-8'), new_last_id) unless set_comments.empty?
     end

@@ -97,9 +97,8 @@ module Unlight
       end
 
       _rank_bonus, all_bonus, _defeat_bonus, _found_bonus = ProfoundTreasureData.get_level_treasure_list(treasure_level)
-      all_bonus_set = []
-      all_bonus.each do |b|
-        all_bonus_set << "#{b[:type]}_#{b[:id]}_#{b[:num]}_#{b[:sct_type]}"
+      all_bonus_set = all_bonus.map do |b|
+        "#{b[:type]}_#{b[:id]}_#{b[:num]}_#{b[:sct_type]}"
       end
       all_bonus_set_str = all_bonus_set.empty? ? '' : all_bonus_set.join(',')
 

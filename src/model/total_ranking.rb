@@ -144,7 +144,7 @@ module Unlight
       end
       CACHE.delete("#{@ranking_all}_#{server_type}")
       CACHE.delete("#{@ranking_all_id}_#{server_type}")
-      @total_ranking_str_set.each do |k, _v|
+      @total_ranking_str_set.each_key do |k|
         CACHE.delete(k)
       end
     end

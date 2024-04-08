@@ -452,8 +452,7 @@ module Unlight
       if ret
         size = ret[@foe].size
         sc_duel_refill_phase(ActionCard.array2str(ret[@no]), ActionCard.array2int_dir(ret[@no]), size)
-        ac_arr = []
-        ret[@no].each { |_ac| ac_arr << 0 }
+        ac_arr = ret[@no].map { |_ac| 0 }
         set_cache_act_command(ac_arr.join(','), 0, size)
       end
     end
@@ -465,8 +464,7 @@ module Unlight
         ac_arr_int_dir = ActionCard.array2int_dir(ret[@no])
         size = ret[@foe].size
         sc_duel_refill_event_phase(ac_arr_str, ac_arr_int_dir, size)
-        ac_arr = []
-        ret[@no].each { |_ac| ac_arr << 0 }
+        ac_arr = ret[@no].map { |_ac| 0 }
         set_cache_act_command(ac_arr.join(','), 0, size)
       end
     end

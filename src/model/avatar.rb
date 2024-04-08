@@ -195,9 +195,8 @@ module Unlight
               invited_item_set[pre] = 0 unless invited_item_set[pre]
               invited_item_set[pre] += 1
             end
-            pre_no_set = []
-            invited_item_set.each do |id, num|
-              pre_no_set << "#{TG_AVATAR_ITEM}_#{id}_#{num}"
+            pre_no_set = invited_item_set.map do |id, num|
+              "#{TG_AVATAR_ITEM}_#{id}_#{num}"
             end
             notice_str += pre_no_set.join(',')
             avatar.write_notice(NOTICE_TYPE_INVITED_SUCC, notice_str)
@@ -292,10 +291,7 @@ module Unlight
       refresh if r
       return nil unless list && !list.empty?
 
-      deck_id_list = []
-      chara_card_decks.each do |ccd|
-        deck_id_list.push(ccd.id)
-      end
+      deck_id_list = chara_card_decks.map(&:id)
       CharaCardSlotInventory.where(chara_card_deck_id: deck_id_list, kind: SCT_WEAPON, card_id: list).all
     end
 
@@ -353,8 +349,7 @@ module Unlight
       # ベースカード情報を抜き出す
       base_id = inv_id_list.shift
       # 素材カードのインベントリIDを配列に入れなおす
-      set_id_list = []
-      inv_id_list.each { |id| set_id_list << id.to_i }
+      set_id_list = inv_id_list.map(&:to_i)
       # 素材カードのインベントリを取得
       sci_set = binder.get_slot_card_inventory(set_id_list)
       # ベースカードのインベントリを取得
@@ -529,13 +524,11 @@ module Unlight
             end
           else
             # 装備しようとするインベントリからパーツ位置を取り出す
-            str1 = []
-            i.avatar_part.image.split('+').each { |e| str1 << e[e.rindex('_p') + 2..] }
+            str1 = i.avatar_part.image.split('+').map { |e| e[e.rindex('_p') + 2..] }
             part_inventories.each do |p|
               # すべての使用中パーツに関してパーツの重複をしらべる（素体は除く）
               if p.equiped? && p.avatar_part && (p.avatar_part.parts_type != APT_B_BODY)
-                str2 = []
-                p.avatar_part.image.split('+').each { |e| str2 << e[e.rindex('_p') + 2..] }
+                str2 = p.avatar_part.image.split('+').map { |e| e[e.rindex('_p') + 2..] }
                 # 装備するアイテムと装備中のアイテムを比較し重複していたら外す
                 if (str1 & str2).count.positive?
                   p.unequip
@@ -799,70 +792,61 @@ module Unlight
 
     # デッキの名前のリストを返す
     def deck_name_list_str(r = true)
-      ret = []
       refresh if r
-      chara_card_decks.each do |d|
-        ret << d.name
-      end
+      ret = chara_card_decks.map(&:name)
       ret.join(',')
     end
 
     # デッキの種類のリストを返す
     def deck_kind_list_str(r = true)
-      ret = []
       refresh if r
-      chara_card_decks.each do |d|
-        ret << d.kind.to_s
+      ret = chara_card_decks.map do |d|
+        d.kind.to_s
       end
       ret.join(',')
     end
 
     # デッキのレベルリストを返す
     def deck_level_list_str(r = true)
-      ret = []
       refresh if r
-      chara_card_decks.each do |d|
-        ret << d.level.to_s
+      ret = chara_card_decks.map do |d|
+        d.level.to_s
       end
       ret.join(',')
     end
 
     # デッキの経験値リストを返す
     def deck_exp_list_str(r = true)
-      ret = []
       refresh if r
-      chara_card_decks.each do |d|
-        ret << d.exp.to_s
+      ret = chara_card_decks.map do |d|
+        d.exp.to_s
       end
       ret.join(',')
     end
 
     # デッキの現在のステータスのリストを返す
     def deck_status_list_str(r = true)
-      ret = []
       refresh if r
-      chara_card_decks.each do |d|
-        ret << d.status.to_s
+      ret = chara_card_decks.map do |d|
+        d.status.to_s
       end
       ret.join(',')
     end
 
     # デッキの現在のコストのリストを返す
     def deck_cost_list_str(r = true)
-      ret = []
       refresh if r
-      chara_card_decks.each do |d|
-        ret << d.current_cost.to_s
+      ret = chara_card_decks.map do |d|
+        d.current_cost.to_s
       end
       ret.join(',')
     end
 
     # デッキのマックスコストのリストを返す
     def deck_max_cost_list_str(r = true)
-      ret = []
       refresh if r
-      chara_card_decks.each do |d|
-        ret << d.max_cost.to_s
+      ret = chara_card_decks.map do |d|
+        d.max_cost.to_s
       end
       ret.join(',')
     end
@@ -1234,9 +1218,8 @@ module Unlight
     def duel_foe_avatar_check_match_log
       list = MatchLog.filter(a_avatar_id: id).or(b_avatar_id: id).filter { start_at > RECORD_OTHER_AVATAR_DUEL_CHECK_START }.all
 
-      other_avatar_ids = []
-      list.each do |ml|
-        other_avatar_ids << ml.other_avatar_id(id)
+      other_avatar_ids = list.map do |ml|
+        ml.other_avatar_id(id)
       end
       other_avatar_ids.uniq!
 
@@ -1815,9 +1798,8 @@ module Unlight
       end
 
       # ログ表示などの為に、Bossの名前を保持しておく
-      boss_name = []
-      boss_deck.card_inventories.each do |ci|
-        boss_name << ci.chara_card.name
+      boss_name = boss_deck.card_inventories.map do |ci|
+        ci.chara_card.name
       end
 
       set_data = {
@@ -3597,21 +3579,15 @@ module Unlight
 
     # アチーブメントインベントリのIDのリストを文字列で返す
     def achievement_inventories_list_str(r = true)
-      ret = []
       refresh if r
-      achievement_inventories.each do |p|
-        ret << p.achievement_id
-      end
+      ret = achievement_inventories.map(&:achievement_id)
       ret.join(',')
     end
 
     # アチーブメントインベントリのstateのリストを文字列返す
     def achievement_inventories_state_list_str(r = true)
-      ret = []
       refresh if r
-      achievement_inventories.each do |p|
-        ret << p.state
-      end
+      ret = achievement_inventories.map(&:state)
       ret.join(',')
     end
 
@@ -3655,9 +3631,8 @@ module Unlight
 
     # カード取得チェックアチーブメント
     def get_card_level_record_check(card_ids)
-      new_cards = []
-      card_ids.each do |c_id|
-        new_cards.push(CharaCard[c_id])
+      new_cards = card_ids.map do |c_id|
+        CharaCard[c_id]
       end
       check_ids = Achievement.get_card_level_record(new_cards) if new_cards && new_cards.size
       # SERVER_LOG.info("<UID:#{self.player_id}>Avatar: [#{__method__}] card_ids:#{card_ids} record_ids:#{check_ids}")
@@ -4194,7 +4169,7 @@ module Unlight
       if avatar_apology
         apologies = avatar_apology.get_body
         add_apology = false
-        apologies.each do |_k, param|
+        apologies.each_value do |param|
           notice_set = [param[:date]]
           param[:items].each do |i|
             r = get_treasures(i[0], i[1], i[3], i[2])

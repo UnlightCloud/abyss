@@ -99,14 +99,7 @@ module Unlight
 
     # 特定クジの商品リストを返す
     def self.get_lot_list(kind)
-      ret = false
-      unless ret
-        ret = []
-        RareCardLot.filter({ lot_kind: kind }).all.each do |s|
-          ret << s
-        end
-      end
-      ret
+      RareCardLot.filter({ lot_kind: kind }).all
     end
 
     # レアリティを決定する

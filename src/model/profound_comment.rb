@@ -51,11 +51,8 @@ module Unlight
       cache_key = "prf_comment_#{prf_id}"
       list = CACHE.get(cache_key) if cache
       st = Time.now.utc - 60 * 5
-      unless list
-        list = []
-        ProfoundComment.limit(100).where(profound_id: prf_id).where { created_at > st }.order(:id).all.each do |pc|
-          list << { id: pc.id, a_id: pc.avatar_id, comment: pc.comment, a_name: pc.name }
-        end
+      list ||= ProfoundComment.limit(100).where(profound_id: prf_id).where { created_at > st }.order(:id).all.map do |pc|
+        { id: pc.id, a_id: pc.avatar_id, comment: pc.comment, a_name: pc.name }
       end
       list.each do |pc|
         if pc[:id] > last_id

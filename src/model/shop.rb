@@ -37,9 +37,8 @@ module Unlight
   def Shop.get_sale_list(shop)
     ret = cache_store.get("shop_type:#{shop}")
     unless ret
-      ret = []
-      Shop.filter({ shop_type: shop }).all.each do |s|
-        ret << [s.article_kind, s.article_id, s.price, s.coin_0, s.coin_1, s.coin_2, s.coin_3, s.coin_4, s.coin_ex]
+      ret = Shop.filter({ shop_type: shop }).all.map do |s|
+        [s.article_kind, s.article_id, s.price, s.coin_0, s.coin_1, s.coin_2, s.coin_3, s.coin_4, s.coin_ex]
       end
       cache_store.set("shop_type:#{shop}", ret)
     end

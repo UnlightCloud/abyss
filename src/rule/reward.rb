@@ -385,7 +385,7 @@ module Unlight
       end
       # 確率
       num = 0
-      @current_genre_odds.each { |_k, v| num += v }
+      @current_genre_odds.each_value { |v| num += v }
       # ランダムの結果
       r = rand(num)
       # 前回の値をいれる一時変数

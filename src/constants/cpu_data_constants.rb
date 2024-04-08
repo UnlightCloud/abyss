@@ -177,7 +177,7 @@ module Unlight
                    541_055,          # Reality 7 22%
                    322_836,          # Reality 8 16%
                    160_061,          # Reality 9 10%
-                   58_828           # Reality 10 6%
+                   58_828 # Reality 10 6%
                  ]]
 
   MAP_REALITY_NUM = 1_000_000

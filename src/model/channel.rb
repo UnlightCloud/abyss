@@ -73,7 +73,7 @@ module Unlight
 
     # クイックマッチのチャンネルか判定
     def is_radder?
-      (rule == CRULE_HIGH || rule == CRULE_RADDER || rule == CRULE_COST_A || rule == CRULE_COST_B)
+      rule == CRULE_HIGH || rule == CRULE_RADDER || rule == CRULE_COST_A || rule == CRULE_COST_B
     end
 
     # プレイヤーを入場させる

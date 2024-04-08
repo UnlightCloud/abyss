@@ -110,9 +110,8 @@ module Unlight
 
     # 許可するコンテキストを登録
     def self.context(*cont)
-      s = []
-      cont.each do |a|
-        s << "Unlight::#{a[0]}::#{a[1]}"
+      s = cont.map do |a|
+        "Unlight::#{a[0]}::#{a[1]}"
       end
       instance.allow_context << s.join('->')
     end
@@ -157,9 +156,8 @@ module Unlight
 
     # ガードとゴール関数登録関数
     def self.add_decision(list, args)
-      ret = []
-      args.each do |a|
-        ret << a
+      ret = args.map do |a|
+        a
       end
       list << ret unless ret == []
     end

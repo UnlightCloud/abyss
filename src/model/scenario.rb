@@ -98,17 +98,15 @@ module Unlight
 
     # パネル表示命令を受け取ってProcで返す
     def panel_to_proc(set)
-      str_set = []
-      set.each do |s|
-        str_set << s[1]
+      str_set = set.map do |s|
+        s[1]
       end
       [:sc_lobby_chara_select_panel, [str_set.join(',')]]
     end
 
     def stop_to_proc(set)
-      str_set = []
-      set.each do |s|
-        str_set << s[0]
+      str_set = set.map do |s|
+        s[0]
       end
       [:stop, str_set]
     end

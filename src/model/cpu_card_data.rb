@@ -145,11 +145,7 @@ module Unlight
     end
 
     def treasure_items
-      ret = []
-      monster_treasure_inventories.sort_by(&:step).each do |mt|
-        ret << mt.get_treasure
-      end
-      ret
+      monster_treasure_inventories.sort_by(&:step).map(&:get_treasure)
     end
   end
 end
