@@ -19,6 +19,8 @@ interaction:
     description: Run the abyss command
     service: auth
     command: bin/abyss
+    compose:
+      depends_on: [mysql, memcached]
 
   bundle:
     description: Run the bundle command

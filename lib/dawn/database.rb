@@ -43,13 +43,13 @@ module Dawn
     # @since 0.1.0
     def config
       return @config if @config
-      return @config = ENV['DATABASE_URL'] unless config_file.exist?
+
+      @config = ENV.fetch('DATABASE_URL', nil)
+      return @config unless @config.nil? && config_file.exist?
 
       template = ERB.new(config_file.read)
-
       @config ||=
         YAML.safe_load(template.result(binding), aliases: true).fetch(Dawn.env, nil)
-      @config ||= ENV['DATABASE_URL']
       @config
     end
 
