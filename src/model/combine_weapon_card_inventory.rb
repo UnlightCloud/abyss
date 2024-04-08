@@ -74,7 +74,7 @@ module Unlight
         sdp = mat.combine_sword_dp.to_f / 10 * num
         aap = mat.combine_arrow_ap.to_f / 10 * num
         adp = mat.combine_arrow_dp.to_f / 10 * num
-        param = { sap: sap, sdp: sdp, aap: aap, adp: adp, special: false, passive_id: mat.passive_id, restriction: mat.restriction }
+        param = { sap:, sdp:, aap:, adp:, special: false, passive_id: mat.passive_id, restriction: mat.restriction }
         add_params << param
       end
 

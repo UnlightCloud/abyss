@@ -40,7 +40,7 @@ Dawn::Database.migrate!
 
 require_relative '../src/unlight'
 
-Dir[Bundler.root.join('spec/support/**/*.rb')].sort.each { |support| require support }
+Dir[Bundler.root.join('spec/support/**/*.rb')].each { |support| require support }
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|

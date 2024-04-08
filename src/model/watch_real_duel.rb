@@ -264,11 +264,11 @@ module Unlight
       # 提出ターンの場合、場にカードを出す
       unless func.nil?
         @pl_table.each do |_ac|
-          cmd = { func: func, args: [true, 0, 0] }
+          cmd = { func:, args: [true, 0, 0] }
           @init_commands.push(cmd)
         end
         @foe_table.each do |_ac|
-          cmd = { func: func, args: [false, 0, 0] }
+          cmd = { func:, args: [false, 0, 0] }
           @init_commands.push(cmd)
         end
       end

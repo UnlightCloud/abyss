@@ -27,13 +27,13 @@ module Unlight
       ret = ''
       # 専用
       dw = DialogueWeight.filter({ dialogue_type: DLG_QUEST_START_CHARA,
-                                   chara_id: chara_id,
+                                   chara_id:,
                                    other_chara_id: other_id,
                                    weight: map_id,
                                    level: land_id }).first
       # 汎用 (専用が無いとき)
       dw ||= DialogueWeight.filter({ dialogue_type: DLG_QUEST_START_CHARA,
-                                     chara_id: chara_id,
+                                     chara_id:,
                                      other_chara_id: chara_id,
                                      weight: map_id,
                                      level: land_id })
@@ -44,7 +44,7 @@ module Unlight
 
     def self.quest_clear_dialogue(chara_id, map_no)
       ret = []
-      DialogueWeight.filter({ chara_id: chara_id, level: map_no, dialogue_type: DLG_QUEST_END_CHARA..DLG_QUEST_END_AVATAR }).order(Sequel.asc(:weight)).all.each do |r|
+      DialogueWeight.filter({ chara_id:, level: map_no, dialogue_type: DLG_QUEST_END_CHARA..DLG_QUEST_END_AVATAR }).order(Sequel.asc(:weight)).all.each do |r|
         ret << [Dialogue[r.dialogue.id].content, r.id, r.dialogue_type]
       end
       ret
@@ -75,7 +75,7 @@ module Unlight
     def self.default_dialogue(parent_id, chara_id, type, level)
       ret = Array.new(level, 0)
       if parent_id != chara_id
-        DialogueWeight.filter({ chara_id: chara_id, other_chara_id: chara_id, dialogue_type: type })
+        DialogueWeight.filter({ chara_id:, other_chara_id: chara_id, dialogue_type: type })
                       .filter((Sequel.cast_string(:level) <= level)).all do |r|
           ret[r.level - 1] = r
         end
@@ -111,7 +111,7 @@ module Unlight
     # 出現率
     def current_percent
       len = 0
-      DialogueWeight.filter({ chara_id: chara_id, other_chara_id: other_chara_id, dialogue_type: dialogue_type }).all.each do |r|
+      DialogueWeight.filter({ chara_id:, other_chara_id:, dialogue_type: }).all.each do |r|
         len += r.weight
       end
       if len.zero?

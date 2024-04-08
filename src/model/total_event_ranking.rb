@@ -32,7 +32,7 @@ module Unlight
     end
 
     def self.ranking_data_count(server_type)
-      TotalEventRanking.filter(server_type: server_type).count
+      TotalEventRanking.filter(server_type:).count
     end
 
     def self.data_type
@@ -48,11 +48,11 @@ module Unlight
       lr = last_ranking(server_type)
       # 100番より値が低くて
       if lr >= point && point.positive?
-        ret = { rank: EstimationRanking.get_ranking(RANK_TYPE_TE, server_type, point), arrow: RANK_NONE, point: point }
+        ret = { rank: EstimationRanking.get_ranking(RANK_TYPE_TE, server_type, point), arrow: RANK_NONE, point: }
       elsif index && index < RANKING_COUNT_NUM
-        ret = { rank: index + 1, arrow: get_arrow_set(server_type)[index], point: point }
+        ret = { rank: index + 1, arrow: get_arrow_set(server_type)[index], point: }
       else
-        ret = { rank: 0, arrow: RANK_NONE, point: point }
+        ret = { rank: 0, arrow: RANK_NONE, point: }
       end
       ret
     end
@@ -120,7 +120,7 @@ module Unlight
 
     # アチーブメントでポイント管理する場合のイベント時の処理
     def self.start_up_achievement(server_type)
-      av_set = Avatar.join(AchievementInventory.filter([[:achievement_id, TOTAL_EVENT_RANKING_ACHIEVEMENT_ID]]).order(Sequel.desc(:progress)).limit(RANKING_COUNT_NUM), avatar_id: :id, server_type: server_type).all
+      av_set = Avatar.join(AchievementInventory.filter([[:achievement_id, TOTAL_EVENT_RANKING_ACHIEVEMENT_ID]]).order(Sequel.desc(:progress)).limit(RANKING_COUNT_NUM), avatar_id: :id, server_type:).all
       av_set.each_with_index do |av, _i|
         TotalEventRanking.update_ranking(av.values[:avatar_id], av.values[:name], av.values[:progress], server_type)
       end
@@ -216,7 +216,7 @@ module Unlight
 
     # アチーブメントでポイント管理する場合のイベント時の処理
     def self.point_avatars_achievement(server_type)
-      av_set = Avatar.join(AchievementInventory.filter([[:achievement_id, TOTAL_EVENT_RANKING_ACHIEVEMENT_ID]]).order(Sequel.desc(:progress)), avatar_id: :id, server_type: server_type).all
+      av_set = Avatar.join(AchievementInventory.filter([[:achievement_id, TOTAL_EVENT_RANKING_ACHIEVEMENT_ID]]).order(Sequel.desc(:progress)), avatar_id: :id, server_type:).all
       av_set.each_with_index do |av, _i|
         TotalEventRanking.update_ranking(av.values[:avatar_id], av.values[:name], av.values[:progress], server_type)
       end

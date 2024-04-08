@@ -42,8 +42,7 @@ module Avatars
         part_inventories
           .each(&:work_end?)
           .select(&:equiped?)
-          .map { |p| Unlight::AvatarPart[p.avatar_part_id] }
-          .compact
+          .filter_map { |p| Unlight::AvatarPart[p.avatar_part_id] }
       end
     end
   end

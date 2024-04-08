@@ -371,13 +371,13 @@ module Unlight
       end
     end
 
-    def respond_to_missing?(*args)
-      @event.respond_to?(*args)
+    def respond_to_missing?(*)
+      @event.respond_to?(*)
     end
 
     # イベントを委譲する
-    def method_missing(message, *arg)
-      @event.send(message, *arg)
+    def method_missing(message, *)
+      @event.send(message, *)
     end
 
     # カードイベントの後処理

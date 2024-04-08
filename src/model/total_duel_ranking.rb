@@ -32,7 +32,7 @@ module Unlight
     end
 
     def self.ranking_data_count(server_type)
-      TotalDuelRanking.filter(server_type: server_type).count
+      TotalDuelRanking.filter(server_type:).count
     end
 
     def self.data_type
@@ -47,11 +47,11 @@ module Unlight
       lr = last_ranking(server_type)
       # 100番より値が低くて
       if lr >= point && point.positive?
-        ret = { rank: EstimationRanking.get_ranking(RANK_TYPE_TD, server_type, point), arrow: RANK_NONE, point: point }
+        ret = { rank: EstimationRanking.get_ranking(RANK_TYPE_TD, server_type, point), arrow: RANK_NONE, point: }
       elsif index && index < 100
-        ret = { rank: index + 1, arrow: get_arrow_set(server_type)[index], point: point }
+        ret = { rank: index + 1, arrow: get_arrow_set(server_type)[index], point: }
       else
-        ret = { rank: EstimationRanking.get_ranking(RANK_TYPE_TD, server_type, point), arrow: RANK_NONE, point: point }
+        ret = { rank: EstimationRanking.get_ranking(RANK_TYPE_TD, server_type, point), arrow: RANK_NONE, point: }
       end
       ret
     end
@@ -62,7 +62,7 @@ module Unlight
       # 現在から一月アップデートされたことのあるアバターが対象
       last_update = Date.today - 30
       st = Time.utc(last_update.year, last_update.month, last_update.day)
-      Avatar.filter(server_type: server_type).filter { updated_at > st }.all do |a|
+      Avatar.filter(server_type:).filter { updated_at > st }.all do |a|
         if a.point
           avatars[a.id] = a.point
         end
@@ -75,7 +75,7 @@ module Unlight
       # 現在から一月アップデートされたことのあるアバターが対象
       last_update = Date.today - 30
       st = Time.utc(last_update.year, last_update.month, last_update.day)
-      Avatar.filter(server_type: server_type).filter { updated_at > st }.all do |a|
+      Avatar.filter(server_type:).filter { updated_at > st }.all do |a|
         if a.point
           TotalDuelRanking.update_ranking(a.id, a.name, a.point, server_type)
         end

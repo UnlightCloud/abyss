@@ -20156,8 +20156,8 @@ module Unlight
         feat_id: f_id_src,
         feat_no: f_no_src,
         owner_index: actor_index,
-        foe_index: foe_index,
-        other_feats: other_feats
+        foe_index:,
+        other_feats:
       }
     end
 
@@ -24356,7 +24356,7 @@ module Unlight
         eased_condition = easing_condition_all_type(Feat[f_id].condition, pow)
         condition_check = Feat.condition_check_gen(eased_condition).gsub('__FEAT__', f_no.to_s)
         update_feat_condition_event(true, owner.current_chara_card_no, get_feat_inventories_index(f_id), eased_condition)
-        @easing_feat_list[f_id] = { f_no: f_no, pow: pow, condition: condition_check }
+        @easing_feat_list[f_id] = { f_no:, pow:, condition: condition_check }
       end
 
       create_easing_check_feat(f_id, f_no)
@@ -24388,7 +24388,7 @@ module Unlight
     end
 
     # 既定条件の値をnumだけ変動させた技条件文字列を返す
-    COND_PTN = /([ASDMEW]|\[.*\])(\d?)([+=-]?)(?:\*(\d))?/.freeze
+    COND_PTN = /([ASDMEW]|\[.*\])(\d?)([+=-]?)(?:\*(\d))?/
     REDUCTION_TYPE_PRIORITY = %w[D M S A E W].freeze
     def easing_condition_all_type(condition, num = -1)
       return '' if condition == ''

@@ -54,7 +54,7 @@ module Unlight
 
     # 取得済み判定
     def self.is_acquired_profound(avatar_id, hash)
-      list = Profound.join(ProfoundInventory.filter(avatar_id: avatar_id), profound_id: :id).filter(profound_hash: hash).all
+      list = Profound.join(ProfoundInventory.filter(avatar_id:), profound_id: :id).filter(profound_hash: hash).all
       (list && !list.empty?)
     end
 
@@ -96,12 +96,12 @@ module Unlight
 
     # 特定ユーザの報酬などの確認が必要な渦を取得
     def self.get_avatar_check_list(avatar_id)
-      ProfoundInventory.where(avatar_id: avatar_id).exclude(reward_state: PRF_INV_REWARD_ST_ALREADY).exclude(state: [PRF_INV_ST_FAILED, PRF_INV_ST_GIVE_UP]).all
+      ProfoundInventory.where(avatar_id:).exclude(reward_state: PRF_INV_REWARD_ST_ALREADY).exclude(state: [PRF_INV_ST_FAILED, PRF_INV_ST_GIVE_UP]).all
     end
 
     # 特定ユーザの実行中の渦を取得
     def self.get_avatar_battle_list(avatar_id)
-      ProfoundInventory.where(avatar_id: avatar_id).exclude(state: PRF_INV_ST_SOLVED).exclude(state: PRF_INV_ST_FAILED).exclude(state: PRF_INV_ST_GIVE_UP).all
+      ProfoundInventory.where(avatar_id:).exclude(state: PRF_INV_ST_SOLVED).exclude(state: PRF_INV_ST_FAILED).exclude(state: PRF_INV_ST_GIVE_UP).all
     end
 
     # 特定ユーザの特定渦を取得
@@ -663,7 +663,7 @@ module Unlight
         data_list.each do |_dmg, data|
           count = 0
           data.each do |d|
-            ret[d[:a_id]] = { rank: rank, damage: d[:score] }
+            ret[d[:a_id]] = { rank:, damage: d[:score] }
             count += 1
           end
           rank += count

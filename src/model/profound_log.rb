@@ -90,7 +90,7 @@ module Unlight
         end
         name_view = true if name_view == false && damage > view_start_dmg
         if log.id > last_id && log_set && log.avatar_id != a_id
-          log_data << { log: log, name_view: true }
+          log_data << { log:, name_view: true }
           last_id = log.id
         end
       end

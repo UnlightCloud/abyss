@@ -333,13 +333,13 @@ module Unlight
       @status_update = true
     end
 
-    def respond_to_missing?(*args)
-      @event.respond_to?(*args)
+    def respond_to_missing?(*)
+      @event.respond_to?(*)
     end
 
     # イベントを委譲する
-    def method_missing(message, *arg)
-      @event.send(message, *arg)
+    def method_missing(message, *)
+      @event.send(message, *)
     end
 
     def feat_event_no_to_id; end

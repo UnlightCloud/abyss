@@ -10,8 +10,8 @@ RSpec.describe Unlight::Avatar do
 
     context 'when has quests' do
       before do
-        create(:avatar_quest_inventory, avatar: avatar, quest_id: 1)
-        create(:avatar_quest_inventory, avatar: avatar, quest_id: 2)
+        create(:avatar_quest_inventory, avatar:, quest_id: 1)
+        create(:avatar_quest_inventory, avatar:, quest_id: 2)
       end
 
       it { is_expected.to eq('1,2') }
@@ -20,8 +20,8 @@ RSpec.describe Unlight::Avatar do
     context 'when has pending quests' do
       before do
         allow(Time).to receive(:now).and_return(DateTime.parse('2021-11-10').to_time)
-        create(:avatar_quest_inventory, avatar: avatar, quest_id: 1, status: Unlight::QS_PENDING, find_at: DateTime.parse('2021-11-11'))
-        create(:avatar_quest_inventory, avatar: avatar, quest_id: 2)
+        create(:avatar_quest_inventory, avatar:, quest_id: 1, status: Unlight::QS_PENDING, find_at: DateTime.parse('2021-11-11'))
+        create(:avatar_quest_inventory, avatar:, quest_id: 2)
       end
 
       it { is_expected.to eq('0,2') }
@@ -34,8 +34,8 @@ RSpec.describe Unlight::Avatar do
     it { is_expected.to eq('') }
 
     context 'when has quests' do
-      let!(:item1) { create(:avatar_quest_inventory, avatar: avatar, quest_id: 1) }
-      let!(:item2) { create(:avatar_quest_inventory, avatar: avatar, quest_id: 2) }
+      let!(:item1) { create(:avatar_quest_inventory, avatar:, quest_id: 1) }
+      let!(:item2) { create(:avatar_quest_inventory, avatar:, quest_id: 2) }
 
       it { is_expected.to eq([item1, item2].map(&:id).join(',')) }
     end
@@ -48,8 +48,8 @@ RSpec.describe Unlight::Avatar do
 
     context 'when has quests' do
       before do
-        create(:avatar_quest_inventory, avatar: avatar, quest_id: 1, status: Unlight::QS_PENDING)
-        create(:avatar_quest_inventory, avatar: avatar, quest_id: 2)
+        create(:avatar_quest_inventory, avatar:, quest_id: 1, status: Unlight::QS_PENDING)
+        create(:avatar_quest_inventory, avatar:, quest_id: 2)
       end
 
       it { is_expected.to eq('4,') }
@@ -64,8 +64,8 @@ RSpec.describe Unlight::Avatar do
     context 'when has quests' do
       before do
         allow(Time).to receive(:now).and_return(DateTime.parse('2021-11-10').to_time)
-        create(:avatar_quest_inventory, avatar: avatar, quest_id: 1, status: Unlight::QS_PENDING, find_at: DateTime.parse('2021-11-11'))
-        create(:avatar_quest_inventory, avatar: avatar, quest_id: 2)
+        create(:avatar_quest_inventory, avatar:, quest_id: 1, status: Unlight::QS_PENDING, find_at: DateTime.parse('2021-11-11'))
+        create(:avatar_quest_inventory, avatar:, quest_id: 2)
       end
 
       it { is_expected.to eq('86400,0') }
@@ -79,7 +79,7 @@ RSpec.describe Unlight::Avatar do
 
     context 'when quest before_avatar_id is nil' do
       before do
-        create(:avatar_quest_inventory, avatar: avatar, quest_id: 2)
+        create(:avatar_quest_inventory, avatar:, quest_id: 2)
       end
 
       it { is_expected.to eq('n') }
@@ -88,7 +88,7 @@ RSpec.describe Unlight::Avatar do
     context 'when quest before_avatar_id is present' do
       before do
         before_avatar = create(:avatar, name: 'Sheri')
-        create(:avatar_quest_inventory, avatar: avatar, quest_id: 2, before_avatar_id: before_avatar.id)
+        create(:avatar_quest_inventory, avatar:, quest_id: 2, before_avatar_id: before_avatar.id)
       end
 
       it { is_expected.to eq('Sheri') }
@@ -96,7 +96,7 @@ RSpec.describe Unlight::Avatar do
 
     context 'when quest before_avatar_id is present but avatar not exists' do
       before do
-        create(:avatar_quest_inventory, avatar: avatar, quest_id: 2, before_avatar_id: 9999)
+        create(:avatar_quest_inventory, avatar:, quest_id: 2, before_avatar_id: 9999)
       end
 
       it { is_expected.to eq('n') }

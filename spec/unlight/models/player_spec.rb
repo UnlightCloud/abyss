@@ -33,7 +33,7 @@ RSpec.describe Unlight::Player do
     it { is_expected.to eq(Unlight::RG_NG[:none]) }
 
     context 'when duplicate player name' do
-      before { create(:player, name: name) }
+      before { create(:player, name:) }
 
       it { expect { regist }.to change(described_class, :count).by(0) }
       it { is_expected.to eq(Unlight::RG_NG[:name]) }
@@ -150,7 +150,7 @@ RSpec.describe Unlight::Player do
   describe '#login_bonus_set' do
     subject { player.login_bonus_set }
 
-    let(:player) { create(:player, login_at: login_at) }
+    let(:player) { create(:player, login_at:) }
     let(:login_at) { Time.now }
 
     it { is_expected.to be_falsy }
@@ -173,7 +173,7 @@ RSpec.describe Unlight::Player do
   describe '#count_total_time' do
     subject(:count) { player.count_total_time }
 
-    let(:player) { create(:player, logout_at: logout_at, login_at: login_at) }
+    let(:player) { create(:player, logout_at:, login_at:) }
     let(:logout_at) { nil }
     let(:login_at) { Time.now - 60 * 60 }
 
@@ -199,7 +199,7 @@ RSpec.describe Unlight::Player do
   describe '#login?' do
     subject { player.login? }
 
-    let(:player) { create(:player, state: state) }
+    let(:player) { create(:player, state:) }
     let(:state) { 0 }
 
     it { is_expected.to be_falsy }
@@ -214,7 +214,7 @@ RSpec.describe Unlight::Player do
   describe '#auth?' do
     subject { player.auth? }
 
-    let(:player) { create(:player, state: state) }
+    let(:player) { create(:player, state:) }
     let(:state) { 0 }
 
     it { is_expected.to be_falsy }

@@ -77,7 +77,7 @@ module Unlight
                                        chara_card_id_2: c_2,
                                        result: r,
                                        quest_point: qp,
-                                       server_type: server_type,
+                                       server_type:,
                                        created_at: t,
                                        updated_at: t)
 

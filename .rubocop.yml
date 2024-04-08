@@ -10,8 +10,7 @@ require:
   - rubocop-sequel
 
 AllCops:
-  # The Ruby 2.7 changes may breaks UL server
-  TargetRubyVersion: 2.6.8
+  TargetRubyVersion: 3.2
   DisplayCopNames: true
   NewCops: enable
   SuggestExtensions: false

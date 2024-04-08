@@ -31,7 +31,7 @@ module Unlight
     # リンクをゲット出来る(リンクを五分間キャッシュする)
     def self.get_link(p_id, server_type)
       link = CACHE.get("friend_link_get:#{p_id}")
-      new_link = FriendLink.filter(Sequel.|({ relating_player_id: p_id }, { related_player_id: p_id })).exclude(friend_type: TYPE_BLOCK).filter(server_type: server_type).all
+      new_link = FriendLink.filter(Sequel.|({ relating_player_id: p_id }, { related_player_id: p_id })).exclude(friend_type: TYPE_BLOCK).filter(server_type:).all
       if new_link
         link = new_link
       else
@@ -42,44 +42,44 @@ module Unlight
 
     # リンクをゲット出来る
     def self.get_all_link(p_id, server_type)
-      FriendLink.filter(Sequel.|({ relating_player_id: p_id }, { related_player_id: p_id })).filter(server_type: server_type).all
+      FriendLink.filter(Sequel.|({ relating_player_id: p_id }, { related_player_id: p_id })).filter(server_type:).all
     end
 
     # BlackListゲット出来る
     def self.get_black_list(p_id, server_type)
-      FriendLink.filter(Sequel.|({ relating_player_id: p_id }, { related_player_id: p_id })).filter(friend_type: TYPE_BLOCK).filter(server_type: server_type).all
+      FriendLink.filter(Sequel.|({ relating_player_id: p_id }, { related_player_id: p_id })).filter(friend_type: TYPE_BLOCK).filter(server_type:).all
     end
 
     # RequestListゲット出来る
     def self.get_request_list(p_id, server_type)
-      FriendLink.filter(Sequel.|({ relating_player_id: p_id }, { related_player_id: p_id })).filter(friend_type: TYPE_CONFIRM).filter(server_type: server_type).all
+      FriendLink.filter(Sequel.|({ relating_player_id: p_id }, { related_player_id: p_id })).filter(friend_type: TYPE_CONFIRM).filter(server_type:).all
     end
 
     # リンクをゲット出来る
     def self.get_link_offset(p_id, offset, count, server_type)
-      FriendLink.filter(Sequel.|({ relating_player_id: p_id }, { related_player_id: p_id })).filter(friend_type: TYPE_FRIEND).filter(server_type: server_type).order(Sequel.asc(:id)).limit(count, offset).all
+      FriendLink.filter(Sequel.|({ relating_player_id: p_id }, { related_player_id: p_id })).filter(friend_type: TYPE_FRIEND).filter(server_type:).order(Sequel.asc(:id)).limit(count, offset).all
     end
 
     def self.get_link_num(p_id, server_type)
-      FriendLink.filter(Sequel.|({ relating_player_id: p_id }, { related_player_id: p_id })).filter(friend_type: TYPE_FRIEND).filter(server_type: server_type).order(Sequel.asc(:id)).count
+      FriendLink.filter(Sequel.|({ relating_player_id: p_id }, { related_player_id: p_id })).filter(friend_type: TYPE_FRIEND).filter(server_type:).order(Sequel.asc(:id)).count
     end
 
     # BlackListゲット出来る
     def self.get_black_list_offset(p_id, offset, count, server_type)
-      FriendLink.filter(Sequel.|({ relating_player_id: p_id }, { related_player_id: p_id })).filter(friend_type: TYPE_BLOCK).filter(server_type: server_type).order(Sequel.asc(:id)).limit(count, offset).all
+      FriendLink.filter(Sequel.|({ relating_player_id: p_id }, { related_player_id: p_id })).filter(friend_type: TYPE_BLOCK).filter(server_type:).order(Sequel.asc(:id)).limit(count, offset).all
     end
 
     def self.get_black_link_num(p_id, server_type)
-      FriendLink.filter(relating_player_id: p_id).filter(friend_type: TYPE_BLOCK).filter(server_type: server_type).order(Sequel.asc(:id)).count
+      FriendLink.filter(relating_player_id: p_id).filter(friend_type: TYPE_BLOCK).filter(server_type:).order(Sequel.asc(:id)).count
     end
 
     # RequestedListゲット出来る
     def self.get_request_list_offset(p_id, offset, count, server_type)
-      FriendLink.filter(Sequel.|({ relating_player_id: p_id }, { related_player_id: p_id })).filter(friend_type: TYPE_CONFIRM).filter(server_type: server_type).order(Sequel.asc(:id)).limit(count, offset).all
+      FriendLink.filter(Sequel.|({ relating_player_id: p_id }, { related_player_id: p_id })).filter(friend_type: TYPE_CONFIRM).filter(server_type:).order(Sequel.asc(:id)).limit(count, offset).all
     end
 
     def self.get_request_list_num(p_id, server_type)
-      FriendLink.filter(Sequel.|({ relating_player_id: p_id }, { related_player_id: p_id })).filter(friend_type: TYPE_CONFIRM).filter(server_type: server_type).order(Sequel.asc(:id)).count
+      FriendLink.filter(Sequel.|({ relating_player_id: p_id }, { related_player_id: p_id })).filter(friend_type: TYPE_CONFIRM).filter(server_type:).order(Sequel.asc(:id)).count
     end
 
     # キャッシュを削除する（ログアウト時に仕様：リークになるので）
@@ -89,7 +89,7 @@ module Unlight
 
     # キャッシュのアップデート
     def self.cache_update(p_id, server_type)
-      @@link_cache[p_id] = FriendLink.filter(Sequel.|({ relating_player_id: p_id }, { related_player_id: p_id })).filter(server_type: server_type).all
+      @@link_cache[p_id] = FriendLink.filter(Sequel.|({ relating_player_id: p_id }, { related_player_id: p_id })).filter(server_type:).all
     end
 
     # リンクを作る
@@ -114,13 +114,13 @@ module Unlight
       ret = []
       ret << 0
       # すでに自分がブロックされていたら抜ける
-      a = FriendLink.filter(Sequel.&({ relating_player_id: p_b }, { related_player_id: p_a }, { friend_type: TYPE_BLOCK })).filter(server_type: server_type).all
+      a = FriendLink.filter(Sequel.&({ relating_player_id: p_b }, { related_player_id: p_a }, { friend_type: TYPE_BLOCK })).filter(server_type:).all
       unless a.empty?
         ret[0] = ERROR_BLOCK_APPLY
         return ret
       end
       # ブロックは10人しか出来ない
-      b = FriendLink.filter(Sequel.&({ relating_player_id: p_a }, { friend_type: TYPE_BLOCK })).filter(server_type: server_type).all
+      b = FriendLink.filter(Sequel.&({ relating_player_id: p_a }, { friend_type: TYPE_BLOCK })).filter(server_type:).all
       unless b.size < MAX_BLOCK_NUM
         ret[0] = ERROR_BLOCK_MAX
         return ret
@@ -183,8 +183,8 @@ module Unlight
     # リンクがすでに存在するかしなかったFalse,存在したらそのリンクを返す
     def self.check_already_exist?(p_a, p_b, server_type)
       ret = false
-      links =  FriendLink.filter(Sequel.&({ relating_player_id: p_a }, { related_player_id: p_b })).filter(server_type: server_type).all
-      links =  FriendLink.filter(Sequel.&({ relating_player_id: p_b }, { related_player_id: p_a })).filter(server_type: server_type).all if links.empty?
+      links =  FriendLink.filter(Sequel.&({ relating_player_id: p_a }, { related_player_id: p_b })).filter(server_type:).all
+      links =  FriendLink.filter(Sequel.&({ relating_player_id: p_b }, { related_player_id: p_a })).filter(server_type:).all if links.empty?
       ret = links unless links.empty?
       ret
     end

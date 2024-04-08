@@ -31,11 +31,11 @@ module Unlight
       if t
         case t.treasure_type
         when TG_CHARA_CARD
-          ret = { step: step, item: [Unlight::Reward::RANDOM_CARD, t.value, num] }
+          ret = { step:, item: [Unlight::Reward::RANDOM_CARD, t.value, num] }
         when TG_SLOT_CARD
-          ret = { step: step, item: [SLOTS2REWARD[t.slot_type], t.value, num] } unless (SLOTS2REWARD[t.slot_type]).zero?
+          ret = { step:, item: [SLOTS2REWARD[t.slot_type], t.value, num] } unless (SLOTS2REWARD[t.slot_type]).zero?
         when TG_AVATAR_ITEM
-          ret = { step: step, item: [Unlight::Reward::ITEM, t.value, num] }
+          ret = { step:, item: [Unlight::Reward::ITEM, t.value, num] }
         end
       end
       ret

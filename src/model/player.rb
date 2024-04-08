@@ -69,7 +69,7 @@ module Unlight
 
     # プレイヤーのパスを再登録
     def self.reregist(name, email, salt, verifier, server_type)
-      pl = Player[name: name]
+      pl = Player[name:]
       if pl
         pl.email = email
         pl.salt = salt
@@ -286,7 +286,7 @@ module Unlight
     def current_avatar
       unless @current_avatar
         if avatars.empty?
-          @current_avatar = Avatar.new(name: name, player_id: id)
+          @current_avatar = Avatar.new(name:, player_id: id)
         else
           @current_avatar = avatars[0]
         end

@@ -636,7 +636,7 @@ module Unlight
       step = @candidate_list.size + 1
       chara_ids = @pl_deck.map(&:charactor_id)
 
-      if EVENT_CHARA_REWARD_ITEM_STEPS.index(step) && !(chara_ids & EVENT_CHARA_IDS).empty?
+      if EVENT_CHARA_REWARD_ITEM_STEPS.index(step) && !chara_ids.intersect?(EVENT_CHARA_IDS).nil?
         ret = [2, EVENT_REWARD_ITEM[@duel_result][0], EVENT_CHARA_REWARD_ITEM_STEP_NUM[EVENT_CHARA_REWARD_ITEM_STEPS.index(step)]]
       elsif EVENT_REWARD_ITEM_STEPS.index(step)
         ret = [2, EVENT_REWARD_ITEM[@duel_result][0], EVENT_REWARD_ITEM_STEP_NUM[EVENT_REWARD_ITEM_STEPS.index(step)]]

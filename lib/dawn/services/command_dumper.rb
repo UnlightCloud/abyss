@@ -60,7 +60,7 @@ module Dawn
 
       args.map do |name, type, size|
         {
-          name: name,
+          name:,
           type: type_with_size(type, size)
         }
       end

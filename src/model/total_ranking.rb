@@ -33,7 +33,7 @@ module Unlight
     def get_order_ranking(server_type = SERVER_SB, st_i = 0, end_i = 99, _cache = true) # rubocop:disable Metrics/ParameterLists
       ret = CACHE.get("#{@ranking_all}_#{server_type}")
       unless ret
-        ret = ranking_data.filter(server_type: server_type).order(Sequel.desc(:point)).limit(RANKING_COUNT_NUM).all
+        ret = ranking_data.filter(server_type:).order(Sequel.desc(:point)).limit(RANKING_COUNT_NUM).all
         CACHE.set("#{@ranking_all}_#{server_type}", ret, RANK_CACHE_TTL)
         CACHE.set("#{@ranking_all_id}_#{server_type}", ret.map(&:avatar_id), RANK_CACHE_TTL)
         create_arrow(server_type)
@@ -47,7 +47,7 @@ module Unlight
       if before
         arrow_set = []
         a_id_set = CACHE.get("#{@ranking_all_id}_#{server_type}")
-        a_id_set ||= ranking_data.filter(server_type: server_type).order(Sequel.desc(:point)).limit(RANKING_COUNT_NUM).all.map(&:avatar_id)
+        a_id_set ||= ranking_data.filter(server_type:).order(Sequel.desc(:point)).limit(RANKING_COUNT_NUM).all.map(&:avatar_id)
         a_id_set.each_index do |i|
           rid = a_id_set[i]
           old_rank = before.index(rid)
@@ -91,7 +91,7 @@ module Unlight
     def get_order_ranking_id(server_type)
       ret = CACHE.get("#{@ranking_all_id}_#{server_type}")
       unless ret
-        ret = ranking_data.filter(server_type: server_type).order(Sequel.desc(:point)).limit(RANKING_COUNT_NUM).all.map(&:avatar_id)
+        ret = ranking_data.filter(server_type:).order(Sequel.desc(:point)).limit(RANKING_COUNT_NUM).all.map(&:avatar_id)
         CACHE.set("#{@ranking_all_id}_#{server_type}", ret, RANK_CACHE_TTL)
         create_arrow(server_type)
       end
@@ -101,7 +101,7 @@ module Unlight
     # 指定したアバターのランキングを更新して現在のランクを返す
     def update_ranking(a_id, a_name, a_point, server_type)
       lr = last_ranking(server_type)
-      r = ranking_data.filter(server_type: server_type).filter(avatar_id: a_id).all.first
+      r = ranking_data.filter(server_type:).filter(avatar_id: a_id).all.first
       if lr < a_point
         # すでに登録済みな
         if r
@@ -110,7 +110,7 @@ module Unlight
           r = ranking_data.new
         else
           # いっぱいならケツと交換
-          r = ranking_data.filter(server_type: server_type).order(Sequel.desc(:point)).limit(RANKING_COUNT_NUM).all.last
+          r = ranking_data.filter(server_type:).order(Sequel.desc(:point)).limit(RANKING_COUNT_NUM).all.last
         end
         r.avatar_id = a_id
         r.name = a_name
@@ -132,7 +132,7 @@ module Unlight
       if ranking_data_count(server_type) < RANKING_COUNT_NUM
         0
       else
-        ranking_data.filter(server_type: server_type).min(:point) || 0
+        ranking_data.filter(server_type:).min(:point) || 0
       end
     end
 

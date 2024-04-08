@@ -1821,13 +1821,13 @@ module Unlight
       end
 
       set_data = {
-        inv: inv,
+        inv:,
         data: prf_data,
-        boss_deck: boss_deck,
+        boss_deck:,
         deck_idx: current_deck,
         avatar_deck: duel_deck,
         stage: prf_data.stage,
-        boss_name: boss_name
+        boss_name:
       }
 
       [ret, set_data]
@@ -2185,7 +2185,7 @@ module Unlight
     # ペイメントログ、アイテムを含めたデッキ数を取得
     def get_all_deck_num_include_payment_log
       now_decks_num = decks_num
-      p_logs = PaymentLog.filter({ player_id: player_id, result: PaymentLog::STATE_PAYED }).filter([[:real_money_item_id, RM_ITEM_DECK_ID]]).all
+      p_logs = PaymentLog.filter({ player_id:, result: PaymentLog::STATE_PAYED }).filter([[:real_money_item_id, RM_ITEM_DECK_ID]]).all
       deck_items = ItemInventory.where(avatar_id: id, avatar_item_id: DECK_ITEM_ID, state: ITEM_STATE_NOT_USE).all
       add_num = 0
       p_logs.each { |plog| add_num += plog.num }
@@ -2196,7 +2196,7 @@ module Unlight
     # 課金アイテムを付与する
     def get_real_money_item
       # 自分の支払い済みのログを探し出す
-      p_log_set = PaymentLog.filter({ player_id: player_id, result: PaymentLog::STATE_PAYED }).all
+      p_log_set = PaymentLog.filter({ player_id:, result: PaymentLog::STATE_PAYED }).all
       ret = []
       # ログに支払いがあるとき
       if p_log_set && p_log_set.count.positive?
@@ -2258,17 +2258,17 @@ module Unlight
         when RMI_TYPE_EVENT_CARD
           rmi.num.times do
             inv = get_slot_card(SCT_EVENT, rmi.item_id)
-            list << { type: RMI_TYPE_EVENT_CARD, inv: inv }
+            list << { type: RMI_TYPE_EVENT_CARD, inv: }
           end
         when RMI_TYPE_WEAPON_CARD
           rmi.num.times do
             inv = get_slot_card(SCT_WEAPON, rmi.item_id)
-            list << { type: RMI_TYPE_WEAPON_CARD, inv: inv }
+            list << { type: RMI_TYPE_WEAPON_CARD, inv: }
           end
         when RMI_TYPE_CHARA_CARD
           rmi.num.times do
             inv = get_chara_card(rmi.item_id)
-            list << { type: RMI_TYPE_CHARA_CARD, inv: inv }
+            list << { type: RMI_TYPE_CHARA_CARD, inv: }
           end
         end
         # セット販売があるときはそいつも追加()
@@ -2622,13 +2622,13 @@ module Unlight
       @event = AvatarEvent.new(self)
     end
 
-    def respond_to_missing?(*args)
-      @event.respond_to?(*args)
+    def respond_to_missing?(*)
+      @event.respond_to?(*)
     end
 
     # イベントを委譲する
-    def method_missing(message, *arg)
-      @event.send(message, *arg)
+    def method_missing(message, *)
+      @event.send(message, *)
     end
 
     # 報酬ゲームオブジェの保存と結果の保存
@@ -4166,7 +4166,7 @@ module Unlight
         ret = prf_inv.get_self_rank
         prf_id = prf_inv.profound_id
       end
-      { prf_id: prf_id, ret: ret }
+      { prf_id:, ret: }
     end
 
     def get_profound_rank_from_inv(prf_inv)
@@ -4176,7 +4176,7 @@ module Unlight
         ret = prf_inv.get_self_rank
         prf_id = prf_inv.profound_id
       end
-      { prf_id: prf_id, ret: ret }
+      { prf_id:, ret: }
     end
 
     # 渦戦闘の報酬を取得

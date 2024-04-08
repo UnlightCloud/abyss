@@ -49,7 +49,7 @@ module Unlight
     def self.get_order_ranking(server_type, st_i = 0, end_i = 99)
       ret = cache_store.get("weekly_duel_ranking:all_#{server_type}")
       unless ret
-        ret = WeeklyDuelRanking.filter(server_type: server_type).filter(Sequel.cast_string(:id) <= 100).all
+        ret = WeeklyDuelRanking.filter(server_type:).filter(Sequel.cast_string(:id) <= 100).all
         cache_store.set("weekly_duel_ranking:all_#{server_type}", ret, RANK_CACHE_TTL)
         cache_store.set("weekly_duel_ranking:all_id_#{server_type}", ret.map(&:avatar_id), RANK_CACHE_TTL)
         cache_store.set("weekly_duel_ranking:arrow_#{server_type}", ret.map(&:arrow), RANK_CACHE_TTL)
@@ -89,7 +89,7 @@ module Unlight
     def self.get_order_ranking_id(server_type)
       ret = cache_store.get("weekly_duel_ranking:all_id_#{server_type}")
       unless ret
-        ret = WeeklyDuelRanking.filter(server_type: server_type).filter(Sequel.cast_string(:id) <= 100).map(&:avatar_id)
+        ret = WeeklyDuelRanking.filter(server_type:).filter(Sequel.cast_string(:id) <= 100).map(&:avatar_id)
         cache_store.set("weekly_duel_ranking:all_id_#{server_type}", ret, RANK_CACHE_TTL)
       end
       ret
@@ -103,14 +103,14 @@ module Unlight
       ranking = []
       sunday = Date.today - Date.today.wday
       st = Time.utc(sunday.year, sunday.month, sunday.day)
-      MatchLog.filter(server_type: server_type).filter { finish_at > st }.all do |log|
+      MatchLog.filter(server_type:).filter { finish_at > st }.all do |log|
         if log.winner_avatar_id
           avatars[log.winner_avatar_id] = 0 unless avatars[log.winner_avatar_id]
           avatars[log.winner_avatar_id] += log.get_bp
         end
       end
       ranking = avatars.to_a.sort { |a, b| b[1] <=> a[1] }
-      weekly_ranking = WeeklyDuelRanking.filter(server_type: server_type).order(Sequel.asc(:id)).all
+      weekly_ranking = WeeklyDuelRanking.filter(server_type:).order(Sequel.asc(:id)).all
       (0..99).each do |i|
         if ranking[i]
           if weekly_ranking[i]
@@ -184,7 +184,7 @@ module Unlight
       avatars = {}
       sunday = Date.today - Date.today.wday
       st = Time.utc(sunday.year, sunday.month, sunday.day)
-      MatchLog.filter(server_type: server_type).filter { finish_at > st }.all do |log|
+      MatchLog.filter(server_type:).filter { finish_at > st }.all do |log|
         if log.winner_avatar_id
           avatars[log.winner_avatar_id] = 0 unless avatars[log.winner_avatar_id]
           avatars[log.winner_avatar_id] += log.get_bp
@@ -195,7 +195,7 @@ module Unlight
 
     # 100位のポイントを返す
     def self.last_ranking(server_type)
-      weekly_ranking = WeeklyDuelRanking.filter(server_type: server_type).order(Sequel.asc(:id)).all
+      weekly_ranking = WeeklyDuelRanking.filter(server_type:).order(Sequel.asc(:id)).all
       weekly_ranking[100].point
     end
 

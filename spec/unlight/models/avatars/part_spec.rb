@@ -10,8 +10,8 @@ RSpec.describe Unlight::Avatar do
 
     context 'when has parts' do
       before do
-        create(:part_inventory, avatar: avatar, avatar_part_id: 1)
-        create(:part_inventory, avatar: avatar, avatar_part_id: 2)
+        create(:part_inventory, avatar:, avatar_part_id: 1)
+        create(:part_inventory, avatar:, avatar_part_id: 2)
       end
 
       it { is_expected.to eq('1,2') }
@@ -24,8 +24,8 @@ RSpec.describe Unlight::Avatar do
     it { is_expected.to eq('') }
 
     context 'when has parts' do
-      let!(:item1) { create(:part_inventory, avatar: avatar, avatar_part_id: 1) }
-      let!(:item2) { create(:part_inventory, avatar: avatar, avatar_part_id: 2) }
+      let!(:item1) { create(:part_inventory, avatar:, avatar_part_id: 1) }
+      let!(:item2) { create(:part_inventory, avatar:, avatar_part_id: 2) }
 
       it { is_expected.to eq([item1, item2].map(&:id).join(',')) }
     end
@@ -39,8 +39,8 @@ RSpec.describe Unlight::Avatar do
     context 'when has parts' do
       before do
         allow(Time).to receive(:now).and_return(DateTime.parse('2021-11-10').to_time)
-        create(:part_inventory, avatar: avatar, avatar_part_id: 1, end_at: DateTime.parse('2021-11-11'))
-        create(:part_inventory, avatar: avatar, avatar_part_id: 2)
+        create(:part_inventory, avatar:, avatar_part_id: 1, end_at: DateTime.parse('2021-11-11'))
+        create(:part_inventory, avatar:, avatar_part_id: 2)
       end
 
       it { is_expected.to eq('86400,0') }
@@ -54,8 +54,8 @@ RSpec.describe Unlight::Avatar do
 
     context 'when has parts' do
       before do
-        create(:part_inventory, avatar: avatar, avatar_part_id: 1, used: 1)
-        create(:part_inventory, avatar: avatar, avatar_part_id: 2)
+        create(:part_inventory, avatar:, avatar_part_id: 1, used: 1)
+        create(:part_inventory, avatar:, avatar_part_id: 2)
       end
 
       it { is_expected.to eq('1,0') }
@@ -69,8 +69,8 @@ RSpec.describe Unlight::Avatar do
 
     context 'when has parts' do
       before do
-        create(:part_inventory, avatar: avatar, avatar_part_id: 1, used: Unlight::APS_USED)
-        create(:part_inventory, avatar: avatar, avatar_part_id: 2)
+        create(:part_inventory, avatar:, avatar_part_id: 1, used: Unlight::APS_USED)
+        create(:part_inventory, avatar:, avatar_part_id: 2)
       end
 
       it { is_expected.to eq([1]) }
@@ -84,8 +84,8 @@ RSpec.describe Unlight::Avatar do
 
     context 'when has parts' do
       before do
-        create(:part_inventory, avatar: avatar, avatar_part_id: 1, used: Unlight::APS_USED)
-        create(:part_inventory, avatar: avatar, avatar_part_id: 2)
+        create(:part_inventory, avatar:, avatar_part_id: 1, used: Unlight::APS_USED)
+        create(:part_inventory, avatar:, avatar_part_id: 2)
       end
 
       it { is_expected.to eq('1') }
@@ -101,8 +101,8 @@ RSpec.describe Unlight::Avatar do
       let(:part) { create(:avatar_part) }
 
       before do
-        create(:part_inventory, avatar: avatar, avatar_part_id: part.id, used: Unlight::APS_USED)
-        create(:part_inventory, avatar: avatar, avatar_part_id: 2)
+        create(:part_inventory, avatar:, avatar_part_id: part.id, used: Unlight::APS_USED)
+        create(:part_inventory, avatar:, avatar_part_id: 2)
       end
 
       it { is_expected.to eq([part]) }

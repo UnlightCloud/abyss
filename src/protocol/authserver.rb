@@ -41,7 +41,7 @@ module Unlight
           # 認証のスタート
           SERVER_LOG.info("#{@@class_name}: [auth_start] #{name} ,#{client_pub_key} ,#{@@online_list.size}")
           # プレイヤーは登録されているか？
-          @player = Player[name: name]
+          @player = Player[name:]
           if @player
             if @player.penalty?
               # ペナルティではじく
@@ -103,7 +103,7 @@ module Unlight
         # 認証のスタート
         SERVER_LOG.info("#{@@class_name}: [cs_os_auth_start] #{name} ,#{client_pub_key}")
         # プレイヤーは登録されているか？
-        @player = Player[name: name]
+        @player = Player[name:]
         if @player
           if @player.penalty?
             # ペナルティではじく

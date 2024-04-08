@@ -64,7 +64,7 @@ module Unlight
       set_serial += serial.delete('-')
       ret = false
       # 同一シリアル、または同一プレイヤーのデータがあるか
-      icss = filter(Sequel.|({ serial: set_serial }, { player_id: player_id })).filter(server_type: server_type).all
+      icss = filter(Sequel.|({ serial: set_serial }, { player_id: })).filter(server_type:).all
       # データがない
       if icss.size <= 0
         # Infectionコラボシリアル判定

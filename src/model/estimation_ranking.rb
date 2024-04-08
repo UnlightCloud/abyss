@@ -177,7 +177,7 @@ module Unlight
       end
       c_rank = 1
 
-      est_rank_list = EstimationRanking.filter(rank_type: rank_type, server_type: server_type).order(Sequel.asc(:id)).all
+      est_rank_list = EstimationRanking.filter(rank_type:, server_type:).order(Sequel.asc(:id)).all
 
       BASE_RANKING_NUM.times do |i|
         e = est_rank_list[i]

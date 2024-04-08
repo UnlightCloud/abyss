@@ -83,7 +83,7 @@ module Unlight
       else
         check_val = avatar.chara_card_decks[avatar.current_deck].current_level
       end
-      @@radder_match_waiting_list[@player.id] = { bp: avatar.point, check_val: check_val, rule: rule, started: false, waiting_time: RADDER_WAITING_TIME, time_limit: Time.now.utc + MATCHING_TIME_LIMIT[rand(MATCHING_TIME_LIMIT.size)] }
+      @@radder_match_waiting_list[@player.id] = { bp: avatar.point, check_val:, rule:, started: false, waiting_time: RADDER_WAITING_TIME, time_limit: Time.now.utc + MATCHING_TIME_LIMIT[rand(MATCHING_TIME_LIMIT.size)] }
       ret
     end
 

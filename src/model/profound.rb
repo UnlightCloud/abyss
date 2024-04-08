@@ -60,7 +60,7 @@ module Unlight
 
     def self.get_new_profound_for_group(found_avatar_id, group_id, server_type, pow = 0, type = PRF_TYPE_NORMAL)
       r = get_realty(pow)
-      q = search_profound({ group_id: group_id, prf_type: type, rarity: r }, r)
+      q = search_profound({ group_id:, prf_type: type, rarity: r }, r)
       data = q[rand(q.count)] if q
       if data
         ret = Profound.new do |pr|
@@ -234,7 +234,7 @@ module Unlight
       else
         buffs ||= {}
         # 保存 limitはturn*1分
-        buffs[id] = { value: value, turn: turn, limit: Time.now.utc + turn * 60 } if id != 0
+        buffs[id] = { value:, turn:, limit: Time.now.utc + turn * 60 } if id != 0
       end
       CACHE.set("prf_#{self.id}_buffs", buffs, set_time)
       reset ? nil : [id, buffs[id]]
@@ -269,7 +269,7 @@ module Unlight
           if id == b_id && value == v[:value]
             if (v[:turn] - 1).positive?
               turn = v[:turn] - 1
-              ret[b_id] = { value: v[:value], turn: turn }
+              ret[b_id] = { value: v[:value], turn: }
             end
           else
             ret[b_id] = { value: v[:value], turn: v[:turn] }

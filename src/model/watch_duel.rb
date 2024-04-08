@@ -55,8 +55,8 @@ module Unlight
     def set_cache_duel_data(_match_uid, pl_id, foe_id)
       # キャッシュ保存用データ
       set_data = {
-        pl_id: pl_id,
-        foe_id: foe_id
+        pl_id:,
+        foe_id:
       }
       CACHE.set("watch_duel:#{@key}", set_data, WATCH_DATA_CACHE_TIME)
       # コマンドをクリアしておく
@@ -83,11 +83,11 @@ module Unlight
       if @act_command && method
         if @act_command.empty?
           # 最初なのでそのまま追加
-          @act_command.push({ func: method, args: args })
+          @act_command.push({ func: method, args: })
         elsif @act_command.first[:func] != DUEL_ABORT_FUNC_STR
           pop_command = @act_command.pop if @act_command[-1][:func] == DUEL_FINISH_FUNC_STR
           # コマンドを追加
-          @act_command.push({ func: method, args: args })
+          @act_command.push({ func: method, args: })
           # 抜いた場合、入れなおす
           @act_command.push(pop_command) unless pop_command.nil?
           # コマンド配列の末尾が終了なら一度抜く

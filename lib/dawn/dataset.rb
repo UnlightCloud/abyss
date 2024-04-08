@@ -103,13 +103,12 @@ module Dawn
     # @since 0.1.0
     def localize_column(row)
       row
-        .map do |key, value|
+        .filter_map do |key, value|
           next [key, value] unless key.match?(LANGUAGE_SET)
           next unless key.end_with?(language)
 
           [key.sub(/_#{language}$/, ''), value]
         end
-        .compact
         .to_h
     end
 

@@ -183,7 +183,7 @@ module Unlight
     # 自分の次のチャンネルを返す存在しなければnil
     def next_channel
       ret = nil
-      cs = Channel.filter({ rule: rule }).filter(server_type: server_type).order(:order).all
+      cs = Channel.filter({ rule: }).filter(server_type:).order(:order).all
       i = false
       cs.each do |c|
         if i
@@ -198,7 +198,7 @@ module Unlight
     # 自分の前のチャンネルを返す存在しなければnil
     def before_channel
       ret = nil
-      cs = Channel.filter({ rule: rule }).filter(server_type: server_type).order(:order).all
+      cs = Channel.filter({ rule: }).filter(server_type:).order(:order).all
       cs.each_index do |i|
         if cs[i].id == id
           ret = cs[i - 1] if cs[i - 1] && i.positive?

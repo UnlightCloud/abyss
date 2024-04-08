@@ -51,7 +51,7 @@ module Unlight
     # 済んだ
     def self.check(serial, pass)
       ret = nil
-      ess = filter(serial: serial).all
+      ess = filter(serial:).all
       es =  ess.first unless ess.empty?
       if es && es.state == STATE_OK && (es.pass == pass || es.pass == 'pass')
         es.state = STATE_DONE

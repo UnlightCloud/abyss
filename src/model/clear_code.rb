@@ -35,10 +35,10 @@ module Unlight
     # 済んだ
     def self.get_code(kind, max)
       ret = ''
-      if filter(kind: kind, state: STATE_USED).count > max
+      if filter(kind:, state: STATE_USED).count > max
         return ret
       else
-        ccs = filter(kind: kind, state: STATE_UNUSE).all
+        ccs = filter(kind:, state: STATE_UNUSE).all
         unless ccs.empty?
           cc =  ccs.first
           ret = cc.code

@@ -513,7 +513,7 @@ module Unlight
       chara_card_slot_inventories.each do |a|
         if a.combined? && a.combine_passive_id != 0
           vani_psv_ids = a.use_combine_passive
-          ret << { inv: a, vani_psv_ids: vani_psv_ids }
+          ret << { inv: a, vani_psv_ids: }
         end
       end
       ret

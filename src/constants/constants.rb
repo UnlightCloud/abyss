@@ -501,13 +501,13 @@ class OrderHash < Hash
     self
   end
 
-  def reject!(&block)
+  def reject!(&)
     del = ''
     @keys.each do |k|
       del = k if yield(k, self[k])
     end
     @keys.delete(del)
-    super(&block)
+    super(&)
   end
 
   def each_value

@@ -32,7 +32,7 @@ module Unlight
     end
 
     def self.ranking_data_count(server_type)
-      TotalCharaVoteRanking.filter(server_type: server_type).count
+      TotalCharaVoteRanking.filter(server_type:).count
     end
 
     def self.data_type
@@ -45,13 +45,13 @@ module Unlight
     def self.get_ranking(i_id, server_type, point = 0)
       index = get_order_ranking_item_id(server_type).index(i_id)
       if index
-        ret = { rank: index + 1, arrow: get_arrow_set(server_type)[index], point: point }
+        ret = { rank: index + 1, arrow: get_arrow_set(server_type)[index], point: }
       end
       ret
     end
 
     def self.start_up(server_type)
-      list = ItemInventory.filter((Sequel.cast_string(:avatar_item_id) >= CHARA_VOTE_ITEM_START_ID) & (Sequel.cast_string(:avatar_item_id) <= CHARA_VOTE_ITEM_END_ID)).filter(server_type: server_type).order(Sequel.asc(:avatar_item_id)).all
+      list = ItemInventory.filter((Sequel.cast_string(:avatar_item_id) >= CHARA_VOTE_ITEM_START_ID) & (Sequel.cast_string(:avatar_item_id) <= CHARA_VOTE_ITEM_END_ID)).filter(server_type:).order(Sequel.asc(:avatar_item_id)).all
       set_hash = Hash.new(0)
       list.each do |i|
         set_hash[i.avatar_item_id] += 1
@@ -71,7 +71,7 @@ module Unlight
       if before
         arrow_set = []
         a_id_set = CACHE.get("#{@ranking_all_id}_#{server_type}")
-        a_id_set ||= ranking_data.filter(server_type: server_type).order(Sequel.desc(:point)).limit(RANKING_COUNT_NUM).all.map(&:avatar_item_id)
+        a_id_set ||= ranking_data.filter(server_type:).order(Sequel.desc(:point)).limit(RANKING_COUNT_NUM).all.map(&:avatar_item_id)
         a_id_set.each_index do |i|
           rid = a_id_set[i]
           old_rank = before.index(rid)
@@ -104,7 +104,7 @@ module Unlight
     def self.get_order_ranking_item_id(server_type)
       ret = CACHE.get("#{@ranking_all_id}_#{server_type}")
       unless ret
-        ret = ranking_data.filter(server_type: server_type).order(Sequel.desc(:point)).limit(RANKING_COUNT_NUM).all.map(&:avatar_item_id)
+        ret = ranking_data.filter(server_type:).order(Sequel.desc(:point)).limit(RANKING_COUNT_NUM).all.map(&:avatar_item_id)
         CACHE.set("#{@ranking_all_id}_#{server_type}", ret, RANK_CACHE_TTL)
         create_arrow_item_id(server_type)
       end
@@ -113,7 +113,7 @@ module Unlight
 
     def self.update_vote_ranking(item_id, name, point, server_type)
       lr = last_ranking(server_type)
-      r = ranking_data.filter(server_type: server_type).filter(avatar_item_id: item_id).all.first
+      r = ranking_data.filter(server_type:).filter(avatar_item_id: item_id).all.first
       if lr < point
         # すでに登録済みな
         if r
@@ -122,7 +122,7 @@ module Unlight
           r = ranking_data.new
         else
           # いっぱいならケツと交換
-          r = ranking_data.filter(server_type: server_type).order(Sequel.desc(:point)).limit(RANKING_COUNT_NUM).all.last
+          r = ranking_data.filter(server_type:).order(Sequel.desc(:point)).limit(RANKING_COUNT_NUM).all.last
         end
         r.avatar_item_id = item_id
         r.name = name
