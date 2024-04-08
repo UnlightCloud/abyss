@@ -631,7 +631,7 @@ module Unlight
 
       #{hook_remove_gen}
       DSL
-      module_eval doc
+      module_eval doc, __FILE__, __LINE__
       @event_rule = nil
       EventRule.dispose
     end
