@@ -13,7 +13,7 @@ module Abyss
     class << self
       extend Forwardable
 
-      delegate %w[current ready?] => :instance
+      delegate %w[current flush ready?] => :instance
     end
 
     include Singleton
@@ -27,6 +27,10 @@ module Abyss
       true
     rescue Dalli::RingError
       false
+    end
+
+    def flush
+      current.flush
     end
 
     def current
