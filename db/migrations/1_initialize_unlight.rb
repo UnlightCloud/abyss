@@ -2,6 +2,7 @@
 
 # rubocop:disable Naming/VariableNumber
 Sequel.migration do # rubocop:disable Metrics/BlockLength
+  transaction
   change do # rubocop:disable Metrics/BlockLength
     create_table :achievement_inventories do
       primary_key :id

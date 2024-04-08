@@ -28,6 +28,8 @@ gem 'sentry-ruby'
 # Utils
 gem 'activesupport'
 gem 'config'
+gem 'flipper-dalli'
+gem 'flipper-sequel', require: false
 gem 'rake'
 gem 'RubyInline', '~> 3.14.0'
 gem 'semantic_logger'

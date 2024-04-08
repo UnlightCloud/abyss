@@ -33,6 +33,7 @@ require_relative '../config/initializers/sentry'
 # TODO: Require necessary library for Game / API mode
 require_relative '../config/initializers/oj'
 require_relative '../config/initializers/logger'
+require_relative '../config/initializers/flipper'
 
 if File.exist?("#{File.dirname(__FILE__)}/server_ip.rb")
   require 'server_ip'
