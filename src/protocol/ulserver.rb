@@ -168,7 +168,7 @@ module Unlight
       end
 
       def method_missing(msg, *_arg)
-        SERVER_LOG.warn("#{@@class_name}:Command [#{msg}] is Undefined")
+        SERVER_LOG.fatal("#{@@class_name}:Command [#{msg}] is undefined")
       end
 
       # 子クラスが使用する汎用関数
