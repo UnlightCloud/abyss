@@ -452,7 +452,7 @@ module Unlight
       ent1 = @entrants[@initi[1]]
 
       # 一撃死のチェック）
-      striked = ((ent1.current_hit_point_max == ent1.current_hit_point) && (ent1.current_hit_point_max <= @tmp_damage))
+      striked = (ent1.current_hit_point_max == ent1.current_hit_point) && (ent1.current_hit_point_max <= @tmp_damage)
       ent1.damaged_event(@tmp_damage) if @tmp_damage.positive?
       # ファーストアタックか実行済みでなくかつダメージが生じていたら
       if !@first_attack_bonus_done && @tmp_damage.positive?
@@ -611,32 +611,32 @@ module Unlight
         when RULE_1VS1
           case r
           when RESULT_WIN
-            Reward::RESULT_1VS1_WIN
+            RESULT_1VS1_WIN
           when RESULT_LOSE
-            Reward::RESULT_1VS1_LOSE
+            RESULT_1VS1_LOSE
           when RESULT_DRAW
-            Reward::RESULT_1VS1_LOSE
+            RESULT_1VS1_LOSE
           end
         when RULE_3VS3
           case r
           when RESULT_WIN
-            Reward::RESULT_3VS3_WIN
+            RESULT_3VS3_WIN
           when RESULT_LOSE
-            Reward::RESULT_3VS3_LOSE
+            RESULT_3VS3_LOSE
           when RESULT_DRAW
-            Reward::RESULT_3VS3_LOSE
+            RESULT_3VS3_LOSE
           end
         else
-          Reward::RESULT_1VS1_LOSE
+          RESULT_1VS1_LOSE
         end
       else
         case r
         when RESULT_WIN
-          Reward::RESULT_CPU_WIN
+          RESULT_CPU_WIN
         when RESULT_LOSE
-          Reward::RESULT_CPU_LOSE
+          RESULT_CPU_LOSE
         when RESULT_DRAW
-          Reward::RESULT_CPU_LOSE
+          RESULT_CPU_LOSE
         end
       end
     end

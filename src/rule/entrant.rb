@@ -1880,41 +1880,41 @@ module Unlight
       [kind, pow, turn]
     end
     regist_event SetFieldStatusEvent
-  end
 
-  # 経験値を計算
-  def update_exp(result)
-    case result
-    when RESULT_WIN
-      @base_exp = @result_exp * 1 * @exp_pow
-      @exp_bonus = DUEL_BONUS_POW * @reward_bonus
-      (@base_exp + @exp_bonus).ceil
-    when RESULT_LOSE
-      @base_exp = (@result_exp * 0.3 * @exp_pow).round
-      @exp_bonus = 0
-      @base_exp.round
-    when RESULT_DRAW
-      @base_exp = (@result_exp * 0.5 * @exp_pow).round
-      @exp_bonus = 0
-      @base_exp.round
+    # 経験値を計算
+    def update_exp(result)
+      case result
+      when RESULT_WIN
+        @base_exp = @result_exp * 1 * @exp_pow
+        @exp_bonus = DUEL_BONUS_POW * @reward_bonus
+        (@base_exp + @exp_bonus).ceil
+      when RESULT_LOSE
+        @base_exp = (@result_exp * 0.3 * @exp_pow).round
+        @exp_bonus = 0
+        @base_exp.round
+      when RESULT_DRAW
+        @base_exp = (@result_exp * 0.5 * @exp_pow).round
+        @exp_bonus = 0
+        @base_exp.round
+      end
     end
-  end
 
-  # 獲得ジェムを計算
-  def update_gems(result)
-    case result
-    when RESULT_WIN
-      (@result_gems * 1 * (0.4 + dice(0.3, 4)) * @special_gem_bonus_multi).ceil
-    when RESULT_LOSE
-      (@result_gems * 0.3 * (0.4 + dice(0.3, 4)) * @special_gem_bonus_multi).truncate
-    when RESULT_DRAW
-      (@result_gems * 0.5 * (0.4 + dice(0.3, 4)) * @special_gem_bonus_multi).round
+    # 獲得ジェムを計算
+    def update_gems(result)
+      case result
+      when RESULT_WIN
+        (@result_gems * 1 * (0.4 + dice(0.3, 4)) * @special_gem_bonus_multi).ceil
+      when RESULT_LOSE
+        (@result_gems * 0.3 * (0.4 + dice(0.3, 4)) * @special_gem_bonus_multi).truncate
+      when RESULT_DRAW
+        (@result_gems * 0.5 * (0.4 + dice(0.3, 4)) * @special_gem_bonus_multi).round
+      end
     end
-  end
 
-  def dice(pow, num)
-    ret = 0
-    num.times { ret += rand * pow }
-    ret
+    def dice(pow, num)
+      ret = 0
+      num.times { ret += rand * pow }
+      ret
+    end
   end
 end
