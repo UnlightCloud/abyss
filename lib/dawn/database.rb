@@ -6,6 +6,7 @@
 # frozen_string_literal: true
 
 require 'yaml'
+require 'erb'
 require 'singleton'
 require 'forwardable'
 
@@ -44,8 +45,10 @@ module Dawn
       return @config if @config
       return @config = ENV['DATABASE_URL'] unless config_file.exist?
 
+      template = ERB.new(config_file.read)
+
       @config ||=
-        YAML.safe_load(config_file.read).fetch(Dawn.env, nil)
+        YAML.safe_load(template.result(binding), aliases: true).fetch(Dawn.env, nil)
       @config ||= ENV['DATABASE_URL']
       @config
     end

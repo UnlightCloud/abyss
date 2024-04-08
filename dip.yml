@@ -28,12 +28,21 @@ interaction:
   spec:
     description: Run the rspec command
     service: auth
+    environment:
+      DAWN_ENV: test
     command: bundle exec rspec
 
   cucumber:
     description: Run the cucumber command
     service: auth
+    environment:
+      DAWN_ENV: test
     command: bundle exec cucumber
+
+  database:
+    description: Run the database console
+    service: mysql
+    command: mysql -h mysql -p unlight_$DAWN_ENV
 
   client_data:
     description: Generate client data
@@ -49,4 +58,6 @@ provision:
   - dip clean_cache
   - dip bundle
   - dip up -d --wait mysql memcached
+  - dip compose exec mysql mysqladmin -punlight create unlight_development
+  - dip compose exec mysql mysqladmin -punlight create unlight_test
   - dip abyss upgrade
