@@ -15,19 +15,55 @@ Abssy is a community-driven project to make the Unlight server updated to date a
 
 ## Development
 
+The development environment is built on top of Docker and Docker Compose with dip gem to manage the development environment.
+
 ### Requirement
 
 * Ruby 3.2+
 * MySQL 8.0+
 * Memcached
 
+### Provision
+
+```bash
+dip provision
+```
+
+> If `data/` contains the game data it will be loaded into the database.
+
+### Start Server
+
+```bash
+dip up
+```
+
+### Stop Server
+
+```bash
+dip stop
+```
+
+### Console
+
+```bash
+dip abyss console
+```
+
 ### Cucumber
 
 We are focused on E2E testing to ensure each behavior can be reproduced that didn't break anything when we working on refactoring and improvement.
 
+```bash
+dip cucumber
+```
+
 ### RSpec
 
 For each component and module, we will use RSpec to ensure the logic behind it is working as expected.
+
+```bash
+dip rspec
+```
 
 ## License
 
