@@ -294,6 +294,7 @@ DEPENDENCIES
   simplecov-cobertura
   sqlite3
   super_diff
+  zeitwerk
 
 BUNDLED WITH
    2.4.13
