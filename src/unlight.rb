@@ -24,7 +24,14 @@ Sequel::Model.require_valid_table = false
 Sequel::Model.plugin :json_serializer
 
 require 'dawn'
+require 'dawn/database'
 require 'abyss'
+
+# Abyss
+module Unlight
+  class Application < Abyss::Application
+  end
+end
 
 # TODO: Refactor to Dawn::AppLoader
 # Initialize Extensions
@@ -37,15 +44,6 @@ require_relative '../config/initializers/flipper'
 
 if File.exist?("#{File.dirname(__FILE__)}/server_ip.rb")
   require 'server_ip'
-end
-
-# Dawn
-require 'dawn/database'
-
-# Abyss
-module Unlight
-  class Application < Abyss::Application
-  end
 end
 
 # 定数

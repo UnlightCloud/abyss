@@ -9,11 +9,10 @@ if ENV['DAWN_LOG_TO_STDOUT']
 
   SemanticLogger.add_appender(io: $stdout, formatter: Dawn.logger_format)
 else
-  SemanticLogger.add_appender(file_name: "log/#{Dawn.env}.log", formatter: Dawn.logger_format)
+  SemanticLogger.add_appender(file_name: "log/#{Abyss.env}.log", formatter: Dawn.logger_format)
 end
 
-SemanticLogger.add_appender(io: $stdout, formatter: Dawn.logger_format) if Dawn.env == 'development'
+SemanticLogger.add_appender(io: $stdout, formatter: Dawn.logger_format) if Abyss.env?(:development)
 
-SemanticLogger.environment = Dawn.env
-SemanticLogger.application = 'Dawn'
+SemanticLogger.environment = Abyss.env
 # TODO: Set hostname

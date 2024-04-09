@@ -11,5 +11,5 @@ Config.setup do |config|
 end
 
 Config.load_and_set_settings(
-  Config.setting_files(Dawn.root.join('config'), Dawn.env)
+  Config.setting_files(Abyss.root.join('config'), Abyss.env)
 )

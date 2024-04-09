@@ -49,6 +49,18 @@ module Abyss
     end
   end
 
+  # @api public
+  # @since 0.1.0
+  def env(env: ENV)
+    env.fetch('ABYSS_ENV') { env.fetch('DAWN_ENV', 'development') }.to_sym
+  end
+
+  # @api public
+  # @since 0.1.0
+  def env?(*names)
+    names.map(&:to_sym).include?(env)
+  end
+
   # Boots the application
   #
   # @see Application::ClassMethods#boot
