@@ -27,7 +27,6 @@ gem 'sentry-ruby'
 
 # Utils
 gem 'activesupport'
-gem 'config'
 gem 'flipper-dalli'
 gem 'flipper-sequel', require: false
 gem 'rake'
