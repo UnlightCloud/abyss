@@ -42,6 +42,12 @@ end
 # Dawn
 require 'dawn/database'
 
+# Abyss
+module Unlight
+  class Application < Abyss::Application
+  end
+end
+
 # 定数
 require 'constants/common_constants'
 require 'constants/reward_constants'
@@ -148,6 +154,4 @@ require 'model/combine_case'
 require 'model/reissue_request'
 require 'rule/ai'
 
-# メモリリークチェック用関数
-module Unlight
-end
+Abyss.boot

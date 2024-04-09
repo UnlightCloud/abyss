@@ -33,6 +33,9 @@ gem 'flipper-sequel', require: false
 gem 'rake'
 gem 'RubyInline', '~> 3.14.0'
 gem 'semantic_logger'
+
+# Abyss
+gem 'dry-system'
 gem 'zeitwerk'
 
 group :build do
