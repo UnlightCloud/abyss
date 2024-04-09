@@ -22,6 +22,9 @@ SimpleCov.start do
   add_group 'Libraries', 'lib/'
 end
 
+ENV['DAWN_ENV'] = 'test'
+ENV['ABYSS_ENV'] = 'test'
+
 require_relative '../../src/unlight'
 
 Abyss::Cache.flush # NOTE: Unlight cache breaks tests

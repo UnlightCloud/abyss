@@ -14,7 +14,6 @@ x-image: &image
     MEMCACHED_HOST: memcached:11211
     # Unlight
     RUBY_INLINE_DIR: /opt/unlight/lib/ruby_inline
-    DAWN_LOG_TO_STDOUT: ${LOG_TO_STDOUT:-true}
     # Development
     HISTFILE: /usr/local/hist/.bash_history
     LANG: C.UTF-8

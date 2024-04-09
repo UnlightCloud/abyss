@@ -4,7 +4,6 @@ version: '8.0'
 environment:
   DAWN_ENV: development
   RUBY_VERSION: <%= RUBY_VERSION %>
-  LOG_TO_STDOUT: true
   WORK_DIR: /opt/unlight/${DIP_WORK_DIR_REL_PATH}
 
 compose:
