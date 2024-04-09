@@ -34,11 +34,14 @@ SimpleCov.start do
 end
 
 ENV['DAWN_ENV'] = 'test'
+ENV['ABYSS_ENV'] = 'test'
 
 require 'dawn/database'
 Dawn::Database.migrate!
 
 require_relative '../src/unlight'
+
+Abyss::Cache.flush # NOTE: Unlight cache breaks tests
 
 Dir[Bundler.root.join('spec/support/**/*.rb')].each { |support| require support }
 

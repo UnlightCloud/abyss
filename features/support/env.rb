@@ -23,3 +23,5 @@ SimpleCov.start do
 end
 
 require_relative '../../src/unlight'
+
+Abyss::Cache.flush # NOTE: Unlight cache breaks tests
