@@ -25,13 +25,7 @@ Sequel::Model.plugin :json_serializer
 
 require 'dawn'
 require 'dawn/database'
-require 'abyss'
-
-# Abyss
-module Unlight
-  class Application < Abyss::Application
-  end
-end
+require 'abyss/setup'
 
 # TODO: Refactor to Dawn::AppLoader
 # Initialize Extensions
