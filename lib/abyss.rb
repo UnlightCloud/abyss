@@ -17,6 +17,7 @@ module Abyss
     @loader ||= Zeitwerk::Loader.for_gem.tap do |loader| # rubocop:disable ThreadSafety/InstanceVariableInClassMethod
       loader.ignore("#{__dir__}/dawn.rb")
       loader.ignore("#{__dir__}/{dawn,ruby_inline,tasks}/")
+      loader.ignore("#{__dir__}/abyss/errors.rb")
     end
   end
 
@@ -32,7 +33,7 @@ module Abyss
   # @since 0.1.0
   def app
     @_mutex.synchronize do
-      raise 'Abyss.app is not configured' unless defined?(@app)
+      raise AppLoadError, 'Abyss.app is not configured' unless defined?(@app)
 
       @app
     end
@@ -42,7 +43,7 @@ module Abyss
   # @since 0.1.0
   def app=(app)
     @_mutex.synchronize do
-      raise 'Abyss.app is already configured' if instance_variable_defined?(:@app)
+      raise AppLoadError, 'Abyss.app is already configured' if instance_variable_defined?(:@app)
 
       @app = app
     end
@@ -59,4 +60,6 @@ module Abyss
   end
 
   loader.setup
+
+  require_relative 'abyss/errors'
 end

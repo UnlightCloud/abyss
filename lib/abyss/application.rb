@@ -2,6 +2,7 @@
 
 require 'dry/system'
 
+# rubocop:disable ThreadSafety/InstanceVariableInClassMethod
 module Abyss
   # @since 0.1.0
   class Application
@@ -49,7 +50,7 @@ module Abyss
       #
       # @since 0.1.0
       def booted?
-        !!@booted # rubocop:disable ThreadSafety/InstanceVariableInClassMethod
+        !!@booted
       end
 
       # boot the application
@@ -61,10 +62,11 @@ module Abyss
         return self if booted?
 
         container.finalize!
-        @booted = true # rubocop:disable ThreadSafety/InstanceVariableInClassMethod
+        @booted = true
 
         self
       end
     end
   end
 end
+# rubocop:enable ThreadSafety/InstanceVariableInClassMethod
