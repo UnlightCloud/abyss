@@ -63,6 +63,15 @@ module Abyss
         @inflector ||= Dry::Inflector.new
       end
 
+      # return the application namespace
+      #
+      # @return [Module]
+      #
+      # @since 0.1.0
+      def namespace
+        app_name.namespace
+      end
+
       # return is booted
       #
       # @return [Boolean]
@@ -80,8 +89,35 @@ module Abyss
       def boot
         return self if booted?
 
+        prepare
+
         container.finalize!
         @booted = true
+
+        self
+      end
+
+      # return is prepared
+      #
+      # @return [Boolean]
+      #
+      # @since 0.1.0
+      def prepared?
+        !!@prepared
+      end
+
+      # prepare the application
+      #
+      # @return [self]
+      #
+      # @since 0.1.0
+      def prepare
+        return self if prepared?
+
+        namespace.const_set(:Container, container)
+        namespace.const_set(:Deps, container.injector)
+
+        @prepared = true
 
         self
       end
