@@ -61,6 +61,15 @@ module Abyss
         @app_name ||= AppName.new(self, inflector: method(:inflector))
       end
 
+      # return the application's root path
+      #
+      # @return [Pathname]
+      #
+      # @since 0.1.0
+      def root
+        @root ||= Pathname.new(Abyss.root)
+      end
+
       # return the inflector
       #
       # @return [Dry::Inflector]
@@ -140,6 +149,9 @@ module Abyss
         prepare_container_constants
         prepare_container_plugins
         prepare_container_base_config
+        container.configured!
+
+        prepare_autoloader
 
         @prepared = true
 
@@ -169,12 +181,20 @@ module Abyss
       # @since 0.1.0
       def prepare_container_base_config
         container.config.name = app_name.to_sym
-        container.config.root = Abyss.root
+        container.config.root = root
         container.config.provider_dirs = [File.join('config', 'providers')]
         container.config.registrations_dir = File.join('config', 'registrations')
 
         container.config.env = config.env
         container.config.inflector = config.inflector
+      end
+
+      # @api private
+      # @since 0.1.0
+      def prepare_autoloader
+        autoloader.ignore(root.join(CONFIG_DIR)) if root.join(CONFIG_DIR)&.directory?
+
+        autoloader.setup
       end
     end
   end
