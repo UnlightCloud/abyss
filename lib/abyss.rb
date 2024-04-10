@@ -79,6 +79,15 @@ module Abyss
     app.boot
   end
 
+  # Return application's logger
+  #
+  # @return [logger] the application logger
+  #
+  # @since 0.1.0
+  def logger
+    app[:logger]
+  end
+
   # Finds and loads the Abyss application file (`config/application.rb`)
   #
   # @return [Abyss::App] the loaded application

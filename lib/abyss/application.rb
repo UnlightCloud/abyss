@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'forwardable'
+
 require 'dry/system'
 require 'dry/inflector'
 
@@ -31,6 +33,19 @@ module Abyss
     #
     # @since 0.1.0
     module ClassMethods
+      extend Forwardable
+
+      delegate %i[
+        register
+        register_provider
+        start
+        stop
+        key?
+        keys
+        []
+        resolve
+      ] => :container
+
       # return application config
       #
       # @return [Abyss::Config]
