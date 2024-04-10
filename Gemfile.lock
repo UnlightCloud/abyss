@@ -243,6 +243,7 @@ DEPENDENCIES
   dip
   dotenv
   dry-cli
+  dry-inflector
   dry-system
   eventmachine
   factory_bot

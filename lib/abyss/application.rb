@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'dry/system'
+require 'dry/inflector'
 
 # rubocop:disable ThreadSafety/InstanceVariableInClassMethod
 module Abyss
@@ -43,6 +44,24 @@ module Abyss
       #
       # @since 0.1.0
       attr_reader :container
+
+      # return a {AppName} for the application, an object with methods in various format
+      #
+      # @return [AppName]
+      #
+      # @since 0.1.0
+      def app_name
+        @app_name ||= AppName.new(self, inflector: method(:inflector))
+      end
+
+      # return the inflector
+      #
+      # @return [Dry::Inflector]
+      #
+      # @since 0.1.0
+      def inflector
+        @inflector ||= Dry::Inflector.new
+      end
 
       # return is booted
       #
