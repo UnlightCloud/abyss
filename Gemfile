@@ -34,6 +34,7 @@ gem 'RubyInline', '~> 3.14.0'
 gem 'semantic_logger'
 
 # Abyss
+gem 'dry-configurable'
 gem 'dry-inflector'
 gem 'dry-system'
 gem 'zeitwerk'

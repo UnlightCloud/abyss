@@ -243,6 +243,7 @@ DEPENDENCIES
   dip
   dotenv
   dry-cli
+  dry-configurable
   dry-inflector
   dry-system
   eventmachine

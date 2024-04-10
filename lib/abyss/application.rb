@@ -19,9 +19,9 @@ module Abyss
 
         @_mutex.synchronize do
           subclass.class_eval do
-            @_mutex = Mutex.new
             @autoloader = Zeitwerk::Loader.new
             @container = Class.new(Dry::System::Container)
+            @config = Config.new(app_name:, env: Abyss.env)
           end
         end
       end
@@ -31,6 +31,13 @@ module Abyss
     #
     # @since 0.1.0
     module ClassMethods
+      # return application config
+      #
+      # @return [Abyss::Config]
+      #
+      # @since 0.1.0
+      attr_reader :config
+
       # return abyss autoloader
       #
       # @return [Zeitwrk::Loader]
@@ -60,7 +67,7 @@ module Abyss
       #
       # @since 0.1.0
       def inflector
-        @inflector ||= Dry::Inflector.new
+        config.inflector
       end
 
       # return the application namespace
@@ -113,6 +120,8 @@ module Abyss
       # @since 0.1.0
       def prepare
         return self if prepared?
+
+        config.finalize!
 
         namespace.const_set(:Container, container)
         namespace.const_set(:Deps, container.injector)
