@@ -18,6 +18,14 @@ module Abyss
     # @since 0.1.0
     setting :inflector, default: Dry::Inflector.new
 
+    # @!attribute [rw] settings_store
+    #
+    # @return [Abyss::Settings::EnvStore]
+    #
+    # @api public
+    # @since 0.1.0
+    setting :settings_store, default: Abyss::Settings::EnvStore.new
+
     # Return the application's {Abyss::AppName app_name}
     #
     # @return [Abyss::AppName]

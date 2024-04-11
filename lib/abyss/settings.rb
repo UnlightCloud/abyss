@@ -15,7 +15,7 @@ module Abyss
 
         require settings_path
         klass = app.namespace.const_get(SETTINGS_CLASS_NAME)
-        klass.new
+        klass.new(app.config.settings_store)
       rescue LoadError => e
         raise e unless e.path == settings_path
       end
