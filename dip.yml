@@ -2,6 +2,7 @@
 version: '8.0'
 
 environment:
+  ABYSS_ENV: development
   DAWN_ENV: development
   RUBY_VERSION: <%= RUBY_VERSION %>
   WORK_DIR: /opt/unlight/${DIP_WORK_DIR_REL_PATH}
@@ -30,6 +31,7 @@ interaction:
     description: Run the rspec command
     service: auth
     environment:
+      ABYSS_ENV: test
       DAWN_ENV: test
     command: bundle exec rspec
 
@@ -37,6 +39,7 @@ interaction:
     description: Run the cucumber command
     service: auth
     environment:
+      ABYSS_ENV: test
       DAWN_ENV: test
     command: bundle exec cucumber
 

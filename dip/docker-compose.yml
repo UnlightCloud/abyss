@@ -8,9 +8,7 @@ x-image: &image
     - history:/usr/local/hist
   working_dir: ${WORK_DIR:-/opt/unlight}
   environment:
-    DB_HOST: mysql
-    DB_USER: root
-    DB_PASSWORD: unlight
+    DATABASE_URL: mysql2://root:unlight@mysql/unlight_${ABYSS_ENV:-development}?encoding=utf8mb4
     MEMCACHED_HOST: memcached:11211
     # Unlight
     RUBY_INLINE_DIR: /opt/unlight/lib/ruby_inline
