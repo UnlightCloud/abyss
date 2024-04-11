@@ -103,6 +103,17 @@ module Abyss
         app_name.namespace
       end
 
+      # return the application's settings
+      #
+      # @return [Abyss::Settings]
+      #
+      # @since 0.1.0
+      def settings
+        return @settings if instance_variable_defined?(:@settings)
+
+        @settings = Settings.load(self)
+      end
+
       # return is booted
       #
       # @return [Boolean]
@@ -161,6 +172,7 @@ module Abyss
 
         config.finalize!
 
+        prepare_settings
         prepare_container_constants
         prepare_container_plugins
         prepare_container_base_config
@@ -171,6 +183,12 @@ module Abyss
         @prepared = true
 
         self
+      end
+
+      # @api private
+      # @since 0.1.0
+      def prepare_settings
+        container.register(:settings, settings) if settings
       end
 
       # @api private

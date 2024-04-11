@@ -12,4 +12,12 @@ module Abyss
   # @api private
   MODULE_DELIMITER = '::'
   private_constant :MODULE_DELIMITER
+
+  # @api private
+  SETTINGS_PATH = 'config/settings.rb'
+  private_constant :SETTINGS_PATH
+
+  # @api private
+  SETTINGS_CLASS_NAME = 'Settings'
+  private_constant :SETTINGS_CLASS_NAME
 end
