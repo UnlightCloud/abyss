@@ -388,7 +388,7 @@ module Unlight
   #     DB = Sequel.mysql2(nil, MYSQL_CONFIG)
   #   end
   # #  DB = Sequel.mysql(nil,MYSQL)
-  DB = Dawn::Database.current
+  DB = Container[:database]
 
   Sequel.default_timezone = :utc
 

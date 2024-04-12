@@ -3,13 +3,10 @@
 require 'database_cleaner'
 require 'database_cleaner-sequel'
 
-DatabaseCleaner[:sequel].db = Dawn::Database.current
-
 RSpec.configure do |config|
-  config.before(:suite) do
-    DatabaseCleaner[:sequel].strategy = :transaction
-    DatabaseCleaner[:sequel].clean_with(:truncation)
-  end
+  DatabaseCleaner[:sequel].db = Unlight::Container[:database]
+  DatabaseCleaner[:sequel].strategy = :transaction
+  DatabaseCleaner[:sequel].clean_with(:truncation)
 
   config.around do |example|
     DatabaseCleaner[:sequel].cleaning do

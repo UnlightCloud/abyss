@@ -3,7 +3,7 @@
 require 'database_cleaner'
 require 'database_cleaner-sequel'
 
-DatabaseCleaner[:sequel].db = Dawn::Database.current
+DatabaseCleaner[:sequel].db = Unlight::Container[:database]
 DatabaseCleaner[:sequel].strategy = :truncation
 
 Around do |_scenario, block|

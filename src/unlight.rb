@@ -24,8 +24,7 @@ Sequel::Model.require_valid_table = false
 Sequel::Model.plugin :json_serializer
 
 require 'dawn'
-require 'dawn/database'
-require 'abyss/setup'
+require 'abyss/boot'
 
 # TODO: Refactor to Dawn::AppLoader
 # Initialize Extensions
@@ -143,5 +142,3 @@ require 'model/event_quest_flag_inventory'
 require 'model/combine_case'
 require 'model/reissue_request'
 require 'rule/ai'
-
-Abyss.boot
