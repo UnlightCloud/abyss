@@ -10,7 +10,7 @@ Abyss.app.register_provider :logger do
     use_stdout = %w[true yes 1].include?(to_stdout)
 
     SemanticLogger.add_appender(file_name: "log/#{Abyss.env}.log", formatter:)
-    SemanticLogger.add_appender(io: $stdout, formatter: Dawn.logger_format) if use_stdout || Abyss.env?(:development)
+    SemanticLogger.add_appender(io: $stdout, formatter:) if use_stdout || Abyss.env?(:development)
 
     SemanticLogger.environment = Abyss.env
 
