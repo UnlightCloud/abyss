@@ -30,32 +30,32 @@ module Unlight
         @@current_time = h
       end
     rescue StandardError => e
-      Dawn.logger.fatal('Pop CPU failed', e)
+      Unlight::Container[:logger].fatal('Pop CPU failed', e)
     end
 
     EM::PeriodicTimer.new(60) do
       MatchServer.check_boot
       MatchServer.update_login_count
     rescue StandardError => e
-      Dawn.logger.fatal('Check boot failed', e)
+      Unlight::Container[:logger].fatal('Check boot failed', e)
     end
 
     EM::PeriodicTimer.new(60 / GAME_CHECK_CONNECT_INTERVAL) do
       MatchServer.check_connection_sec
     rescue StandardError => e
-      Dawn.logger.fatal('Check connection failed', e)
+      Unlight::Container[:logger].fatal('Check connection failed', e)
     end
 
     EM::PeriodicTimer.new(5) do
       MatchServer.radder_match_update
     rescue StandardError => e
-      Dawn.logger.fatal('Radder match update failed', e)
+      Unlight::Container[:logger].fatal('Radder match update failed', e)
     end
 
     EM::PeriodicTimer.new(RADDER_CPU_POP_TIME) do
       MatchController.cpu_radder_match_update if RADDER_CPU_POP_ENABLE && rand(RADDER_CPU_POP_RAND).zero?
     rescue StandardError => e
-      Dawn.logger.fatal('Radder CPU POP failed', e)
+      Unlight::Container[:logger].fatal('Radder CPU POP failed', e)
     end
   end
 end

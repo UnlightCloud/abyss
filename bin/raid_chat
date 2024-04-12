@@ -23,7 +23,7 @@ module Unlight
     EM::PeriodicTimer.new(60) do
       RaidChatServer.check_connection
     rescue StandardError => e
-      Dawn.logger.fatal('Check connection failed', e)
+      Unlight::Container[:logger].fatal('Check connection failed', e)
     end
   end
 end

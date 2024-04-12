@@ -13,7 +13,6 @@ ENV['INLINEDIR'] = "#{d}lib/ruby_inline"
 
 require 'rubygems'
 require 'sequel'
-require 'logger'
 require 'dalli'
 require 'sentry-ruby'
 
@@ -31,7 +30,6 @@ require 'abyss/boot'
 require_relative '../config/initializers/sentry'
 # TODO: Require necessary library for Game / API mode
 require_relative '../config/initializers/oj'
-require_relative '../config/initializers/logger'
 
 if File.exist?("#{File.dirname(__FILE__)}/server_ip.rb")
   require 'server_ip'

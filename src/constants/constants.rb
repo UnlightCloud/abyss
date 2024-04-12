@@ -393,7 +393,7 @@ module Unlight
   Sequel.default_timezone = :utc
 
   # ログの出力先
-  SERVER_LOG = Dawn.logger
+  SERVER_LOG = Container[:logger]
   # ログレベル
   #  SERVER_LOG.level = Logger::DEBUG
   SERVER_LOG.level = Logger::INFO

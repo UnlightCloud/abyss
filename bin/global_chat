@@ -23,26 +23,26 @@ module Unlight
     EM::PeriodicTimer.new(RAID_HELP_SEND_TIME) do
       GlobalChatServer.sending_help_list
     rescue StandardError => e
-      Dawn.logger.fatal('Sending help list failed', e)
+      Unlight::Container[:logger].fatal('Sending help list failed', e)
     end
 
     EM::PeriodicTimer.new(60) do
       GlobalChatServer.check_connection
     rescue StandardError => e
-      Dawn.logger.fatal('Check connection failed', e)
+      Unlight::Container[:logger].fatal('Check connection failed', e)
     end
 
     if PRF_AUTO_CREATE_EVENT_FLAG
       EM::PeriodicTimer.new(PRF_AUTO_CREATE_INTERVAL) do
         GlobalChatController.auto_create_prf
       rescue StandardError => e
-        Dawn.logger.fatal('Auto create profound failed', e)
+        Unlight::Container[:logger].fatal('Auto create profound failed', e)
       end
 
       EM::PeriodicTimer.new(PRF_AUTO_HELP_INTERVAL) do
         GlobalChatController.auto_prf_send_help
       rescue StandardError => e
-        Dawn.logger.fatal('Send profound help failed', e)
+        Unlight::Container[:logger].fatal('Send profound help failed', e)
       end
     end
   end

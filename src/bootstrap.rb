@@ -17,26 +17,27 @@ EM.epoll
 # TODO: Remove after Dawn::Application is ready
 module Dawn
   class Bootstrap
-    attr_reader :name, :server
+    attr_reader :name, :server, :logger
 
     def initialize(server, *args)
       @server = server
       @name = server.name.split('::').last
       @args = args
-
-      Dawn.logger.name = @name
+      @logger = Unlight::Container[:logger]
 
       Signal.trap(:INT) { stop }
       Signal.trap(:TERM) { stop }
     end
 
     def start
+      logger.name = name
+
       EM.run do
         server.setup(*@args)
         EM.start_server '0.0.0.0', Dawn::Server.port, server
         EM.set_quantum(10)
 
-        Dawn.logger.info("Listening... #{Dawn::Server.hostname}:#{Dawn::Server.port}")
+        logger.info("Listening... #{Dawn::Server.hostname}:#{Dawn::Server.port}")
 
         start_database_connection_checker
 
@@ -45,7 +46,7 @@ module Dawn
     end
 
     def stop
-      Dawn.logger.info('Stopping...')
+      logger.info('Stopping...')
       SemanticLogger.flush
       EM.stop_event_loop
     end
@@ -58,7 +59,7 @@ module Dawn
       EM::PeriodicTimer.new(60 * 60 * 7) do
         server.check_db_connection
       rescue StandardError => e
-        Dawn.logger.fatal('Check database connection failed', e)
+        logger.fatal('Check database connection failed', e)
       end
     end
   end

@@ -24,13 +24,13 @@ module Unlight
     EM::PeriodicTimer.new(0.3) do
       MultiDuel.update
     rescue StandardError => e
-      Dawn.logger.fatal('MultiDuel update failed', e)
+      Unlight::Container[:logger].fatal('MultiDuel update failed', e)
     end
 
     EM::PeriodicTimer.new(1) do
       AI.update
     rescue StandardError => e
-      Dawn.logger.fatal('AI update failed', e)
+      Unlight::Container[:logger].fatal('AI update failed', e)
     end
 
     EM::PeriodicTimer.new(60 / GAME_CHECK_CONNECT_INTERVAL) do
