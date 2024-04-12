@@ -6,6 +6,10 @@ module Abyss
   private_constant :APP_PATH
 
   # @api private
+  APP_DIR = 'app'
+  private_constant :APP_DIR
+
+  # @api private
   CONFIG_DIR = 'config'
   private_constant :CONFIG_DIR
 
