@@ -36,8 +36,9 @@ end
 ENV['DAWN_ENV'] = 'test'
 ENV['ABYSS_ENV'] = 'test'
 
-require 'dawn/database'
-Dawn::Database.migrate!
+require 'abyss/prepare'
+
+Abyss::Migrator.new(Abyss.app[:settings][:database_url]).migrate!
 
 require_relative '../src/unlight'
 

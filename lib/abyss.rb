@@ -19,7 +19,7 @@ module Abyss
     @loader ||= Zeitwerk::Loader.for_gem.tap do |loader| # rubocop:disable ThreadSafety/InstanceVariableInClassMethod
       loader.ignore("#{__dir__}/dawn.rb")
       loader.ignore("#{__dir__}/{dawn,ruby_inline,tasks}/")
-      loader.ignore("#{__dir__}/abyss/{constants,errors,setup,boot}.rb")
+      loader.ignore("#{__dir__}/abyss/{constants,errors,setup,prepare,boot}.rb")
     end
   end
 
@@ -67,6 +67,16 @@ module Abyss
   # @since 0.1.0
   def env?(*names)
     names.map(&:to_sym).include?(env)
+  end
+
+  # Prepare Abyss application
+  #
+  # @see Application::ClassMethods#prepare
+  #
+  # @api public
+  # @since 0.1.0
+  def prepare
+    app.prepare
   end
 
   # Boots the application

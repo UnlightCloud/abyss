@@ -14,9 +14,10 @@ module Abyss
       option :cpu_decks, type: :boolean, default: true, desc: 'Initialize CPU decks after upgrading'
 
       def call(**options)
+        require 'abyss/prepare'
         require 'dawn/database'
 
-        Dawn::Database.migrate!(options.fetch(:version, nil))
+        Abyss::Migrator.new(Abyss.app[:settings][:database_url]).migrate!
         import_data if options[:import]
         initialize_cpu_decks if options[:cpu_decks]
       end
