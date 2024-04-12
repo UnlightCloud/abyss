@@ -59,7 +59,9 @@ module Dawn
     def migrate!(version = nil)
       Sequel.extension :migration
       version = version.to_i unless version.nil?
-      Sequel::Migrator.run(current, Dawn.root.join('db/migrations'), target: version, use_advisory_lock: true)
+      current do |database|
+        Sequel::Migrator.run(database, Dawn.root.join('db/migrations'), target: version, use_advisory_lock: true)
+      end
     end
 
     # Check any pendign migrations
@@ -70,19 +72,21 @@ module Dawn
     def pending?(version = nil)
       Sequel.extension :migration
       version = version&.to_i unless version.nil?
-      Sequel::Migrator.is_current?(current, Dawn.root.join('db/migrations'), target: version, use_advisory_lock: true) == false
+      current do |database|
+        Sequel::Migrator.is_current?(database, Dawn.root.join('db/migrations'), target: version, use_advisory_lock: true) == false
+      end
     end
 
     # @return [Sequel] the current database object
     #
     # @since 0.1.0
-    def current
+    def current(&)
       return @current if @current
 
       @mutex.synchronize do
         return @current if @current
 
-        @current = Sequel.connect(config, logger: SemanticLogger['Database'])
+        @current = Sequel.connect(config, logger: SemanticLogger['Database'], &)
       end
 
       @current
