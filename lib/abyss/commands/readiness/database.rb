@@ -7,13 +7,13 @@ module Abyss
       #
       # @since 0.1.0
       class Database < Dry::CLI::Command
-        require 'dawn'
-        require 'abyss/boot'
-
         desc 'Check the database is ready'
         option :wait, type: :boolean, default: false, desc: 'Wait until the database is ready'
 
         def call(**options)
+          require 'dawn'
+          require 'abyss/boot'
+
           puts 'Check database connection...'
           database.test_connection
           puts 'Database connection is ready.'
