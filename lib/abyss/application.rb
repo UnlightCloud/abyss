@@ -238,7 +238,7 @@ module Abyss
         return unless root.join(APP_DIR).directory?
 
         container.config.component_dirs.add(APP_DIR) do |dir|
-          dir.namespace.add_root(key: nil, const: app_name.name)
+          dir.namespaces.add_root(key: nil, const: app_name.name)
         end
       end
     end
