@@ -7,14 +7,15 @@ module Abyss
       #
       # @since 0.1.0
       class Migration < Dry::CLI::Command
-        require 'dawn/database'
-
         desc 'Check database migration is ready'
 
         option :wait, type: :boolean, default: false, desc: 'Wait until the database migration is ready'
 
         def call(**options)
-          while Dawn::Database.pending?
+          require 'abyss/prepare'
+          migrator = Abyss::Migrator.new(Abyss.app[:settings][:database_url])
+
+          while migrator.pending?
             puts 'Waiting for database migration...'
             exit 1 unless options[:wait]
             sleep 1

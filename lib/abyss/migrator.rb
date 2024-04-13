@@ -19,8 +19,9 @@ module Abyss
     # @param config [String] the database connection string
     #
     # @since 0.1.0
-    def initialize(config)
+    def initialize(config, migrations_path = 'db/migrations')
       @config = config
+      @migrations_path = migrations_path
     end
 
     # Migrate database to specify version
@@ -28,10 +29,32 @@ module Abyss
     # @param version [Integer] the version to migrate
     #
     # @since 0.1.0
-    def migrate!(version = nil)
+    def migrate!(target = nil)
       run do |database|
-        Sequel::Migrator.run(database, Abyss.root.join('db/migrations'), target: version, use_advisory_lock: true)
+        Sequel::Migrator.run(database, migrations_path, target:, use_advisory_lock: true)
       end
+    end
+
+    # Check if there is any pending migration
+    #
+    # @param version [Integer] the version to check
+    #
+    # @return [Boolean] true if there is any pending migration
+    #
+    # @since 0.1.0
+    def pending?(target = nil)
+      run do |database|
+        Sequel::Migrator.is_current?(database, migrations_path, target:, use_advisory_lock: true) == false
+      end
+    end
+
+    # Return migration path
+    #
+    # @return [String] the migration path
+    #
+    # @since 0.1.0
+    def migrations_path
+      Abyss.root.join(@migrations_path)
     end
 
     # Run with the database connection
