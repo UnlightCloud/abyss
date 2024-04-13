@@ -139,6 +139,16 @@ module Abyss
         self
       end
 
+      # shutdown the application
+      #
+      # @return [self]
+      #
+      # @since 0.1.0
+      def shutdown
+        container.shutdown!
+        self
+      end
+
       # return is prepared
       #
       # @return [Boolean]

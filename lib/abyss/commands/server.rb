@@ -50,6 +50,7 @@ module Abyss
 
         server.start(&)
         Abyss.logger.info("Stopping #{server_class} server...")
+        Abyss.shutdown
       end
     end
 

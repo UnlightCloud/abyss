@@ -89,6 +89,16 @@ module Abyss
     app.boot
   end
 
+  # Shutdown the application
+  #
+  # @see Application::ClassMethods#shutdown
+  #
+  # @api public
+  # @since 0.1.0
+  def shutdown
+    app.shutdown
+  end
+
   # Return application's logger
   #
   # @return [logger] the application logger
