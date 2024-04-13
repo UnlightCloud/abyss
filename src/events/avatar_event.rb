@@ -299,7 +299,7 @@ module Unlight
 
     # 合成武器情報を更新
     def update_combine_weapon_data(inv_id, card_id, base_sap, base_sdp, base_aap, base_adp, base_max, add_sap, add_sdp, add_aap, add_adp, add_max, passive_id, restriction, cnt_str, cnt_max_str, level, exp, psv_num_max, passive_pass, vani_psv_ids = '')
-      SERVER_LOG.info("<UID:#{@avatar.player_id}>#{Dawn::Server.name}: [#{__method__}] id:#{inv_id} card_id:#{card_id}")
+      SERVER_LOG.info("<UID:#{@avatar.player_id}> [#{__method__}] id:#{inv_id} card_id:#{card_id}")
       [inv_id, card_id, base_sap, base_sdp, base_aap, base_adp, base_max, add_sap, add_sdp, add_aap, add_adp, add_max, passive_id, restriction, cnt_str, cnt_max_str, level, exp, psv_num_max, passive_pass, vani_psv_ids]
     end
     regist_event UpdateCombineWeaponDataEvent

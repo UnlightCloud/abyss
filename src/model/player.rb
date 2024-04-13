@@ -432,7 +432,7 @@ module Unlight
 
     # ログイン成功
     def login_check
-      SERVER_LOG.debug("<UID:#{id}>#{Dawn::Server.name}: [player.login_check] ")
+      SERVER_LOG.debug("<UID:#{id}> [player.login_check] ")
       # 招待されていた場合すべて招待してくれた人にプレゼントを登録
       invite_succeed
       # ログインボーナスをあげる
@@ -449,7 +449,7 @@ module Unlight
     # フレンドを招待した相手へ登録プレゼント
     def invite_succeed(my_name)
       ret = false
-      SERVER_LOG.debug("<UID:#{id}>#{Dawn::Server.name}: [player.invite_succeed] ")
+      SERVER_LOG.debug("<UID:#{id}> [player.invite_succeed] ")
 
       item_counter = 0
 
@@ -474,7 +474,7 @@ module Unlight
                 pre_no_set << "#{id}_#{amount}"
               end
               notice_str += pre_no_set.join(',')
-              SERVER_LOG.info("<UID:#{id}>#{Dawn::Server.name}: [player.invite_succeed]#{pl.id}: #{notice_str}")
+              SERVER_LOG.info("<UID:#{id}> [player.invite_succeed]#{pl.id}: #{notice_str}")
               pl.current_avatar.write_notice(NOTICE_TYPE_INVITE_SUCC, notice_str)
             end
             item_counter += 1
@@ -518,7 +518,7 @@ module Unlight
                 ret = true
               end
               notice_str += pre_no_set.join(',')
-              SERVER_LOG.info("<UID:#{id}>#{Dawn::Server.name}: [player.comeback_succeed]#{pl.id}: #{notice_str}")
+              SERVER_LOG.info("<UID:#{id}> [player.comeback_succeed]#{pl.id}: #{notice_str}")
               pl.current_avatar.write_notice(NOTICE_TYPE_COMEBK_SUCC, notice_str)
             end
           end

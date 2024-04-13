@@ -1223,14 +1223,14 @@ module Unlight
       end
       other_avatar_ids.uniq!
 
-      SERVER_LOG.info("<UID:#{id}>#{Dawn::Server.name}: [#{__method__}] list:#{other_avatar_ids}")
+      SERVER_LOG.info("<UID:#{id}> [#{__method__}] list:#{other_avatar_ids}")
       other_avatar_ids
     end
 
     # Duel相手のIDリストを取得
     def duel_foe_avatar_get_cache
       ret = duel_foe_avatar_check_match_log
-      SERVER_LOG.info("<UID:#{id}>#{Dawn::Server.name}: [#{__method__}] list:#{ret}")
+      SERVER_LOG.info("<UID:#{id}> [#{__method__}] list:#{ret}")
       ret
     end
 
@@ -1388,7 +1388,7 @@ module Unlight
 
     # 指定した効果のアイテムを取得する
     def get_item(item_id)
-      SERVER_LOG.info("<UID:#{id}>#{Dawn::Server.name}: [avatar.get_item] item_id:#{item_id}")
+      SERVER_LOG.info("<UID:#{id}> [avatar.get_item] item_id:#{item_id}")
       ret = false
       if AvatarItem[item_id]
         # アイテムインベントリを追加
@@ -4387,7 +4387,7 @@ module Unlight
         self.sale_type = type
         self.sale_limit_at = Time.now.utc + set_time
         save_changes
-        SERVER_LOG.info("<UID:#{id}>#{Dawn::Server.name}: [set_sale_limit] type:#{type} limit_at:#{sale_limit_at}")
+        SERVER_LOG.info("<UID:#{id}> [set_sale_limit] type:#{type} limit_at:#{sale_limit_at}")
         @event.start_sale_event(type, get_sale_limit_rest_time) if @event
       end
     end
@@ -4437,7 +4437,7 @@ module Unlight
     def get_lobby_chara_scenario
       ret = []
       # 特別なシナリオを持っているかチェックする
-      SERVER_LOG.info("<UID:#{id}>#{Dawn::Server.name}: [get_lobby_chara_scenario]fav_id:#{favorite_chara_id}")
+      SERVER_LOG.info("<UID:#{id}> [get_lobby_chara_scenario]fav_id:#{favorite_chara_id}")
       scenario_inventories.each do |s|
         # 今のお気に入りキャラの特別シナリオが存在する場合
         if favorite_chara_id == s.scenario.chara_id
@@ -4474,7 +4474,7 @@ module Unlight
         @lobby_chara_script_list[@lobby_chara_scr_i]
       else
         @lobby_chara_scr_i += 1
-        SERVER_LOG.info("<UID:#{id}>#{Dawn::Server.name}: [run_lobby_chara_scr]scr_list[#{@lobby_chara_scr_i - 1}]:#{@lobby_chara_script_list[@lobby_chara_scr_i - 1]}")
+        SERVER_LOG.info("<UID:#{id}> [run_lobby_chara_scr]scr_list[#{@lobby_chara_scr_i - 1}]:#{@lobby_chara_script_list[@lobby_chara_scr_i - 1]}")
 
         @lobby_chara_script_list[@lobby_chara_scr_i - 1]
       end
