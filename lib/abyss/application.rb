@@ -177,6 +177,7 @@ module Abyss
         prepare_container_plugins
         prepare_container_base_config
         prepare_app_component_dirs
+        prepare_app_providers
 
         container.configured!
 
@@ -250,6 +251,14 @@ module Abyss
             !relative_path.start_with?("#{LIB_DIR}/")
           }
         end
+      end
+
+      # @api private
+      #
+      # @since 0.1.0
+      def prepare_app_providers
+        require_relative 'providers/inflector'
+        register_provider(:inflector, source: Abyss::Providers::Inflector)
       end
     end
   end
