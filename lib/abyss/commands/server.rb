@@ -22,6 +22,17 @@ module Abyss
         'raid_rank' => 'Unlight::Protocol::RaidRankServer'
       }.freeze
 
+      SERVER_FILE = {
+        'auth' => 'authserver',
+        'authentication' => 'authserver',
+        'chat' => 'chatserver',
+        'data_lobby' => 'dataserver',
+        'lobby' => 'lobbyserver',
+        'raid_chat' => 'raidchatserver',
+        'raid_data' => 'raiddataserver',
+        'raid_rank' => 'raidrankserver'
+      }.freeze
+
       desc 'Start the server'
 
       argument :type, required: true, desc: 'The server type'
@@ -33,11 +44,12 @@ module Abyss
       def call(type:, **)
         require 'eventmachine'
         require Abyss.root.join('src', 'unlight')
-        require Abyss.root.join('src', 'protocol', 'authserver')
 
+        class_path = SERVER_FILE[type]
         class_name = SERVER_CLASSES[type]
-        return execute(type:, **) unless class_name
+        return execute(type:, **) unless class_name && class_path
 
+        require Abyss.root.join('src', 'protocol', class_path)
         server_class = Abyss.app.inflector.constantize(class_name)
         run_server(server_class, **)
       end

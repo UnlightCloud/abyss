@@ -15,7 +15,7 @@ module Unlight
       attr_accessor :player, :avatar
 
       # クラスの初期化
-      def self.setup
+      def self.setup(*_args)
         super
         # コマンドクラスをつくる
         @@receive_cmd = Command.new(self, :RaidRank)
