@@ -235,10 +235,20 @@ module Abyss
       # @api private
       # @since 0.1.0
       def prepare_app_component_dirs
+        if root.join(APP_DIR, LIB_DIR).directory?
+          container.config.component_dirs.add(LIB_DIR) do |dir|
+            dir.namespaces.add_root(key: nil, const: app_name.name)
+          end
+        end
+
         return unless root.join(APP_DIR).directory?
 
         container.config.component_dirs.add(APP_DIR) do |dir|
           dir.namespaces.add_root(key: nil, const: app_name.name)
+          dir.auto_register = lambda { |component|
+            relative_path = component.file_path.relative_path_from(root.join(APP_DIR)).to_s
+            !relative_path.start_with?("#{LIB_DIR}/")
+          }
         end
       end
     end

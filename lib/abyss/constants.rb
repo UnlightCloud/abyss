@@ -10,6 +10,10 @@ module Abyss
   private_constant :APP_DIR
 
   # @api private
+  LIB_DIR = 'lib'
+  private_constant :LIB_DIR
+
+  # @api private
   CONFIG_DIR = 'config'
   private_constant :CONFIG_DIR
 
