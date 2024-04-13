@@ -236,7 +236,7 @@ module Abyss
       # @since 0.1.0
       def prepare_app_component_dirs
         if root.join(APP_DIR, LIB_DIR).directory?
-          container.config.component_dirs.add(LIB_DIR) do |dir|
+          container.config.component_dirs.add(File.join(APP_DIR, LIB_DIR)) do |dir|
             dir.namespaces.add_root(key: nil, const: app_name.name)
           end
         end
