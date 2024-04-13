@@ -15,7 +15,6 @@ module Abyss
 
       def call(**options)
         require 'abyss/prepare'
-        require 'dawn/database'
 
         Abyss::Migrator.new(Abyss.app[:settings][:database_url]).migrate!
         import_data if options[:import]
@@ -25,12 +24,12 @@ module Abyss
       private
 
       def import_data
+        require 'csv'
         require Abyss.root.join('src', 'unlight')
-        require 'dawn/services/data_importer'
 
-        importer = Dawn::DataImporter.new
-        importer.import do |dataset|
-          puts "Importing #{dataset.model_name}"
+        command = Abyss.app.resolve('importer.import_command')
+        command.call(data) do |repository, data|
+          puts "#{repository} imported #{data.count} records"
         end
       end
 
@@ -38,6 +37,19 @@ module Abyss
         require Abyss.root.join('src', 'unlight')
 
         Unlight::CharaCardDeck.initialize_CPU_deck
+      end
+
+      def data
+        @data ||=
+          sources.to_h do |source|
+            name = source.basename.to_s[/([a-zA-Z0-9]+)\.csv/, 1]
+            [name, CSV.read(source, headers: true)]
+          end
+      end
+
+      def sources
+        @sources ||=
+          Dawn.root.glob('data/csv/{ja,tcn}/*.csv')
       end
     end
 
