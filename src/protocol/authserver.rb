@@ -11,7 +11,7 @@ module Unlight
   module Protocol
     class AuthServer < ULServer
       # クラスの初期化
-      def self.setup
+      def self.setup(*_args)
         super
         Player.auth_off_all
         # コマンドクラスをつくる

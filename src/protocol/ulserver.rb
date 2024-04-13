@@ -18,7 +18,7 @@ module Unlight
       attr_accessor :player, :last_connect
 
       # クラスの初期化
-      def self.setup
+      def self.setup(*_args)
         @@class_name = name[19..] # 最後のクラス名だけにしている
         SERVER_LOG.info("#{@@class_name}: Start.")
         @@receive_cmd = nil
