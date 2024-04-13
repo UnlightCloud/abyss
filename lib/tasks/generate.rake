@@ -14,7 +14,7 @@ namespace :generate do
         end
       end
     RUBY
-    dest = Dawn.root.join("db/migrations/#{Time.now.to_i}_#{args[:name]}.rb")
+    dest = Abyss.root.join("db/migrations/#{Time.now.to_i}_#{args[:name]}.rb")
     File.write(
       dest,
       template

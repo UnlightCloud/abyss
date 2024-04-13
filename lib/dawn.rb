@@ -21,14 +21,4 @@ module Dawn
   def env
     ENV['DAWN_ENV'] || 'development'
   end
-
-  # @return [SemanticLogger] the game logger
-  def logger
-    @logger ||= SemanticLogger['Dawn']
-  end
-
-  # @return [Symbol] the game logger format
-  def logger_format
-    ENV.fetch('DAWN_LOG_FORMAT', :color).to_sym
-  end
 end
