@@ -13,7 +13,13 @@ module Abyss
 
       SERVER_CLASSES = {
         'auth' => 'Unlight::Protocol::AuthServer',
-        'authentication' => 'Unlight::Protocol::AuthServer'
+        'authentication' => 'Unlight::Protocol::AuthServer',
+        'chat' => 'Unlight::Protocol::ChatServer',
+        'data_lobby' => 'Unlight::Protocol::DataServer',
+        'lobby' => 'Unlight::Protocol::LobbyServer',
+        'raid_chat' => 'Unlight::Protocol::RaidChatServer',
+        'raid_data' => 'Unlight::Protocol::RaidDataServer',
+        'raid_rank' => 'Unlight::Protocol::RaidRankServer'
       }.freeze
 
       desc 'Start the server'
