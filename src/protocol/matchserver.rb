@@ -15,9 +15,12 @@ module Unlight
       attr_accessor :player, :matching, :opponent_player
 
       # クラスの初期化
-      def self.setup(_id, _ip, _port)
+      def self.setup(id, hostname, port)
         super()
         # コマンドクラスをつくる
+        @@id = id
+        @@hostname = hostname
+        @@port = port
         @@receive_cmd = Command.new(self, :Match)
         @@server_channel = nil
         unless server_channel
@@ -67,7 +70,7 @@ module Unlight
 
       def self.server_channel
         unless @@server_channel
-          @@server_channel = Channel.filter(host_name: Dawn::Server.hostname, port: Dawn::Server.port).all.first
+          @@server_channel = Channel.filter(host_name: @@hostname, port: @@port).all.first
           @@server_channel.boot if @@server_channel
         end
         @@server_channel

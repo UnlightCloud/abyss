@@ -24,7 +24,8 @@ module Abyss
         'quest' => 'Unlight::Protocol::QuestServer',
         'raid' => 'Unlight::Protocol::RaidServer',
         'game' => 'Unlight::Protocol::GameServer',
-        'global_chat' => 'Unlight::Protocol::GlobalChatServer'
+        'global_chat' => 'Unlight::Protocol::GlobalChatServer',
+        'matching' => 'Unlight::Protocol::MatchServer'
       }.freeze
 
       SERVER_FILE = {
@@ -40,7 +41,8 @@ module Abyss
         'quest' => 'quest_server',
         'raid' => 'raid_server',
         'game' => 'gameserver',
-        'global_chat' => 'globalchatserver'
+        'global_chat' => 'globalchatserver',
+        'matching' => 'matchserver'
       }.freeze
 
       desc 'Start the server'
@@ -57,7 +59,6 @@ module Abyss
 
         class_path = SERVER_FILE[type]
         class_name = SERVER_CLASSES[type]
-        return execute(type:, **) unless class_name && class_path
 
         require Abyss.root.join('src', 'protocol', class_path)
         server_class = Abyss.app.inflector.constantize(class_name)
@@ -65,11 +66,6 @@ module Abyss
       end
 
       private
-
-      def execute(type:, **options)
-        command = Abyss.root.join('bin', TYPE_ALIASES[type] || type)
-        exec("#{command} -p #{options[:port]} -h #{options[:hostname]}")
-      end
 
       def run_server(server_class, **, &)
         server = Abyss::Servers::Tcp.new(server_class, **)
@@ -89,12 +85,21 @@ module Abyss
           quest_workers(server_class)
         when 'Unlight::Protocol::GameServer' then game_workers(server_class)
         when 'Unlight::Protocol::GlobalChatServer' then global_chat_workers(server_class)
+        when 'Unlight::Protocol::MatchServer' then match_workers(server_class)
         end
       end
 
       def connection_check(server)
         EventMachine::PeriodicTimer.new(60) do
           server.check_connection
+        rescue StandardError => e
+          Abyss.logger.fatal('Check connection failed', e)
+        end
+      end
+
+      def connection_check_sec(server)
+        EventMachine::PeriodicTimer.new(60 / Unlight::GAME_CHECK_CONNECT_INTERVAL) do
+          server.check_connection_sec
         rescue StandardError => e
           Abyss.logger.fatal('Check connection failed', e)
         end
@@ -131,12 +136,7 @@ module Abyss
 
       def game_workers(server)
         duel_update(server)
-
-        EventMachine::PeriodicTimer.new(60 / Unlight::GAME_CHECK_CONNECT_INTERVAL) do
-          server.check_connection_sec
-        rescue StandardError => e
-          SERVER_LOG.fatal('Check connection failed', e)
-        end
+        connection_check_sec(server)
       end
 
       def global_chat_workers(server)
@@ -160,6 +160,42 @@ module Abyss
           Unlight::GlobalChatController.auto_prf_send_help
         rescue StandardError => e
           Abyss.logger.fatal('Send profound help failed', e)
+        end
+      end
+
+      def match_workers(server)
+        current_time = 0
+
+        EventMachine::PeriodicTimer.new(Unlight::CPU_POP_TIME) do
+          h = Time.now.utc.hour
+          if current_time != h
+            c = Unlight::CPU_SPAWN_NUM[h]
+            c.times { Unlight::MatchController.cpu_room_update }
+            current_time = h
+          end
+        rescue StandardError => e
+          Abyss.logger.fatal('Pop CPU failed', e)
+        end
+
+        EventMachine::PeriodicTimer.new(60) do
+          server.check_boot
+          server.update_login_count
+        rescue StandardError => e
+          Abyss.logger.fatal('Check boot failed', e)
+        end
+
+        connection_check_sec(server)
+
+        EventMachine::PeriodicTimer.new(5) do
+          server.radder_match_update
+        rescue StandardError => e
+          Abyss.logger.fatal('Radder match update failed', e)
+        end
+
+        EventMachine::PeriodicTimer.new(Unlight::RADDER_CPU_POP_TIME) do
+          Unlight::MatchController.cpu_radder_match_update if Unlight::RADDER_CPU_POP_ENABLE && rand(Unlight::RADDER_CPU_POP_RAND).zero?
+        rescue StandardError => e
+          Abyss.logger.fatal('Radder CPU POP failed', e)
         end
       end
     end
