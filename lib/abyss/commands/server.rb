@@ -20,7 +20,9 @@ module Abyss
         'raid_chat' => 'Unlight::Protocol::RaidChatServer',
         'raid_data' => 'Unlight::Protocol::RaidDataServer',
         'raid_rank' => 'Unlight::Protocol::RaidRankServer',
-        'watch' => 'Unlight::Protocol::WatchServer'
+        'watch' => 'Unlight::Protocol::WatchServer',
+        'quest' => 'Unlight::Protocol::QuestServer',
+        'raid' => 'Unlight::Protocol::RaidServer'
       }.freeze
 
       SERVER_FILE = {
@@ -32,7 +34,9 @@ module Abyss
         'raid_chat' => 'raidchatserver',
         'raid_data' => 'raiddataserver',
         'raid_rank' => 'raidrankserver',
-        'watch' => 'watchserver'
+        'watch' => 'watchserver',
+        'quest' => 'quest_server',
+        'raid' => 'raid_server'
       }.freeze
 
       desc 'Start the server'
@@ -77,6 +81,8 @@ module Abyss
       def extra_workers(server_class)
         case server_class.name
         when 'Unlight::Protocol::WatchServer' then watch_workers(server_class)
+        when 'Unlight::Protocol::RaidServer' then quest_workers(server_class)
+        when 'Unlight::Protocol::QuestServer' then quest_workers(server_class)
         end
       end
 
@@ -88,6 +94,26 @@ module Abyss
         end
 
         EventMachine::PeriodicTimer.new(60) do
+          server.check_connection
+        rescue StandardError => e
+          Abyss.logger.fatal('Check connection failed', e)
+        end
+      end
+
+      def quest_workers(server)
+        EM::PeriodicTimer.new(0.3) do
+          Unlight::MultiDuel.update
+        rescue StandardError => e
+          Abyss.logger.fatal('MultiDuel update failed', e)
+        end
+
+        EM::PeriodicTimer.new(1) do
+          Unlight::AI.update
+        rescue StandardError => e
+          Abyss.logger.fatal('AI update failed', e)
+        end
+
+        EM::PeriodicTimer.new(60) do
           server.check_connection
         rescue StandardError => e
           Abyss.logger.fatal('Check connection failed', e)
