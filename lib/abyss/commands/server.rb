@@ -22,7 +22,8 @@ module Abyss
         'raid_rank' => 'Unlight::Protocol::RaidRankServer',
         'watch' => 'Unlight::Protocol::WatchServer',
         'quest' => 'Unlight::Protocol::QuestServer',
-        'raid' => 'Unlight::Protocol::RaidServer'
+        'raid' => 'Unlight::Protocol::RaidServer',
+        'game' => 'Unlight::Protocol::GameServer'
       }.freeze
 
       SERVER_FILE = {
@@ -36,7 +37,8 @@ module Abyss
         'raid_rank' => 'raidrankserver',
         'watch' => 'watchserver',
         'quest' => 'quest_server',
-        'raid' => 'raid_server'
+        'raid' => 'raid_server',
+        'game' => 'gameserver'
       }.freeze
 
       desc 'Start the server'
@@ -83,16 +85,11 @@ module Abyss
         when 'Unlight::Protocol::WatchServer' then watch_workers(server_class)
         when 'Unlight::Protocol::RaidServer' then quest_workers(server_class)
         when 'Unlight::Protocol::QuestServer' then quest_workers(server_class)
+        when 'Unlight::Protocol::GameServer' then game_workers(server_class)
         end
       end
 
-      def watch_workers(server)
-        EventMachine::PeriodicTimer.new(1) do
-          server.all_duel_update
-        rescue StandardError => e
-          Abyss.logger.fatal('All duel update failed', e)
-        end
-
+      def connection_check(server)
         EventMachine::PeriodicTimer.new(60) do
           server.check_connection
         rescue StandardError => e
@@ -100,7 +97,7 @@ module Abyss
         end
       end
 
-      def quest_workers(server)
+      def duel_update(_server)
         EM::PeriodicTimer.new(0.3) do
           Unlight::MultiDuel.update
         rescue StandardError => e
@@ -112,11 +109,30 @@ module Abyss
         rescue StandardError => e
           Abyss.logger.fatal('AI update failed', e)
         end
+      end
 
-        EM::PeriodicTimer.new(60) do
-          server.check_connection
+      def watch_workers(server)
+        EventMachine::PeriodicTimer.new(1) do
+          server.all_duel_update
         rescue StandardError => e
-          Abyss.logger.fatal('Check connection failed', e)
+          Abyss.logger.fatal('All duel update failed', e)
+        end
+
+        connection_check(server)
+      end
+
+      def quest_workers(server)
+        duel_update(server)
+        connection_check(server)
+      end
+
+      def game_workers(server)
+        duel_update(server)
+
+        EM::PeriodicTimer.new(60 / Unlight::GAME_CHECK_CONNECT_INTERVAL) do
+          server.check_connection_sec
+        rescue StandardError => e
+          SERVER_LOG.fatal('Check connection failed', e)
         end
       end
     end
