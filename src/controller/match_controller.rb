@@ -480,25 +480,25 @@ module Unlight
 
     # CPU部屋を更新
     def self.cpu_room_update
-      c = Unlight::MatchServer.match_channel
+      c = Unlight::Protocol::MatchServer.match_channel
       if c && CPU_POP_TABLE[c.order]
         room = get_cpu_room
         @match = Match.create_room(c, AI_PLAYER_ID, "R#{room.level} #{room.name}", 0, room.rule, 0, 0, room.cpu_card_data_id)
         # 作った部屋のidを送る
         if @match
           info = @match.room_info_str
-          c.player_list.each { |p| Unlight::MatchServer.match_list[p].sc_matching_info_update(info) if Unlight::MatchServer.match_list[p] }
+          c.player_list.each { |p| Unlight::Protocol::MatchServer.match_list[p].sc_matching_info_update(info) if Unlight::Protocol::MatchServer.match_list[p] }
         end
       end
     end
 
     # CPUROOMから1つランダムでかえす
     def self.get_cpu_room(_low = 0, _high = 99, player = nil)
-      case Unlight::MatchServer.match_channel.cpu_matching_type?
+      case Unlight::Protocol::MatchServer.match_channel.cpu_matching_type?
       when CPU_MATCHING_TYPE_COST
         avatar = player.current_avatar
         deck_cost = avatar.chara_card_decks[avatar.current_deck].current_cost
-        cost_conditions = Unlight::MatchServer.match_channel.cpu_matching_condition?.split(',').map { |s| s.scan(/([\d~]+):([\d+]+)/)[0] }
+        cost_conditions = Unlight::Protocol::MatchServer.match_channel.cpu_matching_condition?.split(',').map { |s| s.scan(/([\d~]+):([\d+]+)/)[0] }
         cost_conditions.each do |cond|
           range = cond[0].split('~', 2).map(&:to_i)
           room_ids = cond[1].split('+').map(&:to_i)
@@ -510,7 +510,7 @@ module Unlight
         # FIXME: SHould not return array
         CpuRoomData[75]
       else
-        Unlight::MatchServer.match_channel.order
+        Unlight::Protocol::MatchServer.match_channel.order
         rs = CpuRoomData.filter([[:level, 1..99]])
         r = rs.all[rand(rs.count)]
         r || CpuRoomData[1]
