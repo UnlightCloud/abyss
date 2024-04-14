@@ -19,7 +19,8 @@ module Abyss
         'lobby' => 'Unlight::Protocol::LobbyServer',
         'raid_chat' => 'Unlight::Protocol::RaidChatServer',
         'raid_data' => 'Unlight::Protocol::RaidDataServer',
-        'raid_rank' => 'Unlight::Protocol::RaidRankServer'
+        'raid_rank' => 'Unlight::Protocol::RaidRankServer',
+        'watch' => 'Unlight::Protocol::WatchServer'
       }.freeze
 
       SERVER_FILE = {
@@ -30,7 +31,8 @@ module Abyss
         'lobby' => 'lobbyserver',
         'raid_chat' => 'raidchatserver',
         'raid_data' => 'raiddataserver',
-        'raid_rank' => 'raidrankserver'
+        'raid_rank' => 'raidrankserver',
+        'watch' => 'watchserver'
       }.freeze
 
       desc 'Start the server'
@@ -51,7 +53,7 @@ module Abyss
 
         require Abyss.root.join('src', 'protocol', class_path)
         server_class = Abyss.app.inflector.constantize(class_name)
-        run_server(server_class, **)
+        run_server(server_class, **) { extra_workers(server_class) }
       end
 
       private
@@ -69,6 +71,27 @@ module Abyss
         server.start(&)
         Abyss.logger.info("Stopping #{server_class} server...")
         Abyss.shutdown
+      end
+
+      # Extra Works
+      def extra_workers(server_class)
+        case server_class.name
+        when 'Unlight::Protocol::WatchServer' then watch_workers(server_class)
+        end
+      end
+
+      def watch_workers(server)
+        EventMachine::PeriodicTimer.new(1) do
+          server.all_duel_update
+        rescue StandardError => e
+          Abyss.logger.fatal('All duel update failed', e)
+        end
+
+        EventMachine::PeriodicTimer.new(60) do
+          server.check_connection
+        rescue StandardError => e
+          Abyss.logger.fatal('Check connection failed', e)
+        end
       end
     end
 
