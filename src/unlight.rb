@@ -24,10 +24,6 @@ Sequel::Model.plugin :json_serializer
 require 'dawn'
 require 'abyss/boot'
 
-if File.exist?("#{File.dirname(__FILE__)}/server_ip.rb")
-  require 'server_ip'
-end
-
 # 定数
 require 'constants/common_constants'
 require 'constants/reward_constants'
