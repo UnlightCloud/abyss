@@ -14,7 +14,6 @@ ENV['INLINEDIR'] = "#{d}lib/ruby_inline"
 require 'rubygems'
 require 'sequel'
 require 'dalli'
-require 'sentry-ruby'
 
 require 'active_support'
 require 'active_support/core_ext/object/blank'
@@ -24,10 +23,6 @@ Sequel::Model.plugin :json_serializer
 
 require 'dawn'
 require 'abyss/boot'
-
-# TODO: Refactor to Dawn::AppLoader
-# Initialize Extensions
-require_relative '../config/initializers/sentry'
 
 if File.exist?("#{File.dirname(__FILE__)}/server_ip.rb")
   require 'server_ip'
