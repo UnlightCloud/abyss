@@ -3,6 +3,9 @@
 Abyss.app.register_provider :database do
   prepare do
     require 'sequel'
+
+    Sequel::Model.require_valid_table = false
+    Sequel::Model.plugin :json_serializer
   end
 
   start do

@@ -18,9 +18,6 @@ require 'dalli'
 require 'active_support'
 require 'active_support/core_ext/object/blank'
 
-Sequel::Model.require_valid_table = false
-Sequel::Model.plugin :json_serializer
-
 require 'dawn'
 require 'abyss/boot'
 
