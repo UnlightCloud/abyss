@@ -23,7 +23,8 @@ module Abyss
         'watch' => 'Unlight::Protocol::WatchServer',
         'quest' => 'Unlight::Protocol::QuestServer',
         'raid' => 'Unlight::Protocol::RaidServer',
-        'game' => 'Unlight::Protocol::GameServer'
+        'game' => 'Unlight::Protocol::GameServer',
+        'global_chat' => 'Unlight::Protocol::GlobalChatServer'
       }.freeze
 
       SERVER_FILE = {
@@ -38,7 +39,8 @@ module Abyss
         'watch' => 'watchserver',
         'quest' => 'quest_server',
         'raid' => 'raid_server',
-        'game' => 'gameserver'
+        'game' => 'gameserver',
+        'global_chat' => 'globalchatserver'
       }.freeze
 
       desc 'Start the server'
@@ -83,9 +85,10 @@ module Abyss
       def extra_workers(server_class)
         case server_class.name
         when 'Unlight::Protocol::WatchServer' then watch_workers(server_class)
-        when 'Unlight::Protocol::RaidServer' then quest_workers(server_class)
-        when 'Unlight::Protocol::QuestServer' then quest_workers(server_class)
+        when 'Unlight::Protocol::RaidServer', 'Unlight::Protocol::QuestServer'
+          quest_workers(server_class)
         when 'Unlight::Protocol::GameServer' then game_workers(server_class)
+        when 'Unlight::Protocol::GlobalChatServer' then global_chat_workers(server_class)
         end
       end
 
@@ -98,13 +101,13 @@ module Abyss
       end
 
       def duel_update(_server)
-        EM::PeriodicTimer.new(0.3) do
+        EventMachine::PeriodicTimer.new(0.3) do
           Unlight::MultiDuel.update
         rescue StandardError => e
           Abyss.logger.fatal('MultiDuel update failed', e)
         end
 
-        EM::PeriodicTimer.new(1) do
+        EventMachine::PeriodicTimer.new(1) do
           Unlight::AI.update
         rescue StandardError => e
           Abyss.logger.fatal('AI update failed', e)
@@ -129,10 +132,34 @@ module Abyss
       def game_workers(server)
         duel_update(server)
 
-        EM::PeriodicTimer.new(60 / Unlight::GAME_CHECK_CONNECT_INTERVAL) do
+        EventMachine::PeriodicTimer.new(60 / Unlight::GAME_CHECK_CONNECT_INTERVAL) do
           server.check_connection_sec
         rescue StandardError => e
           SERVER_LOG.fatal('Check connection failed', e)
+        end
+      end
+
+      def global_chat_workers(server)
+        EventMachine::PeriodicTimer.new(Unlight::RAID_HELP_SEND_TIME) do
+          server.sending_help_list
+        rescue StandardError => e
+          Abyss.logger.fatal('Sending help list failed', e)
+        end
+
+        connection_check(server)
+
+        return unless Unlight::PRF_AUTO_CREATE_EVENT_FLAG
+
+        EventMachine::PeriodicTimer.new(Unlight::PRF_AUTO_CREATE_INTERVAL) do
+          Unlight::GlobalChatController.auto_create_prf
+        rescue StandardError => e
+          Abyss.logger.fatal('Auto create profound failed', e)
+        end
+
+        EventMachine::PeriodicTimer.new(Unlight::PRF_AUTO_HELP_INTERVAL) do
+          Unlight::GlobalChatController.auto_prf_send_help
+        rescue StandardError => e
+          Abyss.logger.fatal('Send profound help failed', e)
         end
       end
     end
