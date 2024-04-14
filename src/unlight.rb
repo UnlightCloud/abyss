@@ -28,8 +28,6 @@ require 'abyss/boot'
 # TODO: Refactor to Dawn::AppLoader
 # Initialize Extensions
 require_relative '../config/initializers/sentry'
-# TODO: Require necessary library for Game / API mode
-require_relative '../config/initializers/oj'
 
 if File.exist?("#{File.dirname(__FILE__)}/server_ip.rb")
   require 'server_ip'
