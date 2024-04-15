@@ -13,8 +13,6 @@ module Abyss
         require 'irb'
         require 'irb/completion'
 
-        # NOTE: replace dawn with abyss
-        require 'dawn'
         require Abyss.root.join('src', 'unlight')
 
         ARGV.clear

@@ -5,7 +5,7 @@ namespace :generate do
   task :migration, [:name] do |_, args|
     raise 'Migration name not given' if args[:name].nil?
 
-    require 'dawn'
+    require 'abyss/boot'
     template = <<~RUBY
       # frozen_string_literal: true
 

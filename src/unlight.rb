@@ -18,7 +18,6 @@ require 'dalli'
 require 'active_support'
 require 'active_support/core_ext/object/blank'
 
-require 'dawn'
 require 'abyss/boot'
 
 # 定数

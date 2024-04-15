@@ -11,7 +11,6 @@ module Abyss
         option :wait, type: :boolean, default: false, desc: 'Wait until the database is ready'
 
         def call(**options)
-          require 'dawn'
           require 'abyss/boot'
 
           puts 'Check database connection...'
