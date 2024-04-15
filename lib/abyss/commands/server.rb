@@ -53,16 +53,19 @@ module Abyss
       option :hostname, type: :string, default: 'localhost', desc: 'The hostname to bind to', aliases: ['-h']
       option :check_database, type: :boolean, default: false, desc: 'Check database connection', aliases: ['-c']
 
-      def call(type:, **)
+      def call(type:, **options)
         require 'eventmachine'
         require Abyss.root.join('src', 'unlight')
 
+        server = Abyss.app.resolve("servers.legacies.#{type}")
+        server.start(options[:id], options[:hostname], options[:port])
+      rescue Dry::Core::Container::KeyError
         class_path = SERVER_FILE[type]
         class_name = SERVER_CLASSES[type]
 
         require Abyss.root.join('src', 'protocol', class_path)
         server_class = Abyss.app.inflector.constantize(class_name)
-        run_server(server_class, **) { extra_workers(server_class) }
+        run_server(server_class, **options) { extra_workers(server_class) }
       end
 
       private
