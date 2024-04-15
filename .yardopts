@@ -1,1 +1,1 @@
-{src,lib}/**/*.rb
+{app,src,lib}/**/*.rb
