@@ -6,6 +6,8 @@ x-image: &image
     - ${PWD}:/opt/unlight:cached
     - bundler_data:/usr/local/bundle
     - history:/usr/local/hist
+    # for better DX
+    - ./.irbrc:/root/.irbrc:ro
   working_dir: ${WORK_DIR:-/opt/unlight}
   environment:
     DATABASE_URL: mysql2://root:unlight@mysql/unlight_${ABYSS_ENV:-development}?encoding=utf8mb4
