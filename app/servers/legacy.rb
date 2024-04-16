@@ -33,7 +33,7 @@ module Unlight
           EventMachine.set_quantum(10)
 
           logger.info("Listening #{server_class}... :#{port} as #{hostname}")
-          ensure_database_connection
+          every(1.hour) { ensure_database_connection } if settings.check_database
 
           yield if defined?(yield)
         end
@@ -46,15 +46,17 @@ module Unlight
         EventMachine.stop_event_loop
       end
 
-      def ensure_database_connection
-        return unless settings.check_database
-
-        EventMachine::PeriodicTimer.new(60 * 60) do
-          logger.info('Checking database connection...')
-          server_class.check_db_connection
-        rescue StandardError => e
-          logger.fatal('Check database connection failed', e)
+      def every(interval, &)
+        EventMachine::PeriodicTimer.new(interval) do
+          yield if defined?(yield)
         end
+      end
+
+      def ensure_database_connection
+        logger.info('Checking database connection...')
+        server_class.check_db_connection
+      rescue StandardError => e
+        logger.fatal('Check database connection failed', e)
       end
     end
   end

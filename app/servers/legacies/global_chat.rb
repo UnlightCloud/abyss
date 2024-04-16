@@ -7,55 +7,39 @@ module Unlight
       class GlobalChat < Unlight::Servers::Legacy
         require 'protocol/globalchatserver'
 
+        include Liveiness
+
         def server_class
           Unlight::Protocol::GlobalChatServer
         end
 
         def start(*)
           super(*) do
-            ensure_connection
-            publish_raid_help
-            auto_create_profound
-            publish_auto_create_profound
+            every(1.minute) { check_connection }
+            every(settings.raid.help_send_interval) { publish_raid_help }
+            every(settings.raid.auto_create_profound_interval) { auto_create_profound } if settings.raid.auto_create_profound
+            every(settings.raid.auto_help_prodound_interval) { publish_auto_create_profound } if settings.raid.auto_create_profound
           end
         end
 
         private
 
-        def ensure_connection
-          EventMachine::PeriodicTimer.new(60) do
-            server_class.check_connection
-          rescue StandardError => e
-            logger.fatal('Check connection failed', e)
-          end
-        end
-
         def publish_raid_help
-          EventMachine::PeriodicTimer.new(Unlight::RAID_HELP_SEND_TIME) do
-            server_class.sending_help_list
-          rescue StandardError => e
-            logger.fatal('Sending help list failed', e)
-          end
+          server_class.sending_help_list
+        rescue StandardError => e
+          logger.fatal('Sending help list failed', e)
         end
 
         def auto_create_profound
-          return unless Unlight::PRF_AUTO_CREATE_EVENT_FLAG
-
-          EventMachine::PeriodicTimer.new(Unlight::PRF_AUTO_CREATE_INTERVAL) do
-            Unlight::GlobalChatController.auto_create_prf
-          rescue StandardError => e
-            logger.fatal('Auto create profound failed', e)
-          end
+          Unlight::GlobalChatController.auto_create_prf
+        rescue StandardError => e
+          logger.fatal('Auto create profound failed', e)
         end
 
         def publish_auto_create_profound
-          return unless Unlight::PRF_AUTO_CREATE_EVENT_FLAG
-
-          EventMachine::PeriodicTimer.new(Unlight::PRF_AUTO_HELP_INTERVAL) do
-            Unlight::GlobalChatController.auto_prf_send_help
-          rescue StandardError => e
-            logger.fatal('Send profound help failed', e)
-          end
+          Unlight::GlobalChatController.auto_prf_send_help
+        rescue StandardError => e
+          logger.fatal('Send profound help failed', e)
         end
       end
     end
