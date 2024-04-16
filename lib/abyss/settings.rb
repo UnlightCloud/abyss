@@ -40,9 +40,9 @@ module Abyss
       name = setting.name
 
       if setting.children.any?
-        return setting.children.map do |child|
+        return setting.children.to_h do |child|
           [child.name, read_as_hash(store, child, prefix: [*prefix, name], delimiter:)]
-        end.to_h
+        end
       end
 
       store.fetch([*prefix, name].join(delimiter), setting.default)
