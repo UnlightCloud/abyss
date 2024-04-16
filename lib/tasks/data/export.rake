@@ -5,7 +5,10 @@ namespace :data do
   task generate_client_data: :environment do
     Unlight::DB.logger = nil
 
-    Abyss.app.resolve('services.client_data_exporter').call do |dataset|
+    path = Pathname.new('tmp/export')
+    command = Unlight::Container['exporter.export_command']
+
+    command.execute(path:) do |dataset|
       puts "Generating #{dataset.table_name}.csv"
     end
   end

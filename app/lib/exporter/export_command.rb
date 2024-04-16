@@ -1,13 +1,15 @@
 # frozen_string_literal: true
 
 require 'csv'
-require 'sequel'
-require 'sequel/extensions/inflector'
 
 module Unlight
-  module Services
-    # :nodoc:
-    class ClientDataExporter
+  module Exporter
+    # Client data exporter
+    #
+    # @since 0.1.0
+    class ExportCommand
+      include Deps[:inflector]
+
       # @since 0.1.0
       MODELS = %w[
         CharaCard
@@ -30,15 +32,14 @@ module Unlight
         Charactor
       ].freeze
 
-      EXPORT_PATH = Abyss.root.join('tmp/export')
-
-      def call
-        ensure_export_path
+      def execute(path: nil)
+        path = Pathname.new(path)
+        ensure_export_path(path)
 
         datasets.each do |dataset|
           yield dataset if block_given?
 
-          CSV.open(EXPORT_PATH.join("#{dataset.table_name}.csv"), 'w') do |csv|
+          CSV.open(path.join("#{dataset.table_name}.csv"), 'w') do |csv|
             dataset.each { |row| csv << row.to_client }
           end
         end
@@ -46,12 +47,12 @@ module Unlight
 
       private
 
-      def ensure_export_path
-        EXPORT_PATH.mkpath unless EXPORT_PATH.exist?
+      def ensure_export_path(path)
+        path.mkpath unless path.exist?
       end
 
       def datasets
-        @datasets = MODELS.map { |model| Unlight.const_get(model) }
+        @datasets = MODELS.map { |model| inflector.constantize("Unlight::#{model}") }
       end
     end
   end
