@@ -28,7 +28,7 @@ module Abyss
         require Abyss.root.join('src', 'unlight')
 
         command = Abyss.app.resolve('importer.import_command')
-        command.call(data) do |repository, data|
+        command.execute(data) do |repository, data|
           puts "#{repository} imported #{data.count} records"
         end
       end
@@ -49,7 +49,7 @@ module Abyss
 
       def sources
         @sources ||=
-          Dawn.root.glob('data/csv/{ja,tcn}/*.csv')
+          Abyss.root.glob('data/csv/{ja,tcn}/*.csv')
       end
     end
 

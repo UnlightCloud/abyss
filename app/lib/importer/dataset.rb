@@ -17,7 +17,7 @@ module Unlight
       attr_reader :schema, :language
 
       # @api private
-      def initialize(schema = language = 'tcn')
+      def initialize(schema, language = 'tcn')
         @schema = schema
         @language = language.to_s
         @items = []

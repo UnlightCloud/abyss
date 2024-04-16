@@ -7,7 +7,7 @@ module Unlight
       include Deps[:inflector]
 
       # @api private
-      def call(data, batch_size: 1000)
+      def execute(data, batch_size: 1000)
         data.each do |name, rows|
           repository = find_repository(name)
           dataset = build_dataset(repository.db_schema, rows)
