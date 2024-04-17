@@ -40,8 +40,8 @@ gem 'dry-system'
 gem 'zeitwerk'
 
 # Abyss API
-gem 'hanami-controller'
-gem 'hanami-router'
+gem 'hanami-controller', '~> 2.0.0'
+gem 'hanami-router', '~> 2.0.0'
 
 group :build do
   gem 'sqlite3'
