@@ -3,6 +3,6 @@
 module Unlight
   # :nodoc:
   class Routes < Abyss::Api::Routes
-    get '/', to: ->(_env) { [200, {}, ['Hello, Unlight API']] }
+    # get '/', to: ->(_env) { [200, {}, ['Hello, Unlight API']] }
   end
 end

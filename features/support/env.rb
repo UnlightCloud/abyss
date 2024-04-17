@@ -4,6 +4,9 @@ require 'bundler/setup'
 require 'simplecov'
 require 'faker'
 
+require 'rspec'
+require 'super_diff/rspec'
+
 SimpleCov.start do
   load_profile 'test_frameworks'
 
