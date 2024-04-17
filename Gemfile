@@ -39,6 +39,10 @@ gem 'dry-inflector'
 gem 'dry-system'
 gem 'zeitwerk'
 
+# Abyss API
+gem 'hanami-controller'
+gem 'hanami-router'
+
 group :build do
   gem 'sqlite3'
 end
