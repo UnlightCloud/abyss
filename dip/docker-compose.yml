@@ -44,6 +44,13 @@ services:
     ports:
       - 3306
 
+  # API Server
+  api:
+    <<: *image
+    command: bin/abyss api
+    ports:
+      - 3000:3000
+
   # Game Server
   auth:
     <<: *image

@@ -21,6 +21,12 @@ interaction:
     command: bin/abyss
     compose:
       depends_on: [mysql, memcached]
+    subcommands:
+      api:
+        description: Run the abyss api command
+        service: api
+        compose:
+          run_options: [service-ports, use-aliases]
 
   bundle:
     description: Run the bundle command
