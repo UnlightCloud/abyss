@@ -13,15 +13,31 @@ module Abyss
     ROUTES_CLASS_NAME = 'Routes'
     private_constant :ROUTES_CLASS_NAME
 
+    # Raised when an endpoint is not callable
+    #
+    # @api public
+    # @since 0.1.0
+    NoCallableEndpointError = Class.new(Error)
+
+    # Raised when an action is missing
+    #
+    # @api public
+    # @since 0.1.0
+    MissingActionError = Class.new(Error)
+
     module_function
 
     def routes
       @routes ||= load_routes # rubocop:disable ThreadSafety/InstanceVariableInClassMethod
     end
 
+    def resolver
+      @resolver ||= Resolver.new(app: Abyss.app) # rubocop:disable ThreadSafety/InstanceVariableInClassMethod
+    end
+
     # The API server
     def app
-      @app ||= Router.new(routes:) # rubocop:disable ThreadSafety/InstanceVariableInClassMethod
+      @app ||= Router.new(routes:, resolver:) # rubocop:disable ThreadSafety/InstanceVariableInClassMethod
     end
 
     # Rack application
