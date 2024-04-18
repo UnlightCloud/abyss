@@ -19,6 +19,7 @@ x-image: &image
     LANG: C.UTF-8
     PROMPT_DIRTRIM: 2
     PS1: '[\W]\! '
+    CUCUMBER_PUBLISH_QUIET: 'true'
   tmpfs:
     - /tmp
   depends_on:
