@@ -1,7 +1,14 @@
 # frozen_string_literal: true
 
+Given('http headers') do |table|
+  @headers ||= {}
+  table.hashes.each do |row|
+    @headers[row['key']] = row['value']
+  end
+end
+
 When('I make a GET request to {string}') do |path|
-  get path
+  get path, nil, @headers || {}
 end
 
 Then('the response status code should be {int}') do |status_code|

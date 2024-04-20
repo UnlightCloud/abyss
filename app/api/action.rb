@@ -4,6 +4,7 @@ require 'hanami/action'
 
 module Unlight
   module API
+    # :nodoc:
     class Action < Hanami::Action
       include HasAuth
 
