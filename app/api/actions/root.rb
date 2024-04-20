@@ -4,9 +4,9 @@ module Unlight
   module API
     module Actions
       # :nodoc:
-      class Root
-        def call(_env)
-          [200, { 'Content-Type' => 'text/plain' }, ['Hello, Unlight API!']]
+      class Root < Action
+        def handle(*, res)
+          res.body = 'Hello, Unlight API!'
         end
       end
     end
