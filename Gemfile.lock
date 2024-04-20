@@ -80,12 +80,38 @@ GEM
       concurrent-ruby (~> 1.0)
       zeitwerk (~> 2.6)
     dry-inflector (1.0.0)
+    dry-initializer (3.1.1)
+    dry-logic (1.5.0)
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 1.0, < 2)
+      zeitwerk (~> 2.6)
+    dry-schema (1.13.3)
+      concurrent-ruby (~> 1.0)
+      dry-configurable (~> 1.0, >= 1.0.1)
+      dry-core (~> 1.0, < 2)
+      dry-initializer (~> 3.0)
+      dry-logic (>= 1.4, < 2)
+      dry-types (>= 1.7, < 2)
+      zeitwerk (~> 2.6)
     dry-system (1.0.1)
       dry-auto_inject (~> 1.0, < 2)
       dry-configurable (~> 1.0, < 2)
       dry-core (~> 1.0, < 2)
       dry-inflector (~> 1.0, < 2)
     dry-transformer (1.0.1)
+      zeitwerk (~> 2.6)
+    dry-types (1.7.2)
+      bigdecimal (~> 3.0)
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 1.0)
+      dry-inflector (~> 1.0)
+      dry-logic (~> 1.4)
+      zeitwerk (~> 2.6)
+    dry-validation (1.10.0)
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 1.0, < 2)
+      dry-initializer (~> 3.0)
+      dry-schema (>= 1.12, < 2)
       zeitwerk (~> 2.6)
     eventmachine (1.2.7)
     factory_bot (6.4.6)
@@ -116,6 +142,9 @@ GEM
       concurrent-ruby (~> 1.0)
       dry-core (~> 1.0, < 2)
       dry-transformer (~> 1.0, < 2)
+    hanami-validations (2.0.1)
+      dry-validation (>= 1.10, < 2)
+      zeitwerk (~> 2.6.0)
     hansi (0.2.1)
     i18n (1.14.4)
       concurrent-ruby (~> 1.0)
@@ -273,6 +302,7 @@ DEPENDENCIES
   dry-configurable
   dry-inflector
   dry-system
+  dry-types
   eventmachine
   factory_bot
   faker
@@ -280,6 +310,7 @@ DEPENDENCIES
   flipper-sequel
   hanami-controller (~> 2.0.0)
   hanami-router (~> 2.0.0)
+  hanami-validations (~> 2.0.0)
   irb
   mysql2 (~> 0.5.6)
   oj

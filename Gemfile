@@ -37,11 +37,13 @@ gem 'semantic_logger'
 gem 'dry-configurable'
 gem 'dry-inflector'
 gem 'dry-system'
+gem 'dry-types'
 gem 'zeitwerk'
 
 # Abyss API
 gem 'hanami-controller', '~> 2.0.0'
 gem 'hanami-router', '~> 2.0.0'
+gem 'hanami-validations', '~> 2.0.0'
 
 group :build do
   gem 'sqlite3'
