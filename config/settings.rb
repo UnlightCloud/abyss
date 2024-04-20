@@ -3,7 +3,11 @@
 module Unlight
   # :nodoc:
   class Settings < Abyss::Settings
+    # Database
     setting :database_url, constructor: Types::String.optional
+
+    # API Server
+    setting :jwks, constructor: Types::String.optional
 
     # Server settings
     setting :check_database, default: false, constructor: Types::Params::Bool

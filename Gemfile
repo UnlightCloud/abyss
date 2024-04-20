@@ -18,6 +18,7 @@ gem 'sequel', '~> 5.79'
 gem 'dalli'
 
 # API Server
+gem 'jwt'
 gem 'oj'
 gem 'puma', '>= 5.3.1'
 gem 'rack'
