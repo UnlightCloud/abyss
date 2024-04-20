@@ -9,6 +9,7 @@ require_relative 'abyss/constants'
 # @since 0.1.0
 module Abyss
   @_mutex = Mutex.new
+  @_bundled = {}
 
   module_function
 
@@ -135,6 +136,17 @@ module Abyss
     return app_path(dir.parent) unless dir.root?
 
     nil
+  end
+
+  def bundled?(gem_name)
+    @_mutex.synchronize do
+      @_bundled[gem_name] ||=
+        begin
+          gem(gem_name)
+        rescue Gem::LoadError
+          false
+        end
+    end
   end
 
   loader.setup

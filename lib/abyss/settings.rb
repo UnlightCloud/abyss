@@ -10,6 +10,15 @@ module Abyss
   #  @since 0.1.0
   class Settings
     class << self
+      def inherited(subclass)
+        super
+
+        return unless Abyss.bundled?('dry-types')
+
+        require 'dry/types'
+        subclass.const_set(:Types, Dry::Types())
+      end
+
       def load(app)
         settings_path = File.join(app.root, SETTINGS_PATH)
 
