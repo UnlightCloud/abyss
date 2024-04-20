@@ -9,7 +9,7 @@ require_relative 'abyss/constants'
 # @since 0.1.0
 module Abyss
   @_mutex = Mutex.new
-  @_bundled = {}
+  @_bundled = {} # rubocop:disable ThreadSafety/MutableClassInstanceVariable
 
   module_function
 
