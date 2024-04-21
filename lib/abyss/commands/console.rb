@@ -14,6 +14,7 @@ module Abyss
         require 'irb/completion'
 
         require Abyss.root.join('src', 'unlight')
+        Abyss.boot
 
         ARGV.clear
 

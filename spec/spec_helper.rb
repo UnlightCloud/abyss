@@ -37,12 +37,14 @@ ENV['DAWN_ENV'] = 'test'
 ENV['ABYSS_ENV'] = 'test'
 
 require 'abyss/prepare'
-
 Abyss::Migrator.new(Abyss.app[:settings][:database_url]).migrate!
 
 require_relative '../src/unlight'
+require 'dry/system/stubs'
 
+Unlight::Container.enable_stubs!
 Abyss::Cache.flush # NOTE: Unlight cache breaks tests
+Abyss.boot
 
 Dir[Bundler.root.join('spec/support/**/*.rb')].each { |support| require support }
 

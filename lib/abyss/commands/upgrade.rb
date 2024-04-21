@@ -26,6 +26,7 @@ module Abyss
       def import_data
         require 'csv'
         require Abyss.root.join('src', 'unlight')
+        Abyss.boot
 
         command = Abyss.app.resolve('importer.import_command')
         command.execute(data) do |repository, data|
@@ -35,6 +36,7 @@ module Abyss
 
       def initialize_cpu_decks
         require Abyss.root.join('src', 'unlight')
+        Abyss.boot
 
         Unlight::CharaCardDeck.initialize_CPU_deck
       end

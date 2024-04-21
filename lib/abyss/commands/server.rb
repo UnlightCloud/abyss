@@ -21,6 +21,7 @@ module Abyss
       def call(type:, **options)
         require 'eventmachine'
         require Abyss.root.join('src', 'unlight')
+        Abyss.boot
 
         server = Abyss.app.resolve("servers.legacies.#{type}")
         Signal.trap(:INT) { server.stop }

@@ -15,7 +15,7 @@ require 'rubygems'
 require 'sequel'
 require 'dalli'
 
-require 'abyss/boot'
+require 'abyss/prepare'
 
 # 定数
 require 'constants/common_constants'

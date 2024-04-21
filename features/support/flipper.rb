@@ -5,3 +5,7 @@ Flipper.configure do |config|
     Flipper::Adapters::Memory.new
   end
 end
+
+Before do
+  Unlight::Container.stub(:feature, Flipper::Adapters::Memory.new)
+end

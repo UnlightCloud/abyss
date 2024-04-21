@@ -29,5 +29,9 @@ ENV['DAWN_ENV'] = 'test'
 ENV['ABYSS_ENV'] = 'test'
 
 require_relative '../../src/unlight'
+require 'dry/system/stubs'
 
 Abyss::Cache.flush # NOTE: Unlight cache breaks tests
+Unlight::Container.enable_stubs!
+
+Abyss.boot

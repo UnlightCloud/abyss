@@ -14,6 +14,7 @@ module Abyss
       def call(**)
         require 'rack'
         require Abyss.root.join('src', 'unlight')
+        Abyss.boot
 
         Rack::Handler.default.run(Abyss::Api, **)
       end
