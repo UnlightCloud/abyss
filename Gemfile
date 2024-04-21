@@ -42,7 +42,7 @@ gem 'dry-types'
 gem 'zeitwerk'
 
 # Abyss API
-gem 'hanami-controller', '~> 2.0.0'
+gem 'hanami-controller', '~> 2.1.0'
 gem 'hanami-router', '~> 2.0.0'
 gem 'hanami-validations', '~> 2.0.0'
 
