@@ -7,6 +7,13 @@ Given('http headers') do |table|
   end
 end
 
+Given('authorized by JWT') do |payload_json|
+  payload = JSON.parse(payload_json)
+  token = JWT.encode(payload, api_jwk.signing_key, api_jwk[:alg], kid: api_jwk[:kid])
+  @headers ||= {}
+  @headers['Authorization'] = "Bearer #{token}"
+end
+
 When('I make a GET request to {string}') do |path|
   get path, nil, @headers || {}
 end

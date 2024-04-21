@@ -6,7 +6,7 @@ module Unlight
       # :nodoc:
       class Root < Action
         def handle(*, res)
-          res.body = 'Hello, Unlight API!'
+          res.body = { message: 'Powered by UnlightCloud' }.to_json
         end
       end
     end
