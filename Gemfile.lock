@@ -134,7 +134,7 @@ GEM
       hanami-utils (~> 2.1)
       rack (~> 2.0)
       zeitwerk (~> 2.6)
-    hanami-router (2.0.2)
+    hanami-router (2.1.0)
       mustermann (~> 3.0)
       mustermann-contrib (~> 3.0)
       rack (~> 2.0)
@@ -311,7 +311,7 @@ DEPENDENCIES
   flipper-dalli
   flipper-sequel
   hanami-controller (~> 2.1.0)
-  hanami-router (~> 2.0.0)
+  hanami-router (~> 2.1.0)
   hanami-validations (~> 2.1.0)
   irb
   jwt
