@@ -18,6 +18,10 @@ When('I make a GET request to {string}') do |path|
   get path, nil, @headers || {}
 end
 
+When('I make a POST request to {string}') do |path, body|
+  post path, body, (@headers || {}).merge('CONTENT_TYPE' => 'application/json')
+end
+
 Then('the response status code should be {int}') do |status_code|
   expect(last_response.status).to eq(status_code)
 end
