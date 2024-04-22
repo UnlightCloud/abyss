@@ -3,8 +3,8 @@ Abyss
 
 [![Test](https://github.com/UnlightCloud/abyss/actions/workflows/main.yml/badge.svg)](https://github.com/UnlightCloud/abyss/actions/workflows/main.yml)
 [![Containerize](https://github.com/UnlightCloud/abyss/actions/workflows/containerize.yml/badge.svg)](https://github.com/UnlightCloud/abyss/actions/workflows/containerize.yml)
-[![Maintainability](https://api.codeclimate.com/v1/badges/0b9b05fdca13833dcfcb/maintainability)](https://codeclimate.com/github/UnlightCloud/abyss/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/0b9b05fdca13833dcfcb/test_coverage)](https://codeclimate.com/github/UnlightCloud/abyss/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/a7a7dc51a33725579a83/maintainability)](https://codeclimate.com/github/UnlightCloud/abyss/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/a7a7dc51a33725579a83/test_coverage)](https://codeclimate.com/github/UnlightCloud/abyss/test_coverage)
 [![CucumberReports: UnlightCloud/Abyss](https://messages.cucumber.io/api/report-collections/78b91caa-5111-4e8b-beca-3df0601f4f86/badge)](https://reports.cucumber.io/report-collections/78b91caa-5111-4e8b-beca-3df0601f4f86)
 
 Abssy is a community-driven project to make the Unlight server updated to date and maintainable.
