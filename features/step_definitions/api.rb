@@ -19,7 +19,7 @@ When('I make a GET request to {string}') do |path|
 end
 
 When('I make a POST request to {string}') do |path, body|
-  post path, body, (@headers || {}).merge('CONTENT_TYPE' => 'application/json')
+  post path, JSON.parse(body), (@headers || {}).merge('CONTENT_TYPE' => 'application/json')
 end
 
 Then('the response status code should be {int}') do |status_code|

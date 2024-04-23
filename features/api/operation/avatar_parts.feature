@@ -5,13 +5,30 @@ Feature: Avatar Part Operation
       {}
       """
 
-  Scenario: Grant Avatar Part to Player
+  Scenario: The player name is required
     When I make a POST request to "/v1/operation/avatar_parts"
     """
-    {}
+      {}
     """
-    Then the response status code should be 200
+    Then the response status code should be 400
     And the response body should be
     """
-    {}
+    {
+      "error": "Player Name is missing"
+    }
+    """
+
+  Scenario: The avatar part id is required
+    When I make a POST request to "/v1/operation/avatar_parts"
+    """
+      {
+        "player_name": "player"
+      }
+    """
+    Then the response status code should be 400
+    And the response body should be
+    """
+    {
+      "error": "Avatar Part Id is missing"
+    }
     """

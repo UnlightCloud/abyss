@@ -7,6 +7,7 @@ module Unlight
     # :nodoc:
     class Action < Hanami::Action
       include HasAuth
+      include HasParamValidation
 
       format :json
     end
