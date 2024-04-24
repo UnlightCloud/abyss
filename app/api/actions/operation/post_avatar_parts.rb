@@ -11,7 +11,10 @@ module Unlight
             required(:avatar_part_id).filled(:int?)
           end
 
-          def handle(_req, res)
+          def handle(req, res)
+            player = Unlight::Player[name: req.params[:player_name]]
+            halt(:not_found, { error: 'Player not found' }.to_json) unless player
+
             res.body = {}.to_json
           end
         end

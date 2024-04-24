@@ -32,3 +32,19 @@ Feature: Avatar Part Operation
       "error": "Avatar Part Id is missing"
     }
     """
+
+  Scenario: The player is not found
+    When I make a POST request to "/v1/operation/avatar_parts"
+    """
+      {
+        "player_name": "player",
+        "avatar_part_id": 1
+      }
+    """
+    Then the response body should be
+    """
+    {
+      "error": "Player not found"
+    }
+    """
+    And the response status code should be 404

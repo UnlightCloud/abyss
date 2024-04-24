@@ -11,6 +11,7 @@ module Unlight
       private
 
       def validate_params!(req, *)
+        pp req.params
         return if req.params.valid?
 
         halt :bad_request, { error: req.params.error_messages.first }.to_json
