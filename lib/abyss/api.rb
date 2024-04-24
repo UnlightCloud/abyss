@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'hanami/middleware/body_parser'
+
 module Abyss
   # Provides the API server support
   #
@@ -37,7 +39,10 @@ module Abyss
 
     # The API server
     def app
-      @app ||= Router.new(routes:, resolver:) # rubocop:disable ThreadSafety/InstanceVariableInClassMethod
+      @app ||= Hanami::Middleware::BodyParser.new( # rubocop:disable ThreadSafety/InstanceVariableInClassMethod
+        Router.new(routes:, resolver:),
+        :json
+      )
     end
 
     # Rack application
