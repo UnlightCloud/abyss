@@ -14,6 +14,7 @@ module Unlight
           def handle(req, res)
             player = Unlight::Player[name: req.params[:player_name]]
             halt(:not_found, { error: 'Player not found' }.to_json) unless player
+            halt(:not_found, { error: 'Avatar not found' }.to_json) if player.current_avatar.new?
 
             res.body = {}.to_json
           end
