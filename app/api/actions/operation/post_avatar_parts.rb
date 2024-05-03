@@ -16,6 +16,9 @@ module Unlight
             halt(:not_found, { error: 'Player not found' }.to_json) unless player
             halt(:not_found, { error: 'Avatar not found' }.to_json) if player.current_avatar.new?
 
+            part = Unlight::AvatarPart[req.params[:avatar_part_id]]
+            halt(:not_found, { error: 'Avatar Part not found' }.to_json) unless part
+
             res.body = {}.to_json
           end
         end

@@ -22,7 +22,7 @@ Feature: Avatar Part Operation
     When I make a POST request to "/v1/operation/avatar_parts"
     """
       {
-        "player_name": "player"
+        "player_name": "aotoki"
       }
     """
     Then the response status code should be 400
@@ -37,7 +37,7 @@ Feature: Avatar Part Operation
     When I make a POST request to "/v1/operation/avatar_parts"
     """
       {
-        "player_name": "player",
+        "player_name": "aotoki",
         "avatar_part_id": 1
       }
     """
@@ -52,11 +52,11 @@ Feature: Avatar Part Operation
   Scenario: The avatar is not found
     Given the following players
       | name   |
-      | player |
+      | aotoki |
     When I make a POST request to "/v1/operation/avatar_parts"
     """
       {
-        "player_name": "player",
+        "player_name": "aotoki",
         "avatar_part_id": 1
       }
     """
@@ -64,6 +64,28 @@ Feature: Avatar Part Operation
     """
     {
       "error": "Avatar not found"
+    }
+    """
+    And the response status code should be 404
+
+  Scenario: The avatar part is not found
+    Given the following players
+      | name   |
+      | aotoki |
+    And the following avatars
+      | name   | player_name |
+      | Aotoki | aotoki      |
+    When I make a POST request to "/v1/operation/avatar_parts"
+    """
+      {
+        "player_name": "aotoki",
+        "avatar_part_id": 1
+      }
+    """
+    Then the response body should be
+    """
+    {
+      "error": "Avatar Part not found"
     }
     """
     And the response status code should be 404
