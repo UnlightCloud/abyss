@@ -89,3 +89,57 @@ Feature: Avatar Part Operation
     }
     """
     And the response status code should be 404
+
+  Scenario: Grant the avatar part success
+    Given the following players
+      | name   |
+      | aotoki |
+    And the following avatars
+      | id | name   | player_name |
+      | 1  | Aotoki | aotoki      |
+    And the following avatar parts
+      | id | name       |
+      | 1  | Basic Hair |
+    When I make a POST request to "/v1/operation/avatar_parts"
+    """
+      {
+        "player_name": "aotoki",
+        "avatar_part_id": 1
+      }
+    """
+    Then the response body should be
+    """
+    {
+      "avatar_id": 1,
+      "avatar_part_id": 1
+    }
+    """
+    And the response status code should be 200
+
+  Scenario: Grant the avatar part duplicate
+    Given the following players
+      | name   |
+      | aotoki |
+    And the following avatars
+      | id | name   | player_name |
+      | 1  | Aotoki | aotoki      |
+    And the following avatar parts
+      | id | name       |
+      | 1  | Basic Hair |
+    And the following avatar part grants
+      | avatar_name | avatar_part_id |
+      | Aotoki      | 1              |
+    When I make a POST request to "/v1/operation/avatar_parts"
+    """
+      {
+        "player_name": "aotoki",
+        "avatar_part_id": 1
+      }
+    """
+    Then the response body should be
+    """
+    {
+      "error": "Avatar Part is duplicate"
+    }
+    """
+    And the response status code should be 400

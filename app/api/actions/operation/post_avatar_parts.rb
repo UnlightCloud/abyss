@@ -14,12 +14,20 @@ module Unlight
           def handle(req, res)
             player = Unlight::Player[name: req.params[:player_name]]
             halt(:not_found, { error: 'Player not found' }.to_json) unless player
-            halt(:not_found, { error: 'Avatar not found' }.to_json) if player.current_avatar.new?
+
+            avatar = player.current_avatar
+            halt(:not_found, { error: 'Avatar not found' }.to_json) if avatar.new?
 
             part = Unlight::AvatarPart[req.params[:avatar_part_id]]
             halt(:not_found, { error: 'Avatar Part not found' }.to_json) unless part
 
-            res.body = {}.to_json
+            ret = avatar.get_part(part.id, true)
+            halt(:bad_request, { error: 'Avatar Part is duplicate' }.to_json) if ret == Unlight::ERROR_PARTS_DUPE
+
+            res.body = {
+              avatar_id: avatar.id,
+              avatar_part_id: part.id
+            }.to_json
           end
         end
       end
