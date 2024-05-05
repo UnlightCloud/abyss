@@ -1,4 +1,4 @@
-Feature: Avatar Part Operation
+Feature: Grant Avatar Part
   Background:
     Given authorized by JWT
       """
