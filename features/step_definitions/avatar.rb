@@ -19,3 +19,9 @@ Given('the following avatar part grants') do |table|
     avatar.get_part(grants.delete('avatar_part_id'))
   end
 end
+
+Given('the following avatar items') do |table|
+  table.hashes.each do |avatar_item|
+    create(:avatar_item, avatar_item)
+  end
+end
