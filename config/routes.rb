@@ -11,6 +11,7 @@ module Unlight
 
       scope 'operation' do
         post '/avatar_parts', to: 'operation.post_avatar_parts'
+        post '/avatar_items', to: 'operation.post_avatar_items'
       end
     end
   end
