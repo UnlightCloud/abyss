@@ -5,3 +5,9 @@ Given('the following character cards') do |table|
     create(:chara_card, character_card)
   end
 end
+
+Given('the following weapon cards') do |table|
+  table.hashes.each do |weapon_card|
+    create(:weapon_card, weapon_card)
+  end
+end
