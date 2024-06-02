@@ -16,7 +16,7 @@ module Unlight
         def start(*)
           @current_time = 0
 
-          super(*) do
+          super do
             every(settings.game.check_connect_interval) { check_connection_seconds }
             every(1.minute) { check_boot }
             every(settings.cpu_pop_interval) { pop_cpu }

@@ -117,7 +117,7 @@ module Unlight
          ]],
 
         # 認証失敗
-        [:sc_request_reregist] #
+        [:sc_request_reregist]
 
       ]
   end

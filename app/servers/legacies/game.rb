@@ -15,7 +15,7 @@ module Unlight
         end
 
         def start(*)
-          super(*) do
+          super do
             every(0.3.seconds) { update_duel }
             every(1.second) { update_ai }
             every(settings.game.check_connect_interval) { check_connection_seconds }

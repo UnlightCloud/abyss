@@ -8,9 +8,9 @@ module Abyss
     #
     # @since 0.1.0
     class Router < Hanami::Router
-      def initialize(routes:, **kwargs, &)
+      def initialize(routes:, **, &)
         instance_eval(&) if block_given?
-        super(**kwargs, &routes)
+        super(**, &routes)
       end
     end
   end

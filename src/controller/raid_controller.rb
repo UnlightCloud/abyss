@@ -275,61 +275,61 @@ module Unlight
     def duel_start_turn_phase_handler(target, ret)
       send_damage_handler
       boss_duel_finish_check
-      super(target, ret)
+      super
     end
 
     def duel_refill_card_phase_handler(duel, ret)
       send_damage_handler
       boss_duel_finish_check
-      super(duel, ret)
+      super
     end
 
     def duel_refill_event_card_phase_handler(duel, ret)
       send_damage_handler
       boss_duel_finish_check
-      super(duel, ret)
+      super
     end
 
     def duel_move_card_phase_finish_handler(target, ret)
       send_damage_handler
       boss_duel_finish_check
-      super(target, ret)
+      super
     end
 
     def duel_determine_move_phase_handler(target, ret)
       send_damage_handler
       boss_duel_finish_check
-      super(target, ret)
+      super
     end
 
     def duel_attack_card_phase_finish_handler(duel, ret)
       send_damage_handler
       boss_duel_finish_check
-      super(duel, ret)
+      super
     end
 
     def duel_deffence_card_phase_finish_handler(duel, ret)
       send_damage_handler
       boss_duel_finish_check
-      super(duel, ret)
+      super
     end
 
     def duel_det_battle_point_phase_handler(duel, ret)
       send_damage_handler
       boss_duel_finish_check
-      super(duel, ret)
+      super
     end
 
     def duel_battle_result_phase_handler(duel, ret)
       send_damage_handler
       boss_duel_finish_check
-      super(duel, ret)
+      super
     end
 
     def duel_finish_turn_phase_handler(duel, ret)
       send_damage_handler
       boss_duel_finish_check
-      super(duel, ret)
+      super
     end
 
     def boss_duel_finish_check

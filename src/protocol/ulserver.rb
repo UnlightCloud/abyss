@@ -13,7 +13,7 @@ module Unlight
       CONNECT_LIVE_SEC = 3600 # 1時間
 
       # 何回のコマンドエラーで切断するか
-      COMMAND_ERROR_MAX = 3 #
+      COMMAND_ERROR_MAX = 3
 
       attr_accessor :player, :last_connect
 

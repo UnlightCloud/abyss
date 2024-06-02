@@ -14,7 +14,7 @@ module Unlight
         end
 
         def start(*)
-          super(*) do
+          super do
             every(1.minute) { check_connection }
             every(settings.raid.help_send_interval) { publish_raid_help }
             every(settings.raid.auto_create_profound_interval) { auto_create_profound } if settings.raid.auto_create_profound

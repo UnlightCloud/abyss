@@ -462,7 +462,7 @@ class OrderHash < Hash
 
   # superとして、Hash#[]=を呼び出す
   def []=(key, value)
-    super(key, value)
+    super
     unless @keys.include?(key)
       @keys.unshift(key)
     end
@@ -476,7 +476,7 @@ class OrderHash < Hash
   def delete(key)
     if @keys.include?(key)
       @keys.delete(key)
-      super(key)
+      super
     else
       yield(key)
     end
@@ -505,7 +505,7 @@ class OrderHash < Hash
       del = k if yield(k, self[k])
     end
     @keys.delete(del)
-    super(&)
+    super
   end
 
   def each_value
