@@ -12,7 +12,7 @@ gem 'eventmachine'
 
 # Database
 gem 'mysql2', '~> 0.5.6'
-gem 'sequel', '~> 5.80'
+gem 'sequel', '~> 5.81'
 
 # Cache
 gem 'dalli'
