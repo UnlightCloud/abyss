@@ -31,7 +31,7 @@ gem 'activesupport'
 gem 'flipper-dalli'
 gem 'flipper-sequel', require: false
 gem 'rake'
-gem 'RubyInline', '~> 3.14.0'
+gem 'RubyInline', '~> 3.14.1'
 gem 'semantic_logger'
 
 # Abyss
