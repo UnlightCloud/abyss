@@ -259,7 +259,7 @@ GEM
       sorbet-runtime (>= 0.5.10782)
     ruby-progressbar (1.13.0)
     ruby2_keywords (0.0.5)
-    semantic_logger (4.15.0)
+    semantic_logger (4.16.0)
       concurrent-ruby (~> 1.0)
     sentry-ruby (5.18.0)
       bigdecimal
