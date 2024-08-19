@@ -65,7 +65,7 @@ GEM
       database_cleaner-core (~> 2.0.0)
       sequel
     diff-lcs (1.5.1)
-    dip (8.0.0)
+    dip (8.1.0)
       thor (>= 0.20, < 2)
     docile (1.4.0)
     dotenv (3.1.2)
