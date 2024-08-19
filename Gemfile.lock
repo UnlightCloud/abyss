@@ -280,7 +280,7 @@ GEM
     simplecov_json_formatter (0.1.4)
     singleton (0.2.0)
     sorbet-runtime (0.5.11518)
-    sqlite3 (2.0.3)
+    sqlite3 (2.0.4)
       mini_portile2 (~> 2.8.0)
     stringio (3.1.1)
     strscan (3.1.0)
