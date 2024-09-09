@@ -64,10 +64,11 @@ jobs:
         MEMCACHED_HOST: "127.0.0.1:${{ job.services.memcached.ports['11211'] }}"
         DATABASE_URL: "mysql2://unlight:unlight@127.0.0.1:${{ job.services.mysql.ports['3306'] }}/unlight_db?encoding=utf8"
     - name: Archive RSpec coverage report
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: simplecov-resultset-${{ matrix.command }}
         path: coverage/
+        include-hidden-files: true
         retention-days: 1
   coverage-report:
     runs-on: ubuntu-latest
@@ -81,12 +82,12 @@ jobs:
         ruby-version: ${{ env.RUBY_VERSION }}
         bundler-cache: true
     - name: Download RSpec coverage report
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: simplecov-resultset-rspec
         path: simplecov-resultset-rspec/
     - name: Download Cucumber coverage report
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: simplecov-resultset-cucumber
         path: simplecov-resultset-cucumber/
