@@ -23,9 +23,6 @@ Style/AsciiComments:
   Severity: info
 
 # Use Rails-like style
-RSpec/FilePath:
-  Enabled: false
-
 RSpec/SpecFilePathFormat:
   Enabled: false
 
