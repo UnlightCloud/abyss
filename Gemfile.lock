@@ -188,7 +188,7 @@ GEM
     prime (0.1.2)
       forwardable
       singleton
-    prism (1.0.0)
+    prism (1.1.0)
     psych (5.1.2)
       stringio
     puma (6.4.3)
@@ -199,7 +199,7 @@ GEM
       rack (>= 1.3)
     rainbow (3.1.1)
     rake (13.2.1)
-    rbs (3.6.0)
+    rbs (3.6.1)
       logger
     rdoc (6.7.0)
       psych (>= 4.0.0)
@@ -243,9 +243,9 @@ GEM
       rubocop (~> 1.0)
     rubocop-thread_safety (0.5.1)
       rubocop (>= 0.90.0)
-    ruby-lsp (0.18.3)
+    ruby-lsp (0.19.1)
       language_server-protocol (~> 3.17.0)
-      prism (~> 1.0)
+      prism (>= 1.1, < 2.0)
       rbs (>= 3, < 4)
       sorbet-runtime (>= 0.5.10782)
     ruby-progressbar (1.13.0)
@@ -268,7 +268,7 @@ GEM
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.4)
     singleton (0.2.0)
-    sorbet-runtime (0.5.11589)
+    sorbet-runtime (0.5.11597)
     sqlite3 (2.1.0)
       mini_portile2 (~> 2.8.0)
     stringio (3.1.1)
