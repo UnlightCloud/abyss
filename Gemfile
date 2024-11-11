@@ -43,7 +43,7 @@ gem 'zeitwerk'
 
 # Abyss API
 gem 'hanami-controller', '~> 2.1.0'
-gem 'hanami-router', '~> 2.1.0'
+gem 'hanami-router', '~> 2.2.0'
 gem 'hanami-validations', '~> 2.1.0'
 
 group :build do
