@@ -95,7 +95,7 @@ GEM
       concurrent-ruby (~> 1.0)
       dry-core (~> 1.0, < 2)
       zeitwerk (~> 2.6)
-    dry-schema (1.13.3)
+    dry-schema (1.13.4)
       concurrent-ruby (~> 1.0)
       dry-configurable (~> 1.0, >= 1.0.1)
       dry-core (~> 1.0, < 2)
@@ -152,9 +152,8 @@ GEM
       concurrent-ruby (~> 1.0)
       dry-core (~> 1.0, < 2)
       dry-transformer (~> 1.0, < 2)
-    hanami-validations (2.1.0)
+    hanami-validations (2.2.0)
       dry-validation (>= 1.10, < 2)
-      zeitwerk (~> 2.6.0)
     hansi (0.2.1)
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
@@ -170,7 +169,7 @@ GEM
     jwt (2.9.3)
       base64
     language_server-protocol (3.17.0.3)
-    logger (1.6.1)
+    logger (1.6.2)
     mini_mime (1.1.5)
     mini_portile2 (2.8.8)
     minitest (5.25.2)
@@ -323,7 +322,7 @@ DEPENDENCIES
   flipper-sequel
   hanami-controller (~> 2.2.0)
   hanami-router (~> 2.2.0)
-  hanami-validations (~> 2.1.0)
+  hanami-validations (~> 2.2.0)
   irb
   jwt
   mysql2 (~> 0.5.6)
