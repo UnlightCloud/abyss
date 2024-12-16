@@ -70,6 +70,7 @@ GEM
     database_cleaner-sequel (2.0.2)
       database_cleaner-core (~> 2.0.0)
       sequel
+    date (3.4.1)
     diff-lcs (1.5.1)
     dip (8.2.5)
       json-schema (~> 5)
@@ -158,8 +159,8 @@ GEM
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
     iniparse (1.5.0)
-    io-console (0.7.2)
-    irb (1.14.1)
+    io-console (0.8.0)
+    irb (1.14.2)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     json (2.9.0)
@@ -200,7 +201,8 @@ GEM
       forwardable
       singleton
     prism (1.2.0)
-    psych (5.1.2)
+    psych (5.2.1)
+      date
       stringio
     public_suffix (5.1.1)
     puma (6.5.0)
@@ -213,10 +215,10 @@ GEM
     rake (13.2.1)
     rbs (3.6.1)
       logger
-    rdoc (6.7.0)
+    rdoc (6.9.1)
       psych (>= 4.0.0)
     regexp_parser (2.9.3)
-    reline (0.5.10)
+    reline (0.5.12)
       io-console (~> 0.5)
     rexml (3.3.9)
     rspec (3.13.0)
@@ -283,7 +285,7 @@ GEM
     sorbet-runtime (0.5.11663)
     sqlite3 (2.3.1)
       mini_portile2 (~> 2.8.0)
-    stringio (3.1.1)
+    stringio (3.1.2)
     super_diff (0.14.0)
       attr_extras (>= 6.2.4)
       diff-lcs
