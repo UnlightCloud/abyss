@@ -160,7 +160,7 @@ GEM
       concurrent-ruby (~> 1.0)
     iniparse (1.5.0)
     io-console (0.8.0)
-    irb (1.14.2)
+    irb (1.14.3)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     json (2.9.0)
@@ -201,7 +201,7 @@ GEM
       forwardable
       singleton
     prism (1.2.0)
-    psych (5.2.1)
+    psych (5.2.2)
       date
       stringio
     public_suffix (5.1.1)
@@ -215,10 +215,10 @@ GEM
     rake (13.2.1)
     rbs (3.6.1)
       logger
-    rdoc (6.9.1)
+    rdoc (6.10.0)
       psych (>= 4.0.0)
     regexp_parser (2.9.3)
-    reline (0.5.12)
+    reline (0.6.0)
       io-console (~> 0.5)
     rexml (3.3.9)
     rspec (3.13.0)
