@@ -270,7 +270,7 @@ GEM
     sentry-ruby (5.21.0)
       bigdecimal
       concurrent-ruby (~> 1.0, >= 1.0.2)
-    sequel (5.87.0)
+    sequel (5.88.0)
       bigdecimal
     simplecov (0.22.0)
       docile (~> 1.1)
@@ -345,7 +345,7 @@ DEPENDENCIES
   ruby-lsp
   semantic_logger
   sentry-ruby
-  sequel (~> 5.87)
+  sequel (~> 5.88)
   simplecov (~> 0.22.0)
   simplecov-cobertura
   sqlite3
