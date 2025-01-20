@@ -182,7 +182,7 @@ GEM
       mustermann (= 3.0.3)
     mysql2 (0.5.6)
     nio4r (2.7.4)
-    oj (3.16.8)
+    oj (3.16.9)
       bigdecimal (>= 3.0)
       ostruct (>= 0.2)
     optimist (3.2.0)
