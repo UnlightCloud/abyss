@@ -71,7 +71,7 @@ GEM
       database_cleaner-core (~> 2.0.0)
       sequel
     date (3.4.1)
-    diff-lcs (1.5.1)
+    diff-lcs (1.6.0)
     dip (8.2.5)
       json-schema (~> 5)
       public_suffix (>= 2.0.2, < 6.0)
@@ -291,7 +291,7 @@ GEM
     sqlite3 (2.5.0)
       mini_portile2 (~> 2.8.0)
     stringio (3.1.2)
-    super_diff (0.14.0)
+    super_diff (0.15.0)
       attr_extras (>= 6.2.4)
       diff-lcs
       patience_diff
